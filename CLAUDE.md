@@ -13,27 +13,26 @@ CLAUDE.md                  — These instructions
 LICENSE                    — MIT license
 docs/
   ai-agents.md             — Detailed AI agent project docs
+  mulesoft.md              — MuleSoft & integration project docs
   learning-resources.md    — Curated AI learning resources
   security.md              — Security-focused project docs
 ```
 
 ## How to Add a New Project
 
-1. Pick the correct category table in `README.md` (AI Agents & Apps, MCP Servers, Learning & Tutorials, or Security).
-2. Add a new row following the existing format:
-   ```
-   | [repo-name](https://github.com/ozgurkarahan/repo-name) | Short description | Tech1, Tech2 |
-   ```
+1. Pick the correct category in `README.md` (AI Agents & MCP, MuleSoft & Integration, Demos & Presentations, Learning & Security, or Forks).
+2. Add a new HTML table row following the existing format (icon + repo link + description + badges).
 3. If the project needs a detailed write-up, add it to the appropriate `docs/*.md` file.
 4. Keep descriptions concise — one sentence max in the table.
 
 ## Formatting Conventions
 
-- **Tables**: Use Markdown tables for project listings. Columns: Project (link), Description, Stack.
-- **Badges**: Use shields.io flat style: `https://img.shields.io/badge/Label-Color?style=flat&logo=name&logoColor=white`
+- **Project cards**: Use HTML `<table>` with icon column (simpleicons.org, 40px) + content column (link, description, badges).
+- **Badges**: Use shields.io `flat-square` for inline badges, `for-the-badge` for the tech stack section.
+- **Icons**: Use `https://cdn.simpleicons.org/{brand}/{color}` for project icons.
 - **Links**: Always use full URLs to GitHub repos: `https://github.com/ozgurkarahan/repo-name`
 - **Headings**: H1 for name, H2 for sections, H3 for sub-categories.
-- **Tone**: Professional, concise. No emojis.
+- **Tone**: Professional, concise. Use emojis for section headers only (🤖 🔀 📚 🔐 🍴 🛠️ etc.).
 
 ## Important Notes
 

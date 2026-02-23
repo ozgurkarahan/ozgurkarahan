@@ -50,6 +50,82 @@ MCP server for Azure API Management — manage APIs through natural language<br>
 </tr>
 </table>
 
+### 🔀 MuleSoft & Integration
+
+<table>
+<tr>
+<td width="80" align="center">
+<img src="https://cdn.simpleicons.org/mulesoft/00A1DF" width="40" alt="MuleSoft"><br>
+<sub><b>Compare</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/mule-vs-ms">mule-vs-ms</a></b><br>
+MuleSoft vs Microsoft — technical comparison across AI, API Management, pricing, and deployment<br>
+<img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=mulesoft&logoColor=white"> <img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+</td>
+</tr>
+<tr>
+<td width="80" align="center">
+<img src="https://cdn.simpleicons.org/mulesoft/00A1DF" width="40" alt="MuleSoft"><br>
+<sub><b>CI/CD</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/Mulesoft-Api-Manager-CI-CD-Postman">Mulesoft-Api-Manager-CI-CD-Postman</a></b><br>
+Automated API proxy deployment on Anypoint Platform via Postman — exchange, deploy, policies, SLA tiers<br>
+<img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=mulesoft&logoColor=white"> <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"> <img src="https://img.shields.io/badge/Anypoint-00A1DF?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="80" align="center">
+<img src="https://cdn.simpleicons.org/mulesoft/00A1DF" width="40" alt="MuleSoft"><br>
+<sub><b>Cross-Org</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/mule-cross-org-collaboration">mule-cross-org-collaboration</a></b><br>
+Cross-organization sync API with JWT/JKS multi-org security — contacts and opportunities across Anypoint orgs<br>
+<img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=mulesoft&logoColor=white"> <img src="https://img.shields.io/badge/RAML-00A1DF?style=flat-square"> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white">
+</td>
+</tr>
+<tr>
+<td width="80" align="center">
+<img src="https://cdn.simpleicons.org/mulesoft/00A1DF" width="40" alt="MuleSoft"><br>
+<sub><b>Utility</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/cross-org-tool-api">cross-org-tool-api</a></b><br>
+Lightweight Mule 4 utility API for cross-organization tooling<br>
+<img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=mulesoft&logoColor=white"> <img src="https://img.shields.io/badge/Mule_4-00A1DF?style=flat-square">
+</td>
+</tr>
+</table>
+
+### 🎤 Demos & Presentations
+
+<table>
+<tr>
+<td width="80" align="center">
+<img src="https://cdn.simpleicons.org/fastapi/009688" width="40" alt="FastAPI"><br>
+<sub><b>Demo</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/fintech-transactions-demo">fintech-transactions-demo</a></b><br>
+FastAPI transaction service — health, list, filter, and summary endpoints for FinTechCo demo<br>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
+</td>
+</tr>
+<tr>
+<td width="80" align="center">
+<img src="https://cdn.simpleicons.org/anthropic/191919" width="40" alt="Claude"><br>
+<sub><b>Pres</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/FinTechCo">FinTechCo</a></b><br>
+Claude Code presentation prep for FinTechCo leadership — slides, demo plan, and live coding walkthrough<br>
+<img src="https://img.shields.io/badge/Claude_Code-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/Presentation-4285F4?style=flat-square">
+</td>
+</tr>
+</table>
+
 ### 📚 Learning & 🔐 Security
 
 <table>
@@ -117,9 +193,11 @@ Identity propagation patterns for secure API architectures<br>
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+![MuleSoft](https://img.shields.io/badge/MuleSoft-00A1DF?style=for-the-badge&logo=mulesoft&logoColor=white)
 ![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=for-the-badge)
 ![MCP](https://img.shields.io/badge/MCP_Protocol-blueviolet?style=for-the-badge)
 ![API Management](https://img.shields.io/badge/API_Management-FF6F00?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![OAuth](https://img.shields.io/badge/OAuth_2.0-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
 
 </div>
@@ -131,5 +209,6 @@ Identity propagation patterns for secure API architectures<br>
 | | Doc | What's inside |
 |:-:|-----|---------------|
 | 🤖 | [AI Agents & Apps](docs/ai-agents.md) | Architecture, stack details, and fork modifications |
+| 🔀 | [MuleSoft & Integration](docs/mulesoft.md) | MuleSoft projects, cross-org patterns, and CI/CD automation |
 | 📚 | [Learning Resources](docs/learning-resources.md) | Curated tutorials, courses, and reference links |
 | 🔐 | [Security Projects](docs/security.md) | Identity propagation patterns and API security |
