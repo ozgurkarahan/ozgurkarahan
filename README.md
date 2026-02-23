@@ -105,7 +105,7 @@ Identity propagation patterns for secure API architectures<br>
 | | Project | Upstream | Purpose |
 |:-:|---------|----------|---------|
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="20"> | [get-started-with-ai-chat](https://github.com/ozgurkarahan/get-started-with-ai-chat) | [Azure-Samples](https://github.com/Azure-Samples/get-started-with-ai-chat) | Azure AI Foundry chat application reference |
-| <img src="https://cdn.simpleicons.org/microsoft/5E5E5E" width="20"> | [TechWorkshop-L300-AI-Apps-and-agents](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents) | [Microsoft](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents) | L300-level AI workshop material |
+| <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI+PHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTAgMGgxMXYxMUgweiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0wIDEyaDExdjExSDB6Ii8+PHBhdGggZmlsbD0iIzdmYmEwMCIgZD0iTTEyIDBoMTF2MTFIMTJ6Ii8+PHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDExdjExSDEyeiIvPjwvc3ZnPg==" width="20"> | [TechWorkshop-L300-AI-Apps-and-agents](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents) | [Microsoft](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents) | L300-level AI workshop material |
 | <img src="https://cdn.simpleicons.org/anthropic/191919" width="20"> | [prompt-eng-interactive-tutorial](https://github.com/ozgurkarahan/prompt-eng-interactive-tutorial) | [Anthropic](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Interactive prompt engineering exercises |
 
 ---
