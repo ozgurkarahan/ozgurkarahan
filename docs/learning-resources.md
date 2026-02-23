@@ -4,19 +4,24 @@ Curated AI learning resources, tutorials, and reference material.
 
 ---
 
-## Tutorial Repos
+## My Projects
 
 ### anthropic-academy
 
 **Repo**: [github.com/ozgurkarahan/anthropic-academy](https://github.com/ozgurkarahan/anthropic-academy)
 
-Worked examples and exercises from the Anthropic Academy curriculum. Covers Claude API fundamentals, tool use, prompt engineering, and agent patterns.
+Worked examples and exercises from the Anthropic Academy curriculum. Covers Claude API fundamentals, tool use, prompt engineering, and agent patterns. Built from scratch with my own implementations.
+
+---
+
+## Forked Tutorials
 
 ### prompt-eng-interactive-tutorial
 
 **Repo**: [github.com/ozgurkarahan/prompt-eng-interactive-tutorial](https://github.com/ozgurkarahan/prompt-eng-interactive-tutorial)
+**Upstream**: [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
 
-An interactive, hands-on prompt engineering tutorial with Jupyter notebooks. Progressive exercises from basic prompting through advanced techniques.
+An interactive, hands-on prompt engineering tutorial with Jupyter notebooks. Progressive exercises from basic prompting through advanced techniques. Unmodified fork kept as a learning reference.
 
 ---
 
