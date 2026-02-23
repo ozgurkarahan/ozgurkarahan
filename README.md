@@ -2,7 +2,7 @@
 
 # Hi, I'm Ozgur Karahan 👋
 
-**AI Solutions Architect | Azure & API Management Specialist**
+**AI Solutions Architect | Azure, MuleSoft & API Management Specialist**
 
 *Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.*
 
@@ -15,7 +15,7 @@
 
 ## 🧑‍💻 About
 
-I design and build AI-powered applications on Azure, with deep expertise in API Management, AI agents, and MCP (Model Context Protocol) integrations. My work focuses on making AI practical and production-ready for enterprise environments.
+I design and build AI-powered applications on Azure and MuleSoft, with deep expertise in API Management, AI agents, and MCP (Model Context Protocol) integrations. My work focuses on making AI practical and production-ready for enterprise environments.
 
 ---
 
@@ -34,7 +34,7 @@ I design and build AI-powered applications on Azure, with deep expertise in API 
 <td>
 <b><a href="https://github.com/ozgurkarahan/simple-order-agent">simple-order-agent</a></b><br>
 Order processing agent using Claude SDK, MuleSoft MCP, and A2A protocol<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_SDK-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/A2A-orange?style=flat-square">
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_SDK-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=mulesoft&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/A2A-orange?style=flat-square">
 </td>
 </tr>
 <tr>
@@ -117,6 +117,7 @@ Identity propagation patterns for secure API architectures<br>
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+![MuleSoft](https://img.shields.io/badge/MuleSoft-00A1DF?style=for-the-badge&logo=mulesoft&logoColor=white)
 ![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=for-the-badge)
 ![MCP](https://img.shields.io/badge/MCP_Protocol-blueviolet?style=for-the-badge)
 ![API Management](https://img.shields.io/badge/API_Management-FF6F00?style=for-the-badge&logo=microsoftazure&logoColor=white)
