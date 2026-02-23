@@ -10,29 +10,31 @@
 
 [![Repo](https://img.shields.io/badge/GitHub-secu--propagate--identity-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/secu-propagate-identity)
 
-Demonstrates identity propagation patterns for securing API architectures. Covers how to flow user identity through API gateways, backend services, and downstream dependencies without breaking the security chain.
+Testing end-to-end identity propagation from Azure AI Foundry through Azure API Management all the way to Salesforce. The goal is to maintain user identity across cloud boundaries without breaking the security chain — ensuring the original caller's context flows through every hop.
 
 ### Architecture
 
 ```
-┌────────┐     ┌──────────────────┐     ┌─────────────────┐     ┌────────────┐
-│  User  │ ──▶ │  API Management  │ ──▶ │ Backend Service │ ──▶ │ Downstream │
-│        │     │  (Gateway)       │     │                 │     │  Service   │
-└────────┘     └──────────────────┘     └─────────────────┘     └────────────┘
-     │                  │                        │                      │
-     └──── OAuth Token ─┴──── Identity Flow ─────┴──── Propagated ─────┘
+┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐     ┌──────────────┐
+│  Azure AI        │ ──▶ │  Azure API       │ ──▶ │  Backend         │ ──▶ │  Salesforce  │
+│  Foundry         │     │  Management      │     │  Services        │     │              │
+└──────────────────┘     └──────────────────┘     └──────────────────┘     └──────────────┘
+         │                        │                        │                       │
+         └───── OAuth Token ──────┴──── Identity Flow ─────┴──── Propagated ──────┘
 ```
 
 ### Key Patterns
 
 | Pattern | Description |
 |---------|-------------|
-| 🔑 **End-to-end identity propagation** | Flow user identity through Azure API Management across all service layers |
-| 🔄 **OAuth 2.0 token flow** | Token exchange and validation across service boundaries |
-| 🏗️ **Secure delegation** | Delegation patterns for multi-tier architectures without credential sharing |
+| 🔑 **End-to-end identity propagation** | Flow user identity from Azure AI Foundry through API Management to Salesforce |
+| 🔄 **OAuth 2.0 token flow** | Token exchange and validation across Azure and Salesforce boundaries |
+| 🏗️ **Secure delegation** | Delegation patterns for multi-tier, multi-cloud architectures without credential sharing |
+| ☁️ **Cross-cloud identity** | Bridging Azure AD and Salesforce identity providers in a single chain |
 
 ### Stack
 
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
+![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
 ![API Management](https://img.shields.io/badge/API_Management-FF6F00?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
+![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=flat-square&logo=salesforce&logoColor=white)
 ![OAuth 2.0](https://img.shields.io/badge/OAuth_2.0-EB5424?style=flat-square&logo=auth0&logoColor=white)
