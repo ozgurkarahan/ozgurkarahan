@@ -1,68 +1,99 @@
-# AI Agents & Apps
+# 🤖 AI Agents & Apps
 
-Detailed overview of AI agent and application projects.
+> Detailed overview of AI agent and application projects.
+
+[← Back to Profile](../README.md)
 
 ---
 
-## My Projects
+## 🚀 My Projects
 
-### simple-order-agent
+### <img src="https://cdn.simpleicons.org/anthropic/191919" width="22" align="top"> simple-order-agent
 
-**Repo**: [github.com/ozgurkarahan/simple-order-agent](https://github.com/ozgurkarahan/simple-order-agent)
+[![Repo](https://img.shields.io/badge/GitHub-simple--order--agent-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/simple-order-agent)
 
 An order processing agent that demonstrates the integration of Claude SDK with MuleSoft MCP servers and the Agent-to-Agent (A2A) protocol. Shows how to build practical business agents with real API backends.
 
-**Architecture**: Claude SDK → MCP Client → MuleSoft APIs → Order Processing
-**Stack**: Python, Claude SDK, MCP, A2A Protocol
+```
+┌─────────────┐     ┌────────────┐     ┌───────────────┐     ┌──────────────────┐
+│  Claude SDK  │ ──▶ │ MCP Client │ ──▶ │ MuleSoft APIs │ ──▶ │ Order Processing │
+└─────────────┘     └────────────┘     └───────────────┘     └──────────────────┘
+```
+
+**Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Claude SDK](https://img.shields.io/badge/Claude_SDK-191919?style=flat-square&logo=anthropic&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-blueviolet?style=flat-square)
+![A2A](https://img.shields.io/badge/A2A-orange?style=flat-square)
 
 ---
 
-### azure-apim-mcp-server
+### <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" width="22" align="top"> azure-apim-mcp-server
 
-**Repo**: [github.com/ozgurkarahan/azure-apim-mcp-server](https://github.com/ozgurkarahan/azure-apim-mcp-server)
+[![Repo](https://img.shields.io/badge/GitHub-azure--apim--mcp--server-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/azure-apim-mcp-server)
 
 An MCP server that exposes Azure API Management operations through the Model Context Protocol. Enables AI assistants to manage, query, and interact with APIM resources via natural language.
 
-**Architecture**: MCP Server → Azure APIM SDK → API Management Service
-**Stack**: Python, Azure API Management, MCP
+```
+┌────────────┐     ┌────────────────┐     ┌──────────────────────────┐
+│ MCP Server │ ──▶ │ Azure APIM SDK │ ──▶ │ API Management Service   │
+└────────────┘     └────────────────┘     └──────────────────────────┘
+```
+
+**Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Azure APIM](https://img.shields.io/badge/Azure_APIM-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-blueviolet?style=flat-square)
 
 ---
 
-## Forks & Contributions
+## 🍴 Forks & Contributions
 
-### get-started-with-ai-agents
+### <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" width="22" align="top"> get-started-with-ai-agents &nbsp;`modified`
 
-**Repo**: [github.com/ozgurkarahan/get-started-with-ai-agents](https://github.com/ozgurkarahan/get-started-with-ai-agents)
-**Upstream**: [Azure-Samples/get-started-with-ai-agents](https://github.com/Azure-Samples/get-started-with-ai-agents)
+[![Repo](https://img.shields.io/badge/GitHub-get--started--with--ai--agents-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/get-started-with-ai-agents)
+[![Upstream](https://img.shields.io/badge/Upstream-Azure--Samples-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)](https://github.com/Azure-Samples/get-started-with-ai-agents)
 
-Azure AI Foundry agents starter project. Forked from Azure-Samples with significant additions:
+Azure AI Foundry agents starter project. Forked from Azure-Samples with significant additions.
 
-**My modifications** (11 commits ahead of upstream):
-- Added `docs/ai-foundry-endpoint-and-a2a.md` — comprehensive documentation on AI Foundry endpoints and A2A patterns (1400+ lines)
-- Added `CLAUDE.md` — Claude Code project instructions
-- Extended `README.md` with additional documentation
-- Customized Bicep infrastructure (`main.bicep`, `main.parameters.json`)
+#### ✏️ My Modifications (11 commits ahead)
 
-**Stack**: Python, Azure AI Foundry, Bicep
+| Change | Details |
+|--------|---------|
+| 📄 `docs/ai-foundry-endpoint-and-a2a.md` | Comprehensive A2A & AI Foundry endpoint documentation — **1 400+ lines** |
+| 📄 `CLAUDE.md` | Claude Code project instructions |
+| 📝 `README.md` | Extended with additional documentation |
+| ⚙️ `infra/main.bicep` | Customized Bicep infrastructure |
+| ⚙️ `infra/main.parameters.json` | Updated deployment parameters |
+
+**Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=flat-square)
 
 ---
 
-### get-started-with-ai-chat
+### <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" width="22" align="top"> get-started-with-ai-chat &nbsp;`reference`
 
-**Repo**: [github.com/ozgurkarahan/get-started-with-ai-chat](https://github.com/ozgurkarahan/get-started-with-ai-chat)
-**Upstream**: [Azure-Samples/get-started-with-ai-chat](https://github.com/Azure-Samples/get-started-with-ai-chat)
+[![Repo](https://img.shields.io/badge/GitHub-get--started--with--ai--chat-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/get-started-with-ai-chat)
+[![Upstream](https://img.shields.io/badge/Upstream-Azure--Samples-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)](https://github.com/Azure-Samples/get-started-with-ai-chat)
 
 Azure AI Foundry chat application reference. Unmodified fork kept as a reference.
 
-**Stack**: Python, Azure AI Foundry, Bicep
+**Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=flat-square)
 
 ---
 
-### TechWorkshop-L300-AI-Apps-and-agents
+### <img src="https://cdn.simpleicons.org/microsoft/5E5E5E" width="22" align="top"> TechWorkshop-L300-AI-Apps-and-agents &nbsp;`reference`
 
-**Repo**: [github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents)
-**Upstream**: [microsoft/TechWorkshop-L300-AI-Apps-and-agents](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents)
+[![Repo](https://img.shields.io/badge/GitHub-TechWorkshop--L300-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents)
+[![Upstream](https://img.shields.io/badge/Upstream-Microsoft-5E5E5E?style=flat-square&logo=microsoft&logoColor=white)](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents)
 
 L300-level technical workshop covering the end-to-end lifecycle of building production AI applications and agents. Unmodified fork kept as workshop reference material.
 
-**Stack**: Python, Azure, AI Agents
+**Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
