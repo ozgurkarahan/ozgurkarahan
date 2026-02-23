@@ -87,10 +87,10 @@ Azure AI Foundry chat application reference. Unmodified fork kept as a reference
 
 ---
 
-### <img src="https://img.shields.io/badge/MS-5E5E5E?style=flat-square&logo=microsoft&logoColor=white" height="22" align="top"> TechWorkshop-L300-AI-Apps-and-agents &nbsp;`reference`
+### <img src="https://img.shields.io/badge/MS-5E5E5E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI+PHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTAgMGgxMXYxMUgweiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0wIDEyaDExdjExSDB6Ii8+PHBhdGggZmlsbD0iIzdmYmEwMCIgZD0iTTEyIDBoMTF2MTFIMTJ6Ii8+PHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDExdjExSDEyeiIvPjwvc3ZnPg==&logoColor=white" height="22" align="top"> TechWorkshop-L300-AI-Apps-and-agents &nbsp;`reference`
 
 [![Repo](https://img.shields.io/badge/GitHub-TechWorkshop--L300-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents)
-[![Upstream](https://img.shields.io/badge/Upstream-Microsoft-5E5E5E?style=flat-square&logo=microsoft&logoColor=white)](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents)
+[![Upstream](https://img.shields.io/badge/Upstream-Microsoft-5E5E5E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI+PHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTAgMGgxMXYxMUgweiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0wIDEyaDExdjExSDB6Ii8+PHBhdGggZmlsbD0iIzdmYmEwMCIgZD0iTTEyIDBoMTF2MTFIMTJ6Ii8+PHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDExdjExSDEyeiIvPjwvc3ZnPg==&logoColor=white)](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents)
 
 L300-level technical workshop covering the end-to-end lifecycle of building production AI applications and agents. Unmodified fork kept as workshop reference material.
 

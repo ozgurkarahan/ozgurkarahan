@@ -34,7 +34,7 @@ I design and build AI-powered applications on Azure and MuleSoft, with deep expe
 <td>
 <b><a href="https://github.com/ozgurkarahan/simple-order-agent">simple-order-agent</a></b><br>
 Order processing agent using Claude SDK, MuleSoft MCP, and A2A protocol<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_SDK-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=mulesoft&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/A2A-orange?style=flat-square">
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_SDK-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAwQzUuMzczIDAgMCA1LjM3MyAwIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyUzE4LjYyNyAwIDEyIDB6bTAgMy42YzQuNjM2IDAgOC40IDMuNzY0IDguNCA4LjRzLTMuNzY0IDguNC04LjQgOC40LTguNC0zLjc2NC04LjQtOC40UzcuMzY0IDMuNiAxMiAzLjZ6bTAgMi40YTYgNiAwIDEwMCAxMiA2IDYgMCAwMDAtMTJ6Ii8+PC9zdmc+&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/A2A-orange?style=flat-square">
 </td>
 </tr>
 <tr>
@@ -105,7 +105,7 @@ Identity propagation patterns for secure API architectures<br>
 | | Project | Upstream | Purpose |
 |:-:|---------|----------|---------|
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="20"> | [get-started-with-ai-chat](https://github.com/ozgurkarahan/get-started-with-ai-chat) | [Azure-Samples](https://github.com/Azure-Samples/get-started-with-ai-chat) | Azure AI Foundry chat application reference |
-| <img src="https://img.shields.io/badge/MS-5E5E5E?style=flat-square&logo=microsoft&logoColor=white" height="20"> | [TechWorkshop-L300-AI-Apps-and-agents](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents) | [Microsoft](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents) | L300-level AI workshop material |
+| <img src="https://img.shields.io/badge/MS-5E5E5E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI+PHBhdGggZmlsbD0iI2YyNTAyMiIgZD0iTTAgMGgxMXYxMUgweiIvPjxwYXRoIGZpbGw9IiMwMGE0ZWYiIGQ9Ik0wIDEyaDExdjExSDB6Ii8+PHBhdGggZmlsbD0iIzdmYmEwMCIgZD0iTTEyIDBoMTF2MTFIMTJ6Ii8+PHBhdGggZmlsbD0iI2ZmYjkwMCIgZD0iTTEyIDEyaDExdjExSDEyeiIvPjwvc3ZnPg==&logoColor=white" height="20"> | [TechWorkshop-L300-AI-Apps-and-agents](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents) | [Microsoft](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents) | L300-level AI workshop material |
 | <img src="https://cdn.simpleicons.org/anthropic/191919" width="20"> | [prompt-eng-interactive-tutorial](https://github.com/ozgurkarahan/prompt-eng-interactive-tutorial) | [Anthropic](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Interactive prompt engineering exercises |
 
 ---
@@ -117,7 +117,7 @@ Identity propagation patterns for secure API architectures<br>
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logo=anthropic&logoColor=white)
-![MuleSoft](https://img.shields.io/badge/MuleSoft-00A1DF?style=for-the-badge&logo=mulesoft&logoColor=white)
+![MuleSoft](https://img.shields.io/badge/MuleSoft-00A1DF?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAwQzUuMzczIDAgMCA1LjM3MyAwIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyUzE4LjYyNyAwIDEyIDB6bTAgMy42YzQuNjM2IDAgOC40IDMuNzY0IDguNCA4LjRzLTMuNzY0IDguNC04LjQgOC40LTguNC0zLjc2NC04LjQtOC40UzcuMzY0IDMuNiAxMiAzLjZ6bTAgMi40YTYgNiAwIDEwMCAxMiA2IDYgMCAwMDAtMTJ6Ii8+PC9zdmc+&logoColor=white)
 ![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=for-the-badge)
 ![MCP](https://img.shields.io/badge/MCP_Protocol-blueviolet?style=for-the-badge)
 ![API Management](https://img.shields.io/badge/API_Management-FF6F00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
