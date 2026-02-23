@@ -28,7 +28,7 @@ An order processing agent that demonstrates the integration of Claude SDK with M
 
 ---
 
-### <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" width="22" align="top"> azure-apim-mcp-server
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="22" align="top"> azure-apim-mcp-server
 
 [![Repo](https://img.shields.io/badge/GitHub-azure--apim--mcp--server-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/azure-apim-mcp-server)
 
@@ -42,17 +42,17 @@ An MCP server that exposes Azure API Management operations through the Model Con
 
 **Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Azure APIM](https://img.shields.io/badge/Azure_APIM-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Azure APIM](https://img.shields.io/badge/Azure_APIM-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-blueviolet?style=flat-square)
 
 ---
 
 ## 🍴 Forks & Contributions
 
-### <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" width="22" align="top"> get-started-with-ai-agents &nbsp;`modified`
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="22" align="top"> get-started-with-ai-agents &nbsp;`modified`
 
 [![Repo](https://img.shields.io/badge/GitHub-get--started--with--ai--agents-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/get-started-with-ai-agents)
-[![Upstream](https://img.shields.io/badge/Upstream-Azure--Samples-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)](https://github.com/Azure-Samples/get-started-with-ai-agents)
+[![Upstream](https://img.shields.io/badge/Upstream-Azure--Samples-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)](https://github.com/Azure-Samples/get-started-with-ai-agents)
 
 Azure AI Foundry agents starter project. Forked from Azure-Samples with significant additions.
 
@@ -68,21 +68,21 @@ Azure AI Foundry agents starter project. Forked from Azure-Samples with signific
 
 **Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
 ![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=flat-square)
 
 ---
 
-### <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" width="22" align="top"> get-started-with-ai-chat &nbsp;`reference`
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="22" align="top"> get-started-with-ai-chat &nbsp;`reference`
 
 [![Repo](https://img.shields.io/badge/GitHub-get--started--with--ai--chat-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/get-started-with-ai-chat)
-[![Upstream](https://img.shields.io/badge/Upstream-Azure--Samples-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)](https://github.com/Azure-Samples/get-started-with-ai-chat)
+[![Upstream](https://img.shields.io/badge/Upstream-Azure--Samples-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)](https://github.com/Azure-Samples/get-started-with-ai-chat)
 
 Azure AI Foundry chat application reference. Unmodified fork kept as a reference.
 
 **Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
 ![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=flat-square)
 
 ---
@@ -96,4 +96,4 @@ L300-level technical workshop covering the end-to-end lifecycle of building prod
 
 **Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)

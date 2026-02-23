@@ -46,7 +46,7 @@ An interactive, hands-on prompt engineering tutorial with Jupyter notebooks. Pro
 | [Model Context Protocol](https://modelcontextprotocol.io/) | MCP specification and guides |
 | [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | CLI tool documentation |
 
-### <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" width="20" align="top"> Azure AI
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="20" align="top"> Azure AI
 
 | Resource | Description |
 |----------|-------------|
