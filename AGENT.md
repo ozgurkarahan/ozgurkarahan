@@ -1,4 +1,4 @@
-# CLAUDE.md — Project Instructions
+# AGENT.md — Project Instructions
 
 ## What This Repo Is
 
@@ -8,7 +8,7 @@ This is `ozgurkarahan/ozgurkarahan` — a GitHub profile hub repository. The REA
 
 ```
 README.md                  — Main hub displayed on GitHub profile
-CLAUDE.md                  — These instructions
+AGENT.md                   — Project instructions (public)
 .gitignore                 — Standard gitignore
 LICENSE                    — MIT license
 docs/
