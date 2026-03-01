@@ -8,6 +8,25 @@
 
 ## 🚀 My Projects
 
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" width="22" align="top"> meta-tool-salesforce
+
+[![Repo](https://img.shields.io/badge/GitHub-meta--tool--salesforce-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/meta-tool-salesforce)
+
+A meta-tool MCP server for Salesforce that enables AI agents to manage and interact with Salesforce resources through natural language. Bridges Azure AI Foundry with Salesforce via the Model Context Protocol.
+
+```
+┌──────────────────┐     ┌────────────┐     ┌──────────────────┐
+│ Azure AI Foundry │ ──▶ │ MCP Server │ ──▶ │    Salesforce    │
+└──────────────────┘     └────────────┘     └──────────────────┘
+```
+
+**Stack:**
+![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
+![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMC4wMDYgNS40MTVhNC4xOTUgNC4xOTUgMCAwMTMuMDQ1LTEuMzA2YzEuNTYgMCAyLjk1NC45IDMuNjkgMi4yMDUuNjMtLjMgMS4zNS0uNDUgMi4xLS40NSAyLjg1IDAgNS4xNTkgMi4zNCA1LjE1OSA1LjIycy0yLjMxIDUuMjItNS4xNiA1LjIyYy0uNDUgMC0uODg0LS4wNi0xLjMwNS0uMTY1YTMuOTc1IDMuOTc1IDAgMDEtMy4zOSAxLjkwNWMtLjYgMC0xLjE3LS4xMzUtMS42OC0uMzc1YTQuNzkgNC43OSAwIDAxLTQuMiAyLjUyIDQuNzggNC43OCAwIDAxLTQuNTMtMy4yNyAzLjI3IDMuMjcgMCAwMS0uNTQuMDQ1Yy0xLjk1IDAtMy4xOTUtMS41OS0zLjE5NS0zLjM0NSAwLTEuMTcuNTg1LTIuMjM1IDEuNTE1LTIuODhhNC4yMTQgNC4yMTQgMCAwMS0uMzQ1LTEuNjY1YzAtMi4zMSAxLjg2LTQuMiA0LjE3LTQuMiAxLjAyIDAgMS45NS4zNzUgMi42Ny45OXoiLz48L3N2Zz4=&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-blueviolet?style=flat-square)
+
+---
+
 ### <img src="https://cdn.simpleicons.org/anthropic/191919" width="22" align="top"> simple-order-agent
 
 [![Repo](https://img.shields.io/badge/GitHub-simple--order--agent-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/simple-order-agent)

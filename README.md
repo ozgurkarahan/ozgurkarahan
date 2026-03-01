@@ -27,7 +27,19 @@ I design and build AI-powered applications on Azure and MuleSoft, with deep expe
 
 <table>
 <tr>
-<td width="80" align="center">
+<td width="130" align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" width="40" alt="Salesforce"><br>
+<sub><b>Agent + MCP</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/meta-tool-salesforce">meta-tool-salesforce</a></b><br>
+Meta-tool MCP server for Salesforce — manage Salesforce resources through natural language<br>
+<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMC4wMDYgNS40MTVhNC4xOTUgNC4xOTUgMCAwMTMuMDQ1LTEuMzA2YzEuNTYgMCAyLjk1NC45IDMuNjkgMi4yMDUuNjMtLjMgMS4zNS0uNDUgMi4xLS40NSAyLjg1IDAgNS4xNTkgMi4zNCA1LjE1OSA1LjIycy0yLjMxIDUuMjItNS4xNiA1LjIyYy0uNDUgMC0uODg0LS4wNi0xLjMwNS0uMTY1YTMuOTc1IDMuOTc1IDAgMDEtMy4zOSAxLjkwNWMtLjYgMC0xLjE3LS4xMzUtMS42OC0uMzc1YTQuNzkgNC43OSAwIDAxLTQuMiAyLjUyIDQuNzggNC43OCAwIDAxLTQuNTMtMy4yNyAzLjI3IDMuMjcgMCAwMS0uNTQuMDQ1Yy0xLjk1IDAtMy4xOTUtMS41OS0zLjE5NS0zLjM0NSAwLTEuMTcuNTg1LTIuMjM1IDEuNTE1LTIuODhhNC4yMTQgNC4yMTQgMCAwMS0uMzQ1LTEuNjY1YzAtMi4zMSAxLjg2LTQuMiA0LjE3LTQuMiAxLjAyIDAgMS45NS4zNzUgMi42Ny45OXoiLz48L3N2Zz4=&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="130" align="center">
 <img src="https://cdn.simpleicons.org/anthropic/191919" width="40" alt="Claude"><br>
 <sub><b>Agent</b></sub>
 </td>
@@ -38,7 +50,7 @@ Order processing agent using Claude SDK, MuleSoft MCP, and A2A protocol<br>
 </td>
 </tr>
 <tr>
-<td width="80" align="center">
+<td width="130" align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
 <sub><b>MCP</b></sub>
 </td>
@@ -54,7 +66,7 @@ MCP server for Azure API Management — manage APIs through natural language<br>
 
 <table>
 <tr>
-<td width="80" align="center">
+<td width="130" align="center">
 <img src="https://cdn.simpleicons.org/letsencrypt/003A70" width="40" alt="Security"><br>
 <sub><b>Identity</b></sub>
 </td>
@@ -70,7 +82,7 @@ End-to-end identity propagation from Azure AI Foundry through API Management to 
 
 <table>
 <tr>
-<td width="80" align="center">
+<td width="130" align="center">
 <img src="https://cdn.simpleicons.org/anthropic/191919" width="40" alt="Anthropic"><br>
 <sub><b>Learn</b></sub>
 </td>
@@ -90,7 +102,7 @@ Worked examples from the Anthropic Academy curriculum<br>
 
 <table>
 <tr>
-<td width="80" align="center">
+<td width="130" align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
 <sub><b>Fork+</b></sub>
 </td>
@@ -130,6 +142,18 @@ Worked examples from the Anthropic Academy curriculum<br>
 ![OAuth](https://img.shields.io/badge/OAuth_2.0-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
 
 </div>
+
+---
+
+## 🤖 Agent Workflow
+
+All repositories follow a standard convention for working with AI code agents:
+
+- **`AGENT.md`** — public project instructions, architecture, and conventions committed to each repo
+- **`.claude/`** — private per-project configuration, lessons learned, and session context (gitignored)
+- **Global workflow rules** — verification standards, subagent strategy, and self-improvement loop loaded across all projects
+
+This separation keeps project knowledge accessible to collaborators while keeping iterative agent context private.
 
 ---
 
