@@ -19,11 +19,8 @@ docs/
 
 ## How to Add a New Project
 
-1. Pick the correct category table in `README.md` (AI Agents & Apps, MCP Servers, Learning & Tutorials, or Security).
-2. Add a new row following the existing format:
-   ```
-   | [repo-name](https://github.com/ozgurkarahan/repo-name) | Short description | Tech1, Tech2 |
-   ```
+1. Pick the correct category table in `README.md` (AI Agents & MCP, Security, or Learning).
+2. Add a new `<tr>` row following the existing HTML table format (icon cell + description cell with badges).
 3. If the project needs a detailed write-up, add it to the appropriate `docs/*.md` file.
 4. Keep descriptions concise — one sentence max in the table.
 
