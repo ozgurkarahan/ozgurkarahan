@@ -12,7 +12,7 @@
 
 [![Repo](https://img.shields.io/badge/GitHub-salesforce--meta--tool--identity--propagation-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation)
 
-A meta-tool MCP server for Salesforce that enables AI agents to manage and interact with Salesforce resources through natural language. Bridges Azure AI Foundry with Salesforce via the Model Context Protocol, with end-to-end identity propagation across cloud boundaries.
+A meta-tool MCP server for Salesforce combined with cross-cloud identity propagation. AI agents on Azure AI Foundry interact with Salesforce resources via the Model Context Protocol, while the caller's Azure identity is propagated end-to-end through APIM and into Salesforce — no service accounts in the data path.
 
 ```
 ┌──────────────────┐     ┌────────────┐     ┌──────────────────┐

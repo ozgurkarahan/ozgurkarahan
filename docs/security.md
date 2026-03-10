@@ -10,7 +10,7 @@
 
 [![Repo](https://img.shields.io/badge/GitHub-salesforce--meta--tool--identity--propagation-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation)
 
-Testing end-to-end identity propagation from Azure AI Foundry through Azure API Management all the way to Salesforce. The goal is to maintain user identity across cloud boundaries without breaking the security chain — ensuring the original caller's context flows through every hop.
+Cross-cloud identity propagation from Azure to Salesforce, built on a meta-tool MCP server architecture. The caller's Azure identity flows from AI Foundry through API Management into Salesforce without breaking the security chain — no service accounts, no credential sharing. The meta-tool MCP layer lets AI agents manage Salesforce resources while the identity propagation ensures every hop carries the original caller's context.
 
 ### Architecture
 
