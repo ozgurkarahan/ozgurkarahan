@@ -40,6 +40,17 @@ Meta-tool MCP server for Salesforce — manage resources through natural languag
 </tr>
 <tr>
 <td width="130" align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
+<sub><b>Agent + MCP</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/propagate-id-entra">propagate-id-entra</a></b><br>
+End-to-end Entra ID identity propagation from browser through AI Foundry agents and APIM to backend APIs — no service accounts in the data path<br>
+<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/Entra_ID-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/API_Management-FF6F00?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="130" align="center">
 <img src="https://cdn.simpleicons.org/anthropic/191919" width="40" alt="Claude"><br>
 <sub><b>Agent</b></sub>
 </td>
@@ -74,6 +85,17 @@ MCP server for Azure API Management — manage APIs through natural language<br>
 <b><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">salesforce-meta-tool-identity-propagation</a></b><br>
 End-to-end identity propagation from Azure AI Foundry through API Management to Salesforce — testing OAuth token flow across cloud boundaries<br>
 <img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/API_Management-FF6F00?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMC4wMDYgNS40MTVhNC4xOTUgNC4xOTUgMCAwMTMuMDQ1LTEuMzA2YzEuNTYgMCAyLjk1NC45IDMuNjkgMi4yMDUuNjMtLjMgMS4zNS0uNDUgMi4xLS40NSAyLjg1IDAgNS4xNTkgMi4zNCA1LjE1OSA1LjIycy0yLjMxIDUuMjItNS4xNiA1LjIyYy0uNDUgMC0uODg0LS4wNi0xLjMwNS0uMTY1YTMuOTc1IDMuOTc1IDAgMDEtMy4zOSAxLjkwNWMtLjYgMC0xLjE3LS4xMzUtMS42OC0uMzc1YTQuNzkgNC43OSAwIDAxLTQuMiAyLjUyIDQuNzggNC43OCAwIDAxLTQuNTMtMy4yNyAzLjI3IDMuMjcgMCAwMS0uNTQuMDQ1Yy0xLjk1IDAtMy4xOTUtMS41OS0zLjE5NS0zLjM0NSAwLTEuMTcuNTg1LTIuMjM1IDEuNTE1LTIuODhhNC4yMTQgNC4yMTQgMCAwMS0uMzQ1LTEuNjY1YzAtMi4zMSAxLjg2LTQuMiA0LjE3LTQuMiAxLjAyIDAgMS45NS4zNzUgMi42Ny45OXoiLz48L3N2Zz4=&logoColor=white"> <img src="https://img.shields.io/badge/OAuth_2.0-EB5424?style=flat-square&logo=auth0&logoColor=white">
+</td>
+</tr>
+<tr>
+<td width="130" align="center">
+<img src="https://cdn.simpleicons.org/letsencrypt/003A70" width="40" alt="Security"><br>
+<sub><b>Identity</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/propagate-id-entra">propagate-id-entra</a></b><br>
+End-to-end Entra ID identity propagation from browser through AI Foundry agents and APIM to backend APIs — zero service accounts in the data path<br>
+<img src="https://img.shields.io/badge/Entra_ID-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/API_Management-FF6F00?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square"> <img src="https://img.shields.io/badge/Container_Apps-0078D4?style=flat-square&logo=microsoftazure&logoColor=white">
 </td>
 </tr>
 </table>
@@ -140,6 +162,8 @@ Worked examples from the Anthropic Academy curriculum<br>
 ![API Management](https://img.shields.io/badge/API_Management-FF6F00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
 ![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMC4wMDYgNS40MTVhNC4xOTUgNC4xOTUgMCAwMTMuMDQ1LTEuMzA2YzEuNTYgMCAyLjk1NC45IDMuNjkgMi4yMDUuNjMtLjMgMS4zNS0uNDUgMi4xLS40NSAyLjg1IDAgNS4xNTkgMi4zNCA1LjE1OSA1LjIycy0yLjMxIDUuMjItNS4xNiA1LjIyYy0uNDUgMC0uODg0LS4wNi0xLjMwNS0uMTY1YTMuOTc1IDMuOTc1IDAgMDEtMy4zOSAxLjkwNWMtLjYgMC0xLjE3LS4xMzUtMS42OC0uMzc1YTQuNzkgNC43OSAwIDAxLTQuMiAyLjUyIDQuNzggNC43OCAwIDAxLTQuNTMtMy4yNyAzLjI3IDMuMjcgMCAwMS0uNTQuMDQ1Yy0xLjk1IDAtMy4xOTUtMS41OS0zLjE5NS0zLjM0NSAwLTEuMTcuNTg1LTIuMjM1IDEuNTE1LTIuODhhNC4yMTQgNC4yMTQgMCAwMS0uMzQ1LTEuNjY1YzAtMi4zMSAxLjg2LTQuMiA0LjE3LTQuMiAxLjAyIDAgMS45NS4zNzUgMi42Ny45OXoiLz48L3N2Zz4=&logoColor=white)
 ![OAuth](https://img.shields.io/badge/OAuth_2.0-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
+![Entra ID](https://img.shields.io/badge/Entra_ID-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Container Apps](https://img.shields.io/badge/Container_Apps-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
 </div>
 

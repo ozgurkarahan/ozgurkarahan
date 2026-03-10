@@ -27,6 +27,32 @@ A meta-tool MCP server for Salesforce that enables AI agents to manage and inter
 
 ---
 
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="22" align="top"> propagate-id-entra
+
+[![Repo](https://img.shields.io/badge/GitHub-propagate--id--entra-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/propagate-id-entra)
+
+End-to-end identity propagation from browser through AI Foundry agents and APIM to backend APIs using Entra ID — no service accounts in the data path. A proof-of-concept showing how a user's Entra token flows from an MSAL.js SPA, through a FastAPI chat app, into an AI Foundry agent with MCP tools, through API Management, all the way to a backend API. Deployed with a single `azd up`.
+
+```
+┌──────────┐     ┌──────────┐     ┌─────────────────┐     ┌──────────┐     ┌────────────┐
+│ Browser  │ ──▶ │ Chat App │ ──▶ │ Foundry Agent   │ ──▶ │   APIM   │ ──▶ │ Orders API │
+│ MSAL.js  │     │ FastAPI  │     │ gpt-4o + MCP    │     │ JWT val. │     │  FastAPI   │
+└──────────┘     └──────────┘     └─────────────────┘     └──────────┘     └────────────┘
+       │                │                   │                    │                 │
+       └─── Entra ID ───┴── access token ───┴── UserEntraToken ─┴── propagated ───┘
+```
+
+**Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
+![Entra ID](https://img.shields.io/badge/Entra_ID-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![API Management](https://img.shields.io/badge/API_Management-FF6F00?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-blueviolet?style=flat-square)
+![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=flat-square)
+![Container Apps](https://img.shields.io/badge/Container_Apps-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+
+---
+
 ### <img src="https://cdn.simpleicons.org/anthropic/191919" width="22" align="top"> simple-order-agent
 
 [![Repo](https://img.shields.io/badge/GitHub-simple--order--agent-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/simple-order-agent)
