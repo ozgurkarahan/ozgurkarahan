@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ozgur Karahan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0d1117;
+      color: #e1e7ef;
+      line-height: 1.6;
+    }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+
+    /* Hero */
+    .hero { text-align: center; margin-bottom: 60px; }
+    .hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; }
+    .hero p.headline {
+      font-size: 1.15rem; color: #9ea3ac; font-weight: 400; margin-bottom: 24px;
+    }
+    .links a {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border: 1px solid #30363d; border-radius: 8px;
+      color: #e1e7ef; font-weight: 500; transition: background .2s;
+    }
+    .links a:hover { background: #161b22; text-decoration: none; }
+    .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .links svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* Sections */
+    section { margin-bottom: 50px; }
+    section h2 {
+      font-size: 1.3rem; font-weight: 600; margin-bottom: 20px;
+      padding-bottom: 8px; border-bottom: 1px solid #21262d;
+    }
+
+    /* Project cards */
+    .projects { display: grid; gap: 14px; }
+    .card {
+      background: #161b22; border: 1px solid #21262d; border-radius: 10px;
+      padding: 20px 24px; transition: border-color .2s;
+    }
+    .card:hover { border-color: #388bfd; }
+    .card .label {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;
+      background: #388bfd20; color: #58a6ff; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .card .label.security { background: #f0883e20; color: #f0883e; }
+    .card .label.learn { background: #3fb38f20; color: #3fb38f; }
+    .card .label.mcp { background: #a371f720; color: #a371f7; }
+    .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .card h3 a { color: #e1e7ef; }
+    .card h3 a:hover { color: #58a6ff; }
+    .card p { color: #9ea3ac; font-size: 0.92rem; }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+    .tag {
+      font-size: 0.75rem; padding: 2px 8px; border-radius: 12px;
+      background: #21262d; color: #9ea3ac;
+    }
+
+    /* Tech stack */
+    .stack { display: flex; gap: 10px; flex-wrap: wrap; }
+    .stack span {
+      padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 500;
+      background: #161b22; border: 1px solid #21262d;
+    }
+
+    footer { text-align: center; color: #484f58; font-size: 0.85rem; padding-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Ozgur Karahan</h1>
+      <p class="headline">AI Solutions Architect &middot; Azure, MuleSoft &amp; API Management</p>
+      <p style="color:#7d838a; margin-bottom:28px;">Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.</p>
+      <div class="links">
+        <a href="https://github.com/ozgurkarahan">
+          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8a7.99 7.99 0 005.47 15.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/ozgurkarahan">
+          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 110-4.128 2.064 2.064 0 010 4.128zm1.782 13.017H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <div class="card">
+          <span class="label mcp">Agent + MCP</span>
+          <h3><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">salesforce-meta-tool-identity-propagation</a></h3>
+          <p>Meta-tool MCP server for Salesforce with cross-cloud identity propagation — AI agents manage Salesforce resources using the caller's Azure identity</p>
+          <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">Salesforce</span><span class="tag">MCP</span><span class="tag">OAuth 2.0</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label mcp">Agent + MCP</span>
+          <h3><a href="https://github.com/ozgurkarahan/propagate-id-entra">propagate-id-entra</a></h3>
+          <p>End-to-end Entra ID identity propagation from browser through AI Foundry agents and APIM to backend APIs</p>
+          <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">Entra ID</span><span class="tag">APIM</span><span class="tag">MCP</span><span class="tag">Bicep</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label">Agent</span>
+          <h3><a href="https://github.com/ozgurkarahan/simple-order-agent">simple-order-agent</a></h3>
+          <p>Order processing agent using Claude SDK, MuleSoft MCP, and A2A protocol</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Claude SDK</span><span class="tag">MuleSoft</span><span class="tag">MCP</span><span class="tag">A2A</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label mcp">MCP</span>
+          <h3><a href="https://github.com/ozgurkarahan/azure-apim-mcp-server">azure-apim-mcp-server</a></h3>
+          <p>MCP streamable HTTP server for Azure API Management — manage APIs through natural language</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Azure APIM</span><span class="tag">MCP</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label learn">Learning</span>
+          <h3><a href="https://github.com/ozgurkarahan/anthropic-academy">anthropic-academy</a></h3>
+          <p>Worked examples from the Anthropic Academy curriculum</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Claude API</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Forks -->
+    <section>
+      <h2>Forks &amp; Contributions</h2>
+      <div class="projects">
+        <div class="card">
+          <span class="label">Fork+</span>
+          <h3><a href="https://github.com/ozgurkarahan/get-started-with-ai-agents">get-started-with-ai-agents</a></h3>
+          <p>Azure-Samples fork with AI Foundry endpoint &amp; A2A documentation (1,400+ lines), Bicep customizations, extended README</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Azure AI Foundry</span><span class="tag">Bicep</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech stack -->
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="stack">
+        <span>Python</span>
+        <span>Azure</span>
+        <span>Anthropic / Claude</span>
+        <span>MuleSoft</span>
+        <span>Bicep</span>
+        <span>MCP Protocol</span>
+        <span>API Management</span>
+        <span>Salesforce</span>
+        <span>OAuth 2.0</span>
+        <span>Entra ID</span>
+        <span>Container Apps</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Ozgur Karahan</p>
+    </footer>
+
+  </div>
+</body>
+</html>
