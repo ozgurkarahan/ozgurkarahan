@@ -8,30 +8,6 @@
 
 ## 🚀 My Projects
 
-### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="22" align="top"> salesforce-meta-tool
-
-[![Repo](https://img.shields.io/badge/GitHub-salesforce--meta--tool-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/salesforce-meta-tool)
-
-A metadata-driven MCP server for Salesforce with 6 generic tools that cover every object, field, and workflow. The agent discovers schemas at runtime and constructs SOQL queries dynamically — no hardcoded objects, no predefined reports. Per-user identity propagation via OAuth 2.0 PKCE ensures the agent operates with the authenticated user's own permissions. Deployed with `azd up`.
-
-```
-┌──────────┐   ┌──────────────┐   ┌──────┐   ┌───────────────┐   ┌────────────┐
-│  User    │──▶│  AI Foundry  │──▶│ APIM │──▶│  Salesforce   │──▶│ Salesforce │
-│(browser) │JWT│  Agent       │JWT│      │JWT│  MCP Server   │JWT│ REST API   │
-└──────────┘   └──────────────┘   └──────┘   └───────────────┘   └────────────┘
-     │                                                                   │
-     └─────────────── same user identity, same permissions ──────────────┘
-```
-
-**Stack:**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Azure AI Foundry](https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=flat-square&logo=salesforce&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-blueviolet?style=flat-square)
-![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=flat-square)
-
----
-
 ### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="22" align="top"> snow-meta-tool
 
 [![Repo](https://img.shields.io/badge/GitHub-snow--meta--tool-181717?style=flat-square&logo=github)](https://github.com/ozgurkarahan/snow-meta-tool)

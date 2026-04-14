@@ -28,18 +28,6 @@ I design and build AI-powered applications on Azure and MuleSoft, with deep expe
 <table>
 <tr>
 <td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" width="40" alt="Salesforce"><br>
-<sub><b>Agent + MCP</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/salesforce-meta-tool">salesforce-meta-tool</a></b><br>
-Metadata-driven MCP server for Salesforce — 6 generic tools cover every object, field, and workflow with per-user identity propagation via OAuth 2.0 PKCE<br>
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=flat-square&logo=salesforce&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
 <sub><b>Agent + MCP</b></sub>
 </td>
@@ -118,7 +106,6 @@ AI-powered avatar presentation assistant — upload PowerPoint slides and have a
 
 | Project | Security Pattern |
 |---------|-----------------|
-| [salesforce-meta-tool](https://github.com/ozgurkarahan/salesforce-meta-tool) | OAuth 2.0 PKCE token flow — per-user Salesforce access via AI Foundry agent, no service accounts |
 | [snow-meta-tool](https://github.com/ozgurkarahan/snow-meta-tool) | JWT Bearer OBO flow — Azure APIM exchanges Azure AD token for ServiceNow per-user token |
 | [salesforce-meta-tool-identity-propagation](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation) | Cross-cloud identity: Azure AD → APIM → Salesforce via On-Behalf-Of JWT Bearer |
 | [propagate-id-entra](https://github.com/ozgurkarahan/propagate-id-entra) | Entra ID token passthrough from MSAL.js SPA through AI Foundry + APIM to backend API |
