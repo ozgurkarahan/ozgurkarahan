@@ -1,0 +1,32 @@
+name: Check Links
+
+on:
+  push:
+    branches: [master]
+    paths: ['**.md', 'index.html']
+  pull_request:
+    paths: ['**.md', 'index.html']
+  schedule:
+    - cron: '0 9 * * 1'  # Weekly on Monday at 09:00 UTC
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --accept 200,204,206,301,302,429
+            --exclude-mail
+            --exclude '^https://img\.shields\.io/'
+            --exclude '^https://cdn\.(jsdelivr\.net|simpleicons\.org)/'
+            --exclude '^https://fonts\.(googleapis|gstatic)\.com/'
+            '*.md'
+            'docs/*.md'
+            'index.html'
+          fail: true

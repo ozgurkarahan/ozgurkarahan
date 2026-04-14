@@ -3,20 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ozgur Karahan</title>
+  <title>Ozgur Karahan — AI Solutions Architect</title>
+  <meta name="description" content="AI Solutions Architect specializing in Azure AI Foundry, MCP servers, identity propagation, and enterprise API integration.">
+  <meta property="og:title" content="Ozgur Karahan — AI Solutions Architect">
+  <meta property="og:description" content="Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration. Azure, MuleSoft & API Management specialist.">
+  <meta property="og:image" content="https://github.com/ozgurkarahan.png">
+  <meta property="og:url" content="https://ozgurkarahan.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ozgur Karahan — AI Solutions Architect">
+  <meta name="twitter:description" content="Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.">
+  <meta name="twitter:image" content="https://github.com/ozgurkarahan.png">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23388bfd'/><text x='50' y='68' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='48' fill='white'>OK</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-primary: #0d1117;
+      --bg-card: #161b22;
+      --border: #21262d;
+      --border-hover: #388bfd;
+      --text-primary: #e1e7ef;
+      --text-muted: #8b949e;
+      --text-footer: #6e7681;
+      --link: #58a6ff;
+      --label-agent: #388bfd;
+      --label-security: #f0883e;
+      --label-learn: #3fb38f;
+      --label-mcp: #a371f7;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', -apple-system, sans-serif;
-      background: #0d1117;
-      color: #e1e7ef;
+      background: var(--bg-primary);
+      color: var(--text-primary);
       line-height: 1.6;
     }
-    a { color: #58a6ff; text-decoration: none; }
+    a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .skip-link {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--link); color: var(--bg-primary); padding: 8px 16px;
+      z-index: 100; font-weight: 600;
+    }
+    .skip-link:focus { left: 0; }
 
     .container { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
 
@@ -24,14 +55,14 @@
     .hero { text-align: center; margin-bottom: 60px; }
     .hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; }
     .hero p.headline {
-      font-size: 1.15rem; color: #9ea3ac; font-weight: 400; margin-bottom: 24px;
+      font-size: 1.15rem; color: var(--text-muted); font-weight: 400; margin-bottom: 24px;
     }
     .links a {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 20px; border: 1px solid #30363d; border-radius: 8px;
-      color: #e1e7ef; font-weight: 500; transition: background .2s;
+      padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px;
+      color: var(--text-primary); font-weight: 500; transition: background .2s;
     }
-    .links a:hover { background: #161b22; text-decoration: none; }
+    .links a:hover { background: var(--bg-card); text-decoration: none; }
     .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .links svg { width: 20px; height: 20px; fill: currentColor; }
 
@@ -39,80 +70,105 @@
     section { margin-bottom: 50px; }
     section h2 {
       font-size: 1.3rem; font-weight: 600; margin-bottom: 20px;
-      padding-bottom: 8px; border-bottom: 1px solid #21262d;
+      padding-bottom: 8px; border-bottom: 1px solid var(--border);
     }
 
     /* Project cards */
     .projects { display: grid; gap: 14px; }
     .card {
-      background: #161b22; border: 1px solid #21262d; border-radius: 10px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
       padding: 20px 24px; transition: border-color .2s;
     }
-    .card:hover { border-color: #388bfd; }
+    .card:hover { border-color: var(--border-hover); }
     .card .label {
       display: inline-block; font-size: 0.7rem; font-weight: 600;
       padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;
-      background: #388bfd20; color: #58a6ff; text-transform: uppercase; letter-spacing: 0.5px;
+      background: color-mix(in srgb, var(--label-agent) 12%, transparent);
+      color: var(--label-agent); text-transform: uppercase; letter-spacing: 0.5px;
     }
-    .card .label.security { background: #f0883e20; color: #f0883e; }
-    .card .label.learn { background: #3fb38f20; color: #3fb38f; }
-    .card .label.mcp { background: #a371f720; color: #a371f7; }
+    .card .label.security {
+      background: color-mix(in srgb, var(--label-security) 12%, transparent);
+      color: var(--label-security);
+    }
+    .card .label.learn {
+      background: color-mix(in srgb, var(--label-learn) 12%, transparent);
+      color: var(--label-learn);
+    }
+    .card .label.mcp {
+      background: color-mix(in srgb, var(--label-mcp) 12%, transparent);
+      color: var(--label-mcp);
+    }
     .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
-    .card h3 a { color: #e1e7ef; }
-    .card h3 a:hover { color: #58a6ff; }
-    .card p { color: #9ea3ac; font-size: 0.92rem; }
+    .card h3 a { color: var(--text-primary); }
+    .card h3 a:hover { color: var(--link); }
+    .card p { color: var(--text-muted); font-size: 0.92rem; }
     .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
     .tag {
       font-size: 0.75rem; padding: 2px 8px; border-radius: 12px;
-      background: #21262d; color: #9ea3ac;
+      background: var(--border); color: var(--text-muted);
     }
 
     /* Tech stack */
     .stack { display: flex; gap: 10px; flex-wrap: wrap; }
     .stack span {
       padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 500;
-      background: #161b22; border: 1px solid #21262d;
+      background: var(--bg-card); border: 1px solid var(--border);
     }
 
-    footer { text-align: center; color: #484f58; font-size: 0.85rem; padding-top: 40px; }
+    footer { text-align: center; color: var(--text-footer); font-size: 0.85rem; padding-top: 40px; }
   </style>
 </head>
 <body>
-  <div class="container">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container" id="main" role="main">
 
     <!-- Hero -->
-    <div class="hero">
+    <header class="hero">
       <h1>Ozgur Karahan</h1>
       <p class="headline">AI Solutions Architect &middot; Azure, MuleSoft &amp; API Management</p>
-      <p style="color:#7d838a; margin-bottom:28px;">Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.</p>
-      <div class="links">
-        <a href="https://github.com/ozgurkarahan">
-          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8a7.99 7.99 0 005.47 15.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      <p style="color:var(--text-muted); margin-bottom:28px;">Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.</p>
+      <nav class="links" aria-label="Social links">
+        <a href="https://github.com/ozgurkarahan" aria-label="GitHub profile">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a7.99 7.99 0 005.47 15.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           GitHub
         </a>
-        <a href="https://www.linkedin.com/in/karahanozgur/">
-          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 110-4.128 2.064 2.064 0 010 4.128zm1.782 13.017H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+        <a href="https://www.linkedin.com/in/karahanozgur/" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 110-4.128 2.064 2.064 0 010 4.128zm1.782 13.017H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
           LinkedIn
         </a>
-      </div>
-    </div>
+      </nav>
+    </header>
 
     <!-- Projects -->
-    <section>
+    <section aria-label="Projects">
       <h2>Projects</h2>
       <div class="projects">
 
         <div class="card">
           <span class="label mcp">Agent + MCP</span>
+          <h3><a href="https://github.com/ozgurkarahan/salesforce-meta-tool">salesforce-meta-tool</a></h3>
+          <p>Metadata-driven MCP server for Salesforce — 6 generic tools cover every object, field, and workflow with per-user identity propagation</p>
+          <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">Salesforce</span><span class="tag">MCP</span><span class="tag">OAuth 2.0</span><span class="tag">Bicep</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label mcp">Agent + MCP</span>
+          <h3><a href="https://github.com/ozgurkarahan/snow-meta-tool">snow-meta-tool</a></h3>
+          <p>ServiceNow MCP meta-tool — 3 generic tools (discover, query, write) with per-user identity propagation via Azure APIM JWT Bearer OBO flow</p>
+          <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">ServiceNow</span><span class="tag">MCP</span><span class="tag">APIM OBO</span><span class="tag">Bicep</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label mcp">Agent + MCP</span>
           <h3><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">salesforce-meta-tool-identity-propagation</a></h3>
-          <p>Meta-tool MCP server for Salesforce with cross-cloud identity propagation — AI agents manage Salesforce resources using the caller's Azure identity</p>
+          <p>Cross-cloud identity propagation from Azure to Salesforce via a meta-tool MCP server — user identity flows end-to-end without service accounts</p>
           <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">Salesforce</span><span class="tag">MCP</span><span class="tag">OAuth 2.0</span></div>
         </div>
 
         <div class="card">
           <span class="label mcp">Agent + MCP</span>
           <h3><a href="https://github.com/ozgurkarahan/propagate-id-entra">propagate-id-entra</a></h3>
-          <p>End-to-end Entra ID identity propagation from browser through AI Foundry agents and APIM to backend APIs</p>
+          <p>End-to-end Entra ID identity propagation from browser through AI Foundry agents and APIM to backend APIs — zero service accounts</p>
           <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">Entra ID</span><span class="tag">APIM</span><span class="tag">MCP</span><span class="tag">Bicep</span></div>
         </div>
 
@@ -131,6 +187,13 @@
         </div>
 
         <div class="card">
+          <span class="label">AI App</span>
+          <h3><a href="https://github.com/ozgurkarahan/ai-avatar-presenter">ai-avatar-presenter</a></h3>
+          <p>AI-powered avatar presentation assistant — upload PowerPoint slides and have an AI avatar present them with multilingual TTS and interactive Q&amp;A</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Azure AI Speech</span><span class="tag">Azure OpenAI</span><span class="tag">WebRTC</span><span class="tag">Bicep</span></div>
+        </div>
+
+        <div class="card">
           <span class="label learn">Learning</span>
           <h3><a href="https://github.com/ozgurkarahan/anthropic-academy">anthropic-academy</a></h3>
           <p>Worked examples from the Anthropic Academy curriculum</p>
@@ -141,7 +204,7 @@
     </section>
 
     <!-- Forks -->
-    <section>
+    <section aria-label="Forks and contributions">
       <h2>Forks &amp; Contributions</h2>
       <div class="projects">
         <div class="card">
@@ -150,11 +213,25 @@
           <p>Azure-Samples fork with AI Foundry endpoint &amp; A2A documentation (1,400+ lines), Bicep customizations, extended README</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">Azure AI Foundry</span><span class="tag">Bicep</span></div>
         </div>
+
+        <div class="card">
+          <span class="label">Reference</span>
+          <h3><a href="https://github.com/ozgurkarahan/voicelive-api-salescoach">voicelive-api-salescoach</a></h3>
+          <p>AI-powered voice training for sales professionals using Azure Voice Live API &mdash; forked from <a href="https://github.com/Azure-Samples/voicelive-api-salescoach">Azure-Samples</a></p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Azure AI Speech</span><span class="tag">Voice Live API</span><span class="tag">React</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label">Reference</span>
+          <h3><a href="https://github.com/ozgurkarahan/karpathy-autoresearch">karpathy-autoresearch</a></h3>
+          <p>Autonomous AI research agent that experiments on single-GPU LLM training overnight &mdash; forked from <a href="https://github.com/karpathy/autoresearch">karpathy</a></p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">LLM Training</span></div>
+        </div>
       </div>
     </section>
 
     <!-- Tech stack -->
-    <section>
+    <section aria-label="Tech stack">
       <h2>Tech Stack</h2>
       <div class="stack">
         <span>Python</span>
@@ -165,14 +242,17 @@
         <span>MCP Protocol</span>
         <span>API Management</span>
         <span>Salesforce</span>
+        <span>ServiceNow</span>
         <span>OAuth 2.0</span>
         <span>Entra ID</span>
         <span>Container Apps</span>
+        <span>React</span>
       </div>
     </section>
 
     <footer>
-      <p>&copy; 2026 Ozgur Karahan</p>
+      <p>Currently exploring enterprise identity propagation patterns for multi-cloud AI agent architectures.</p>
+      <p style="margin-top:8px;">&copy; 2026 Ozgur Karahan</p>
     </footer>
 
   </div>

@@ -9,12 +9,17 @@ This is `ozgurkarahan/ozgurkarahan` — a GitHub profile hub repository. The REA
 ```
 README.md                  — Main hub displayed on GitHub profile
 AGENT.md                   — Project instructions (public)
+index.html                 — GitHub Pages site (ozgurkarahan.com)
+CNAME                      — Custom domain config
 .gitignore                 — Standard gitignore
 LICENSE                    — MIT license
 docs/
   ai-agents.md             — Detailed AI agent project docs
   learning-resources.md    — Curated AI learning resources
   security.md              — Security-focused project docs
+.github/
+  workflows/
+    link-check.yml         — Automated link validation
 ```
 
 ## How to Add a New Project
