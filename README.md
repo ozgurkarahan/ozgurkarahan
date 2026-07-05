@@ -19,6 +19,16 @@ I design and build AI-powered applications on Azure and MuleSoft, with deep expe
 
 ---
 
+## 🔐 Featured: Identity Propagation for AI Agents
+
+Enterprise AI agents must act as the **real user** — no service accounts in the data path, every action traceable and authorized per-user. This is a series of production-grade implementations of that pattern on Azure (Entra ID, APIM, AI Foundry) across ServiceNow, Salesforce, and custom APIs.
+
+📄 **Read the story:** [From Theory to Production: Salesforce Meta-Tool & Identity Propagation](https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/)
+
+🧩 **The series:** [propagate-id-entra](https://github.com/ozgurkarahan/propagate-id-entra) · [snow-meta-tool](https://github.com/ozgurkarahan/snow-meta-tool) · [salesforce-meta-tool-identity-propagation](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation)
+
+---
+
 ## 🚀 My Projects
 
 > Projects I built from scratch.
