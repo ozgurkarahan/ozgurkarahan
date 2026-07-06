@@ -49,6 +49,17 @@ Persistent memory for AI coding agents — Karpathy LLM Wiki pattern for GitHub 
 </tr>
 <tr>
 <td width="130" align="center">
+<img src="https://cdn.simpleicons.org/githubactions/2088FF" width="40" alt="GitHub Actions"><br>
+<sub><b>Agentic SDLC</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">agentic-sdlc-demo</a></b><br>
+Ready-to-run, presenter-led demo of the full SDLC driven by AI coding agents — intake → plan → implement → test → review → PR → deploy, with enforce-first CI gates (<a href="https://github.com/ozgurkarahan/agentic-sdlc-demo-live">live validation target</a>)<br>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/GitHub_Copilot-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/Multi--Agent-blueviolet?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="130" align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
 <sub><b>Agent + MCP</b></sub>
 </td>
