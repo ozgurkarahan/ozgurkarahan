@@ -54,7 +54,7 @@ Persistent memory for AI coding agents — Karpathy LLM Wiki pattern for GitHub 
 </td>
 <td>
 <b><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">agentic-sdlc-demo</a></b><br>
-Ready-to-run, presenter-led demo of the full SDLC driven by AI coding agents — intake → plan → implement → test → review → PR → deploy, with enforce-first CI gates (<a href="https://github.com/ozgurkarahan/agentic-sdlc-demo-live">live validation target</a>)<br>
+Ready-to-run, presenter-led demo of the full SDLC driven by AI coding agents — intake → plan → implement → test → review → PR → deploy, with enforce-first CI gates (<a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">🎞️ slide deck</a> · <a href="https://github.com/ozgurkarahan/agentic-sdlc-demo-live">live validation target</a>)<br>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/GitHub_Copilot-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/Multi--Agent-blueviolet?style=flat-square">
 </td>
 </tr>
