@@ -83,6 +83,17 @@ Order processing agent using Claude SDK, MuleSoft MCP, and A2A protocol<br>
 </tr>
 <tr>
 <td width="130" align="center">
+<img src="https://cdn.simpleicons.org/github/181717" width="40" alt="GitHub"><br>
+<sub><b>Agent Memory</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/ai-agent-memory">ai-agent-memory</a></b> ⭐<br>
+Persistent memory for AI coding agents — Karpathy LLM Wiki pattern for GitHub Copilot, Claude Code, Codex, and Cursor<br>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_Code-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Copilot-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Codex-412991?style=flat-square&logo=openai&logoColor=white"> <img src="https://img.shields.io/badge/Cursor-000000?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="130" align="center">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
 <sub><b>MCP</b></sub>
 </td>
