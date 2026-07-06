@@ -2,7 +2,7 @@
 
 # Hi, I'm Ozgur Karahan 👋
 
-**AI Solutions Architect | Azure, MuleSoft & API Management Specialist**
+**AI Solution Engineer @ Microsoft**
 
 *Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.*
 
@@ -15,7 +15,7 @@
 
 ## 🧑‍💻 About
 
-I design and build AI-powered applications on Azure and MuleSoft, with deep expertise in API Management, AI agents, and MCP (Model Context Protocol) integrations. My work focuses on making AI practical and production-ready for enterprise environments.
+I design and build AI-powered applications on Azure, with deep expertise in AI agents and MCP (Model Context Protocol) integrations, and a strong background in enterprise architecture, integration strategy, and API management. My work focuses on making AI practical and production-ready for enterprise environments.
 
 ---
 
