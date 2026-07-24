@@ -98,6 +98,10 @@
       background: color-mix(in srgb, var(--label-mcp) 12%, transparent);
       color: var(--label-mcp);
     }
+    .card .label.private {
+      background: color-mix(in srgb, var(--text-footer) 18%, transparent);
+      color: var(--text-muted);
+    }
     .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
     .card h3 a { color: var(--text-primary); }
     .card h3 a:hover { color: var(--link); }
@@ -205,10 +209,31 @@
         </div>
 
         <div class="card">
+          <span class="label">SRE Agent</span>
+          <h3><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">azure-sre-agent-synapse-poc</a></h3>
+          <p>Reproducible IaC, KQL runbook, and smoke-test scaffold for validating Azure SRE Agent against common Synapse observability pain points</p>
+          <div class="tags"><span class="tag">Bicep</span><span class="tag">KQL</span><span class="tag">Azure SRE Agent</span><span class="tag">Synapse</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label private">Template &middot; Private</span>
+          <h3>AI Agent Project Template</h3>
+          <p>Internal scaffold standardizing AI-agent project structure and agent-config conventions across repos</p>
+          <div class="tags"><span class="tag">Agent Config</span><span class="tag">Conventions</span></div>
+        </div>
+
+        <div class="card">
           <span class="label">AI App</span>
           <h3><a href="https://github.com/ozgurkarahan/ai-avatar-presenter">ai-avatar-presenter</a></h3>
           <p>AI-powered avatar presentation assistant — upload PowerPoint slides and have an AI avatar present them with multilingual TTS and interactive Q&amp;A</p>
           <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Azure AI Speech</span><span class="tag">Azure OpenAI</span><span class="tag">WebRTC</span><span class="tag">Bicep</span></div>
+        </div>
+
+        <div class="card">
+          <span class="label private">AI App &middot; Private</span>
+          <h3>Enterprise Document RAG</h3>
+          <p>Document-intelligence and retrieval-augmented generation solution delivered for an enterprise client</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Azure AI</span><span class="tag">RAG</span></div>
         </div>
 
         <div class="card">
@@ -218,6 +243,20 @@
           <div class="tags"><span class="tag">Python</span><span class="tag">Claude API</span></div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Talks and presentations -->
+    <section aria-label="Talks and presentations">
+      <h2>Talks &amp; Presentations</h2>
+      <div class="projects">
+        <div class="card">
+          <span class="label learn">Vision Deck</span>
+          <h3><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform — our vision</a></h3>
+          <p>Interactive vision deck on the shift from AI assistance to agentic platforms — how developers build, deploy, and operate agents at scale</p>
+          <p style="margin-top:10px;"><a href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">View source on GitHub</a></p>
+          <div class="tags"><span class="tag">Agentic Platform</span><span class="tag">GitHub</span><span class="tag">Microsoft Foundry</span><span class="tag">Interactive HTML</span></div>
+        </div>
       </div>
     </section>
 
