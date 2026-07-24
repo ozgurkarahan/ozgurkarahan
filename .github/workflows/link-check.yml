@@ -25,6 +25,7 @@ jobs:
             --exclude '^https://img\.shields\.io/'
             --exclude '^https://cdn\.(jsdelivr\.net|simpleicons\.org)/'
             --exclude '^https://fonts\.(googleapis|gstatic)\.com/'
+            --exclude '^https://www\.linkedin\.com/'
             '*.md'
             'docs/*.md'
             'index.html'
