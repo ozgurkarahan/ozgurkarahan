@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide 5 — Build (product zoom)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#EDF1F7; --paper:#FFFFFF; --line:#E2E8F2;
+    --ink:#16202F; --muted:#6B7790;
+    --azure:#0F6CBD; --azure-soft:#EAF3FC; --azure-line:#BBD7F0;
+    --sand:#9FB4D0;
+    --amber:#C2620A; --amber-soft:#FFF4E4; --amber-line:#F0C078;
+    --ok:#1F9D6B; --node:#F7F9FC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);font-family:"Instrument Sans",system-ui,sans-serif;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;min-height:100vh;padding:0}
+  .deck-label{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+  .slide{width:100vw;aspect-ratio:16/9;container-type:inline-size;
+    background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(22,32,47,.10)}
+  .slide-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:3cqw 4cqw 2cqw;gap:1.3cqw}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(.6cqw)}to{opacity:1;transform:none}}
+  @keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+  @keyframes slipR{from{opacity:0;transform:translateX(-.8cqw)}to{opacity:1;transform:none}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,157,107,.4)}70%{box-shadow:0 0 0 .6cqw rgba(31,157,107,0)}100%{box-shadow:0 0 0 0 rgba(31,157,107,0)}}
+
+  /* header */
+  .header-band{display:flex;align-items:flex-end;gap:2.4cqw}
+  .header-left{display:flex;flex-direction:column;gap:.8cqw}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.95cqw;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--azure);opacity:0;animation:fadeUp .6s ease forwards .2s}
+  .w-solo{font-size:3.2cqw;font-weight:800;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;
+    letter-spacing:-.02em;opacity:0;animation:fadeUp .6s ease forwards .5s}
+  .w-solo .blue{color:var(--azure)}
+  .subtitle{margin-left:auto;text-align:right;font-size:1.2cqw;line-height:1.5;color:var(--muted);
+    align-self:flex-end;padding-bottom:.4cqw;opacity:0;animation:fadeUp .6s ease forwards 1s}
+  .subtitle b{color:var(--ink);font-weight:600}
+
+  /* stepper rappel lifecycle */
+  .stepper{display:flex;align-items:center;gap:.6cqw;opacity:0;animation:fadeUp .5s ease forwards 1.3s}
+  .stepper .s{font-family:"IBM Plex Mono",monospace;font-size:.78cqw;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);padding:.3cqw .8cqw;border:1px solid var(--line);border-radius:99px;background:#fff}
+  .stepper .s.on{color:#fff;background:var(--azure);border-color:var(--azure)}
+  .stepper .sep{color:#B7C3D8;font-size:.9cqw}
+
+  /* body : probleme -> reponse */
+  .body{flex:1;display:grid;grid-template-columns:.85fr auto 2fr;gap:1.6cqw;align-items:stretch}
+
+  .pain{background:var(--node);border:1px solid var(--line);border-radius:12px;padding:1.3cqw 1.3cqw;
+    display:flex;flex-direction:column;gap:.9cqw;opacity:0;animation:pop .5s cubic-bezier(.2,.8,.3,1.12) forwards 1.6s}
+  .pain .lt{font-family:"IBM Plex Mono",monospace;font-size:.72cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .pain h3{font-family:"Bricolage Grotesque",sans-serif;font-size:1.5cqw;font-weight:700;line-height:1.15;letter-spacing:-.01em}
+  .pain ul{list-style:none;display:flex;flex-direction:column;gap:.7cqw;margin-top:.2cqw}
+  .pain li{font-size:1cqw;color:var(--muted);line-height:1.35;display:flex;gap:.6cqw}
+  .pain li::before{content:"—";color:var(--sand)}
+
+  .bridge{align-self:center;display:flex;flex-direction:column;align-items:center;gap:.5cqw;
+    opacity:0;animation:slipR .5s ease forwards 2.1s}
+  .bridge .ar{color:var(--azure);font-size:2cqw}
+  .bridge .lb{font-family:"IBM Plex Mono",monospace;font-size:.7cqw;color:var(--azure);letter-spacing:.1em;text-transform:uppercase}
+
+  .answer{display:flex;flex-direction:column;gap:.9cqw}
+  .answer .lt{font-family:"IBM Plex Mono",monospace;font-size:.72cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--azure);
+    opacity:0;animation:fadeUp .5s ease forwards 2.3s}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:.9cqw;flex:1}
+  .card{background:#fff;border:1px solid var(--azure-line);border-radius:11px;padding:1cqw 1.1cqw;
+    display:flex;flex-direction:column;gap:.5cqw;opacity:0;animation:pop .45s cubic-bezier(.2,.8,.3,1.15) forwards}
+  .card .ch{display:flex;align-items:center;gap:.7cqw}
+  .card .ch svg{width:1.8cqw;height:1.8cqw;stroke:var(--azure);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .card .ch b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.18cqw;font-weight:700;letter-spacing:-.01em}
+  .card .ch .tag{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:.6cqw;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--azure);border:1px solid var(--azure-line);border-radius:99px;padding:.16cqw .55cqw;background:var(--azure-soft);white-space:nowrap}
+  .card p{font-size:.92cqw;color:var(--muted);line-height:1.4}
+  .card code{font-family:"IBM Plex Mono",monospace;font-size:.82cqw;color:var(--ink);
+    background:var(--node);border:1px solid var(--line);border-radius:4px;padding:.05cqw .35cqw}
+  .card.c1{animation-delay:2.5s} .card.c2{animation-delay:2.7s}
+  .card.c3{animation-delay:2.9s} .card.c4{animation-delay:3.1s}
+  .card.feat{border-color:var(--amber-line)}
+  .card.feat .ch svg{stroke:var(--amber)}
+  .card.feat .ch .tag{color:var(--amber);border-color:var(--amber-line);background:var(--amber-soft)}
+
+  /* outcome bar */
+  .outcome{display:flex;align-items:center;gap:1cqw;background:var(--azure-soft);border:1px solid var(--azure-line);
+    border-radius:10px;padding:.85cqw 1.2cqw;opacity:0;animation:fadeUp .5s ease forwards 3.4s}
+  .outcome .pulse{width:.6cqw;height:.6cqw;border-radius:50%;background:var(--ok);flex:none;animation:pulse 2.2s infinite 3.6s}
+  .outcome b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15cqw;font-weight:600;color:var(--ink)}
+  .outcome span{font-size:1cqw;color:var(--muted)}
+
+  .foot{display:flex;align-items:center;justify-content:space-between;font-family:"IBM Plex Mono",monospace;
+    font-size:.9cqw;color:var(--muted);letter-spacing:.08em;padding-top:.2cqw}
+  .foot .num{color:var(--azure)}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.01s !important;animation-delay:0s !important}}
+</style>
+</head>
+<body>
+<section class="slide">
+  <div class="slide-inner">
+
+    <div class="header-band">
+      <div class="header-left">
+        <div class="eyebrow">Zoom 01 · Build — the agentic dev experience</div>
+        <div class="w-solo">Your developers <span class="blue">delegate, not autocomplete.</span></div>
+      </div>
+      <p class="subtitle">Build 2026 turns the IDE into<br>an <b>agent-native</b> workspace.</p>
+    </div>
+
+    <div class="stepper">
+      <span class="s on">Build</span><span class="sep">▸</span>
+      <span class="s">Deploy &amp; Host</span><span class="sep">▸</span>
+      <span class="s">Observe</span><span class="sep">▸</span>
+      <span class="s">Evaluate</span><span class="sep">▸</span>
+      <span class="s">Secure</span><span class="sep">▸</span>
+      <span class="s">Improve</span>
+    </div>
+
+    <div class="body">
+
+      <div class="pain">
+        <div class="lt">The shift</div>
+        <h3>Coding is now a multi-agent workflow.</h3>
+        <ul>
+          <li>agents run parallel workstreams</li>
+          <li>they open PRs &amp; manage review</li>
+          <li>more context-switching, not less</li>
+        </ul>
+      </div>
+
+      <div class="bridge">
+        <div class="ar">▸</div>
+        <div class="lb">what shipped</div>
+      </div>
+
+      <div class="answer">
+        <div class="lt">GitHub Copilot · Build 2026</div>
+        <div class="cards">
+
+          <div class="card c1">
+            <div class="ch">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 9l3 3-3 3M12 15h6"/></svg>
+              <b>Agent mode</b>
+            </div>
+            <p>Autonomous task execution in the IDE — plan, edit across files, run, iterate.</p>
+          </div>
+
+          <div class="card c2 feat">
+            <div class="ch">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+              <b>Copilot app</b><span class="tag">new</span>
+            </div>
+            <p>Desktop home to orchestrate many agents in parallel — one "My Work" view.</p>
+          </div>
+
+          <div class="card c3 feat">
+            <div class="ch">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+              <b>Custom agents</b><span class="tag">new</span>
+            </div>
+            <p>Define specialized agents as <code>.agent.md</code> in the repo — your stack, your model, MCP tools.</p>
+          </div>
+
+          <div class="card c4 feat">
+            <div class="ch">
+              <svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10z"/></svg>
+              <b>Agent skills</b><span class="tag">new</span>
+            </div>
+            <p>Reusable <code>SKILL.md</code> instruction sets — teach agents your repeatable tasks.</p>
+          </div>
+
+          <div class="card c5 feat">
+            <div class="ch">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 9l3 3-3 3M12 15h6"/></svg>
+              <b>Foundry Toolkit · VS Code</b><span class="tag">GA</span>
+            </div>
+            <p>Create, debug &amp; deploy to Foundry Agent Service without leaving VS Code.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="outcome">
+      <span class="pulse"></span>
+      <b>The takeaway:</b>
+      <span>your team automates its own dev work — agentically — before touching the platform. <b>Migrate to Response API + azure-ai-projects.</b></span>
+    </div>
+
+    <div class="foot">
+      <span>OUR AGENTIC VISION · BUILD 2026</span>
+      <span><span class="num">05</span> / 08 · zoom — Build</span>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
+

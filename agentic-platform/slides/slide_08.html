@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide 8 — Resources & links</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#EDF1F7;--paper:#FFFFFF;--line:#E2E8F2;--ink:#16202F;--muted:#6B7790;
+    --azure:#0F6CBD;--azure-soft:#EAF3FC;--azure-line:#BBD7F0;--sand:#9FB4D0;
+    --amber:#C2620A;--amber-soft:#FFF4E4;--amber-line:#F0C078;--ok:#1F9D6B;--node:#F7F9FC}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);font-family:"Instrument Sans",system-ui,sans-serif;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;min-height:100vh;padding:0}
+  .slide{width:100vw;aspect-ratio:16/9;container-type:inline-size;background:var(--paper);
+    border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(22,32,47,.10)}
+  .slide-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:3cqw 4cqw 2cqw;gap:1.5cqw}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(.6cqw)}to{opacity:1;transform:none}}
+  @keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,157,107,.4)}70%{box-shadow:0 0 0 .6cqw rgba(31,157,107,0)}100%{box-shadow:0 0 0 0 rgba(31,157,107,0)}}
+
+  .header-band{display:flex;align-items:flex-end;gap:2.4cqw}
+  .header-left{display:flex;flex-direction:column;gap:.8cqw}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.95cqw;letter-spacing:.22em;text-transform:uppercase;color:var(--azure);opacity:0;animation:fadeUp .6s ease forwards .2s}
+  .w-solo{font-size:3.2cqw;font-weight:800;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.02em;opacity:0;animation:fadeUp .6s ease forwards .5s}
+  .w-solo .gold{color:var(--amber)}
+  .subtitle{margin-left:auto;text-align:right;font-size:1.2cqw;line-height:1.5;color:var(--muted);align-self:flex-end;padding-bottom:.4cqw;opacity:0;animation:fadeUp .6s ease forwards 1s}
+  .subtitle b{color:var(--ink);font-weight:600}
+
+  .cols{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1cqw;margin-top:.4cqw}
+  .col{background:var(--node);border:1px solid var(--line);border-radius:12px;padding:1.05cqw 1cqw;display:flex;flex-direction:column;gap:.7cqw;opacity:0;animation:pop .5s cubic-bezier(.2,.8,.3,1.12) forwards}
+  .col.c1{animation-delay:1.3s}.col.c2{animation-delay:1.55s}.col.c3{animation-delay:1.8s}.col.c4{animation-delay:2.05s}
+  .col.gh{background:#0d1117;border-color:#0d1117}
+  .ch{display:flex;align-items:center;gap:.7cqw}
+  .ch svg{width:1.6cqw;height:1.6cqw;stroke:var(--azure);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .ch b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.12cqw;font-weight:700;letter-spacing:-.01em}
+  .gh .ch b{color:#fff}.gh .ch svg{stroke:#fff;fill:#fff}
+  .iq .ch svg{stroke:var(--amber)}
+  .link{display:flex;flex-direction:column;gap:.1cqw;padding:.4cqw 0;border-top:1px solid var(--line)}
+  .gh .link{border-top:1px solid #21262d}
+  .link b{font-size:.9cqw;font-weight:600}
+  .gh .link b{color:#fff}
+  .link a{font-family:"IBM Plex Mono",monospace;font-size:.72cqw;color:var(--azure);text-decoration:none;word-break:break-all}
+  .gh .link a{color:#58a6ff}
+  .link small{font-size:.7cqw;color:var(--muted)}
+  .tagga{font-family:"IBM Plex Mono",monospace;font-size:.6cqw;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);border:1px solid var(--amber-line);border-radius:99px;padding:.1cqw .5cqw;background:var(--amber-soft);margin-left:.5cqw}
+
+  .outcome{display:flex;align-items:center;gap:1cqw;background:var(--azure-soft);border:1px solid var(--azure-line);border-radius:10px;padding:.85cqw 1.2cqw;opacity:0;animation:fadeUp .5s ease forwards 2.3s}
+  .outcome .pulse{width:.6cqw;height:.6cqw;border-radius:50%;background:var(--ok);flex:none;animation:pulse 2.2s infinite 2.6s}
+  .outcome b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15cqw;font-weight:600;color:var(--ink)}
+  .outcome span{font-size:1cqw;color:var(--muted)}
+  .foot{display:flex;align-items:center;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:.9cqw;color:var(--muted);letter-spacing:.08em;padding-top:.2cqw}
+  .foot .num{color:var(--azure)}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.01s !important;animation-delay:0s !important}}
+</style>
+</head>
+<body>
+<section class="slide"><div class="slide-inner">
+
+  <div class="header-band">
+    <div class="header-left">
+      <div class="eyebrow">Resources · go deeper</div>
+      <div class="w-solo">All of it is <span class="gold">public.</span></div>
+    </div>
+    <p class="subtitle">Every claim here is sourced.<br>Take it, share it, <b>build on it</b>.</p>
+  </div>
+
+  <div class="cols">
+
+    <div class="col gh c1">
+      <div class="ch">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.6.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.4-3.4-1.4-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 3.9-1.3 6.8-5.1 6.8-9.6C22 6.6 17.5 2 12 2z"/></svg>
+        <b>All announcements</b>
+      </div>
+      <div class="link"><b>microsoft/Build26-news</b><a>github.com/microsoft/Build26-news</a><small>exact-wording index of every announcement</small></div>
+      <div class="link"><b>Session repos</b><a>github.com/microsoft/build26-brk241</a><small>brk241 · brk243 · brk250 · brk252 · DEM333</small></div>
+      <div class="link"><b>Build CLI</b><a>github.com/microsoft/Build-CLI</a><small>connect repos to the session catalog</small></div>
+    </div>
+
+    <div class="col iq c2">
+      <div class="ch">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M9.5 10.5L6.5 7M14.5 10.5L17.5 7M9.5 13.5L6.5 17M14.5 13.5L17.5 17"/></svg>
+        <b>Microsoft IQ</b>
+      </div>
+      <div class="link"><b>Microsoft IQ — context layer</b><a>aka.ms/AA10pe80</a><small>GA across Copilot · Foundry · Studio</small></div>
+      <div class="link"><b>Work IQ APIs — GA Jun 16</b><a>aka.ms/WorkIQAPI_GA</a><small>10 MCP tools · Context API</small></div>
+      <div class="link"><b>Foundry IQ — KBs GA</b><a>aka.ms/FoundryIQ</a><small>+54% recall · Serverless · Web IQ</small></div>
+      <div class="link"><b>Fabric IQ — semantic layer GA</b><a>aka.ms/Azure-Data-Build26</a></div>
+      <div class="link"><b>Enterprise agent platform</b><a>aka.ms/AA1188jd</a><small>how IQ fits the single system</small></div>
+    </div>
+
+    <div class="col c3">
+      <div class="ch">
+        <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8 7.2l7.6-.6M7.2 8l3.6 7.8M16.8 9l-3.6 6.8"/></svg>
+        <b>Foundry deep-dives</b>
+      </div>
+      <div class="link"><b>Recap + Agents</b><a>aka.ms/FoundryBuildNews · BuildFoundryAgents</a></div>
+      <div class="link"><b>Agent Framework</b><a>aka.ms/Build2026MicrosoftAgentFramework</a></div>
+      <div class="link"><b>Hosted Agents · Toolbox</b><a>aka.ms/Build2026HostedAgents · /Toolbox</a></div>
+      <div class="link"><b>Foundry Memory</b><a>aka.ms/Build2026FoundryMemory</a></div>
+      <div class="link"><b>Container Apps · sandboxes</b><a>aka.ms/aca/build · aca/sandboxes</a></div>
+    </div>
+
+    <div class="col c4">
+      <div class="ch">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9l3 2-3 2"/></svg>
+        <b>Sessions &amp; keynote</b>
+      </div>
+      <div class="link"><b>Live blog</b><a>news.microsoft.com/build-2026</a><small>replaces the Book of News</small></div>
+      <div class="link"><b>Opening keynote</b><a>aka.ms/MSBuildOpeningKeynote</a></div>
+      <div class="link"><b>Session catalog</b><a>aka.ms/MSBuildSessions</a></div>
+      <div class="link"><b>Demos</b><a>aka.ms/MicrosoftBuildDemos</a></div>
+    </div>
+
+  </div>
+
+  <div class="outcome">
+    <span class="pulse"></span>
+    <b>One link to keep:</b>
+    <span><b>github.com/microsoft/Build26-news</b> — the full index, then every aka.ms above.</span>
+  </div>
+
+  <div class="foot">
+    <span>OUR AGENTIC VISION · BUILD 2026</span>
+    <span><span class="num">08</span> / 08 · resources — public links, source every claim</span>
+  </div>
+
+</div></section>
+</body>
+</html>
+

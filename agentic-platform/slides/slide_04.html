@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic vision — Build 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#EDF1F7; --paper:#FFFFFF; --line:#E2E8F2;
+    --ink:#16202F; --muted:#6B7790;
+    --azure:#0F6CBD; --azure-soft:#EAF3FC; --azure-line:#BBD7F0;
+    --sand:#9FB4D0;
+    --amber:#C2620A; --amber-soft:#FFF4E4; --amber-line:#F0C078;
+    --ok:#1F9D6B; --node:#F7F9FC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bg);
+    font-family:"Instrument Sans",system-ui,sans-serif;
+    color:var(--ink);
+    display:flex;align-items:center;justify-content:center;min-height:100vh;padding:0;
+  }
+  .deck-label{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+    letter-spacing:.14em;text-transform:uppercase;
+  }
+  .slide{
+    width:100vw;
+    aspect-ratio:16/9;
+    container-type:inline-size;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;position:relative;
+    box-shadow:0 24px 60px rgba(22,32,47,.10);
+  }
+  .slide-inner{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;
+    padding:3cqw 4cqw 2cqw;
+    gap:1.5cqw;
+  }
+
+  /* ============ animations ============ */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(.6cqw)}to{opacity:1;transform:none}}
+  @keyframes slideUp{from{opacity:0;transform:translateY(.4em)}to{opacity:1;transform:none}}
+  @keyframes strike{to{width:104%}}
+  @keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+  @keyframes drop{from{opacity:0;transform:translateY(-1cqw)}to{opacity:1;transform:none}}
+  @keyframes slipR{from{opacity:0;transform:translateX(-1cqw)}to{opacity:1;transform:none}}
+  @keyframes framein{to{border-color:var(--amber-line);background:#FFFCF5;box-shadow:0 8px 26px rgba(194,98,10,.08)}}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(31,157,107,.4)}
+    70%{box-shadow:0 0 0 .6cqw rgba(31,157,107,0)}
+    100%{box-shadow:0 0 0 0 rgba(31,157,107,0)}
+  }
+
+  /* ============ header band ============ */
+  .header-band{display:flex;align-items:flex-end;gap:2.4cqw}
+  .header-left{display:flex;flex-direction:column;gap:.8cqw}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.95cqw;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--azure);
+    opacity:0;animation:fadeUp .6s ease forwards .2s;
+  }
+  .words-inline{
+    display:flex;align-items:baseline;gap:1.6cqw;
+    font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.02em;
+  }
+  .w-ask{
+    font-size:2.9cqw;font-weight:400;color:#A7B0C2;
+    position:relative;width:max-content;
+    opacity:0;animation:fadeUp .6s ease forwards .5s;
+  }
+  .w-ask::after{
+    content:"";position:absolute;left:-2%;top:55%;height:.09em;width:0;
+    background:var(--amber);border-radius:2px;
+    animation:strike .5s cubic-bezier(.6,0,.3,1) forwards 1.2s;
+  }
+  .w-del{
+    font-size:3.6cqw;font-weight:800;color:var(--azure);
+    opacity:0;transform:translateY(.4em);
+    animation:slideUp .65s cubic-bezier(.2,.8,.2,1) forwards 1.7s;
+  }
+  .words-stack{flex-direction:column;align-items:flex-start;gap:.3cqw}
+  .words-stack .w-ask{font-size:2.2cqw;white-space:nowrap}
+  .w-del-s1{font-size:2.9cqw !important;white-space:nowrap}
+  .w-solo{
+    font-size:3.4cqw;font-weight:800;color:var(--azure);
+    font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.02em;
+    opacity:0;animation:fadeUp .6s ease forwards .5s;
+  }
+  .w-solo .gold{color:var(--amber)}
+  .subtitle{
+    margin-left:auto;text-align:right;
+    font-size:1.25cqw;line-height:1.5;color:var(--muted);
+    align-self:flex-end;padding-bottom:.4cqw;
+    opacity:0;animation:fadeUp .6s ease forwards 2.3s;
+  }
+  .subtitle b{color:var(--ink);font-weight:600}
+  .subtitle .badge-word{color:var(--amber);font-weight:600}
+
+  /* ============ briques ============ */
+  .layers-b{display:flex;flex-direction:column;gap:.45cqw;justify-content:space-between;flex:1}
+  .layer-tag{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.78cqw;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);
+    display:flex;align-items:center;gap:.9cqw;
+    opacity:0;animation:fadeUp .5s ease forwards;
+  }
+  .layer-tag::after{content:"";flex:1;height:1px;background:var(--line)}
+  .connector{
+    align-self:center;color:#9FB0C9;line-height:1;font-size:1.15cqw;
+    opacity:0;animation:drop .4s ease forwards;
+  }
+
+  .experiences{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.1cqw}
+  .xp{
+    background:var(--node);border:1px solid var(--line);border-radius:10px;
+    padding:1.05cqw 1cqw;
+    display:flex;align-items:center;gap:1cqw;
+    opacity:0;animation:pop .45s cubic-bezier(.2,.8,.3,1.15) forwards;
+  }
+  .xp svg{width:2.1cqw;height:2.1cqw;stroke:var(--azure);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .xp .t{display:flex;flex-direction:column;gap:.15cqw}
+  .xp .t b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.18cqw;font-weight:600;letter-spacing:-.01em}
+  .xp .t small{font-size:.88cqw;color:var(--muted)}
+  .xp .live{
+    width:.55cqw;height:.55cqw;border-radius:50%;background:var(--ok);
+    flex:none;margin-left:auto;
+    animation:pulse 2.2s infinite 4.4s;
+  }
+
+  .govframe{
+    border:1.6px solid transparent;border-radius:14px;background:transparent;
+    padding:.9cqw 1.1cqw 1cqw;
+    display:flex;flex-direction:column;gap:.7cqw;
+    animation:framein .8s ease forwards;
+  }
+  .govhead{display:flex;align-items:center;gap:.9cqw;opacity:0;animation:fadeUp .5s ease forwards}
+  .govhead svg{width:1.9cqw;height:1.9cqw;stroke:var(--amber);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .govhead b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.3cqw;font-weight:600}
+  .govhead small{
+    font-family:"IBM Plex Mono",monospace;font-size:.78cqw;
+    color:var(--amber);letter-spacing:.1em;text-transform:uppercase;
+  }
+  .govhead .scope{margin-left:auto;display:flex;gap:.5cqw}
+  .govhead .scope i{
+    font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:.8cqw;
+    color:var(--amber);border:1px solid var(--amber-line);border-radius:99px;
+    padding:.25cqw .75cqw;background:#fff;white-space:nowrap;
+  }
+
+  .workrow{display:grid;grid-template-columns:1fr 1fr;gap:1.1cqw}
+  .sandbox{
+    border:1.5px dashed var(--sand);border-radius:12px;background:#FBFCFE;
+    padding:1cqw 1.1cqw;
+    display:flex;align-items:center;gap:1.1cqw;
+    opacity:0;animation:pop .5s cubic-bezier(.2,.8,.3,1.12) forwards;
+  }
+  .sandbox > svg.host{width:2.3cqw;height:2.3cqw;stroke:var(--ink);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .sandbox .t{display:flex;flex-direction:column;gap:.15cqw;min-width:0}
+  .sandbox .t b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15cqw;font-weight:600}
+  .sandbox .t small{
+    font-family:"IBM Plex Mono",monospace;font-size:.72cqw;
+    color:var(--azure);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;
+  }
+  .mini-caps{margin-left:auto;display:flex;gap:.5cqw;flex:none}
+  .mini-caps span{
+    min-width:2.6cqw;border-radius:6px;
+    background:var(--azure-soft);border:1px solid var(--azure-line);
+    display:flex;flex-direction:column;align-items:center;gap:.25cqw;
+    padding:.4cqw .35cqw .3cqw;
+  }
+  .mini-caps span svg{width:1.1cqw;height:1.1cqw;stroke:var(--azure);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .mini-caps span b{font-family:"IBM Plex Mono",monospace;font-size:.58cqw;font-weight:500;color:var(--ink);letter-spacing:.02em}
+  .mini-caps span.id{background:var(--amber-soft);border-color:var(--amber-line)}
+  .mini-caps span.id svg{stroke:var(--amber)}
+
+  .needs{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1cqw}
+  .need{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:.95cqw .6cqw;
+    display:flex;flex-direction:column;align-items:center;gap:.45cqw;
+    opacity:0;animation:pop .4s ease forwards;
+  }
+  .need svg{width:1.85cqw;height:1.85cqw;stroke:var(--azure);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .need span{font-family:"Bricolage Grotesque",sans-serif;font-size:1.06cqw;font-weight:600}
+  .need small{
+    font-family:"IBM Plex Mono",monospace;font-size:.68cqw;color:var(--muted);
+    letter-spacing:.04em;text-align:center;
+  }
+
+  .foot{
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.9cqw;color:var(--muted);letter-spacing:.08em;
+    padding-top:.4cqw;
+  }
+  .foot .num{color:var(--azure)}
+
+  /* ============ timings communs slides B-layout ============ */
+  .tag-xp{animation-delay:2.6s}
+  .xp.x1{animation-delay:2.8s}
+  .xp.x2{animation-delay:3.05s}
+  .xp.x3{animation-delay:3.3s}
+  .con-1{animation-delay:3.6s}
+  .tag-ws{animation-delay:3.7s}
+  .sandbox.s1{animation-delay:3.9s}
+  .sandbox.s2{animation-delay:4.15s}
+  .con-2{animation-delay:4.45s}
+  .tag-needs{animation-delay:4.55s}
+  .need:nth-child(1){animation-delay:4.7s}
+  .need:nth-child(2){animation-delay:4.85s}
+  .need:nth-child(3){animation-delay:5s}
+  .need:nth-child(4){animation-delay:5.15s}
+  .govframe{animation-delay:5.7s}
+  .govhead{animation-delay:6s}
+
+  /* ============ SLIDE 3 · OPS ============ */
+  .ops{display:grid;grid-template-columns:1fr auto 1.35fr auto 1fr;gap:1cqw;flex:1;align-items:stretch;margin-top:.4cqw}
+  .ops .arrow{
+    align-self:center;color:#9FB0C9;font-size:1.6cqw;
+    opacity:0;animation:slipR .45s ease forwards;
+  }
+  .stage{
+    border:1px solid var(--line);border-radius:12px;background:var(--node);
+    padding:1.2cqw;
+    display:flex;flex-direction:column;gap:1cqw;
+    opacity:0;animation:pop .5s cubic-bezier(.2,.8,.3,1.12) forwards;
+  }
+  .stage-head{display:flex;align-items:center;gap:.8cqw}
+  .stage-head .n{
+    font-family:"IBM Plex Mono",monospace;font-size:.8cqw;color:var(--azure);
+    border:1px solid var(--azure-line);border-radius:99px;padding:.2cqw .7cqw;background:#fff;
+  }
+  .stage-head b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.6cqw;font-weight:800;letter-spacing:-.015em}
+  .stage .who{
+    font-family:"IBM Plex Mono",monospace;font-size:.75cqw;color:var(--muted);
+    letter-spacing:.12em;text-transform:uppercase;
+  }
+  .prod{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:.9cqw 1cqw;
+    display:flex;align-items:center;gap:.9cqw;flex:1;
+  }
+  .prod svg{width:1.9cqw;height:1.9cqw;stroke:var(--azure);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .prod .t{display:flex;flex-direction:column;gap:.1cqw}
+  .prod .t b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.08cqw;font-weight:600}
+  .prod .t small{font-size:.85cqw;color:var(--muted)}
+  .harness{
+    border:1.5px dashed var(--sand);border-radius:10px;background:#FBFCFE;
+    padding:.9cqw 1cqw;flex:2.6;
+    display:flex;flex-direction:column;gap:.9cqw;justify-content:center;
+  }
+  .harness .hh{
+    display:flex;align-items:center;gap:.7cqw;
+  }
+  .harness .hh b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.05cqw;font-weight:600}
+  .harness .hh small{
+    font-family:"IBM Plex Mono",monospace;font-size:.68cqw;color:var(--azure);
+    letter-spacing:.08em;text-transform:uppercase;margin-left:auto;white-space:nowrap;
+  }
+  .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:.6cqw}
+  .chip{
+    background:var(--azure-soft);border:1px solid var(--azure-line);border-radius:6px;
+    padding:.8cqw .3cqw;
+    display:flex;flex-direction:column;align-items:center;gap:.3cqw;
+  }
+  .chip svg{width:1.2cqw;height:1.2cqw;stroke:var(--azure);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .chip b{font-family:"IBM Plex Mono",monospace;font-size:.62cqw;font-weight:500;color:var(--ink)}
+  .chip.id{background:var(--amber-soft);border-color:var(--amber-line)}
+  .chip.id svg{stroke:var(--amber)}
+  .loopline{
+    display:flex;align-items:center;gap:1cqw;justify-content:center;
+    font-family:"IBM Plex Mono",monospace;font-size:.85cqw;color:var(--muted);
+    letter-spacing:.06em;
+    border-top:1px dashed var(--line);padding-top:.8cqw;
+    opacity:0;animation:fadeUp .5s ease forwards 5.6s;
+  }
+  .loopline .lp{color:var(--azure)}
+  .s3 .stage.b1{animation-delay:2.7s}
+  .s3 .arrow.a1{animation-delay:3.2s}
+  .s3 .stage.b2{animation-delay:3.5s}
+  .s3 .arrow.a2{animation-delay:4s}
+  .s3 .stage.b3{animation-delay:4.3s}
+  .s3 .govframe{animation-delay:5s}
+  .s3 .govhead{animation-delay:5.2s}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01s !important;animation-delay:0s !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ====================================================== -->
+<!-- SLIDE 1 — THE VISION (no products)                     -->
+<!-- ====================================================== -->
+<section class="slide s3" aria-label="Slide 3">
+  <div class="slide-inner">
+
+    <div class="header-band">
+      <div class="header-left">
+        <div class="eyebrow">Deep dive · The full lifecycle of an agent</div>
+        <div class="w-solo">Build. Deploy. <span class="gold">Operate.</span></div>
+      </div>
+      <p class="subtitle">
+        Your agents, your code — <b>the ops loop is managed</b>.
+      </p>
+    </div>
+
+    <div class="ops">
+
+      <!-- BUILD -->
+      <div class="stage b1">
+        <div class="stage-head"><span class="n">01</span><b>Build</b></div>
+        <div class="who">developers · their tools</div>
+        <div class="prod">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 9l3 3-3 3M12 15h6"/></svg>
+          <div class="t"><b>GitHub Copilot</b><small>agent mode in the IDE</small></div>
+        </div>
+        <div class="prod">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+          <div class="t"><b>Copilot app</b><small>orchestrate agents in parallel</small></div>
+        </div>
+        <div class="prod">
+          <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          <div class="t"><b>Any framework</b><small>Agent Framework v1.0 · your code</small></div>
+        </div>
+      </div>
+
+      <div class="arrow a1">▸</div>
+
+      <!-- DEPLOY -->
+      <div class="stage b2">
+        <div class="stage-head"><span class="n">02</span><b>Deploy</b></div>
+        <div class="who">foundry agent service · hosted agents</div>
+        <div class="harness">
+          <div class="hh">
+            <b>The agent harness</b>
+            <small>micro-VM per session</small>
+          </div>
+          <div class="chips">
+            <div class="chip"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 105.3 5.3L13 18.6a2.1 2.1 0 01-3-3l6.8-6.8a4 4 0 00-2.3-2.3z"/><path d="M20.5 3.5l-3 3"/></svg><b>toolbox</b></div>
+            <div class="chip"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg><b>memory</b></div>
+            <div class="chip"><svg viewBox="0 0 24 24"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M13 5l-2 14"/></svg><b>code exec</b></div>
+            <div class="chip"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><b>skills</b></div>
+            <div class="chip"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8 7.2l7.6-.6M7.2 8l3.6 7.8M16.8 9l-3.6 6.8"/></svg><b>context · IQ</b></div>
+            <div class="chip id"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c1.2-3.4 3.9-5 7-5s5.8 1.6 7 5"/></svg><b>identity</b></div>
+            <div class="chip"><svg viewBox="0 0 24 24"><path d="M12 3v10M9 6v7M15 6v7M6 9v4M18 9v4"/></svg><b>voice live</b></div>
+          </div>
+        </div>
+        <div class="prod">
+          <svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>
+          <div class="t"><b>Publish</b><small>Teams · M365 Copilot · API</small></div>
+        </div>
+      </div>
+
+      <div class="arrow a2">▸</div>
+
+      <!-- OPERATE -->
+      <div class="stage b3">
+        <div class="stage-head"><span class="n">03</span><b>Operate</b></div>
+        <div class="who">platform &amp; security teams</div>
+        <div class="prod">
+          <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 3 5-8 4 5"/><path d="M3 21h18"/></svg>
+          <div class="t"><b>Evaluations &amp; tracing</b><small>one OpenTelemetry pipeline</small></div>
+        </div>
+        <div class="prod">
+          <svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a4 4 0 018 0v2"/></svg>
+          <div class="t"><b>AI Gateway</b><small>policies · quotas · identity</small></div>
+        </div>
+        <div class="prod">
+          <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-2.6-6.4"/><path d="M21 3v6h-6"/></svg>
+          <div class="t"><b>Agent optimizer</b><small>ranked fixes · diff · rollback</small></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="loopline">
+      <span class="lp">⟲</span><span>operate feeds build — evals linked to traces, improvements shipped as diffs</span>
+    </div>
+
+    <div class="foot">
+      <span>OUR AGENTIC VISION · BUILD 2026</span>
+      <span><span class="num">04</span> / 08 · ops deep dive — we could even host your agents</span>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
+
