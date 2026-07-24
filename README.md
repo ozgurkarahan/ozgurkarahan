@@ -8,6 +8,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-ozgurkarahan-181717?style=for-the-badge&logo=github)](https://github.com/ozgurkarahan)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-ozgurkarahan-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/karahanozgur/)
+[![Website](https://img.shields.io/badge/Website-ozgurkarahan.com-295233?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ozgurkarahan.com/)
 
 </div>
 
