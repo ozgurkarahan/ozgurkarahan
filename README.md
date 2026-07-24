@@ -114,6 +114,28 @@ MCP server for Azure API Management — manage APIs through natural language<br>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Azure_APIM-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square">
 </td>
 </tr>
+<tr>
+<td width="130" align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
+<sub><b>SRE Agent</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">azure-sre-agent-synapse-poc</a></b><br>
+Reproducible IaC, KQL runbook, and smoke-test scaffold for validating Azure SRE Agent against common Synapse observability pain points<br>
+<img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square"> <img src="https://img.shields.io/badge/KQL-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Azure_SRE_Agent-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Synapse-0078D4?style=flat-square&logo=microsoftazure&logoColor=white">
+</td>
+</tr>
+<tr>
+<td width="130" align="center">
+<img src="https://cdn.simpleicons.org/github/6e7681" width="40" alt="Private repo"><br>
+<sub><b>Template</b></sub>
+</td>
+<td>
+<b>AI Agent Project Template</b> <img src="https://img.shields.io/badge/Private_Repo-6e7681?style=flat-square&logo=github&logoColor=white"><br>
+Internal scaffold standardizing AI-agent project structure and agent-config conventions across repos<br>
+<img src="https://img.shields.io/badge/Agent_Config-388bfd?style=flat-square"> <img src="https://img.shields.io/badge/Conventions-6e7681?style=flat-square">
+</td>
+</tr>
 </table>
 
 ### 🖥️ AI Apps
@@ -128,6 +150,17 @@ MCP server for Azure API Management — manage APIs through natural language<br>
 <b><a href="https://github.com/ozgurkarahan/ai-avatar-presenter">ai-avatar-presenter</a></b><br>
 AI-powered avatar presentation assistant — upload PowerPoint slides and have an AI avatar present them with multilingual TTS, interactive Q&A, and Teams integration<br>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/Azure_AI_Speech-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square">
+</td>
+</tr>
+<tr>
+<td width="130" align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
+<sub><b>AI App</b></sub>
+</td>
+<td>
+<b>Enterprise Document RAG</b> <img src="https://img.shields.io/badge/Private_Repo-6e7681?style=flat-square&logo=github&logoColor=white"><br>
+Document-intelligence and retrieval-augmented generation solution delivered for an enterprise client<br>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Azure_AI-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/RAG-3fb38f?style=flat-square">
 </td>
 </tr>
 </table>
@@ -154,6 +187,24 @@ AI-powered avatar presentation assistant — upload PowerPoint slides and have a
 <b><a href="https://github.com/ozgurkarahan/anthropic-academy">anthropic-academy</a></b><br>
 Worked examples from the Anthropic Academy curriculum<br>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white">
+</td>
+</tr>
+</table>
+
+---
+
+## 🎤 Talks & Presentations
+
+<table>
+<tr>
+<td width="130" align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
+<sub><b>Vision Deck</b></sub>
+</td>
+<td>
+<b><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform — our vision</a></b><br>
+Interactive vision deck on the shift from AI assistance to agentic platforms — how developers build, deploy, and operate agents at scale (<a href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">source</a>)<br>
+<img src="https://img.shields.io/badge/Agentic_Platform-6D5DFB?style=flat-square"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Microsoft_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Interactive_HTML-E34F26?style=flat-square&logo=html5&logoColor=white">
 </td>
 </tr>
 </table>
