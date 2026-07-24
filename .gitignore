@@ -12,3 +12,7 @@ Desktop.ini
 
 # Claude Code
 .claude/
+
+# Local design and browser tooling
+.impeccable/
+.playwright-mcp/
