@@ -3,315 +3,1629 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ozgur Karahan — AI Solution Engineer</title>
-  <meta name="description" content="AI Solution Engineer at Microsoft specializing in Azure AI Foundry, MCP servers, identity propagation, and enterprise API integration.">
-  <meta property="og:title" content="Ozgur Karahan — AI Solution Engineer">
-  <meta property="og:description" content="Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration. Strong background in enterprise architecture, integration strategy, and API management.">
+  <title>Ozgur Karahan — Enterprise AI Architecture</title>
+  <meta name="description" content="AI Solution Engineer at Microsoft designing secure agentic platforms, identity propagation, and governed enterprise AI delivery.">
+  <meta name="theme-color" content="#eff6ef">
+  <meta property="og:title" content="Ozgur Karahan — Enterprise AI Architecture">
+  <meta property="og:description" content="Secure agentic platforms, drawn from identity to action. Selected enterprise AI architecture, delivery patterns, and open-source work.">
   <meta property="og:image" content="https://github.com/ozgurkarahan.png">
   <meta property="og:url" content="https://ozgurkarahan.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ozgur Karahan — AI Solution Engineer">
-  <meta name="twitter:description" content="Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.">
+  <meta name="twitter:title" content="Ozgur Karahan — Enterprise AI Architecture">
+  <meta name="twitter:description" content="Secure agentic platforms, drawn from identity to action.">
   <meta name="twitter:image" content="https://github.com/ozgurkarahan.png">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23388bfd'/><text x='50' y='68' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='48' fill='white'>OK</text></svg>">
+  <link rel="canonical" href="https://ozgurkarahan.com/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231f2a1f'/><path d='M23 24h54v52H23z' fill='none' stroke='%23a7c598' stroke-width='4'/><text x='50' y='65' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='white'>OK</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #0d1117;
-      --bg-card: #161b22;
-      --border: #21262d;
-      --border-hover: #388bfd;
-      --text-primary: #e1e7ef;
-      --text-muted: #8b949e;
-      --text-footer: #6e7681;
-      --link: #58a6ff;
-      --label-agent: #388bfd;
-      --label-security: #f0883e;
-      --label-learn: #3fb38f;
-      --label-mcp: #a371f7;
+      --canvas: oklch(0.98 0.006 145);
+      --surface: oklch(1 0 0);
+      --ink: oklch(0.22 0.02 145);
+      --muted: oklch(0.43 0.025 145);
+      --quiet: oklch(0.55 0.025 145);
+      --line: oklch(0.87 0.015 145);
+      --cobalt: oklch(0.4 0.07 150);
+      --cobalt-deep: oklch(0.27 0.025 145);
+      --cobalt-soft: oklch(0.94 0.025 145);
+      --hero-background: oklch(0.965 0.012 145);
+      --hero-ink: oklch(0.22 0.02 145);
+      --hero-muted: oklch(0.4 0.025 145);
+      --dark-ink: oklch(0.97 0.006 145);
+      --dark-muted: oklch(0.84 0.02 145);
+      --signal: oklch(0.79 0.07 135);
+      --shadow: 0 24px 70px oklch(0.18 0.025 145 / 0.14);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.6;
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: "Public Sans", "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    body,
+    button,
+    summary {
+      font-family: "Public Sans", "Segoe UI", sans-serif;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.22em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 0.14em;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      border-radius: 0.2rem;
+      outline: 3px solid currentColor;
+      outline-offset: 4px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+
     .skip-link {
-      position: absolute; left: -9999px; top: 0;
-      background: var(--link); color: var(--bg-primary); padding: 8px 16px;
-      z-index: 100; font-weight: 600;
-    }
-    .skip-link:focus { left: 0; }
-
-    .container { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
-
-    /* Hero */
-    .hero { text-align: center; margin-bottom: 60px; }
-    .hero h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; }
-    .hero p.headline {
-      font-size: 1.15rem; color: var(--text-muted); font-weight: 400; margin-bottom: 24px;
-    }
-    .links a {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px;
-      color: var(--text-primary); font-weight: 500; transition: background .2s;
-    }
-    .links a:hover { background: var(--bg-card); text-decoration: none; }
-    .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .links svg { width: 20px; height: 20px; fill: currentColor; }
-
-    /* Sections */
-    section { margin-bottom: 50px; }
-    section h2 {
-      font-size: 1.3rem; font-weight: 600; margin-bottom: 20px;
-      padding-bottom: 8px; border-bottom: 1px solid var(--border);
+      position: fixed;
+      z-index: 10;
+      top: 0.75rem;
+      left: 0.75rem;
+      transform: translateY(-180%);
+      background: var(--signal);
+      color: var(--ink);
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      transition: transform 180ms var(--ease-out);
     }
 
-    /* Project cards */
-    .projects { display: grid; gap: 14px; }
-    .card {
-      background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
-      padding: 20px 24px; transition: border-color .2s;
-    }
-    .card:hover { border-color: var(--border-hover); }
-    .card .label {
-      display: inline-block; font-size: 0.7rem; font-weight: 600;
-      padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;
-      background: color-mix(in srgb, var(--label-agent) 12%, transparent);
-      color: var(--label-agent); text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .card .label.security {
-      background: color-mix(in srgb, var(--label-security) 12%, transparent);
-      color: var(--label-security);
-    }
-    .card .label.learn {
-      background: color-mix(in srgb, var(--label-learn) 12%, transparent);
-      color: var(--label-learn);
-    }
-    .card .label.mcp {
-      background: color-mix(in srgb, var(--label-mcp) 12%, transparent);
-      color: var(--label-mcp);
-    }
-    .card .label.private {
-      background: color-mix(in srgb, var(--text-footer) 18%, transparent);
-      color: var(--text-muted);
-    }
-    .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
-    .card h3 a { color: var(--text-primary); }
-    .card h3 a:hover { color: var(--link); }
-    .card p { color: var(--text-muted); font-size: 0.92rem; }
-    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
-    .tag {
-      font-size: 0.75rem; padding: 2px 8px; border-radius: 12px;
-      background: var(--border); color: var(--text-muted);
+    .skip-link:focus {
+      transform: translateY(0);
     }
 
-    /* Tech stack */
-    .stack { display: flex; gap: 10px; flex-wrap: wrap; }
-    .stack span {
-      padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 500;
-      background: var(--bg-card); border: 1px solid var(--border);
+    .shell {
+      width: min(100% - 3rem, 74rem);
+      margin-inline: auto;
     }
 
-    footer { text-align: center; color: var(--text-footer); font-size: 0.85rem; padding-top: 40px; }
+    .hero-field {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--hero-background);
+      color: var(--hero-ink);
+    }
+
+    .hero-field::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background-image:
+        linear-gradient(oklch(0.35 0.02 145 / 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, oklch(0.35 0.02 145 / 0.1) 1px, transparent 1px);
+      background-size: 3rem 3rem;
+      content: "";
+      mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 5.5rem;
+      border-bottom: 1px solid var(--line);
+      gap: 2rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--cobalt);
+      place-items: center;
+      color: var(--cobalt);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: -0.04em;
+    }
+
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+    }
+
+    .top-nav a:not(.header-action) {
+      color: var(--hero-muted);
+    }
+
+    .top-nav a:not(.header-action):hover {
+      color: var(--hero-ink);
+    }
+
+    .header-action {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      border: 1px solid var(--ink);
+      padding: 0.55rem 0.9rem;
+      color: var(--hero-ink);
+      transition:
+        background 180ms var(--ease-out),
+        color 180ms var(--ease-out);
+    }
+
+    .header-action:hover {
+      background: var(--ink);
+      color: var(--surface);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(25rem, 0.92fr);
+      align-items: center;
+      gap: clamp(3rem, 8vw, 7rem);
+      min-height: 43rem;
+      padding-block: clamp(4.5rem, 9vw, 8rem);
+    }
+
+    .role-line {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+      color: var(--hero-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.86rem;
+    }
+
+    .role-line::before {
+      width: 0.6rem;
+      height: 0.6rem;
+      border: 2px solid var(--cobalt);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .hero h1 {
+      max-width: 12ch;
+      margin-bottom: 1.75rem;
+      font-size: clamp(3.15rem, 6.5vw, 5.3rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-lede {
+      max-width: 60ch;
+      margin-bottom: 2rem;
+      color: var(--hero-muted);
+      font-size: clamp(1.08rem, 1.7vw, 1.28rem);
+    }
+
+    .hero-actions,
+    .case-links,
+    .vision-actions,
+    .contact-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.2rem;
+      padding: 0.75rem 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        background 180ms var(--ease-out),
+        color 180ms var(--ease-out),
+        transform 180ms var(--ease-out);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      background: var(--dark-ink);
+      color: var(--cobalt-deep);
+    }
+
+    .button-light:hover {
+      background: var(--signal);
+      color: var(--ink);
+    }
+
+    .hero .button-light {
+      background: var(--ink);
+      color: var(--surface);
+    }
+
+    .hero .button-light:hover {
+      background: var(--cobalt);
+      color: var(--surface);
+    }
+
+    .button-signal {
+      background: var(--signal);
+      color: var(--ink);
+    }
+
+    .button-signal:hover {
+      background: var(--surface);
+    }
+
+    .button-cobalt {
+      background: var(--cobalt);
+      color: var(--hero-ink);
+    }
+
+    .button-cobalt:hover {
+      background: var(--cobalt-deep);
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+    }
+
+    .hero .text-link {
+      color: var(--hero-ink);
+    }
+
+    .architecture-figure {
+      position: relative;
+      margin: 0;
+      border: 1px solid oklch(0.95 0 0 / 0.42);
+      background: var(--cobalt-deep);
+      box-shadow: var(--shadow);
+    }
+
+    .architecture-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid oklch(0.95 0 0 / 0.24);
+      padding: 0.8rem 1rem;
+      color: var(--dark-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.7rem;
+    }
+
+    .architecture-label span:last-child {
+      color: var(--signal);
+    }
+
+    .architecture-diagram {
+      width: 100%;
+      height: auto;
+    }
+
+    .architecture-diagram .node {
+      fill: oklch(0.31 0.025 145);
+      stroke: oklch(0.9 0 0 / 0.68);
+      stroke-width: 1.5;
+    }
+
+    .architecture-diagram .node-emphasis {
+      fill: oklch(0.38 0.055 150);
+      stroke: var(--signal);
+      stroke-width: 2;
+    }
+
+    .architecture-diagram .node-title {
+      fill: var(--dark-ink);
+      font-family: "Public Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .architecture-diagram .node-meta,
+    .architecture-diagram .annotation {
+      fill: var(--dark-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+    }
+
+    .architecture-diagram .annotation {
+      fill: var(--signal);
+      font-weight: 600;
+    }
+
+    .architecture-diagram .flow-base {
+      fill: none;
+      stroke: oklch(0.9 0 0 / 0.35);
+      stroke-width: 2;
+    }
+
+    .architecture-diagram .flow-line {
+      fill: none;
+      stroke: var(--signal);
+      stroke-dasharray: 9 10;
+      stroke-width: 3;
+      animation: identity-flow 2.8s linear infinite;
+    }
+
+    .architecture-diagram .callout-line {
+      stroke: oklch(0.9 0 0 / 0.68);
+      stroke-dasharray: 3 4;
+    }
+
+    .architecture-notes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid oklch(0.95 0 0 / 0.24);
+    }
+
+    .architecture-notes span {
+      padding: 0.75rem;
+      color: var(--dark-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem;
+      text-align: center;
+    }
+
+    .architecture-notes span + span {
+      border-left: 1px solid oklch(0.95 0 0 / 0.24);
+    }
+
+    @keyframes identity-flow {
+      to {
+        stroke-dashoffset: -38;
+      }
+    }
+
+    .focus-band {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .focus-band .shell {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      align-items: stretch;
+    }
+
+    .focus-title {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      border-right: 1px solid var(--line);
+      color: var(--quiet);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.75rem;
+    }
+
+    .focus-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .focus-list li {
+      display: flex;
+      align-items: center;
+      min-height: 5rem;
+      padding: 1rem 1.5rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .focus-list li + li {
+      border-left: 1px solid var(--line);
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .section {
+      padding-block: clamp(5rem, 9vw, 8rem);
+    }
+
+    .section + .section {
+      border-top: 1px solid var(--line);
+    }
+
+    .section-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(20rem, 0.65fr);
+      justify-content: space-between;
+      gap: 3rem;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .section-intro h2,
+    .practice-copy h2,
+    .archive-heading h2 {
+      max-width: 16ch;
+      margin-bottom: 0;
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      letter-spacing: -0.03em;
+    }
+
+    .section-intro p,
+    .practice-copy > p,
+    .archive-heading > p {
+      max-width: 62ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .case-studies {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-study {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(19rem, 0.75fr);
+      gap: clamp(2.5rem, 8vw, 7rem);
+      padding-block: clamp(3rem, 6vw, 5rem);
+      border-top: 1px solid var(--line);
+    }
+
+    .case-type,
+    .archive-type,
+    .repo-name,
+    .case-meta,
+    .practice-map dt,
+    .vision-path span {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .case-type {
+      margin-bottom: 1rem;
+      color: var(--cobalt);
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    .case-study h3 {
+      max-width: 18ch;
+      margin-bottom: 1.25rem;
+      font-size: clamp(1.75rem, 3.1vw, 2.65rem);
+      letter-spacing: -0.025em;
+    }
+
+    .case-copy > p {
+      max-width: 62ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .case-links {
+      margin-top: 1.5rem;
+    }
+
+    .case-links a {
+      color: var(--cobalt);
+    }
+
+    .case-evidence {
+      align-self: start;
+      margin: 0;
+      border-top: 3px solid var(--cobalt);
+    }
+
+    .case-evidence div {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 1rem;
+      padding-block: 1rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-evidence dt {
+      color: var(--quiet);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+    }
+
+    .case-evidence dd {
+      margin: 0;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .case-meta {
+      margin-top: 1.25rem;
+      color: var(--quiet);
+      font-size: 0.72rem;
+      line-height: 1.8;
+    }
+
+    .vision-section {
+      padding-block: clamp(5rem, 10vw, 8rem);
+    }
+
+    .vision-panel {
+      position: relative;
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--dark-ink);
+      box-shadow: var(--shadow);
+    }
+
+    .vision-panel::after {
+      position: absolute;
+      inset: auto -7rem -8rem auto;
+      width: 19rem;
+      height: 19rem;
+      border: 1px solid oklch(0.86 0.14 95 / 0.65);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 2.5rem oklch(0.86 0.14 95 / 0.08),
+        0 0 0 5rem oklch(0.86 0.14 95 / 0.05);
+      content: "";
+    }
+
+    .vision-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.7fr);
+      gap: clamp(3rem, 9vw, 8rem);
+      padding: clamp(2.5rem, 7vw, 6rem);
+    }
+
+    .vision-copy h2 {
+      max-width: 13ch;
+      margin-bottom: 1.5rem;
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      letter-spacing: -0.035em;
+    }
+
+    .vision-copy > p {
+      max-width: 58ch;
+      color: var(--dark-muted);
+      font-size: 1.08rem;
+    }
+
+    .vision-actions {
+      margin-top: 2rem;
+    }
+
+    .vision-actions .text-link {
+      color: var(--dark-ink);
+    }
+
+    .vision-path {
+      align-self: center;
+      margin: 0;
+      padding: 0;
+      counter-reset: vision-step;
+      list-style: none;
+    }
+
+    .vision-path li {
+      position: relative;
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      min-height: 4.5rem;
+      counter-increment: vision-step;
+    }
+
+    .vision-path li::before {
+      display: grid;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid var(--signal);
+      place-items: center;
+      color: var(--signal);
+      content: counter(vision-step, decimal-leading-zero);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.66rem;
+    }
+
+    .vision-path li:not(:last-child)::after {
+      position: absolute;
+      top: 2rem;
+      bottom: 0;
+      left: 1rem;
+      border-left: 1px dashed oklch(0.86 0 0 / 0.5);
+      content: "";
+    }
+
+    .vision-path strong {
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .vision-path span {
+      display: block;
+      color: var(--dark-muted);
+      font-size: 0.72rem;
+    }
+
+    .practice {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(24rem, 1fr);
+      gap: clamp(4rem, 10vw, 9rem);
+    }
+
+    .practice-copy h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .practice-map {
+      margin: 0;
+      border-top: 3px solid var(--ink);
+    }
+
+    .practice-map div {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      gap: 1.5rem;
+      padding-block: 1.35rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .practice-map dt {
+      color: var(--cobalt);
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    .practice-map dd {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .archive-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(20rem, 0.65fr);
+      justify-content: space-between;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .project-archive {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .project-archive > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 5.5rem;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    .project-archive > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .archive-summary-copy {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.9rem;
+    }
+
+    .archive-summary-copy span {
+      color: var(--quiet);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+    }
+
+    .archive-toggle {
+      display: grid;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--line);
+      place-items: center;
+      color: var(--cobalt);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1.25rem;
+    }
+
+    .archive-toggle::before {
+      content: "+";
+    }
+
+    .project-archive[open] .archive-toggle::before {
+      content: "−";
+    }
+
+    .archive-content {
+      padding-bottom: 3rem;
+    }
+
+    .archive-group {
+      display: grid;
+      grid-template-columns: minmax(11rem, 0.32fr) 1fr;
+      gap: 2rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .archive-group + .archive-group {
+      margin-top: 2.5rem;
+    }
+
+    .archive-group > h3 {
+      margin: 0;
+      color: var(--cobalt);
+      font-size: 1rem;
+    }
+
+    .archive-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .archive-item {
+      display: grid;
+      grid-template-columns: minmax(12rem, 0.85fr) minmax(15rem, 1.15fr);
+      gap: 2rem;
+      padding-block: 1.4rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .archive-list .archive-item:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .archive-name {
+      min-width: 0;
+    }
+
+    .archive-name h4 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      overflow-wrap: anywhere;
+    }
+
+    .archive-name h4 a {
+      color: var(--ink);
+    }
+
+    .archive-type {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--quiet);
+      font-size: 0.67rem;
+    }
+
+    .private-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.55rem;
+      border: 1px solid var(--cobalt);
+      padding: 0.15rem 0.45rem;
+      color: var(--cobalt);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.62rem;
+      font-weight: 600;
+    }
+
+    .repo-name {
+      margin: 0;
+      color: var(--quiet);
+      font-size: 0.67rem;
+      overflow-wrap: anywhere;
+    }
+
+    .archive-description {
+      margin: 0 0 0.6rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .archive-tech {
+      margin: 0;
+      color: var(--quiet);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.67rem;
+      line-height: 1.7;
+    }
+
+    .contact-section {
+      background: var(--cobalt-deep);
+      color: var(--dark-ink);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 3rem;
+      padding-block: clamp(4rem, 8vw, 6rem);
+    }
+
+    .contact-copy p {
+      margin-bottom: 0.9rem;
+      color: var(--signal);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+    }
+
+    .contact-copy h2 {
+      max-width: 18ch;
+      margin: 0;
+      font-size: clamp(2.45rem, 5vw, 4.3rem);
+      letter-spacing: -0.035em;
+    }
+
+    .contact-actions {
+      justify-content: flex-end;
+    }
+
+    .contact-actions .text-link {
+      color: var(--dark-ink);
+    }
+
+    .site-footer {
+      background: var(--cobalt-deep);
+      color: var(--dark-muted);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 5.5rem;
+      gap: 2rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-grid p {
+      margin: 0;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      color: var(--dark-ink);
+      font-weight: 700;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-copy {
+        max-width: 48rem;
+      }
+
+      .architecture-figure {
+        width: min(100%, 43rem);
+      }
+
+      .section-intro,
+      .archive-heading,
+      .practice {
+        grid-template-columns: 1fr;
+      }
+
+      .section-intro {
+        gap: 1.5rem;
+      }
+
+      .case-study {
+        grid-template-columns: 1fr;
+      }
+
+      .case-evidence {
+        max-width: 42rem;
+      }
+
+      .vision-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .vision-path {
+        max-width: 28rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 2rem, 74rem);
+      }
+
+      .site-header {
+        min-height: 4.75rem;
+      }
+
+      .top-nav > a:not(.header-action) {
+        display: none;
+      }
+
+      .hero {
+        gap: 3.5rem;
+        padding-block: 4.25rem 4.75rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 13.5vw, 4rem);
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .button,
+      .hero-actions .text-link {
+        width: 100%;
+      }
+
+      .hero-actions .text-link {
+        justify-content: center;
+        min-height: 3rem;
+      }
+
+      .architecture-notes {
+        grid-template-columns: 1fr;
+      }
+
+      .architecture-notes span + span {
+        border-top: 1px solid oklch(0.95 0 0 / 0.24);
+        border-left: 0;
+      }
+
+      .focus-band .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-title {
+        min-height: 3.5rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .focus-list {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-list li {
+        min-height: 3.75rem;
+        padding-inline: 0;
+      }
+
+      .focus-list li + li {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .section {
+        padding-block: 4.5rem;
+      }
+
+      .case-study {
+        gap: 2.25rem;
+      }
+
+      .case-evidence div,
+      .practice-map div {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+
+      .vision-grid {
+        padding: 2rem;
+      }
+
+      .archive-group,
+      .archive-item {
+        grid-template-columns: 1fr;
+      }
+
+      .archive-group {
+        gap: 1.5rem;
+      }
+
+      .archive-item {
+        gap: 0.8rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .contact-actions {
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+
+      .contact-actions .button,
+      .contact-actions .text-link {
+        width: 100%;
+      }
+
+      .contact-actions .text-link {
+        justify-content: center;
+        min-height: 3rem;
+      }
+
+      .footer-grid {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding-block: 1.5rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="container" id="main" role="main">
 
-    <!-- Hero -->
-    <header class="hero">
-      <h1>Ozgur Karahan</h1>
-      <p class="headline">AI Solution Engineer @ Microsoft</p>
-      <p style="color:var(--text-muted); margin-bottom:28px;">Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.<br>Strong background in enterprise architecture, integration strategy, and API management.</p>
-      <nav class="links" aria-label="Social links">
-        <a href="https://github.com/ozgurkarahan" aria-label="GitHub profile">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a7.99 7.99 0 005.47 15.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/karahanozgur/" aria-label="LinkedIn profile">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 110-4.128 2.064 2.064 0 010 4.128zm1.782 13.017H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
-          LinkedIn
-        </a>
+  <div class="hero-field">
+    <header class="site-header shell">
+      <a class="brand" href="https://ozgurkarahan.com/" aria-label="Ozgur Karahan, home">
+        <span class="brand-mark" aria-hidden="true">OK</span>
+        <span>Ozgur Karahan</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#vision">Vision</a>
+        <a href="#archive">Archive</a>
+        <a class="header-action" href="https://www.linkedin.com/in/karahanozgur/" rel="me">Let's connect</a>
       </nav>
     </header>
 
-    <!-- Featured -->
-    <section aria-label="Featured">
-      <h2>Featured: Identity Propagation for AI Agents</h2>
-      <div class="card">
-        <p>Enterprise AI agents must act as the <strong style="color:var(--text-primary)">real user</strong> — no service accounts in the data path, every action traceable and authorized per-user. A series of production-grade implementations on Azure (Entra ID, APIM, AI Foundry) across ServiceNow, Salesforce, and custom APIs.</p>
-        <p style="margin-top:10px;">📄 <a href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">Read the story: From Theory to Production — Salesforce Meta-Tool &amp; Identity Propagation</a></p>
-        <div class="tags"><span class="tag"><a href="https://github.com/ozgurkarahan/propagate-id-entra">propagate-id-entra</a></span><span class="tag"><a href="https://github.com/ozgurkarahan/snow-meta-tool">snow-meta-tool</a></span><span class="tag"><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">salesforce-meta-tool-identity-propagation</a></span></div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section aria-label="Projects">
-      <h2>Projects</h2>
-      <div class="projects">
-
-        <div class="card">
-          <span class="label">Agent Memory</span>
-          <h3><a href="https://github.com/ozgurkarahan/ai-agent-memory">ai-agent-memory</a> ⭐</h3>
-          <p>Persistent memory for AI coding agents — Karpathy LLM Wiki pattern for GitHub Copilot, Claude Code, Codex, and Cursor</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Claude Code</span><span class="tag">GitHub Copilot</span><span class="tag">Codex</span><span class="tag">Cursor</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label learn">Agentic SDLC</span>
-          <h3><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">agentic-sdlc-demo</a></h3>
-          <p>Ready-to-run, presenter-led demo of the full SDLC driven by AI coding agents — intake → plan → implement → test → review → PR → deploy, with enforce-first CI gates</p>
-          <p style="margin-top:10px;">🎞️ <a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">View the slide deck: Agentic SDLC — from workplace request to governed, deployed software</a></p>
-          <div class="tags"><span class="tag">JavaScript</span><span class="tag">GitHub Copilot</span><span class="tag">GitHub Actions</span><span class="tag">Multi-Agent</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label mcp">Agent + MCP</span>
-          <h3><a href="https://github.com/ozgurkarahan/snow-meta-tool">snow-meta-tool</a></h3>
-          <p>ServiceNow MCP meta-tool — 3 generic tools (discover, query, write) with per-user identity propagation via Azure APIM JWT Bearer OBO flow</p>
-          <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">ServiceNow</span><span class="tag">MCP</span><span class="tag">APIM OBO</span><span class="tag">Bicep</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label mcp">Agent + MCP</span>
-          <h3><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">salesforce-meta-tool-identity-propagation</a></h3>
-          <p>Cross-cloud identity propagation from Azure to Salesforce via a meta-tool MCP server — user identity flows end-to-end without service accounts</p>
-          <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">Salesforce</span><span class="tag">MCP</span><span class="tag">OAuth 2.0</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label mcp">Agent + MCP</span>
-          <h3><a href="https://github.com/ozgurkarahan/propagate-id-entra">propagate-id-entra</a></h3>
-          <p>End-to-end Entra ID identity propagation from browser through AI Foundry agents and APIM to backend APIs — zero service accounts</p>
-          <div class="tags"><span class="tag">Azure AI Foundry</span><span class="tag">Entra ID</span><span class="tag">APIM</span><span class="tag">MCP</span><span class="tag">Bicep</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label">Agent</span>
-          <h3><a href="https://github.com/ozgurkarahan/simple-order-agent">simple-order-agent</a></h3>
-          <p>Order processing agent using Claude SDK, MuleSoft MCP, and A2A protocol</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Claude SDK</span><span class="tag">MuleSoft</span><span class="tag">MCP</span><span class="tag">A2A</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label mcp">MCP</span>
-          <h3><a href="https://github.com/ozgurkarahan/azure-apim-mcp-server">azure-apim-mcp-server</a></h3>
-          <p>MCP streamable HTTP server for Azure API Management — manage APIs through natural language</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Azure APIM</span><span class="tag">MCP</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label">SRE Agent</span>
-          <h3><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">azure-sre-agent-synapse-poc</a></h3>
-          <p>Reproducible IaC, KQL runbook, and smoke-test scaffold for validating Azure SRE Agent against common Synapse observability pain points</p>
-          <div class="tags"><span class="tag">Bicep</span><span class="tag">KQL</span><span class="tag">Azure SRE Agent</span><span class="tag">Synapse</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label private">Template &middot; Private</span>
-          <h3>AI Agent Project Template</h3>
-          <p>Internal scaffold standardizing AI-agent project structure and agent-config conventions across repos</p>
-          <div class="tags"><span class="tag">Agent Config</span><span class="tag">Conventions</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label">AI App</span>
-          <h3><a href="https://github.com/ozgurkarahan/ai-avatar-presenter">ai-avatar-presenter</a></h3>
-          <p>AI-powered avatar presentation assistant — upload PowerPoint slides and have an AI avatar present them with multilingual TTS and interactive Q&amp;A</p>
-          <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Azure AI Speech</span><span class="tag">Azure OpenAI</span><span class="tag">WebRTC</span><span class="tag">Bicep</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label private">AI App &middot; Private</span>
-          <h3>Enterprise Document RAG</h3>
-          <p>Document-intelligence and retrieval-augmented generation solution delivered for an enterprise client</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Azure AI</span><span class="tag">RAG</span></div>
-        </div>
-
-        <div class="card">
-          <span class="label learn">Learning</span>
-          <h3><a href="https://github.com/ozgurkarahan/anthropic-academy">anthropic-academy</a></h3>
-          <p>Worked examples from the Anthropic Academy curriculum</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Claude API</span></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Talks and presentations -->
-    <section aria-label="Talks and presentations">
-      <h2>Talks &amp; Presentations</h2>
-      <div class="projects">
-        <div class="card">
-          <span class="label learn">Vision Deck</span>
-          <h3><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform — our vision</a></h3>
-          <p>Interactive vision deck on the shift from AI assistance to agentic platforms — how developers build, deploy, and operate agents at scale</p>
-          <p style="margin-top:10px;"><a href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">View source on GitHub</a></p>
-          <div class="tags"><span class="tag">Agentic Platform</span><span class="tag">GitHub</span><span class="tag">Microsoft Foundry</span><span class="tag">Interactive HTML</span></div>
+    <div class="hero shell">
+      <div class="hero-copy">
+        <p class="role-line">AI Solution Engineer at Microsoft</p>
+        <h1>Secure agentic platforms, drawn from identity to action.</h1>
+        <p class="hero-lede">I design the architecture that connects AI agents, cloud infrastructure, APIs, and the real user. The goal is simple: move enterprise AI from prototype to governed production.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#work">See selected work</a>
+          <a class="text-link" href="https://ozgurkarahan.com/agentic-platform/">Open the Agentic Platform vision <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-    </section>
 
-    <!-- Forks -->
-    <section aria-label="Forks and contributions">
-      <h2>Forks &amp; Contributions</h2>
-      <div class="projects">
-        <div class="card">
-          <span class="label">Fork+</span>
-          <h3><a href="https://github.com/ozgurkarahan/get-started-with-ai-agents">get-started-with-ai-agents</a></h3>
-          <p>Azure-Samples fork with AI Foundry endpoint &amp; A2A documentation (1,400+ lines), Bicep customizations, extended README</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Azure AI Foundry</span><span class="tag">Bicep</span></div>
+      <figure class="architecture-figure">
+        <div class="architecture-label">
+          <span>Architecture field note / identity path</span>
+          <span>Live pattern</span>
         </div>
+        <svg class="architecture-diagram" viewBox="0 0 620 480" role="img" aria-labelledby="architecture-title architecture-description">
+          <title id="architecture-title">Per-user identity propagation through an agent platform</title>
+          <desc id="architecture-description">A user context passes through an agent platform and policy gateway to enterprise systems while preserving authorization and traceability.</desc>
+          <defs>
+            <pattern id="diagram-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+              <path d="M32 0H0V32" fill="none" stroke="oklch(0.9 0 0 / 0.14)" stroke-width="1"/>
+            </pattern>
+            <marker id="arrow-signal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+              <path d="M0 0L8 4L0 8Z" fill="oklch(0.86 0.14 95)"/>
+            </marker>
+          </defs>
+          <rect width="620" height="480" fill="url(#diagram-grid)"/>
 
-        <div class="card">
-          <span class="label">Reference</span>
-          <h3><a href="https://github.com/ozgurkarahan/voicelive-api-salescoach">voicelive-api-salescoach</a></h3>
-          <p>AI-powered voice training for sales professionals using Azure Voice Live API &mdash; forked from <a href="https://github.com/Azure-Samples/voicelive-api-salescoach">Azure-Samples</a></p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Azure AI Speech</span><span class="tag">Voice Live API</span><span class="tag">React</span></div>
-        </div>
+          <path class="flow-base" d="M154 226H238M410 226H482"/>
+          <path class="flow-line" d="M154 226H238M410 226H482" marker-end="url(#arrow-signal)"/>
 
-        <div class="card">
-          <span class="label">Reference</span>
-          <h3><a href="https://github.com/ozgurkarahan/karpathy-autoresearch">karpathy-autoresearch</a></h3>
-          <p>Autonomous AI research agent that experiments on single-GPU LLM training overnight &mdash; forked from <a href="https://github.com/karpathy/autoresearch">karpathy</a></p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">LLM Training</span></div>
-        </div>
-      </div>
-    </section>
+          <rect class="node" x="42" y="178" width="112" height="96"/>
+          <text class="node-title" x="62" y="214">User</text>
+          <text class="node-meta" x="62" y="238">Entra ID</text>
+          <text class="node-meta" x="62" y="256">delegated token</text>
 
-    <!-- Tech stack -->
-    <section aria-label="Tech stack">
-      <h2>Tech Stack</h2>
-      <div class="stack">
-        <span>Python</span>
-        <span>Azure</span>
-        <span>Anthropic / Claude</span>
-        <span>MuleSoft</span>
-        <span>Bicep</span>
-        <span>MCP Protocol</span>
-        <span>API Management</span>
-        <span>Salesforce</span>
-        <span>ServiceNow</span>
-        <span>OAuth 2.0</span>
-        <span>Entra ID</span>
-        <span>Container Apps</span>
-        <span>React</span>
-      </div>
-    </section>
+          <rect class="node-emphasis" x="238" y="142" width="172" height="168"/>
+          <text class="annotation" x="258" y="170">CONTROL PLANE</text>
+          <text class="node-title" x="258" y="208">Agent platform</text>
+          <text class="node-meta" x="258" y="234">Microsoft Foundry</text>
+          <text class="node-meta" x="258" y="254">MCP tools</text>
+          <text class="node-meta" x="258" y="274">APIM policy gateway</text>
 
-    <footer>
-      <p>Currently exploring enterprise identity propagation patterns for multi-cloud AI agent architectures.</p>
-      <p style="margin-top:8px;">&copy; 2026 Ozgur Karahan</p>
-    </footer>
+          <rect class="node" x="482" y="106" width="104" height="70"/>
+          <text class="node-title" x="498" y="136">CRM</text>
+          <text class="node-meta" x="498" y="157">Salesforce</text>
 
+          <rect class="node" x="482" y="194" width="104" height="70"/>
+          <text class="node-title" x="498" y="224">ITSM</text>
+          <text class="node-meta" x="498" y="245">ServiceNow</text>
+
+          <rect class="node" x="482" y="282" width="104" height="70"/>
+          <text class="node-title" x="498" y="312">APIs</text>
+          <text class="node-meta" x="498" y="333">custom systems</text>
+
+          <line class="callout-line" x1="324" y1="142" x2="324" y2="88"/>
+          <text class="annotation" x="258" y="68">NO SERVICE ACCOUNT</text>
+          <text class="node-meta" x="266" y="86">user context stays attached</text>
+
+          <line class="callout-line" x1="324" y1="310" x2="324" y2="374"/>
+          <text class="annotation" x="250" y="400">AUTHORIZED + TRACEABLE</text>
+          <text class="node-meta" x="248" y="420">every action maps to a person</text>
+        </svg>
+        <figcaption class="architecture-notes">
+          <span>No service accounts</span>
+          <span>Per-user authorization</span>
+          <span>Traceable actions</span>
+        </figcaption>
+      </figure>
+    </div>
   </div>
+
+  <div class="focus-band" aria-label="Current focus">
+    <div class="shell">
+      <p class="focus-title">Current focus</p>
+      <ul class="focus-list">
+        <li>Enterprise identity for AI agents</li>
+        <li>Agent platforms and MCP integration</li>
+        <li>Governed delivery from request to production</li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-intro">
+        <h2 id="work-title">Selected systems, not just repositories.</h2>
+        <p>Each project tests a platform-level question: how agents inherit trust, how teams ship governed software, and how knowledge compounds across tools and sessions.</p>
+      </div>
+
+      <div class="case-studies">
+        <article class="case-study">
+          <div class="case-copy">
+            <p class="case-type">Secure agent access</p>
+            <h3>Agents that act as the real user.</h3>
+            <p>A production pattern for carrying delegated identity from the browser through Microsoft Foundry and Azure API Management into Salesforce, ServiceNow, and custom APIs.</p>
+            <div class="case-links">
+              <a class="text-link" href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">Read the architecture story <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/ozgurkarahan/propagate-id-entra">View Entra implementation <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="case-meta">Microsoft Foundry · Entra ID · APIM · MCP · OAuth 2.0</p>
+          </div>
+          <dl class="case-evidence">
+            <div>
+              <dt>Challenge</dt>
+              <dd>Enterprise agents must not hide behind shared credentials.</dd>
+            </div>
+            <div>
+              <dt>Move</dt>
+              <dd>Propagate the user's delegated identity across every boundary.</dd>
+            </div>
+            <div>
+              <dt>Proof</dt>
+              <dd>Working patterns for Entra, Salesforce, ServiceNow, and custom APIs.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="case-study">
+          <div class="case-copy">
+            <p class="case-type">Governed software delivery</p>
+            <h3>From workplace request to deployed software.</h3>
+            <p>A presenter-led Agentic SDLC demo that connects intake, planning, implementation, testing, review, pull request, and deployment with enforce-first CI gates.</p>
+            <div class="case-links">
+              <a class="text-link" href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Explore the project <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">Open the lifecycle deck <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="case-meta">GitHub Copilot · GitHub Actions · Multi-agent workflow · JavaScript</p>
+          </div>
+          <dl class="case-evidence">
+            <div>
+              <dt>Challenge</dt>
+              <dd>Agentic coding needs governance without losing delivery speed.</dd>
+            </div>
+            <div>
+              <dt>Move</dt>
+              <dd>Make policy and verification part of the workflow, not an afterthought.</dd>
+            </div>
+            <div>
+              <dt>Proof</dt>
+              <dd>A complete, repeatable path from request intake to deployment.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="case-study">
+          <div class="case-copy">
+            <p class="case-type">Durable agent knowledge</p>
+            <h3>Memory that compounds across sessions.</h3>
+            <p>A Karpathy-style LLM wiki that gives coding agents durable project and domain context across GitHub Copilot, Claude Code, Codex, and Cursor.</p>
+            <div class="case-links">
+              <a class="text-link" href="https://github.com/ozgurkarahan/ai-agent-memory">Explore AI Agent Memory <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="case-meta">Python · Knowledge graph · GitHub Copilot · Claude Code · Codex · Cursor</p>
+          </div>
+          <dl class="case-evidence">
+            <div>
+              <dt>Challenge</dt>
+              <dd>Agents repeatedly relearn the same project context.</dd>
+            </div>
+            <div>
+              <dt>Move</dt>
+              <dd>Turn lessons, decisions, and terminology into a linked local wiki.</dd>
+            </div>
+            <div>
+              <dt>Proof</dt>
+              <dd>One memory pattern shared across multiple coding-agent runtimes.</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="vision-section shell" id="vision" aria-labelledby="vision-title">
+      <div class="vision-panel">
+        <div class="vision-grid">
+          <div class="vision-copy">
+            <h2 id="vision-title">The Agentic Platform: our vision.</h2>
+            <p>An interactive deck on the shift from AI assistance to an operating platform for agents. It follows the full system from how developers build agents to how enterprises deploy, operate, and govern them at scale.</p>
+            <div class="vision-actions">
+              <a class="button button-signal" href="https://ozgurkarahan.com/agentic-platform/">Open the interactive deck</a>
+              <a class="text-link" href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">View source on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <ol class="vision-path" aria-label="Agentic platform lifecycle">
+            <li>
+              <div>
+                <strong>Build</strong>
+                <span>skills · tools · memory</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Deploy</strong>
+                <span>runtime · identity · policy</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Operate</strong>
+                <span>traces · evaluation · reliability</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Govern</strong>
+                <span>access · cost · accountability</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="practice-title">
+      <div class="practice">
+        <div class="practice-copy">
+          <h2 id="practice-title">Working across the whole system.</h2>
+          <p>My work sits between strategy and shipping. I translate enterprise constraints into platform decisions, then carry those decisions into code, infrastructure, and demonstrable systems.</p>
+        </div>
+        <dl class="practice-map">
+          <div>
+            <dt>Agent systems</dt>
+            <dd>Microsoft Foundry, MCP, Claude SDK, A2A, memory, evaluation, and multi-agent workflows</dd>
+          </div>
+          <div>
+            <dt>Trust and integration</dt>
+            <dd>Entra ID, OAuth 2.0, API Management, Salesforce, ServiceNow, MuleSoft, and custom APIs</dd>
+          </div>
+          <div>
+            <dt>Cloud delivery</dt>
+            <dd>Python, React, FastAPI, Bicep, Container Apps, GitHub Actions, KQL, and observability</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section shell" id="archive" aria-labelledby="archive-title">
+      <div class="archive-heading">
+        <h2 id="archive-title">Complete project index.</h2>
+        <p>Selected work above carries the story. This archive keeps the full technical record, including public repositories, contributions, learning work, and safely redacted private projects.</p>
+      </div>
+
+      <details class="project-archive">
+        <summary>
+          <span class="archive-summary-copy">Browse all 15 projects <span>2 private repositories are explicitly flagged</span></span>
+          <span class="archive-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="archive-content">
+          <section class="archive-group" aria-labelledby="archive-platforms">
+            <h3 id="archive-platforms">Agent platforms and delivery</h3>
+            <ul class="archive-list">
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/ai-agent-memory">AI Agent Memory</a></h4>
+                  <p class="repo-name">ai-agent-memory</p>
+                </div>
+                <div>
+                  <p class="archive-description">Persistent memory for AI coding agents using a linked, local LLM wiki pattern.</p>
+                  <p class="archive-tech">Python · GitHub Copilot · Claude Code · Codex · Cursor</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC Demo</a></h4>
+                  <p class="repo-name">agentic-sdlc-demo</p>
+                </div>
+                <div>
+                  <p class="archive-description">A complete presenter-led software lifecycle driven by coding agents and enforce-first CI gates.</p>
+                  <p class="archive-tech">JavaScript · GitHub Copilot · GitHub Actions · Multi-agent</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Internal template <span class="private-badge">Private repository</span></p>
+                  <h4>AI Agent Project Template</h4>
+                </div>
+                <div>
+                  <p class="archive-description">An internal scaffold that standardizes project structure and agent-configuration conventions.</p>
+                  <p class="archive-tech">Agent configuration · Project conventions</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Learning project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/anthropic-academy">Anthropic Academy</a></h4>
+                  <p class="repo-name">anthropic-academy</p>
+                </div>
+                <div>
+                  <p class="archive-description">Worked examples from the Anthropic Academy curriculum.</p>
+                  <p class="archive-tech">Python · Claude API</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="archive-group" aria-labelledby="archive-identity">
+            <h3 id="archive-identity">Identity and integration</h3>
+            <ul class="archive-list">
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/snow-meta-tool">ServiceNow Meta-tool</a></h4>
+                  <p class="repo-name">snow-meta-tool</p>
+                </div>
+                <div>
+                  <p class="archive-description">Three generic MCP tools for discovery, query, and write operations with per-user identity.</p>
+                  <p class="archive-tech">Microsoft Foundry · ServiceNow · MCP · APIM · Bicep</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">Salesforce Identity Propagation</a></h4>
+                  <p class="repo-name">salesforce-meta-tool-identity-propagation</p>
+                </div>
+                <div>
+                  <p class="archive-description">Cross-cloud identity propagation from Azure to Salesforce through an MCP meta-tool.</p>
+                  <p class="archive-tech">Microsoft Foundry · Salesforce · MCP · OAuth 2.0</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/propagate-id-entra">Entra Identity Propagation</a></h4>
+                  <p class="repo-name">propagate-id-entra</p>
+                </div>
+                <div>
+                  <p class="archive-description">End-to-end identity propagation from browser to agents, policy gateway, and backend APIs.</p>
+                  <p class="archive-tech">Microsoft Foundry · Entra ID · APIM · MCP · Bicep</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/simple-order-agent">Simple Order Agent</a></h4>
+                  <p class="repo-name">simple-order-agent</p>
+                </div>
+                <div>
+                  <p class="archive-description">An order-processing agent that connects Claude SDK, MuleSoft MCP, and the A2A protocol.</p>
+                  <p class="archive-tech">Python · Claude SDK · MuleSoft · MCP · A2A</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/azure-apim-mcp-server">Azure APIM MCP Server</a></h4>
+                  <p class="repo-name">azure-apim-mcp-server</p>
+                </div>
+                <div>
+                  <p class="archive-description">A streamable HTTP MCP server for managing Azure API Management through natural language.</p>
+                  <p class="archive-tech">Python · Azure API Management · MCP</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="archive-group" aria-labelledby="archive-applied-ai">
+            <h3 id="archive-applied-ai">Applied AI and operations</h3>
+            <ul class="archive-list">
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">Azure SRE Agent for Synapse</a></h4>
+                  <p class="repo-name">azure-sre-agent-synapse-poc</p>
+                </div>
+                <div>
+                  <p class="archive-description">Reproducible infrastructure, KQL runbooks, and smoke tests for Synapse observability scenarios.</p>
+                  <p class="archive-tech">Bicep · KQL · Azure SRE Agent · Synapse</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Public project</p>
+                  <h4><a href="https://github.com/ozgurkarahan/ai-avatar-presenter">AI Avatar Presenter</a></h4>
+                  <p class="repo-name">ai-avatar-presenter</p>
+                </div>
+                <div>
+                  <p class="archive-description">A multilingual avatar presentation assistant with slide upload, speech, and interactive Q&amp;A.</p>
+                  <p class="archive-tech">React · FastAPI · Azure AI Speech · Azure OpenAI · WebRTC · Bicep</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Enterprise delivery <span class="private-badge">Private repository</span></p>
+                  <h4>Enterprise Document RAG</h4>
+                </div>
+                <div>
+                  <p class="archive-description">Document intelligence and retrieval-augmented generation delivered for an enterprise client.</p>
+                  <p class="archive-tech">Python · Azure AI · RAG</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="archive-group" aria-labelledby="archive-contributions">
+            <h3 id="archive-contributions">Contributions and references</h3>
+            <ul class="archive-list">
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Extended fork</p>
+                  <h4><a href="https://github.com/ozgurkarahan/get-started-with-ai-agents">Get Started with AI Agents</a></h4>
+                  <p class="repo-name">get-started-with-ai-agents</p>
+                </div>
+                <div>
+                  <p class="archive-description">Azure Samples fork extended with Foundry endpoint, A2A documentation, Bicep, and setup guidance.</p>
+                  <p class="archive-tech">Python · Microsoft Foundry · Bicep</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Reference fork</p>
+                  <h4><a href="https://github.com/ozgurkarahan/voicelive-api-salescoach">Voice Live Sales Coach</a></h4>
+                  <p class="repo-name">voicelive-api-salescoach</p>
+                </div>
+                <div>
+                  <p class="archive-description">AI-powered voice training for sales professionals, based on an Azure Samples reference.</p>
+                  <p class="archive-tech">Python · Azure AI Speech · Voice Live API · React</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Reference fork</p>
+                  <h4><a href="https://github.com/ozgurkarahan/karpathy-autoresearch">Karpathy Autoresearch</a></h4>
+                  <p class="repo-name">karpathy-autoresearch</p>
+                </div>
+                <div>
+                  <p class="archive-description">An autonomous research agent that runs single-GPU LLM training experiments overnight.</p>
+                  <p class="archive-tech">Python · PyTorch · LLM training</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <div class="contact-grid shell">
+      <div class="contact-copy">
+        <p>Enterprise AI architecture · agent platforms · identity</p>
+        <h2 id="contact-title">Have a platform problem worth drawing out?</h2>
+      </div>
+      <div class="contact-actions">
+        <a class="button button-light" href="https://www.linkedin.com/in/karahanozgur/" rel="me">Start a conversation</a>
+        <a class="text-link" href="https://github.com/ozgurkarahan" rel="me">Explore GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid shell">
+      <p>Currently exploring identity patterns for multi-cloud agent architectures.</p>
+      <div class="social-links" aria-label="Social links">
+        <a href="https://github.com/ozgurkarahan" rel="me">GitHub</a>
+        <a href="https://www.linkedin.com/in/karahanozgur/" rel="me">LinkedIn</a>
+        <span>© 2026 Ozgur Karahan</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
