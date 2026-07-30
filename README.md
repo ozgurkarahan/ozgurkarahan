@@ -19,6 +19,26 @@ I design and build AI-powered applications on Azure, with deep expertise in AI a
 
 ---
 
+## ⛵ Featured: Horizon Famille — « L'autre fin »
+
+A complete **voice-agent customer-service demo, built in 3 days**: a customer calls a real
+phone number on a Saturday, an Azure AI Foundry hosted agent answers in French, verifies
+identity, checks real capacity, quotes **before** acting, executes the change in live
+(mock) CRM/ERP systems, sells an option — and escalates the discount decision it has no
+mandate for to a human in Teams. **One agent, two experiences: transform experiences,
+not systems.**
+
+🎥 **Watch the real call (French, EN subtitles):** [ozgurkarahan.github.io/horizon-famille](https://ozgurkarahan.github.io/horizon-famille/)
+· 📽️ [Interactive deck](https://ozgurkarahan.github.io/horizon-famille/slides.html) · [PDF](https://ozgurkarahan.github.io/horizon-famille/slides.pdf)
+
+📄 **The story on LinkedIn:** [my post about "the other ending"](https://www.linkedin.com/in/karahanozgur/recent-activity/all/)
+
+💻 **Code (MIT):** [horizon-famille](https://github.com/ozgurkarahan/horizon-famille) — agent, mock ERP/CRM/KB, ACS⇄Voice Live bridge, Power Platform approval, deck
+
+<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Voice_Live-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Azure_Communication_Services-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Dynamics_365-002050?style=flat-square&logo=microsoft&logoColor=white"> <img src="https://img.shields.io/badge/Power_Platform-742774?style=flat-square"> <img src="https://img.shields.io/badge/SAP_on_Azure-0FAAFF?style=flat-square&logo=sap&logoColor=white">
+
+---
+
 ## 🔐 Featured: Identity Propagation for AI Agents
 
 Enterprise AI agents must act as the **real user** — no service accounts in the data path, every action traceable and authorized per-user. This is a series of production-grade implementations of that pattern on Azure (Entra ID, APIM, AI Foundry) across ServiceNow, Salesforce, and custom APIs.
@@ -36,6 +56,17 @@ Enterprise AI agents must act as the **real user** — no service accounts in th
 ### 🤖 AI Agents & MCP
 
 <table>
+<tr>
+<td width="130" align="center">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
+<sub><b>Voice Agent</b></sub>
+</td>
+<td>
+<b><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille — « L'autre fin »</a></b> ⭐<br>
+Full voice-agent customer-service demo built in 3 days — real phone call, French voice agent on Foundry, live mock CRM/ERP, human-in-the-loop approval in Teams (<a href="https://ozgurkarahan.github.io/horizon-famille/">🎥 demo & slides</a>)<br>
+<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Voice_Live-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/ACS-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Power_Platform-742774?style=flat-square"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+</td>
+</tr>
 <tr>
 <td width="130" align="center">
 <img src="https://cdn.simpleicons.org/github/181717" width="40" alt="GitHub"><br>
@@ -295,3 +326,4 @@ This separation keeps project knowledge accessible to collaborators while keepin
 ---
 
 *Currently exploring enterprise identity propagation patterns for multi-cloud AI agent architectures.*
+
