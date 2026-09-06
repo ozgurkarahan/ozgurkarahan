@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ozgur Karahan — Enterprise AI Architecture</title>
-  <meta name="description" content="AI Solution Engineer at Microsoft designing secure agentic platforms, identity propagation, and governed enterprise AI delivery.">
+  <meta name="description" content="Ozgur Karahan, AI Solution Engineer at Microsoft. Explore enterprise voice-agent demos, identity patterns, and experimental agent platforms with clear controls and limitations.">
   <meta name="theme-color" content="#eff6ef">
   <meta property="og:title" content="Ozgur Karahan — Enterprise AI Architecture">
-  <meta property="og:description" content="Secure agentic platforms, drawn from identity to action. Selected enterprise AI architecture, delivery patterns, and open-source work.">
+  <meta property="og:description" content="Enterprise AI agents that turn conversations into business actions. Explore demonstrations, architecture, and open-source samples with clear controls and limitations.">
   <meta property="og:image" content="https://github.com/ozgurkarahan.png">
   <meta property="og:url" content="https://ozgurkarahan.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ozgur Karahan — Enterprise AI Architecture">
-  <meta name="twitter:description" content="Secure agentic platforms, drawn from identity to action.">
+  <meta name="twitter:description" content="Enterprise AI agents that turn conversations into business actions, with clear controls and human oversight.">
   <meta name="twitter:image" content="https://github.com/ozgurkarahan.png">
   <link rel="canonical" href="https://ozgurkarahan.com/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%231f2a1f'/><path d='M23 24h54v52H23z' fill='none' stroke='%23a7c598' stroke-width='4'/><text x='50' y='65' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='white'>OK</text></svg>">
@@ -1166,18 +1166,18 @@
     <div class="hero shell">
       <div class="hero-copy">
         <p class="role-line">AI Solution Engineer at Microsoft</p>
-        <h1>Secure agentic platforms, drawn from identity to action.</h1>
-        <p class="hero-lede">I design the architecture that connects AI agents, cloud infrastructure, APIs, and the real user. The goal is simple: move enterprise AI from prototype to governed production.</p>
+        <h1>AI agents that turn conversations into business actions.</h1>
+        <p class="hero-lede">I build enterprise AI demonstrations and the architecture behind them: connecting customer requests to business systems, respecting user permissions, and keeping people in control of decisions beyond the agent's authority.</p>
         <div class="hero-actions">
-          <a class="button button-light" href="#work">See selected work</a>
-          <a class="text-link" href="https://ozgurkarahan.com/agentic-platform/">Open the Agentic Platform vision <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="https://ozgurkarahan.github.io/horizon-famille/">Watch the voice-agent demo</a>
+          <a class="text-link" href="#identity">Explore the architecture <span aria-hidden="true">↓</span></a>
         </div>
       </div>
 
       <figure class="architecture-figure">
         <div class="architecture-label">
           <span>Architecture field note / identity path</span>
-          <span>Live pattern</span>
+          <span>Illustrative pattern</span>
         </div>
         <svg class="architecture-diagram" viewBox="0 0 620 480" role="img" aria-labelledby="architecture-title architecture-description">
           <title id="architecture-title">Per-user identity propagation through an agent platform</title>
@@ -1228,7 +1228,7 @@
           <text class="node-meta" x="248" y="420">every action maps to a person</text>
         </svg>
         <figcaption class="architecture-notes">
-          <span>No service accounts</span>
+          <span>Delegated user access</span>
           <span>Per-user authorization</span>
           <span>Traceable actions</span>
         </figcaption>
@@ -1240,9 +1240,9 @@
     <div class="shell">
       <p class="focus-title">Current focus</p>
       <ul class="focus-list">
-        <li>Enterprise identity for AI agents</li>
-        <li>Agent platforms and MCP integration</li>
-        <li>Governed delivery from request to production</li>
+        <li>Voice agents for business workflows</li>
+        <li>User identity and human oversight</li>
+        <li>Agent platforms and reusable delivery patterns</li>
       </ul>
     </div>
   </div>
@@ -1250,19 +1250,49 @@
   <main id="main">
     <section class="section shell" id="work" aria-labelledby="work-title">
       <div class="section-intro">
-        <h2 id="work-title">Selected systems, not just repositories.</h2>
-        <p>Each project tests a platform-level question: how agents inherit trust, how teams ship governed software, and how knowledge compounds across tools and sessions.</p>
+        <h2 id="work-title">Business scenarios, backed by architecture.</h2>
+        <p>Start with a recorded customer journey, then inspect the identity and platform patterns behind enterprise agents. These demonstrations and samples make their scope visible; they are not evidence of customer production deployments.</p>
       </div>
 
       <div class="case-studies">
-        <article class="case-study">
+        <article class="case-study" id="horizon">
+          <div class="case-copy">
+            <p class="case-type">Flagship demonstration · Horizon Famille</p>
+            <h3>A customer request resolved, with a human in control.</h3>
+            <p>A voice agent checks a booking, offers a change with a price before acting, and routes a discount request beyond its authority to a human in Teams. The demonstration connects a real phone call and Foundry voice agent to mock CRM, ERP, and knowledge-base services.</p>
+            <div class="case-links">
+              <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/">Watch the recorded call <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Explore the presentation <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/ozgurkarahan/horizon-famille">Inspect the source <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="case-meta">French recording · English subtitles · Microsoft Foundry · Voice Live · ACS · Power Platform</p>
+          </div>
+          <dl class="case-evidence">
+            <div>
+              <dt>Challenge</dt>
+              <dd>A booking change crosses business systems when staff are unavailable.</dd>
+            </div>
+            <div>
+              <dt>Evidence</dt>
+              <dd>A recorded phone journey, mock-system state changes, and a Power Platform approval flow in Teams.</dd>
+            </div>
+            <div>
+              <dt>Boundary</dt>
+              <dd>CRM and ERP are mocks, not live Dynamics or SAP integrations. This is a demonstration, not a public calling service or a production deployment.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="case-study" id="identity">
           <div class="case-copy">
             <p class="case-type">Secure agent access</p>
             <h3>Agents that act as the real user.</h3>
-            <p>A production pattern for carrying delegated identity from the browser through Microsoft Foundry and Azure API Management into Salesforce, ServiceNow, and custom APIs.</p>
+            <p>Sample implementations explore how an agent can access business systems with the caller's permissions. The series covers Entra ID, Microsoft Foundry, Azure API Management, Salesforce, and ServiceNow; the Entra implementation is a proof of concept.</p>
             <div class="case-links">
               <a class="text-link" href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">Read the architecture story <span aria-hidden="true">↗</span></a>
               <a class="text-link" href="https://github.com/ozgurkarahan/propagate-id-entra">View Entra implementation <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">View Salesforce sample <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/ozgurkarahan/snow-meta-tool">View ServiceNow sample <span aria-hidden="true">↗</span></a>
             </div>
             <p class="case-meta">Microsoft Foundry · Entra ID · APIM · MCP · OAuth 2.0</p>
           </div>
@@ -1276,42 +1306,43 @@
               <dd>Propagate the user's delegated identity across every boundary.</dd>
             </div>
             <div>
-              <dt>Proof</dt>
-              <dd>Working patterns for Entra, Salesforce, ServiceNow, and custom APIs.</dd>
+              <dt>Evidence</dt>
+              <dd>Public source and setup documentation for each identity flow. Production use requires environment-specific authorization, security, and operational validation.</dd>
             </div>
           </dl>
         </article>
 
         <article class="case-study">
           <div class="case-copy">
-            <p class="case-type">Governed software delivery</p>
-            <h3>From workplace request to deployed software.</h3>
-            <p>A presenter-led Agentic SDLC demo that connects intake, planning, implementation, testing, review, pull request, and deployment with enforce-first CI gates.</p>
+            <p class="case-type">Supporting platform experiment</p>
+            <h3>Give an agent tools, then define its boundaries.</h3>
+            <p>The Foundry hosted coding-agent sample brings the OpenAI Agents SDK, a terminal, persistent workspace, browser verification, and scoped Azure access into one experimental runtime.</p>
             <div class="case-links">
-              <a class="text-link" href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Explore the project <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">Open the lifecycle deck <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/ozgurkarahan/foundry-openai-coding-agent">Watch the walkthrough and inspect source <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://ozgurkarahan.github.io/foundry-openai-coding-agent/">Explore the architecture guide <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/limitations.md">Read the limitations <span aria-hidden="true">↗</span></a>
             </div>
-            <p class="case-meta">GitHub Copilot · GitHub Actions · Multi-agent workflow · JavaScript</p>
+            <p class="case-meta">Microsoft Foundry · OpenAI Agents SDK · Python · Browser verification</p>
           </div>
           <dl class="case-evidence">
             <div>
               <dt>Challenge</dt>
-              <dd>Agentic coding needs governance without losing delivery speed.</dd>
+              <dd>Delegating coding work requires more than a model: tools, identity, execution boundaries, and verification.</dd>
             </div>
             <div>
               <dt>Move</dt>
-              <dd>Make policy and verification part of the workflow, not an afterthought.</dd>
+              <dd>Make the runtime and its controls inspectable through source, an architecture guide, and a subtitled walkthrough.</dd>
             </div>
             <div>
-              <dt>Proof</dt>
-              <dd>A complete, repeatable path from request intake to deployment.</dd>
+              <dt>Boundary</dt>
+              <dd>Experimental community sample, not an official Microsoft product or reference architecture. Not production-ready; no SLA or one-click infrastructure setup.</dd>
             </div>
           </dl>
         </article>
 
         <article class="case-study">
           <div class="case-copy">
-            <p class="case-type">Durable agent knowledge</p>
+            <p class="case-type">Supporting developer workflow</p>
             <h3>Memory that compounds across sessions.</h3>
             <p>A Karpathy-style LLM wiki that gives coding agents durable project and domain context across GitHub Copilot, Claude Code, Codex, and Cursor.</p>
             <div class="case-links">
@@ -1330,18 +1361,19 @@
             </div>
             <div>
               <dt>Proof</dt>
-              <dd>One memory pattern shared across multiple coding-agent runtimes.</dd>
+              <dd>A public wiki pattern and setup guide for coding-agent context, not a validated customer-data memory solution.</dd>
             </div>
           </dl>
         </article>
       </div>
+      <p>Also explore <a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC</a>, a presenter-led demonstration and reusable harness for software-delivery workflows, or <a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">open its lifecycle deck</a>. Consult the repository for current setup and status.</p>
     </section>
 
     <section class="vision-section shell" id="vision" aria-labelledby="vision-title">
       <div class="vision-panel">
         <div class="vision-grid">
           <div class="vision-copy">
-            <h2 id="vision-title">The Agentic Platform: our vision.</h2>
+            <h2 id="vision-title">The Agentic Platform.</h2>
             <p>An interactive deck on the shift from AI assistance to an operating platform for agents. It follows the full system from how developers build agents to how enterprises deploy, operate, and govern them at scale.</p>
             <div class="vision-actions">
               <a class="button button-signal" href="https://ozgurkarahan.com/agentic-platform/">Open the interactive deck</a>
@@ -1418,6 +1450,17 @@
             <ul class="archive-list">
               <li class="archive-item">
                 <div class="archive-name">
+                  <p class="archive-type">Experimental community sample</p>
+                  <h4><a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent">Foundry Hosted Coding Agent</a></h4>
+                  <p class="repo-name">foundry-openai-coding-agent</p>
+                </div>
+                <div>
+                  <p class="archive-description">A hosted coding-agent runtime with tools, browser verification, and documented boundaries; not production-ready.</p>
+                  <p class="archive-tech">Microsoft Foundry · OpenAI Agents SDK · Python</p>
+                </div>
+              </li>
+              <li class="archive-item">
+                <div class="archive-name">
                   <p class="archive-type">Public project</p>
                   <h4><a href="https://github.com/ozgurkarahan/ai-agent-memory">AI Agent Memory</a></h4>
                   <p class="repo-name">ai-agent-memory</p>
@@ -1434,7 +1477,7 @@
                   <p class="repo-name">agentic-sdlc-demo</p>
                 </div>
                 <div>
-                  <p class="archive-description">A complete presenter-led software lifecycle driven by coding agents and enforce-first CI gates.</p>
+                  <p class="archive-description">A presenter-led demonstration and reusable harness exploring coding-agent delivery workflows. See the repository for current setup and status.</p>
                   <p class="archive-tech">JavaScript · GitHub Copilot · GitHub Actions · Multi-agent</p>
                 </div>
               </li>
@@ -1516,8 +1559,8 @@
                   <p class="repo-name">azure-apim-mcp-server</p>
                 </div>
                 <div>
-                  <p class="archive-description">A streamable HTTP MCP server for managing Azure API Management through natural language.</p>
-                  <p class="archive-tech">Python · Azure API Management · MCP</p>
+                  <p class="archive-description">A business orders REST API exposed as MCP tools through Azure API Management's native MCP gateway.</p>
+                  <p class="archive-tech">Python · FastAPI · PostgreSQL · Azure API Management · MCP · Bicep</p>
                 </div>
               </li>
             </ul>
@@ -1526,6 +1569,17 @@
           <section class="archive-group" aria-labelledby="archive-applied-ai">
             <h3 id="archive-applied-ai">Applied AI and operations</h3>
             <ul class="archive-list">
+              <li class="archive-item">
+                <div class="archive-name">
+                  <p class="archive-type">Recorded demonstration</p>
+                  <h4><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille</a></h4>
+                  <p class="repo-name">horizon-famille</p>
+                </div>
+                <div>
+                  <p class="archive-description">A voice-agent booking journey with mock business systems and human approval in Teams.</p>
+                  <p class="archive-tech">Microsoft Foundry · Voice Live · ACS · Power Platform · Python</p>
+                </div>
+              </li>
               <li class="archive-item">
                 <div class="archive-name">
                   <p class="archive-type">Public project</p>
@@ -1608,7 +1662,7 @@
     <div class="contact-grid shell">
       <div class="contact-copy">
         <p>Enterprise AI architecture · agent platforms · identity</p>
-        <h2 id="contact-title">Have a platform problem worth drawing out?</h2>
+        <h2 id="contact-title">Discuss an enterprise AI challenge.</h2>
       </div>
       <div class="contact-actions">
         <a class="button button-light" href="https://www.linkedin.com/in/karahanozgur/" rel="me">Start a conversation</a>
@@ -1619,7 +1673,7 @@
 
   <footer class="site-footer">
     <div class="footer-grid shell">
-      <p>Currently exploring identity patterns for multi-cloud agent architectures.</p>
+      <p>Personal portfolio and community samples. Employment at Microsoft does not imply official endorsement; consult each project's scope and limitations.</p>
       <div class="social-links" aria-label="Social links">
         <a href="https://github.com/ozgurkarahan" rel="me">GitHub</a>
         <a href="https://www.linkedin.com/in/karahanozgur/" rel="me">LinkedIn</a>

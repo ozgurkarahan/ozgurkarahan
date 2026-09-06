@@ -1,329 +1,74 @@
-<div align="center">
+# Ozgur Karahan
 
-# Hi, I'm Ozgur Karahan 👋
+**AI Solution Engineer at Microsoft**
 
-**AI Solution Engineer @ Microsoft**
+I help connect AI capabilities to business workflows: improving service experiences, integrating enterprise systems, and exploring how agents can act with appropriate identity and human oversight.
 
-*Building intelligent systems at the intersection of AI, cloud infrastructure, and enterprise integration.*
+[Website](https://ozgurkarahan.com/) · [LinkedIn](https://www.linkedin.com/in/karahanozgur/)
 
-[![Website](https://img.shields.io/badge/Website-ozgurkarahan.com-295233?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ozgurkarahan.com/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-ozgurkarahan-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/karahanozgur/)
+## Featured work
 
-</div>
+### Horizon Famille: redesigning the service experience
 
----
+A customer-service demonstration connecting a real phone call to a Foundry voice agent through Voice Live and Azure Communication Services. The scenario uses **mock CRM, ERP, and knowledge-base systems**, with Power Platform routing a decision to a human approver in Teams.
 
-## 🧑‍💻 About
+The business question: how can an agent help resolve a customer request while leaving decisions outside its mandate to a person?
 
-I design and build AI-powered applications on Azure, with deep expertise in AI agents and MCP (Model Context Protocol) integrations, and a strong background in enterprise architecture, integration strategy, and API management. My work focuses on making AI practical and production-ready for enterprise environments.
+[Watch the recorded call — French, English subtitles, 6m19s](https://ozgurkarahan.github.io/horizon-famille/) · [Slides](https://ozgurkarahan.github.io/horizon-famille/slides.html) · [PDF](https://ozgurkarahan.github.io/horizon-famille/slides.pdf) · [Code](https://github.com/ozgurkarahan/horizon-famille)
 
----
+This is a demonstration, not a production service or a public phone line to try.
 
-## ⛵ Featured: Horizon Famille — « L'autre fin »
+### Identity propagation: connecting agent actions to the user
 
-A complete **voice-agent customer-service demo, built in 3 days**: a customer calls a real
-phone number on a Saturday, an Azure AI Foundry hosted agent answers in French, verifies
-identity, checks real capacity, quotes **before** acting, executes the change in live
-(mock) CRM/ERP systems, sells an option — and escalates the discount decision it has no
-mandate for to a human in Teams. **One agent, two experiences: transform experiences,
-not systems.**
+A series exploring how AI agents can access enterprise systems with the caller's identity through Entra ID, Foundry, and API Management. The Entra project is a proof of concept; the Salesforce and ServiceNow projects are sample implementations, not audited production guarantees.
 
-🎥 **Watch the real call (French, EN subtitles):** [ozgurkarahan.github.io/horizon-famille](https://ozgurkarahan.github.io/horizon-famille/)
-· 📽️ [Interactive deck](https://ozgurkarahan.github.io/horizon-famille/slides.html) · [PDF](https://ozgurkarahan.github.io/horizon-famille/slides.pdf)
+[Entra ID proof of concept](https://github.com/ozgurkarahan/propagate-id-entra) · [Salesforce sample](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation) · [ServiceNow sample](https://github.com/ozgurkarahan/snow-meta-tool) · [Identity guide](docs/security.md)
 
-📄 **The story on LinkedIn:** [my post about "the other ending"](https://www.linkedin.com/in/karahanozgur/recent-activity/all/)
+### Foundry hosted coding agent: exploring agent-assisted delivery
 
-💻 **Code (MIT):** [horizon-famille](https://github.com/ozgurkarahan/horizon-famille) — agent, mock ERP/CRM/KB, ACS⇄Voice Live bridge, Power Platform approval, deck
+An experimental community sample exploring a hosted coding agent on Foundry. It connects the discussion about agent platforms to implementation choices and limitations.
 
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Voice_Live-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Azure_Communication_Services-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Dynamics_365-002050?style=flat-square&logo=microsoft&logoColor=white"> <img src="https://img.shields.io/badge/Power_Platform-742774?style=flat-square"> <img src="https://img.shields.io/badge/SAP_on_Azure-0FAAFF?style=flat-square&logo=sap&logoColor=white">
+[Project overview](https://ozgurkarahan.github.io/foundry-openai-coding-agent/) · [Presentation](https://ozgurkarahan.github.io/foundry-openai-coding-agent/deck/) · [Video](https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/deck/agentic-platform-deck.mp4) · [Code](https://github.com/ozgurkarahan/foundry-openai-coding-agent)
 
----
+Not an official Microsoft product or reference implementation, and not production-ready. See the [architecture](https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/ARCHITECTURE.md) and [limitations](https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/limitations.md).
 
-## 🔐 Featured: Identity Propagation for AI Agents
+## Supporting patterns
 
-Enterprise AI agents must act as the **real user** — no service accounts in the data path, every action traceable and authorized per-user. This is a series of production-grade implementations of that pattern on Azure (Entra ID, APIM, AI Foundry) across ServiceNow, Salesforce, and custom APIs.
+- **[AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory)** — a reusable local Markdown wiki pattern for coding-agent project knowledge, not a customer-data solution.
+- **[Agentic SDLC Demo](https://github.com/ozgurkarahan/agentic-sdlc-demo)** — a presenter-led demo and harness for exploring AI-assisted software delivery. Consult the [README for setup and current status](https://github.com/ozgurkarahan/agentic-sdlc-demo#readme); this is not a claim of a complete, verified workflow. [Slides](https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html) · [Companion validation repository](https://github.com/ozgurkarahan/agentic-sdlc-demo-live).
 
-📄 **Read the story:** [From Theory to Production: Salesforce Meta-Tool & Identity Propagation](https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/)
+<details>
+<summary>Other projects, presentations, and private work</summary>
 
-🧩 **The series:** [Entra ID Identity Propagation](https://github.com/ozgurkarahan/propagate-id-entra) · [ServiceNow MCP Meta Tool](https://github.com/ozgurkarahan/snow-meta-tool) · [Salesforce MCP Meta Tool](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation)
+| Project | Focus |
+|---------|-------|
+| [Azure APIM MCP Server](https://github.com/ozgurkarahan/azure-apim-mcp-server) | Exposes a business orders REST API as MCP through APIM's native gateway; Python, FastAPI, PostgreSQL, and Bicep. |
+| [Simple Order Agent](https://github.com/ozgurkarahan/simple-order-agent) | Order-processing example using Claude SDK, MuleSoft MCP, and A2A. |
+| [AI Avatar Presenter](https://github.com/ozgurkarahan/ai-avatar-presenter) | Avatar-led slide presentation and interactive Q&A. |
+| [Azure SRE Agent for Synapse](https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc) | Proof-of-concept scaffold for investigating Synapse observability scenarios. |
+| [Anthropic Academy](https://github.com/ozgurkarahan/anthropic-academy) | Worked learning examples. |
+| [The Agentic Platform](https://ozgurkarahan.com/agentic-platform/) | A presentation exploring the shift from AI assistance to agent platforms. [Source](https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform). |
+| Enterprise Document RAG | Private work. |
+| AI Agent Project Template | Private work. |
 
----
+</details>
 
-## 🚀 My Projects
+<details>
+<summary>Modified and reference forks, with upstream attribution</summary>
 
-> Projects I built from scratch.
+These projects originate with the upstream authors linked below.
 
-### 🤖 AI Agents & MCP
+| Fork | Upstream | Purpose |
+|------|----------|---------|
+| [Get Started with AI Agents](https://github.com/ozgurkarahan/get-started-with-ai-agents) | [Azure-Samples](https://github.com/Azure-Samples/get-started-with-ai-agents) | Modified fork with endpoint/A2A documentation and infrastructure customizations. |
+| [Get Started with AI Chat](https://github.com/ozgurkarahan/get-started-with-ai-chat) | [Azure-Samples](https://github.com/Azure-Samples/get-started-with-ai-chat) | Chat application reference. |
+| [Voice Live API Sales Coach](https://github.com/ozgurkarahan/voicelive-api-salescoach) | [Azure-Samples](https://github.com/Azure-Samples/voicelive-api-salescoach) | Voice-training reference. |
+| [L300 AI Apps and Agents Workshop](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents) | [Microsoft](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents) | Workshop reference. |
+| [Interactive Prompt Engineering Tutorial](https://github.com/ozgurkarahan/prompt-eng-interactive-tutorial) | [Anthropic](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Learning reference. |
+| [Karpathy Autoresearch](https://github.com/ozgurkarahan/karpathy-autoresearch) | [karpathy](https://github.com/karpathy/autoresearch) | Autonomous research reference. |
 
-<table>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>Voice Agent</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille — « L'autre fin »</a></b> ⭐<br>
-Full voice-agent customer-service demo built in 3 days — real phone call, French voice agent on Foundry, live mock CRM/ERP, human-in-the-loop approval in Teams (<a href="https://ozgurkarahan.github.io/horizon-famille/">🎥 demo & slides</a>)<br>
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Voice_Live-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/ACS-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Power_Platform-742774?style=flat-square"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.simpleicons.org/github/181717" width="40" alt="GitHub"><br>
-<sub><b>Agent Memory</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/ai-agent-memory">AI Agent Memory</a></b> ⭐<br>
-Persistent memory for AI coding agents — Karpathy LLM Wiki pattern for GitHub Copilot, Claude Code, Codex, and Cursor<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_Code-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Copilot-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Codex-412991?style=flat-square&logo=openai&logoColor=white"> <img src="https://img.shields.io/badge/Cursor-000000?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.simpleicons.org/githubactions/2088FF" width="40" alt="GitHub Actions"><br>
-<sub><b>Agentic SDLC</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC Demo</a></b><br>
-Ready-to-run, presenter-led demo of the full SDLC driven by AI coding agents — intake → plan → implement → test → review → PR → deploy, with enforce-first CI gates (<a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">🎞️ slide deck</a> · <a href="https://github.com/ozgurkarahan/agentic-sdlc-demo-live">live validation target</a>)<br>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/GitHub_Copilot-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/Multi--Agent-blueviolet?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>Agent + MCP</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/snow-meta-tool">ServiceNow MCP Meta Tool</a></b><br>
-ServiceNow MCP meta-tool — 3 generic tools (discover, query, write) with per-user identity propagation via Azure APIM JWT Bearer OBO flow<br>
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/ServiceNow-6DB33F?style=flat-square&logo=servicenow&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" width="40" alt="Salesforce"><br>
-<sub><b>Agent + MCP</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">Salesforce MCP Meta Tool</a></b><br>
-Meta-tool MCP server for Salesforce with cross-cloud identity propagation — AI agents manage Salesforce resources using the caller's Azure identity end-to-end<br>
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Salesforce-00A1E0?style=flat-square&logo=salesforce&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>Agent + MCP</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/propagate-id-entra">Entra ID Identity Propagation</a></b><br>
-End-to-end Entra ID identity propagation from browser through AI Foundry agents and APIM to backend APIs — no service accounts in the data path<br>
-<img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Entra_ID-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/API_Management-FF6F00?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.simpleicons.org/anthropic/191919" width="40" alt="Claude"><br>
-<sub><b>Agent</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/simple-order-agent">Simple Order Agent</a></b><br>
-Order processing agent using Claude SDK, MuleSoft MCP, and A2A protocol<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_SDK-191919?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/MuleSoft-00A1DF?style=flat-square&logo=mulesoft&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square"> <img src="https://img.shields.io/badge/A2A-orange?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>MCP</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/azure-apim-mcp-server">Azure APIM MCP Server</a></b><br>
-MCP server for Azure API Management — manage APIs through natural language<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Azure_APIM-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/MCP-blueviolet?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>SRE Agent</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">Azure SRE Agent for Synapse</a></b><br>
-Reproducible IaC, KQL runbook, and smoke-test scaffold for validating Azure SRE Agent against common Synapse observability pain points<br>
-<img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square"> <img src="https://img.shields.io/badge/KQL-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Azure_SRE_Agent-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Synapse-0078D4?style=flat-square&logo=microsoftazure&logoColor=white">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.simpleicons.org/github/6e7681" width="40" alt="Private repo"><br>
-<sub><b>Template</b></sub>
-</td>
-<td>
-<b>AI Agent Project Template</b> <img src="https://img.shields.io/badge/Private_Repo-6e7681?style=flat-square&logo=github&logoColor=white"><br>
-Internal scaffold standardizing AI-agent project structure and agent-config conventions across repos<br>
-<img src="https://img.shields.io/badge/Agent_Config-388bfd?style=flat-square"> <img src="https://img.shields.io/badge/Conventions-6e7681?style=flat-square">
-</td>
-</tr>
-</table>
+</details>
 
-### 🖥️ AI Apps
+## Further reading
 
-<table>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>AI App</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/ai-avatar-presenter">AI Avatar Presenter</a></b><br>
-AI-powered avatar presentation assistant — upload PowerPoint slides and have an AI avatar present them with multilingual TTS, interactive Q&A, and Teams integration<br>
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/Azure_AI_Speech-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square">
-</td>
-</tr>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>AI App</b></sub>
-</td>
-<td>
-<b>Enterprise Document RAG</b> <img src="https://img.shields.io/badge/Private_Repo-6e7681?style=flat-square&logo=github&logoColor=white"><br>
-Document-intelligence and retrieval-augmented generation solution delivered for an enterprise client<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Azure_AI-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/RAG-3fb38f?style=flat-square">
-</td>
-</tr>
-</table>
-
-### 🔐 Security
-
-> Identity propagation patterns — see full project descriptions in [AI Agents & MCP](#-ai-agents--mcp) above.
-
-| Project | Security Pattern |
-|---------|-----------------|
-| [ServiceNow MCP Meta Tool](https://github.com/ozgurkarahan/snow-meta-tool) | JWT Bearer OBO flow — Azure APIM exchanges Azure AD token for ServiceNow per-user token |
-| [Salesforce MCP Meta Tool](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation) | Cross-cloud identity: Azure AD → APIM → Salesforce via On-Behalf-Of JWT Bearer |
-| [Entra ID Identity Propagation](https://github.com/ozgurkarahan/propagate-id-entra) | Entra ID token passthrough from MSAL.js SPA through AI Foundry + APIM to backend API |
-
-### 📚 Learning
-
-<table>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.simpleicons.org/anthropic/191919" width="40" alt="Anthropic"><br>
-<sub><b>Learn</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/anthropic-academy">Anthropic Academy</a></b><br>
-Worked examples from the Anthropic Academy curriculum<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Claude_API-191919?style=flat-square&logo=anthropic&logoColor=white">
-</td>
-</tr>
-</table>
-
----
-
-## 🎤 Talks & Presentations
-
-<table>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>Vision Deck</b></sub>
-</td>
-<td>
-<b><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform — our vision</a></b><br>
-Interactive vision deck on the shift from AI assistance to agentic platforms — how developers build, deploy, and operate agents at scale (<a href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">source</a>)<br>
-<img src="https://img.shields.io/badge/Agentic_Platform-6D5DFB?style=flat-square"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Microsoft_Foundry-0078D4?style=flat-square&logo=microsoftazure&logoColor=white"> <img src="https://img.shields.io/badge/Interactive_HTML-E34F26?style=flat-square&logo=html5&logoColor=white">
-</td>
-</tr>
-</table>
-
----
-
-## 🍴 Forks & Contributions
-
-### ✏️ Modified Forks
-
-<table>
-<tr>
-<td width="130" align="center">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="40" alt="Azure"><br>
-<sub><b>Fork+</b></sub>
-</td>
-<td>
-<b><a href="https://github.com/ozgurkarahan/get-started-with-ai-agents">Get Started with AI Agents</a></b>
-&nbsp;·&nbsp; <sub>forked from <a href="https://github.com/Azure-Samples/get-started-with-ai-agents">Azure-Samples</a></sub><br>
-<b>My additions:</b> AI Foundry endpoint & A2A documentation (1 400+ lines), Bicep infra customizations, extended README<br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Azure_AI_Foundry-0078D4?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1OCA1OCI+PHBhdGggZD0iTTI4Ljk4IDUuNjEgMCAzMi4xOWgxMC40M0wzLjkgNTIuMzloMDkuNjlsMjAuODEtMjguODVINS44N0wyOC45OCA1LjYxem03LjA0IDIuMjYtMTAuNiAyNi45MiAyMC4wNCAyMy42SDU4TDM2LjAyIDcuODd6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==&logoColor=white"> <img src="https://img.shields.io/badge/Bicep-FF7F50?style=flat-square">
-</td>
-</tr>
-</table>
-
-### 📌 Reference Forks
-
-> Unmodified forks kept for learning and workshops.
-
-| | Project | Upstream | Purpose |
-|:-:|---------|----------|---------|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="20"> | [Get Started with AI Chat](https://github.com/ozgurkarahan/get-started-with-ai-chat) | [Azure-Samples](https://github.com/Azure-Samples/get-started-with-ai-chat) | Azure AI Foundry chat application reference |
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="20"> | [Voice Live API Sales Coach](https://github.com/ozgurkarahan/voicelive-api-salescoach) | [Azure-Samples](https://github.com/Azure-Samples/voicelive-api-salescoach) | AI-powered voice training for sales with Azure Voice Live API |
-| <img src="https://img.shields.io/badge/MS-5E5E5E?style=flat-square&logo=microsoft&logoColor=white" height="20"> | [L300 AI Apps and Agents Workshop](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents) | [Microsoft](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents) | L300-level AI workshop material |
-| <img src="https://cdn.simpleicons.org/anthropic/191919" width="20"> | [Interactive Prompt Engineering Tutorial](https://github.com/ozgurkarahan/prompt-eng-interactive-tutorial) | [Anthropic](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Interactive prompt engineering exercises |
-| <img src="https://img.shields.io/badge/AK-191919?style=flat-square" height="20"> | [Karpathy Autoresearch](https://github.com/ozgurkarahan/karpathy-autoresearch) | [karpathy](https://github.com/karpathy/autoresearch) | Autonomous AI agent running LLM training experiments |
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Anthropic](https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logo=anthropic&logoColor=white)
-![MuleSoft](https://img.shields.io/badge/MuleSoft-00A1DF?style=for-the-badge&logo=mulesoft&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Bicep](https://img.shields.io/badge/Bicep-FF7F50?style=for-the-badge)
-![MCP](https://img.shields.io/badge/MCP_Protocol-blueviolet?style=for-the-badge)
-![API Management](https://img.shields.io/badge/API_Management-FF6F00?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
-![ServiceNow](https://img.shields.io/badge/ServiceNow-6DB33F?style=for-the-badge&logo=servicenow&logoColor=white)
-![OAuth](https://img.shields.io/badge/OAuth_2.0-EB5424?style=for-the-badge&logo=auth0&logoColor=white)
-![Entra ID](https://img.shields.io/badge/Entra_ID-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Container Apps](https://img.shields.io/badge/Container_Apps-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-
-</div>
-
----
-
-## 🔭 Currently Exploring
-
-Enterprise identity propagation patterns for multi-cloud AI agent architectures — making every AI action traceable to the real user across Azure, Salesforce, and ServiceNow.
-
----
-
-## 🤖 Agent Workflow
-
-All repositories follow a standard convention for working with AI code agents:
-
-- **`AGENT.md`** — public project instructions, architecture, and conventions committed to each repo
-- **`.claude/`** — private per-project configuration, lessons learned, and session context (gitignored)
-- **Global workflow rules** — verification standards, subagent strategy, and self-improvement loop loaded across all projects
-
-This separation keeps project knowledge accessible to collaborators while keeping iterative agent context private.
-
----
-
-## 📖 Detailed Docs
-
-| | Doc | What's inside |
-|:-:|-----|---------------|
-| 🤖 | [AI Agents & Apps](docs/ai-agents.md) | Architecture, stack details, and fork modifications |
-| 📚 | [Learning Resources](docs/learning-resources.md) | Curated tutorials, courses, and reference links |
-| 🔐 | [Security Projects](docs/security.md) | Identity propagation patterns and API security |
-
----
-
-*Currently exploring enterprise identity propagation patterns for multi-cloud AI agent architectures.*
-
+[AI agents and apps](docs/ai-agents.md) · [Identity and security](docs/security.md) · [Learning resources](docs/learning-resources.md)
