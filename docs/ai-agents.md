@@ -8,7 +8,7 @@ Selected demonstrations and reusable patterns for connecting agents to business 
 
 ### Horizon Famille
 
-A voice-agent customer-service scenario using a real phone call, Foundry Voice Live, and Azure Communication Services. CRM, ERP, and knowledge-base integrations are **mock systems**; Power Platform supports human approval in Teams. The published material is a recording and presentation, not a live public service.
+A voice-agent customer-service scenario using a Foundry agent, Azure AI Voice Live, and Azure Communication Services. The agent checks a booking, quotes a change before acting, and routes a discount request beyond its authority to a human in Teams through Power Platform. The phone call is real; CRM, ERP, and knowledge-base services are **mocks**, not live Dynamics or SAP integrations. The published material is a recording and presentation, not a live public service.
 
 [Repository and setup](https://github.com/ozgurkarahan/horizon-famille) · [Recorded call — French, English subtitles, 6m19s](https://ozgurkarahan.github.io/horizon-famille/) · [Slides](https://ozgurkarahan.github.io/horizon-famille/slides.html) · [PDF](https://ozgurkarahan.github.io/horizon-famille/slides.pdf)
 

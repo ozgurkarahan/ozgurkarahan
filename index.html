@@ -529,6 +529,12 @@
       border-top: 1px solid var(--line);
     }
 
+    .case-study-featured {
+      padding-inline: clamp(1.25rem, 3vw, 2.5rem);
+      border-top: 3px solid var(--cobalt);
+      background: var(--cobalt-soft);
+    }
+
     .case-type,
     .archive-type,
     .repo-name,
@@ -538,7 +544,7 @@
       font-family: "IBM Plex Mono", monospace;
     }
 
-    .case-type {
+    .case-copy > .case-type {
       margin-bottom: 1rem;
       color: var(--cobalt);
       font-size: 0.76rem;
@@ -563,6 +569,7 @@
     }
 
     .case-links a {
+      min-height: 2.75rem;
       color: var(--cobalt);
     }
 
@@ -592,11 +599,33 @@
       font-weight: 600;
     }
 
-    .case-meta {
+    .case-copy > .case-meta {
       margin-top: 1.25rem;
       color: var(--quiet);
       font-size: 0.72rem;
       line-height: 1.8;
+    }
+
+    .supporting-work {
+      padding-top: 2.5rem;
+    }
+
+    .supporting-work h3 {
+      font-size: 1.4rem;
+    }
+
+    .supporting-work ul {
+      display: grid;
+      gap: 1.25rem;
+      max-width: 72ch;
+      margin-bottom: 0;
+      padding-left: 1.25rem;
+      color: var(--muted);
+    }
+
+    .supporting-work a {
+      color: var(--cobalt);
+      font-weight: 600;
     }
 
     .vision-section {
@@ -952,6 +981,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .social-links a {
@@ -1007,6 +1037,9 @@
 
       .site-header {
         min-height: 4.75rem;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-block: 0.75rem;
       }
 
       .top-nav > a:not(.header-action) {
@@ -1166,8 +1199,8 @@
     <div class="hero shell">
       <div class="hero-copy">
         <p class="role-line">AI Solution Engineer at Microsoft</p>
-        <h1>AI agents that turn conversations into business actions.</h1>
-        <p class="hero-lede">I build enterprise AI demonstrations and the architecture behind them: connecting customer requests to business systems, respecting user permissions, and keeping people in control of decisions beyond the agent's authority.</p>
+        <h1>AI agents for real business tasks.</h1>
+        <p class="hero-lede">I connect customer requests to enterprise systems through AI agents, user identity, and human oversight. Explore the demonstrations I build and the architecture behind them.</p>
         <div class="hero-actions">
           <a class="button button-light" href="https://ozgurkarahan.github.io/horizon-famille/">Watch the voice-agent demo</a>
           <a class="text-link" href="#identity">Explore the architecture <span aria-hidden="true">↓</span></a>
@@ -1251,17 +1284,17 @@
     <section class="section shell" id="work" aria-labelledby="work-title">
       <div class="section-intro">
         <h2 id="work-title">Business scenarios, backed by architecture.</h2>
-        <p>Start with a recorded customer journey, then inspect the identity and platform patterns behind enterprise agents. These demonstrations and samples make their scope visible; they are not evidence of customer production deployments.</p>
+        <p>Watch a customer journey, inspect how agents inherit user permissions, and explore a hosted runtime. Each demonstration includes its source and clearly defined limits.</p>
       </div>
 
       <div class="case-studies">
-        <article class="case-study" id="horizon">
+        <article class="case-study case-study-featured" id="horizon">
           <div class="case-copy">
             <p class="case-type">Flagship demonstration · Horizon Famille</p>
             <h3>A customer request resolved, with a human in control.</h3>
             <p>A voice agent checks a booking, offers a change with a price before acting, and routes a discount request beyond its authority to a human in Teams. The demonstration connects a real phone call and Foundry voice agent to mock CRM, ERP, and knowledge-base services.</p>
             <div class="case-links">
-              <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/">Watch the recorded call <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/">Watch the call · 6m19s <span aria-hidden="true">↗</span></a>
               <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Explore the presentation <span aria-hidden="true">↗</span></a>
               <a class="text-link" href="https://github.com/ozgurkarahan/horizon-famille">Inspect the source <span aria-hidden="true">↗</span></a>
             </div>
@@ -1340,33 +1373,14 @@
           </dl>
         </article>
 
-        <article class="case-study">
-          <div class="case-copy">
-            <p class="case-type">Supporting developer workflow</p>
-            <h3>Memory that compounds across sessions.</h3>
-            <p>A Karpathy-style LLM wiki that gives coding agents durable project and domain context across GitHub Copilot, Claude Code, Codex, and Cursor.</p>
-            <div class="case-links">
-              <a class="text-link" href="https://github.com/ozgurkarahan/ai-agent-memory">Explore AI Agent Memory <span aria-hidden="true">↗</span></a>
-            </div>
-            <p class="case-meta">Python · Knowledge graph · GitHub Copilot · Claude Code · Codex · Cursor</p>
-          </div>
-          <dl class="case-evidence">
-            <div>
-              <dt>Challenge</dt>
-              <dd>Agents repeatedly relearn the same project context.</dd>
-            </div>
-            <div>
-              <dt>Move</dt>
-              <dd>Turn lessons, decisions, and terminology into a linked local wiki.</dd>
-            </div>
-            <div>
-              <dt>Proof</dt>
-              <dd>A public wiki pattern and setup guide for coding-agent context, not a validated customer-data memory solution.</dd>
-            </div>
-          </dl>
-        </article>
       </div>
-      <p>Also explore <a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC</a>, a presenter-led demonstration and reusable harness for software-delivery workflows, or <a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">open its lifecycle deck</a>. Consult the repository for current setup and status.</p>
+      <div class="supporting-work">
+        <h3>Reusable patterns for developer workflows.</h3>
+        <ul>
+          <li><a href="https://github.com/ozgurkarahan/ai-agent-memory">AI Agent Memory</a> — a shared Markdown wiki for coding-agent knowledge across tools and sessions. A developer workflow, not a validated customer-data memory solution.</li>
+          <li><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC</a> — a presenter-led demo and reusable software-delivery harness. <a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">Explore the lifecycle deck</a>; consult the repository for current setup and status.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="vision-section shell" id="vision" aria-labelledby="vision-title">
@@ -1435,13 +1449,13 @@
 
     <section class="section shell" id="archive" aria-labelledby="archive-title">
       <div class="archive-heading">
-        <h2 id="archive-title">Complete project index.</h2>
-        <p>Selected work above carries the story. This archive keeps the full technical record, including public repositories, contributions, learning work, and safely redacted private projects.</p>
+        <h2 id="archive-title">Explore the wider collection.</h2>
+        <p>More public repositories, contributions, and learning work, with private projects listed by capability only.</p>
       </div>
 
       <details class="project-archive">
         <summary>
-          <span class="archive-summary-copy">Browse all 15 projects <span>2 private repositories are explicitly flagged</span></span>
+          <span class="archive-summary-copy">Browse the project archive <span>Includes clearly labelled private work and reference forks</span></span>
           <span class="archive-toggle" aria-hidden="true"></span>
         </summary>
         <div class="archive-content">
@@ -1537,7 +1551,7 @@
                   <p class="repo-name">propagate-id-entra</p>
                 </div>
                 <div>
-                  <p class="archive-description">End-to-end identity propagation from browser to agents, policy gateway, and backend APIs.</p>
+                  <p class="archive-description">A proof of concept for identity propagation from browser to agents, policy gateway, and backend APIs.</p>
                   <p class="archive-tech">Microsoft Foundry · Entra ID · APIM · MCP · Bicep</p>
                 </div>
               </li>

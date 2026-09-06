@@ -26,7 +26,7 @@ A series exploring how AI agents can access enterprise systems with the caller's
 
 ### Foundry hosted coding agent: exploring agent-assisted delivery
 
-An experimental community sample exploring a hosted coding agent on Foundry. It connects the discussion about agent platforms to implementation choices and limitations.
+An experimental community sample combining the OpenAI Agents SDK, a terminal, persistent workspace, browser verification, and scoped Azure access in a Foundry-hosted runtime. Explore the implementation decisions through a subtitled walkthrough and architecture guide.
 
 [Project overview](https://ozgurkarahan.github.io/foundry-openai-coding-agent/) · [Presentation](https://ozgurkarahan.github.io/foundry-openai-coding-agent/deck/) · [Video](https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/deck/agentic-platform-deck.mp4) · [Code](https://github.com/ozgurkarahan/foundry-openai-coding-agent)
 
@@ -72,3 +72,7 @@ These projects originate with the upstream authors linked below.
 ## Further reading
 
 [AI agents and apps](docs/ai-agents.md) · [Identity and security](docs/security.md) · [Learning resources](docs/learning-resources.md)
+
+## Connect and contribute
+
+For architecture discussions, speaking opportunities, and professional connections, [find me on LinkedIn](https://www.linkedin.com/in/karahanozgur/). To reproduce a sample, report a limitation, or propose an integration, start with its repository and contribution guidance.

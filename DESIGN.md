@@ -56,7 +56,7 @@ Low-chroma stone field with a subtle blueprint grid, enterprise proposition, two
 
 ### Selected Work
 
-Three case studies framed as problem, architectural move, and resulting capability. Technology labels support the story rather than replacing it.
+Three narrative rows: Horizon Famille as the flagship business demonstration, identity propagation as architecture evidence, and the Foundry hosted coding agent as a supporting platform experiment. A restrained sage field distinguishes the flagship. Each row states its evidence and boundaries; compact links below keep AI Agent Memory and Agentic SDLC accessible without competing with the lead story. Technology labels support the story rather than replacing it.
 
 ### Vision Feature
 
