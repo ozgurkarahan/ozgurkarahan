@@ -1214,7 +1214,7 @@
         </div>
         <svg class="architecture-diagram" viewBox="0 0 620 480" role="img" aria-labelledby="architecture-title architecture-description">
           <title id="architecture-title">Per-user identity propagation through an agent platform</title>
-          <desc id="architecture-description">A user context passes through an agent platform and policy gateway to enterprise systems while preserving authorization and traceability.</desc>
+          <desc id="architecture-description">An illustrative identity path from a user through an agent platform and policy gateway to enterprise systems. Each implementation needs its own authorization checks and audit validation.</desc>
           <defs>
             <pattern id="diagram-grid" width="32" height="32" patternUnits="userSpaceOnUse">
               <path d="M32 0H0V32" fill="none" stroke="oklch(0.9 0 0 / 0.14)" stroke-width="1"/>
@@ -1253,17 +1253,17 @@
           <text class="node-meta" x="498" y="333">custom systems</text>
 
           <line class="callout-line" x1="324" y1="142" x2="324" y2="88"/>
-          <text class="annotation" x="258" y="68">NO SERVICE ACCOUNT</text>
+          <text class="annotation" x="258" y="68">DELEGATED ACCESS</text>
           <text class="node-meta" x="266" y="86">user context stays attached</text>
 
           <line class="callout-line" x1="324" y1="310" x2="324" y2="374"/>
-          <text class="annotation" x="250" y="400">AUTHORIZED + TRACEABLE</text>
-          <text class="node-meta" x="248" y="420">every action maps to a person</text>
+          <text class="annotation" x="250" y="400">VALIDATE EACH BOUNDARY</text>
+          <text class="node-meta" x="248" y="420">check permissions and audit evidence</text>
         </svg>
         <figcaption class="architecture-notes">
           <span>Delegated user access</span>
-          <span>Per-user authorization</span>
-          <span>Traceable actions</span>
+          <span>Authorization checks</span>
+          <span>Audit validation</span>
         </figcaption>
       </figure>
     </div>
