@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Ozgur Karahan — Useful agents need more than a model</title>
+  <desc id="description">A stone, sage, and graphite portfolio cover: action, authority, and human judgment.</desc>
+  <rect width="1200" height="630" fill="#f6faf6"/>
+  <path d="M64 113H1136M64 515H1136" fill="none" stroke="#c6d2c3"/>
+  <g font-family="Public Sans, Segoe UI, Arial, sans-serif">
+    <text x="64" y="69" fill="#202b21" font-size="30" font-weight="700">Ozgur Karahan</text>
+    <text x="1136" y="69" fill="#485447" font-size="19" text-anchor="end">AI Solution Engineer at Microsoft</text>
+    <text x="60" y="238" fill="#202b21" font-size="78" font-weight="800" letter-spacing="-3">Useful agents need</text>
+    <text x="60" y="333" fill="#305b3b" font-size="78" font-weight="800" letter-spacing="-3">more than a model.</text>
+    <text x="64" y="425" fill="#485447" font-size="26">Action. Authority. Human judgment.</text>
+    <text x="64" y="565" fill="#202b21" font-size="21">Demonstrations, patterns, and ideas for enterprise AI.</text>
+    <text x="1136" y="565" fill="#305b3b" font-size="21" text-anchor="end">ozgurkarahan.com</text>
+  </g>
+</svg>
