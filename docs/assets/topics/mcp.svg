@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">An orders API, exposed through native APIM MCP</title>
+  <desc id="desc">Original editorial illustration of two conceptual entry paths, MCP and REST, converging at an API Management gateway before a FastAPI orders API backed by PostgreSQL. It depicts the public sample's documented concept, not a live request, administration interface, or tested deployment.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#305b3b" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="shadow" x="-40%" y="-35%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#305b3b" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <path d="M0 0L6 3.5L0 7" fill="none" stroke="#557d5c" stroke-width="1.3"/>
+    </marker>
+  </defs>
+  <rect width="960" height="600" fill="#e1f0e1"/>
+  <rect width="960" height="600" fill="url(#grid)"/>
+  <ellipse cx="505" cy="464" rx="145" ry="23" fill="#b7d3ba" opacity=".6"/>
+  <g font-family="Public Sans, sans-serif">
+    <text x="48" y="51" fill="#305b3b" font-size="14" font-weight="700" letter-spacing="2.4">BUSINESS APIs × MCP</text>
+    <text x="46" y="119" fill="#202b21" font-size="48" font-weight="700" letter-spacing="-2">One API.</text>
+    <text x="46" y="173" fill="#202b21" font-size="48" font-weight="700" letter-spacing="-2">Two ways in.</text>
+    <text x="743" y="51" fill="#54745b" font-size="13" letter-spacing="1.8">CONCEPT STUDY</text>
+  </g>
+  <g fill="none" stroke="#557d5c" stroke-width="2.2">
+    <path d="M189 313 H266 Q304 313 321 334 L351 363 H467" marker-end="url(#arrow)"/>
+    <path d="M189 411 H266 Q304 411 321 390 L351 363" />
+    <path d="M556 363 H628 Q651 363 668 341 L692 313" marker-end="url(#arrow)"/>
+    <path d="M793 358 V401" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Public Sans, sans-serif">
+    <text x="59" y="325" fill="#305b3b" font-size="40" font-weight="700" letter-spacing="-1">MCP</text>
+    <text x="60" y="350" fill="#5b7561" font-size="15">agent tools</text>
+    <text x="59" y="423" fill="#305b3b" font-size="37" font-weight="700" letter-spacing="-1">REST</text>
+    <text x="60" y="450" fill="#5b7561" font-size="15">applications</text>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M411 455V290 A94 94 0 0 1 599 290 V455 H555 V292 A50 50 0 0 0 455 292 V455Z" fill="#305b3b"/>
+    <path d="M599 290V455L619 443V278 A94 94 0 0 0 525 184 L505 196 A94 94 0 0 1 599 290Z" fill="#83aa88"/>
+    <path d="M411 455H455L474 443H431Z" fill="#25462f"/>
+  </g>
+  <g font-family="Public Sans, sans-serif">
+    <text x="455" y="234" fill="#f6faf6" font-size="26" font-weight="700" letter-spacing="2.5">APIM</text>
+    <text x="407" y="507" fill="#305b3b" font-size="17" font-weight="700">native MCP gateway</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="710" y="236" width="209" height="101" rx="10" fill="#9dbc9e"/>
+    <rect x="699" y="247" width="209" height="101" rx="10" fill="#bed7c1"/>
+    <rect x="687" y="259" width="209" height="101" rx="10" fill="#f6faf6" stroke="#b6cfb9"/>
+  </g>
+  <g font-family="Public Sans, sans-serif">
+    <text x="710" y="301" fill="#202b21" font-size="25" font-weight="700" letter-spacing="-.6">Orders API</text>
+    <text x="711" y="333" fill="#55735d" font-size="17">FastAPI</text>
+  </g>
+  <g fill="#f6faf6" stroke="#83a889" stroke-width="1.7">
+    <path d="M719 422V468C719 493 868 493 868 468V422Z"/>
+    <ellipse cx="793.5" cy="422" rx="74.5" ry="20"/>
+    <path d="M719 445C719 470 868 470 868 445" fill="none"/>
+  </g>
+  <text x="743" y="430" fill="#305b3b" font-family="Public Sans, sans-serif" font-size="16" font-weight="700">PostgreSQL</text>
+  <text x="48" y="555" fill="#416a49" font-family="Public Sans, sans-serif" font-size="18">Business operations, available to agent tools.</text>
+</svg>

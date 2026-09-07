@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <!--
-THESIS: Useful agents need more than a model. Three architectural questions,
-not a biography followed by equal project cards, organize the work.
+THESIS: Useful agents need more than a model. Show the breadth of the work
+before developing the architectural questions; no single demo stands for it all.
 OWN-WORLD: Blueprint Field Notes: stone, sage, graphite, Public Sans, measured
 rules, generous type, and authentic work artifacts. Preserve the existing identity.
-STORY: Meet the author, consider action, authority, and human judgment, then
-watch real evidence or inspect its source. Each sample keeps its own boundaries.
-FIRST VIEWPORT: A large thesis leads into three linked questions on the left
-and a genuine, identifier-free approval-card crop on the right. The recording
-action is prominent. Mobile brings the artifact ahead of the question navigation.
-FORM: Three-question dossier, grounded candidate 4, seed b859cd70. Use a readable
-question-to-evidence sequence rather than a shared-system visualization or overture.
+STORY: Meet the author, browse distinct topics, then follow the source or the
+questions of action, authority, and human judgment. Samples remain separately scoped.
+FIRST VIEWPORT: The thesis introduces image-led topic cards with left/right side
+arrows and a separate pause control. Horizon is one topic, not the whole opening.
+FORM: User-requested animated topic shelf extending the three-question dossier
+(original seed b859cd70). Slow reversible scrolling reveals breadth; interaction,
+reduced motion, and offscreen visibility take precedence over automatic movement.
 -->
 <html lang="en">
 <head>
@@ -53,6 +53,7 @@ question-to-evidence sequence rather than a shared-system visualization or overt
       ]
     }
   </script>
+  <script src="docs/assets/topic-showcase.js" defer></script>
   <style>
     :root {
       color-scheme: light;
@@ -67,7 +68,6 @@ question-to-evidence sequence rather than a shared-system visualization or overt
       --dark-muted: #d1dfce;
       --signal: #c4dcb8;
       --line: #c6d2c3;
-      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       --measure: 70ch;
     }
 
@@ -85,13 +85,14 @@ question-to-evidence sequence rather than a shared-system visualization or overt
     img, svg { display: block; max-width: 100%; height: auto; }
     a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.24em; }
     a:hover { text-decoration-thickness: 0.14em; }
-    a:focus-visible, summary:focus-visible {
+    a:focus-visible, button:focus-visible, summary:focus-visible, .topic-viewport:focus-visible {
       outline: 3px solid var(--sage);
       outline-offset: 5px;
       border-radius: 2px;
     }
+    button { font: inherit; color: inherit; }
     h1, h2, h3, p, figure { margin: 0; }
-    h1, h2, h3 { text-wrap: balance; }
+    h1, h2, h3 { text-wrap: balance; overflow-wrap: anywhere; }
     h1, h2, h3 { line-height: 1.08; }
     p { max-width: var(--measure); text-wrap: pretty; }
     p + p { margin-top: 1rem; }
@@ -119,7 +120,7 @@ question-to-evidence sequence rather than a shared-system visualization or overt
     }
     .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.025em; text-decoration: none; }
     .brand span { display: block; margin-top: 0.12rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
-    .primary-nav { display: flex; align-items: center; gap: 1.5rem; font-size: 0.9rem; }
+    .primary-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; max-width: 100%; font-size: 0.9rem; }
     .primary-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
     .primary-nav a:hover { text-decoration: underline; }
     .primary-nav .contact-link { font-weight: 700; }
@@ -142,52 +143,92 @@ question-to-evidence sequence rather than a shared-system visualization or overt
     .opening-position { padding-bottom: 0.2rem; }
     .opening-position p { color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
     .opening-position .text-link { margin-top: 1.1rem; }
-    .opening-work {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      grid-template-areas: "questions proof";
-      align-items: start;
-      gap: 4rem;
-      margin-top: 2.8rem;
+    .topic-showcase { margin-top: 2.5rem; }
+    .topic-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.85rem 1.5rem; margin-bottom: 0.85rem; }
+    .topic-heading h2 { font-size: 1.5rem; letter-spacing: -0.025em; }
+    .topic-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; max-width: 100%; }
+    .topic-controls[hidden], .topic-arrow[hidden] { display: none; }
+    .topic-control {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--sage);
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.3;
+      cursor: pointer;
     }
-    .question-panel { grid-area: questions; }
-    .proof-panel { grid-area: proof; }
-    .questions { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-    .questions li { border-bottom: 1px solid var(--line); }
+    .topic-control:hover:not(:disabled) { background: var(--sage-soft); }
+    .topic-control:disabled { border-color: var(--line); color: var(--muted); background: var(--canvas); cursor: default; }
+    .topic-control svg { width: 18px; height: 18px; }
+    .topic-control-motion { width: 8.8rem; max-width: 100%; }
+    .topic-carousel { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; }
+    .topic-showcase[data-enhanced="true"] .topic-carousel { grid-template-columns: 44px minmax(0, 1fr) 44px; gap: 0.75rem; }
+    .topic-arrow { width: 44px; height: 44px; padding: 0; align-self: center; }
+    .topic-viewport {
+      min-width: 0;
+      overflow-x: auto;
+      scroll-behavior: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: thin;
+      scrollbar-color: var(--sage) var(--sage-soft);
+    }
+    .topic-showcase[data-enhanced="true"] .topic-viewport { scrollbar-width: none; }
+    .topic-showcase[data-enhanced="true"] .topic-viewport::-webkit-scrollbar { display: none; }
+    .topic-list { display: flex; align-items: stretch; gap: 1.25rem; width: 100%; list-style: none; margin: 0; padding: 8px 8px 16px; }
+    .topic-card { display: flex; flex: 0 0 min(clamp(16.5rem, 27vw, 21.5rem), 100%); min-width: 0; }
+    .topic-card-link {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      text-decoration: none;
+    }
+    .topic-card-link:hover { border-color: var(--sage); }
+    .topic-card-link:hover h3 { text-decoration: underline; text-underline-offset: 0.18em; }
+    .topic-image { aspect-ratio: 8 / 5; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--surface); }
+    .topic-image img { width: 100%; height: 100%; object-fit: cover; }
+    .topic-image-voice { background: var(--canvas); }
+    .topic-image-voice svg { width: 100%; height: 100%; }
+    .topic-copy { display: flex; flex: 1; flex-direction: column; gap: 0.7rem; padding: 1.15rem; overflow-wrap: anywhere; }
+    .topic-copy h3 { font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.025em; }
+    .topic-description { color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
+    .topic-copy p + p { margin-top: 0; }
+    .topic-copy > .topic-scope { margin-top: auto; padding-top: 0.4rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
+    .topic-status { min-height: 1.65em; margin-top: 0.65rem; color: var(--muted); font-size: 0.875rem; }
+    .question-panel { margin-top: 2.2rem; }
+    .questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .questions li + li { border-left: 1px solid var(--line); padding-left: 1.25rem; }
     .question-link {
       display: grid;
-      grid-template-columns: 2rem 1fr auto;
-      gap: 0.8rem;
+      grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+      gap: 0.5rem;
       align-items: center;
       min-height: 5.2rem;
-      padding-block: 0.75rem;
+      padding: 0.75rem 1rem 0.75rem 0;
       text-decoration: none;
     }
     .question-number { color: var(--sage); font-size: 0.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-    .question-link strong { font-size: clamp(1.1rem, 1.55vw, 1.4rem); line-height: 1.3; letter-spacing: -0.02em; }
+    .question-link strong { font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.3; letter-spacing: -0.02em; overflow-wrap: anywhere; }
     .question-link .arrow { color: var(--sage); font-size: 1.3rem; }
     .question-link:hover strong { text-decoration: underline; text-underline-offset: 0.2em; }
     .question-context { margin-top: 1rem; color: var(--muted); font-size: 0.88rem; }
-    .evidence-sheet {
-      padding: 1.4rem 1.6rem;
-      border: 1px solid var(--line);
-      background: var(--surface);
-      box-shadow: 8px 12px 0 var(--sage-soft);
-    }
-    .evidence-sheet figcaption { font-size: 1.05rem; font-weight: 700; line-height: 1.4; }
-    .evidence-sheet img { width: 100%; margin-block: 1.15rem; }
-    .evidence-note { color: var(--muted); font-size: 0.875rem; line-height: 1.55; }
-    .evidence-note a { font-weight: 600; }
-    .recording-action { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.25rem 1rem; margin-top: 1.5rem; }
-    .recording-action > span { color: var(--muted); font-size: 0.875rem; }
     .button, .text-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.55rem;
       min-height: 44px;
+      max-width: 100%;
       font-weight: 700;
       line-height: 1.4;
+      overflow-wrap: anywhere;
     }
     .button { padding: 0.8rem 1.05rem; text-decoration: none; background: var(--ink); color: var(--surface); }
     .button:hover { background: var(--sage); }
@@ -277,21 +318,11 @@ question-to-evidence sequence rather than a shared-system visualization or overt
     .site-footer p { max-width: 76ch; }
     .site-footer > span { white-space: nowrap; }
 
-    @keyframes paper-settle {
-      from { transform: translateY(5px); box-shadow: 3px 5px 0 var(--sage-soft); }
-      to { transform: translateY(0); box-shadow: 8px 12px 0 var(--sage-soft); }
-    }
-    @media (prefers-reduced-motion: no-preference) {
-      .evidence-sheet { animation: paper-settle 800ms var(--ease-out) both; }
-    }
     @media (max-width: 1000px) {
       .opening-intro { grid-template-columns: 1.2fr 0.8fr; gap: 2rem; }
       .opening-title { font-size: clamp(3rem, 6.1vw, 4.5rem); }
-      .opening-work, .case-study, .judgment, .section-heading { gap: 2.5rem; }
-      .opening-work { grid-template-columns: 1fr 1fr; }
-      .question-link { grid-template-columns: 1.6rem 1fr auto; min-height: 5.3rem; gap: 0.5rem; }
-      .evidence-sheet { padding: 1.1rem; }
-      .recording-action { align-items: start; flex-direction: column; }
+      .case-study, .judgment, .section-heading { gap: 2.5rem; }
+      .question-link { grid-template-columns: 1.6rem minmax(0, 1fr) auto; min-height: 5.3rem; gap: 0.5rem; }
       .lab-layout { gap: 2.5rem; }
     }
     @media (max-width: 720px) {
@@ -305,14 +336,20 @@ question-to-evidence sequence rather than a shared-system visualization or overt
       .opening-title { max-width: 16ch; font-size: clamp(2.65rem, 10.4vw, 4rem); line-height: 1.04; }
       .opening-position p { font-size: 1rem; }
       .opening-position .text-link { margin-top: 0.65rem; }
-      .opening-work { grid-template-columns: 1fr; grid-template-areas: "proof" "questions"; gap: 1.8rem; margin-top: 1.7rem; }
-      .question-link { min-height: 4.2rem; grid-template-columns: 1.7rem 1fr auto; }
+      .topic-showcase { margin-top: 1.7rem; }
+      .topic-heading h2 { font-size: 1.35rem; }
+      .topic-showcase[data-enhanced="true"] .topic-carousel { gap: 0; margin-inline: -0.75rem; }
+      .topic-list { gap: 1rem; }
+      .topic-card { flex-basis: min(18rem, 100%); }
+      .topic-copy { padding: 1rem; }
+      .topic-image { aspect-ratio: 16 / 9; }
+      .question-panel { margin-top: 1.8rem; }
+      .questions { grid-template-columns: minmax(0, 1fr); }
+      .questions li + li { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+      .question-link { min-height: 4.2rem; grid-template-columns: 1.7rem minmax(0, 1fr) auto; }
       .question-link strong { font-size: 1.15rem; }
       .question-context { margin-top: 0.75rem; }
-      .evidence-sheet { padding: 1.1rem; box-shadow: 5px 8px 0 var(--sage-soft); }
-      .evidence-sheet figcaption { font-size: 1rem; }
-      .recording-action { flex-direction: row; margin-top: 1.25rem; }
-      .case-study, .judgment, .section-heading, .lab-layout, .contact { grid-template-columns: 1fr; gap: 1.5rem; }
+      .case-study, .judgment, .section-heading, .lab-layout, .contact { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
       .case-study { padding-block: 2.8rem; }
       .case-title { max-width: 20ch; font-size: 2.25rem; }
       .case-question { margin-top: 0.75rem; font-size: 1rem; }
@@ -363,22 +400,142 @@ question-to-evidence sequence rather than a shared-system visualization or overt
         <h1 class="opening-title" id="opening-title">Useful agents need <em>more than a model.</em></h1>
         <div class="opening-position">
           <p>I build and share enterprise agent patterns where business workflows, user identity, and human decisions meet.</p>
-          <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/">Watch the voice-agent demo <span class="duration">6m19s</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#work">Explore the topics <span aria-hidden="true">↓</span></a>
         </div>
       </div>
-      <div class="opening-work">
-        <div class="proof-panel">
-          <figure class="evidence-sheet">
-            <figcaption>A human decision, inside the workflow.</figcaption>
-            <img src="docs/assets/horizon-approval.webp" width="548" height="183" fetchpriority="high" alt="A cropped Teams approval card from the Horizon demo: the agent requests human validation, with options to approve or refuse.">
-            <p class="evidence-note">A published screenshot from the Horizon Famille demo. Business systems and data are mocks.</p>
-          </figure>
-          <div class="recording-action">
-            <a class="button" href="https://ozgurkarahan.github.io/horizon-famille/">See the full demonstration <span aria-hidden="true">↗</span></a>
-            <span>French · English subtitles</span>
+      <section class="topic-showcase" id="work" aria-labelledby="topics-title" data-topic-showcase>
+        <div class="topic-heading">
+          <h2 id="topics-title">Explore the work</h2>
+          <div class="topic-controls" aria-label="Topic gallery controls" data-showcase-controls hidden>
+            <button class="topic-control topic-control-motion" type="button" aria-controls="topic-track" data-showcase-motion>Pause motion</button>
           </div>
         </div>
-        <div class="question-panel">
+        <div class="topic-carousel">
+          <button class="topic-control topic-arrow" type="button" aria-label="Show previous topics" aria-controls="topic-track" data-showcase-previous hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg>
+          </button>
+        <div class="topic-viewport" id="topic-track" role="region" aria-label="Scrollable portfolio topics" tabindex="0" data-showcase-track>
+          <ul class="topic-list">
+            <li class="topic-card">
+              <a class="topic-card-link" href="https://ozgurkarahan.github.io/horizon-famille/">
+                <div class="topic-image topic-image-voice">
+                  <svg id="voice-agent-systems" viewBox="0 0 640 400" role="img" aria-labelledby="voice-flow-title voice-flow-description" focusable="false">
+                    <title id="voice-flow-title">A voice agent connected to four systems</title>
+                    <desc id="voice-flow-description">Illustrative demo flow connecting a voice agent to mock CRM, ERP and knowledge-base services, plus human approval in Teams through Power Platform.</desc>
+                    <defs>
+                      <marker id="voice-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+                        <path d="M0 0 10 5 0 10Z" fill="var(--sage)"/>
+                      </marker>
+                    </defs>
+                    <g fill="none" stroke="var(--sage)" stroke-width="3" marker-end="url(#voice-flow-arrow)">
+                      <path class="voice-connection" d="M177 200C260 200 260 65 343 65"/>
+                      <path class="voice-connection" d="M177 200C260 200 260 155 343 155"/>
+                      <path class="voice-connection" d="M177 200C260 200 260 245 343 245"/>
+                      <path class="voice-connection" d="M177 200C260 200 260 335 343 335" stroke-dasharray="7 5"/>
+                    </g>
+                    <circle cx="104" cy="200" r="64" fill="var(--sage-soft)" stroke="var(--sage)" stroke-width="3"/>
+                    <rect x="90" y="160" width="28" height="50" rx="14" fill="var(--sage)"/>
+                    <path d="M78 190v12a26 26 0 0 0 52 0v-12M104 228v16M91 244h26" fill="none" stroke="var(--sage)" stroke-width="6" stroke-linecap="round"/>
+                    <text x="104" y="300" text-anchor="middle" fill="var(--ink)" font-size="34" font-weight="700">Voice agent</text>
+                    <g class="voice-system" transform="translate(355 35)">
+                      <rect width="250" height="60" rx="9" fill="var(--surface)" stroke="var(--sage)" stroke-width="2" stroke-dasharray="6 4"/>
+                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="30" font-weight="700">CRM</text>
+                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">mock service</text>
+                    </g>
+                    <g class="voice-system" transform="translate(355 125)">
+                      <rect width="250" height="60" rx="9" fill="var(--surface)" stroke="var(--sage)" stroke-width="2" stroke-dasharray="6 4"/>
+                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="30" font-weight="700">ERP</text>
+                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">mock service</text>
+                    </g>
+                    <g class="voice-system" transform="translate(355 215)">
+                      <rect width="250" height="60" rx="9" fill="var(--surface)" stroke="var(--sage)" stroke-width="2" stroke-dasharray="6 4"/>
+                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="700">Knowledge base</text>
+                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">mock service</text>
+                    </g>
+                    <g class="voice-system" transform="translate(355 305)">
+                      <rect width="250" height="60" rx="9" fill="var(--sage-soft)" stroke="var(--sage)" stroke-width="2"/>
+                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="700">Teams approval</text>
+                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">via Power Platform</text>
+                    </g>
+                    <text x="40" y="378" fill="var(--muted)" font-size="18">Illustrative demo flow</text>
+                  </svg>
+                </div>
+                <div class="topic-copy">
+                  <h3>Voice agents for the full booking journey</h3>
+                  <p class="topic-description">Horizon Famille: a recorded booking-change journey with mock business systems and human approval in Teams.</p>
+                  <p class="topic-scope">Recorded demo · French, English subtitles <span aria-hidden="true">↗</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card">
+              <a class="topic-card-link" href="#identity">
+                <div class="topic-image"><img src="docs/assets/topics/identity.webp" width="960" height="600" fetchpriority="high" decoding="async" draggable="false" alt=""></div>
+                <div class="topic-copy">
+                  <h3>Agent access on behalf of the user</h3>
+                  <p class="topic-description"><strong>Salesforce and ServiceNow.</strong> Samples for carrying the caller's identity across agent, MCP, and enterprise-system boundaries.</p>
+                  <p class="topic-scope">Proof of concept &amp; samples <span aria-hidden="true">↓</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card">
+              <a class="topic-card-link" href="https://ozgurkarahan.github.io/foundry-openai-coding-agent/">
+                <div class="topic-image"><img src="docs/assets/topics/runtime.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
+                <div class="topic-copy">
+                  <h3>Foundry Hosted Agents</h3>
+                  <p class="topic-description">Tools, persistent workspaces, and browser verification inside a Foundry-hosted coding agent.</p>
+                  <p class="topic-scope">Experimental community sample <span aria-hidden="true">↗</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card">
+              <a class="topic-card-link" href="https://github.com/ozgurkarahan/ai-agent-memory">
+                <div class="topic-image"><img src="docs/assets/topics/memory.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
+                <div class="topic-copy">
+                  <h3>Agent memory</h3>
+                  <p class="topic-description">Connect project knowledge and lessons in a linked Markdown wiki across coding-agent sessions.</p>
+                  <p class="topic-scope">Developer knowledge pattern <span aria-hidden="true">↗</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card">
+              <a class="topic-card-link" href="https://github.com/ozgurkarahan/agentic-sdlc-demo">
+                <div class="topic-image"><img src="docs/assets/topics/delivery.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
+                <div class="topic-copy">
+                  <h3>Agentic software delivery</h3>
+                  <p class="topic-description">Explore a presenter-led software-delivery demonstration and a reusable agent harness.</p>
+                  <p class="topic-scope">Demo &amp; evolving harness <span aria-hidden="true">↗</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card">
+              <a class="topic-card-link" href="https://github.com/ozgurkarahan/azure-apim-mcp-server">
+                <div class="topic-image"><img src="docs/assets/topics/mcp.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
+                <div class="topic-copy">
+                  <h3>Business APIs as MCP</h3>
+                  <p class="topic-description">Expose a business orders API as tools through API Management's native MCP gateway.</p>
+                  <p class="topic-scope">API integration sample <span aria-hidden="true">↗</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card">
+              <a class="topic-card-link" href="https://ozgurkarahan.com/agentic-platform/">
+                <div class="topic-image"><img src="docs/assets/topics/platform.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
+                <div class="topic-copy">
+                  <h3>The Agentic Platform</h3>
+                  <p class="topic-description">Connect the ideas behind building, deploying, operating, and governing agents.</p>
+                  <p class="topic-scope">Interactive presentation <span aria-hidden="true">↗</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+          <button class="topic-control topic-arrow" type="button" aria-label="Show next topics" aria-controls="topic-track" data-showcase-next hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+        <p class="topic-status" role="status" data-showcase-status>Scroll or swipe to browse the topics. Each card opens the work or its source.</p>
+      </section>
+      <div class="question-panel">
           <nav aria-label="Three questions behind the work">
             <ol class="questions">
               <li><a class="question-link" href="#horizon"><span class="question-number" aria-hidden="true">01</span><strong>What can it change?</strong><span class="arrow" aria-hidden="true">↓</span></a></li>
@@ -387,11 +544,10 @@ question-to-evidence sequence rather than a shared-system visualization or overt
             </ol>
           </nav>
           <p class="question-context">Three questions I bring to enterprise AI.<br>The projects below explore them in different ways.</p>
-        </div>
       </div>
     </section>
 
-    <div class="work-section shell" id="work">
+    <div class="work-section shell">
       <article class="case-study" id="horizon" aria-labelledby="horizon-title">
         <div>
           <h2 class="case-title" id="horizon-title">A task, not just an answer.</h2>
@@ -435,7 +591,7 @@ question-to-evidence sequence rather than a shared-system visualization or overt
         </div>
         <div>
           <p>More autonomy is not automatically a better outcome. My starting point is to make the permitted action, the escalation condition, and the human decision explicit.</p>
-          <p>In Horizon, the agent can prepare the request, but <strong>a discount beyond its authority goes to a human</strong>. That handoff is part of the design, not an exception hidden at the end.</p>
+          <p>A useful handoff explains <strong>what is being requested, why approval is needed, and what the person can decide</strong>. Horizon's discount-approval workflow is one concrete example of that broader principle.</p>
           <a class="text-link" href="https://github.com/ozgurkarahan/horizon-famille/tree/master/power-platform">Explore the approval workflow <span aria-hidden="true">↗</span></a>
         </div>
       </div>

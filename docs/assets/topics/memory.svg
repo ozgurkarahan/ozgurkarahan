@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Linked Markdown for coding agents</title>
+  <desc id="desc">Original editorial illustration: an AGENT.md pointer connects to a layered index.md document and a constellation of wiki links. This is a developer knowledge wiki, not a customer-data memory screen.</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#b6d4b8" opacity=".11"/>
+    </pattern>
+    <filter id="paper-shadow" x="-35%" y="-30%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#101e14" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="#26362a"/>
+  <rect width="960" height="600" fill="url(#dots)"/>
+  <g font-family="Public Sans, sans-serif">
+    <text x="48" y="51" fill="#b8d6bc" font-size="14" font-weight="700" letter-spacing="2.4">DEVELOPER WIKI</text>
+    <text x="46" y="121" fill="#f6faf6" font-size="51" font-weight="700" letter-spacing="-2.2">Knowledge,</text>
+    <text x="46" y="179" fill="#f6faf6" font-size="51" font-weight="700" letter-spacing="-2.2">linked.</text>
+  </g>
+  <g fill="none" stroke="#8ab58d" stroke-width="1.6">
+    <path d="M274 337 C347 337 331 285 413 281"/>
+    <path d="M192 316 C189 242 265 227 360 237 S540 265 597 193"/>
+    <path d="M261 363 C350 448 397 489 560 493 S717 477 779 477"/>
+    <path d="M658 150 C686 114 743 104 791 105"/>
+    <path d="M750 285 C843 285 864 355 844 447"/>
+  </g>
+  <g fill="#b9d7bc">
+    <circle cx="359" cy="237" r="4"/>
+    <circle cx="561" cy="493" r="4"/>
+    <circle cx="789" cy="105" r="4"/>
+    <circle cx="844" cy="447" r="4"/>
+  </g>
+  <g transform="rotate(8 654 326)">
+    <rect x="495" y="171" width="318" height="314" rx="12" fill="#48694f"/>
+    <path d="M532 211 H760 M532 230 H716" stroke="#719777" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(-6 588 315)" filter="url(#paper-shadow)">
+    <path d="M436 144 H704 L752 192 V463 Q752 476 739 476 H436 Q422 476 422 462 V158 Q422 144 436 144Z" fill="#f6faf6"/>
+    <path d="M704 144 V180 Q704 192 716 192 H752" fill="#dcebdd"/>
+    <g font-family="Public Sans, sans-serif">
+      <text x="454" y="206" fill="#305b3b" font-size="30" font-weight="700" letter-spacing="-1">index.md</text>
+      <text x="454" y="237" fill="#66796b" font-size="14" letter-spacing=".5">A MAP OF WHAT YOU KNOW</text>
+      <text x="454" y="289" fill="#202b21" font-size="23" font-weight="700">wiki/</text>
+      <text x="455" y="320" fill="#526758" font-size="17">projects · domains</text>
+      <rect x="453" y="351" width="190" height="40" rx="7" fill="#e1f0e1"/>
+      <text x="470" y="378" fill="#305b3b" font-size="19" font-weight="700">[[patterns]]</text>
+    </g>
+    <path d="M454 421 H587 M454 438 H677" stroke="#c6d7c9" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="705" cy="425" r="12" fill="none" stroke="#88aa8e" stroke-width="2"/>
+    <circle cx="693" cy="433" r="12" fill="none" stroke="#88aa8e" stroke-width="2"/>
+  </g>
+  <g font-family="Public Sans, sans-serif">
+    <rect x="66" y="312" width="213" height="56" rx="28" fill="#304b37" stroke="#75987b" stroke-width="1.5"/>
+    <text x="91" y="348" fill="#edf7ed" font-size="25" font-weight="700">AGENT.md</text>
+    <circle cx="66" cy="340" r="5" fill="#bed9c1"/>
+    <text x="757" y="81" fill="#bbd9c0" font-size="20">[[decisions]]</text>
+    <text x="755" y="536" fill="#bbd9c0" font-size="20">[[lessons]]</text>
+    <text x="48" y="551" fill="#d5e7d7" font-size="18">Linked Markdown. Shared across coding agents.</text>
+  </g>
+</svg>
