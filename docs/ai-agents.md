@@ -37,11 +37,9 @@ SDLC resources: [Slides](https://ozgurkarahan.github.io/agentic-sdlc-demo/slides
 
 | Project | Focus |
 |---------|-------|
-| [Azure APIM MCP Server](https://github.com/ozgurkarahan/azure-apim-mcp-server) | Exposes a business orders REST API as MCP through APIM's native gateway, using Python, FastAPI, PostgreSQL, and Bicep. It is not a natural-language APIM administration tool. |
 | [Simple Order Agent](https://github.com/ozgurkarahan/simple-order-agent) | Order-processing example using Claude SDK, MuleSoft MCP, and A2A. |
-| [AI Avatar Presenter](https://github.com/ozgurkarahan/ai-avatar-presenter) | Avatar-led slide narration and interactive Q&A. |
 | [Azure SRE Agent for Synapse](https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc) | Proof-of-concept infrastructure and investigation scaffold for Synapse observability. |
 
-## Forks and learning references
+## Learning references
 
-The [profile's collapsed fork catalogue](../README.md) preserves upstream attribution and distinguishes the modified Azure-Samples AI Agents fork from reference material. See [learning resources](learning-resources.md) for additional tutorials.
+See [learning resources](learning-resources.md) for additional tutorials.

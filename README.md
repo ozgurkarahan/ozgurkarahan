@@ -56,30 +56,12 @@ Not an official Microsoft product or reference implementation, not production-re
 
 | Project | Focus |
 |---------|-------|
-| [Azure APIM MCP Server](https://github.com/ozgurkarahan/azure-apim-mcp-server) | Exposes a business orders REST API as MCP through APIM's native gateway; Python, FastAPI, PostgreSQL, and Bicep. |
 | [Simple Order Agent](https://github.com/ozgurkarahan/simple-order-agent) | Order-processing example using Claude SDK, MuleSoft MCP, and A2A. |
-| [AI Avatar Presenter](https://github.com/ozgurkarahan/ai-avatar-presenter) | Avatar-led slide presentation and interactive Q&A. |
 | [Azure SRE Agent for Synapse](https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc) | Proof-of-concept scaffold for investigating Synapse observability scenarios. |
 | [Anthropic Academy](https://github.com/ozgurkarahan/anthropic-academy) | Worked learning examples. |
 | [The Agentic Platform](https://ozgurkarahan.com/agentic-platform/) | A presentation exploring the shift from AI assistance to agent platforms. [Source](https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform). |
 | Enterprise Document RAG | Private work. |
 | AI Agent Project Template | Private work. |
-
-</details>
-
-<details>
-<summary>Modified and reference forks, with upstream attribution</summary>
-
-These projects originate with the upstream authors linked below.
-
-| Fork | Upstream | Purpose |
-|------|----------|---------|
-| [Get Started with AI Agents](https://github.com/ozgurkarahan/get-started-with-ai-agents) | [Azure-Samples](https://github.com/Azure-Samples/get-started-with-ai-agents) | Modified fork with endpoint/A2A documentation and infrastructure customizations. |
-| [Get Started with AI Chat](https://github.com/ozgurkarahan/get-started-with-ai-chat) | [Azure-Samples](https://github.com/Azure-Samples/get-started-with-ai-chat) | Chat application reference. |
-| [Voice Live API Sales Coach](https://github.com/ozgurkarahan/voicelive-api-salescoach) | [Azure-Samples](https://github.com/Azure-Samples/voicelive-api-salescoach) | Voice-training reference. |
-| [L300 AI Apps and Agents Workshop](https://github.com/ozgurkarahan/TechWorkshop-L300-AI-Apps-and-agents) | [Microsoft](https://github.com/microsoft/TechWorkshop-L300-AI-Apps-and-agents) | Workshop reference. |
-| [Interactive Prompt Engineering Tutorial](https://github.com/ozgurkarahan/prompt-eng-interactive-tutorial) | [Anthropic](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Learning reference. |
-| [Karpathy Autoresearch](https://github.com/ozgurkarahan/karpathy-autoresearch) | [karpathy](https://github.com/karpathy/autoresearch) | Autonomous research reference. |
 
 </details>
 

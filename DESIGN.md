@@ -154,7 +154,7 @@ At the intermediate breakpoint, the display becomes `clamp(3rem, 6.1vw, 4.5rem)`
 
 The reusable grammar is a centered, generous reading shell with paired explanation/evidence columns and horizontal rules. The shell is `min(100% - 4rem, 74rem)`; narrative rows commonly pair `0.85fr 1.15fr` columns with a 4rem gap. Repeated spacing includes 1rem text separations, 1.5rem list/annotation spacing, and 3.5–4.5rem major section breathing room. No separate named spacing scale is defined.
 
-The current homepage opens with the author and thesis, then a topic shelf ordered with voice/booking first and agent access on behalf of the user second, explicitly naming Salesforce and ServiceNow. Foundry Hosted Agents, memory, delivery, MCP integration, and platform ideas follow. Horizon remains one of seven cards, not an exclusive hero panel. The three architectural questions follow the shelf, leading into the existing case studies, human-judgment field, ideas, experiments, native archive, and graphite contact close.
+The current homepage opens with the author and thesis, then a topic shelf ordered with voice/booking first and agent access on behalf of the user second, explicitly naming Salesforce and ServiceNow. Foundry Hosted Agents, memory, delivery, and platform ideas follow. Horizon remains one of six cards, not an exclusive hero panel. The three architectural questions follow the shelf, leading into the existing case studies, human-judgment field, ideas, experiments, native archive, and graphite contact close.
 
 The opening's proposition pair uses `1.32fr 0.85fr`. The gallery spans the shell below it, with 44px arrow gutters at its left and right and Pause/Resume above. Cards use `clamp(16.5rem, 27vw, 21.5rem)` capped at 100% of the padded list's available width. They have 1.25rem gaps and 8px edge padding to protect focus outlines. Side arrows do not cover images or descriptions. The three questions form a ruled three-column row below the gallery.
 
@@ -212,7 +212,7 @@ scenario with mock systems, not a claim of new booking or payment capabilities.
 
 The voice illustration is lightweight SVG directly in `index.html`: a microphone/voice-agent symbol connects by four arrows to CRM, ERP, a knowledge base, and Teams approval via Power Platform. The first three services are explicitly mocked and the graphic is labelled illustrative. It uses the page's existing palette and font, with no Excalidraw file, image-generation service, library, or additional animation.
 
-The six 960 x 600 WebP covers total 249,228 bytes. Each is below 90 KB. The leading voice SVG is parsed with the page; the first bitmap (identity) loads eagerly with high priority and later bitmap cards load lazily. Original diagrams and presentation excerpts are previews, not small-screen reading copy or evidence of production validation.
+The five 960 x 600 WebP covers total 223,810 bytes. Each is below 90 KB. The leading voice SVG is parsed with the page; the first bitmap (identity) loads eagerly with high priority and later bitmap cards load lazily. Original diagrams and presentation excerpts are previews, not small-screen reading copy or evidence of production validation.
 
 | Asset under `docs/assets/` | Kind and source |
 |----------------------------|-----------------|
@@ -220,7 +220,6 @@ The six 960 x 600 WebP covers total 249,228 bytes. Each is below 90 KB. The lead
 | `topics/runtime.webp` | Architecture excerpt from the [experimental runtime guide](https://ozgurkarahan.github.io/foundry-openai-coding-agent/#architecture), not a running application screen. |
 | `topics/memory.webp` | Original editorial linked-Markdown illustration, grounded in [AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory); editable `memory.svg` alongside it. No private wiki was used. |
 | `topics/delivery.webp` | Public [Agentic SDLC presenter slide](https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html#slide-9); procedures, not completion results. |
-| `topics/mcp.webp` | Original editorial API/gateway illustration grounded in the [orders-API sample](https://github.com/ozgurkarahan/azure-apim-mcp-server); editable `mcp.svg` alongside it. |
 | `topics/platform.webp` | Public [Agentic Platform lifecycle slide](https://ozgurkarahan.com/agentic-platform/#3); a strategy presentation, not a deployed platform screenshot. |
 | Voice diagram in `index.html` | Original inline SVG showing four connections; illustrative and mock-qualified, not a deployed-architecture claim. |
 | `horizon-approval.webp` | Retained legacy 548 x 183 crop of the [public approval image](https://raw.githubusercontent.com/ozgurkarahan/horizon-famille/master/slides/html/assets/public/manon-approval.png), crop box `(68, 429, 616, 612)` from 660 x 635 pixels. No longer used in the first card; its existing public asset path is preserved. |
