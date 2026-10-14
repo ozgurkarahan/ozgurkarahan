@@ -3,9 +3,9 @@ name: Check Links
 on:
   push:
     branches: [master]
-    paths: ['**.md', 'index.html']
+    paths: ['**.md', 'index.html', 'customer-360/**']
   pull_request:
-    paths: ['**.md', 'index.html']
+    paths: ['**.md', 'index.html', 'customer-360/**']
   schedule:
     - cron: '0 9 * * 1'  # Weekly on Monday at 09:00 UTC
 
@@ -29,4 +29,5 @@ jobs:
             '*.md'
             'docs/*.md'
             'index.html'
+            'customer-360/index.html'
           fail: true
