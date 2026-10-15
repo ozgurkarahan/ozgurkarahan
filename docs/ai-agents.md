@@ -20,6 +20,12 @@ An **experimental community sample**, not an official Microsoft product or refer
 
 [Project overview](https://ozgurkarahan.github.io/foundry-openai-coding-agent/) · [Presentation](https://ozgurkarahan.github.io/foundry-openai-coding-agent/deck/) · [Video](https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/deck/agentic-platform-deck.mp4)
 
+### DeckFM
+
+AI avatars that present, narrate and podcast your decks. A photorealistic avatar presents a PowerPoint deck live over WebRTC (Azure AI Speech Voice Live), renders it as a narrated video with subtitles and SCORM export (batch avatar), or turns it into a two-avatar podcast scripted by Azure OpenAI, in multiple languages. The public site shows published content only; everything else requires a Microsoft Entra ID sign-in on an allowlist. The **live demo** is narration-only on pre-selected decks, time-boxed and capped daily. A personal open-source sample, not a Microsoft product.
+
+[Repository and setup](https://github.com/ozgurkarahan/deckfm) · [Live demo](https://ozgurkarahan.com/deckfm/) · [Security model](https://github.com/ozgurkarahan/deckfm/blob/main/SECURITY.md) · [How the live demo is guarded](https://github.com/ozgurkarahan/deckfm/blob/main/docs/live-demo.md)
+
 ### Identity propagation series
 
 The [Entra ID proof of concept](https://github.com/ozgurkarahan/propagate-id-entra), [Salesforce sample](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation), and [ServiceNow sample](https://github.com/ozgurkarahan/snow-meta-tool) explore caller identity across agent and enterprise-system boundaries. They are not audited production guarantees. See the [identity and security guide](security.md) for scope and source links.
