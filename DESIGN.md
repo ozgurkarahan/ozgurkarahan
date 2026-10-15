@@ -221,7 +221,7 @@ The six 960 x 600 WebP covers total 243,738 bytes. Each is below 90 KB. The lead
 | `topics/memory.webp` | Original editorial linked-Markdown illustration, grounded in [AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory); editable `memory.svg` alongside it. No private wiki was used. |
 | `topics/delivery.webp` | Public [Agentic SDLC presenter slide](https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html#slide-9); procedures, not completion results. |
 | `topics/platform.webp` | Public [Agentic Platform lifecycle slide](https://ozgurkarahan.com/agentic-platform/#3); a strategy presentation, not a deployed platform screenshot. |
-| `topics/deckfm.webp` | Frame from a published [DeckFM](https://github.com/ozgurkarahan/deckfm) narrated video (public sample deck, AI-generated photo avatar, burned-in subtitles); top and bottom bands edge-extended from 16:9 to 8:5, no other edits. |
+| `topics/deckfm.webp` | Screenshot of the anonymous [DeckFM](https://github.com/ozgurkarahan/deckfm) live avatar demo (public sample deck, AI-generated photo avatar) taken right after a narration; the header bar and slide + avatar panels are centred on the app's own background, padded from about 16:9 to 8:5, no other edits. |
 | Voice diagram in `index.html` | Original inline SVG showing four connections; illustrative and mock-qualified, not a deployed-architecture claim. |
 | `horizon-approval.webp` | Retained legacy 548 x 183 crop of the [public approval image](https://raw.githubusercontent.com/ozgurkarahan/horizon-famille/master/slides/html/assets/public/manon-approval.png), crop box `(68, 429, 616, 612)` from 660 x 635 pixels. No longer used in the first card; its existing public asset path is preserved. |
 
