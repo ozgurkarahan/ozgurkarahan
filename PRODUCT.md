@@ -54,6 +54,8 @@ The site must not resemble a developer profile, an enlarged GitHub README, or a 
   - `AI Agent Project Template`
 - The public Agentic Platform presentation lives at `/agentic-platform/`
 - Public projects may link to their repositories; private work should communicate capability without implying public source access
+- Audience measurement is owner-only and cookie-free: `docs/assets/telemetry.js` sends page paths, referring domains, UTM tags, outbound clicks and deck slide views to Azure Application Insights (90-day retention). It honours Global Privacy Control, Do Not Track and the opt-out on `/privacy/`, which must describe any change to what is collected
+- Fonts and scripts are served from the site itself; the analytics beacon is the only third-party request
 
 ## Success Criteria
 

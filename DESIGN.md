@@ -133,6 +133,8 @@ One-off footer, favicon, and browser-theme colors are not additional palette tok
 **Display and Body Font:** Public Sans, with Segoe UI and sans-serif fallbacks.
 **Label/Mono Font:** IBM Plex Mono, with a monospace fallback, currently used for recording durations.
 
+Both families are self-hosted in `docs\assets\fonts` (Latin and Latin Extended subsets, SIL Open Font License files alongside), so no font request goes to a third party.
+
 **Character:** Humanist, direct, and generous at headline scale. Most labels stay in Public Sans; monospace is a selective annotation device, not the default for project names.
 
 ### Hierarchy
@@ -233,9 +235,9 @@ A native `details` / `summary` disclosure with a square, bordered plus/minus ind
 
 ### Contact and sharing
 
-The graphite close uses inverse text, a light LinkedIn action, and a quieter GitHub text link. The footer maintains the personal/community scope note.
+The graphite close uses inverse text, a light LinkedIn action, and a quieter GitHub text link. The footer maintains the personal/community scope note and links to the privacy notice at `/privacy/`.
 
-`docs\assets\profile-social.svg` is the editable authored share-card source (1200 × 630); `profile-social.png` is its exported image. Open Graph and the large-image social card use that export. The page uses JSON-LD and one small, progressive-enhancement gallery script. It has no autoplay media, tracking, backend, animation library, or new framework.
+`docs\assets\profile-social.svg` is the editable authored share-card source (1200 × 630); `profile-social.png` is its exported image. Open Graph and the large-image social card use that export. The page uses JSON-LD, one small progressive-enhancement gallery script, and `docs\assets\telemetry.js`, a small first-party analytics beacon: owner-only Azure Application Insights, no cookies, path-only URLs, and nothing sent when Global Privacy Control, Do Not Track or the site opt-out is set. It has no autoplay media, third-party tracking, backend, animation library, or new framework.
 
 ## Do's and Don'ts
 

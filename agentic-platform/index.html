@@ -40,8 +40,10 @@
     <div class="dots" id="dots"></div>
     <div class="sp"></div>
     <span class="meta">AGENTIC PLATFORM · <b id="c"></b></span>
+    <a class="meta" href="https://ozgurkarahan.com/privacy/">Privacy</a>
     <button class="fs" id="fs" title="Fullscreen (F)">⛶ Fullscreen</button>
   </div>
+<script src="/docs/assets/telemetry.js"></script>
 <script>
   const N = 8;
   const slides = Array.from({length:N}, (_,k)=>`slides/slide_${String(k+1).padStart(2,'0')}.html`);
@@ -55,6 +57,7 @@
     document.getElementById('next').disabled=i===N-1;
     [...dots.children].forEach((d,k)=>d.className='dot'+(k===i?' on':''));
     if(location.hash!=='#'+(i+1)) history.replaceState(null,'','#'+(i+1));
+    if(window.siteAnalytics) siteAnalytics.trackEvent('deck_slide',{slide:i+1,title:titles[i]});
   }
   function go(n){i=Math.max(0,Math.min(N-1,n));render();}
   slides.forEach((_,k)=>{const b=document.createElement('button');b.className='dot';b.textContent=k+1;b.onclick=()=>go(k);dots.appendChild(b);});

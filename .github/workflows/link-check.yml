@@ -34,4 +34,5 @@ jobs:
             'index.html'
             'customer-360/index.html'
             'deckfm/index.html'
+            'privacy/index.html'
           fail: true
