@@ -30,6 +30,7 @@ jobs:
               "index.html", "robots.txt", "sitemap.xml", "LICENSE",
               "agentic-platform/index.html", "deckfm/index.html", "customer-360/index.html",
               "privacy/index.html", "docs/assets/telemetry.js", "docs/assets/fonts/fonts.css",
+              "docs/assets/fonts/deck-fonts.css",
               "docs/assets/topic-showcase.js", "docs/ai-agents.html",
           ]
           forbidden = [
