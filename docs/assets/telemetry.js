@@ -128,7 +128,8 @@
       host: url.host,
       section: section ? section.id : "",
       card: cardTitle ? cardTitle.textContent : "",
-      label: link.textContent
+      // innerText skips hidden SVG titles; gallery cards are labelled by their heading.
+      label: cardTitle ? cardTitle.textContent : (link.innerText || link.textContent)
     });
   }
 

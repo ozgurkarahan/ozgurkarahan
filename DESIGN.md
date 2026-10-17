@@ -133,7 +133,7 @@ One-off footer, favicon, and browser-theme colors are not additional palette tok
 **Display and Body Font:** Public Sans, with Segoe UI and sans-serif fallbacks.
 **Label/Mono Font:** IBM Plex Mono, with a monospace fallback, currently used for recording durations.
 
-Both families are self-hosted in `docs\assets\fonts` (Latin and Latin Extended subsets, SIL Open Font License files alongside), so no font request goes to a third party.
+Both families are self-hosted in `docs\assets\fonts` (Latin and Latin Extended subsets, SIL Open Font License files alongside), so no font request goes to a third party. The Agentic Platform slides use their own self-hosted families (Bricolage Grotesque, Instrument Sans and IBM Plex Mono) through `deck-fonts.css`.
 
 **Character:** Humanist, direct, and generous at headline scale. Most labels stay in Public Sans; monospace is a selective annotation device, not the default for project names.
 
