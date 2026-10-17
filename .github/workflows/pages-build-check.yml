@@ -1,0 +1,77 @@
+name: Pages build check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the site like GitHub Pages
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Check published files
+        shell: python
+        run: |
+          import pathlib, sys
+          import xml.etree.ElementTree as ET
+
+          site = pathlib.Path("_site")
+          required = [
+              "index.html", "robots.txt", "sitemap.xml", "LICENSE",
+              "agentic-platform/index.html", "deckfm/index.html", "customer-360/index.html",
+              "docs/assets/topic-showcase.js", "docs/ai-agents.html",
+          ]
+          forbidden = [
+              f"{name}{ext}"
+              for name in ("AGENT", "AGENTS", "CLAUDE", "DESIGN", "PRODUCT")
+              for ext in (".html", ".md")
+          ] + ["infra", "scripts", "CNAME"]
+
+          errors = [f"missing from the build: {p}" for p in required if not (site / p).exists()]
+          errors += [f"must not be published: {p}" for p in forbidden if (site / p).exists()]
+
+          ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          for loc in ET.parse(site / "sitemap.xml").getroot().findall("s:url/s:loc", ns):
+              if not loc.text.startswith("https://ozgurkarahan.com/"):
+                  errors.append(f"sitemap URL outside the site: {loc.text}")
+
+          for error in errors:
+              print(f"::error::{error}")
+          sys.exit(1 if errors else 0)
+
+      - name: Check same-origin links resolve in the build
+        shell: python
+        run: |
+          import pathlib, re, sys
+
+          site = pathlib.Path("_site")
+          base = "https://ozgurkarahan.com/"
+          pattern = re.compile(r"https://ozgurkarahan\.com/[^\s\"'<>()#?]*")
+          sources = [p for p in site.rglob("*") if p.suffix in {".html", ".xml", ".js", ".txt"}]
+          sources.append(pathlib.Path("README.md"))
+
+          missing = set()
+          for source in sources:
+              for url in pattern.findall(source.read_text(encoding="utf-8", errors="replace")):
+                  path = url[len(base):].rstrip(".,;:")
+                  target = site / path
+                  if path == "" or path.endswith("/"):
+                      candidates = [target / "index.html"]
+                  else:
+                      candidates = [target, target.with_name(target.name + ".html")]
+                  if not any(c.exists() for c in candidates):
+                      missing.add(f"{url} (in {source})")
+
+          for item in sorted(missing):
+              print(f"::error::{item} does not resolve to a file in the build")
+          sys.exit(1 if missing else 0)

@@ -3,9 +3,9 @@ name: Check Links
 on:
   push:
     branches: [master]
-    paths: ['**.md', 'index.html', 'customer-360/**', 'deckfm/**']
+    paths: ['**.md', 'index.html', 'customer-360/**', 'deckfm/**', 'privacy/**', 'identity-propagation/**']
   pull_request:
-    paths: ['**.md', 'index.html', 'customer-360/**', 'deckfm/**']
+    paths: ['**.md', 'index.html', 'customer-360/**', 'deckfm/**', 'privacy/**', 'identity-propagation/**']
   schedule:
     - cron: '0 9 * * 1'  # Weekly on Monday at 09:00 UTC
 
@@ -15,6 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Same-origin links are checked against the PR's own build in pages-build-check.yml,
+      # so a link to a page added by the same PR does not fail on the live site.
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
@@ -22,6 +24,7 @@ jobs:
             --verbose
             --no-progress
             --accept 200,204,206,301,302,429
+            --exclude '^https://ozgurkarahan\.com/'
             --exclude '^https://img\.shields\.io/'
             --exclude '^https://cdn\.(jsdelivr\.net|simpleicons\.org)/'
             --exclude '^https://fonts\.(googleapis|gstatic)\.com/'
