@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Identity propagation for AI agents · Ozgur Karahan</title>
+  <meta name="description" content="Why an AI agent should act as the signed-in user rather than a service account, how the identity travels through Microsoft Entra ID, Foundry and API Management to Salesforce and ServiceNow, and what propagation does not solve.">
+  <meta name="theme-color" content="#f1f5ef">
+  <link rel="canonical" href="https://ozgurkarahan.com/identity-propagation/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ozgurkarahan.com/identity-propagation/">
+  <meta property="og:title" content="Agents should act as the person who asked">
+  <meta property="og:description" content="Identity propagation for AI agents: one sign-in, the user's own permissions in every system, and an audit trail that names a person, not a bot.">
+  <meta property="og:image" content="https://ozgurkarahan.com/docs/assets/topics/identity.webp">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Architecture detail: one Azure API Management gateway gives the same user access to Salesforce and ServiceNow.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231f2a1f'/><text x='50' y='65' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='700' fill='%23e1f0e1'>OK</text></svg>">
+  <link rel="preload" href="../docs/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../docs/assets/fonts/fonts.css">
+  <script src="../docs/assets/telemetry.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Agents should act as the person who asked: identity propagation for AI agents",
+      "description": "Why an AI agent should act as the signed-in user rather than a service account, how the identity travels through Microsoft Entra ID, Foundry and API Management, and what propagation does not solve.",
+      "url": "https://ozgurkarahan.com/identity-propagation/",
+      "mainEntityOfPage": "https://ozgurkarahan.com/identity-propagation/",
+      "image": "https://ozgurkarahan.com/docs/assets/topics/identity.webp",
+      "datePublished": "2026-10-17",
+      "dateModified": "2026-10-17",
+      "inLanguage": "en",
+      "about": ["Identity propagation", "AI agents", "On-behalf-of flow", "Microsoft Entra ID", "Azure API Management", "Model Context Protocol"],
+      "author": {
+        "@type": "Person",
+        "name": "Ozgur Karahan",
+        "url": "https://ozgurkarahan.com/",
+        "sameAs": ["https://github.com/ozgurkarahan", "https://www.linkedin.com/in/karahanozgur/"]
+      }
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --canvas: #f6faf6;
+      --surface: #ffffff;
+      --ink: #202b21;
+      --muted: #485447;
+      --sage: #305b3b;
+      --sage-soft: #e1f0e1;
+      --line: #c6d2c3;
+      --measure: 70ch;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: "Public Sans", "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.24em; }
+    a:hover { text-decoration-thickness: 0.14em; }
+    a:focus-visible { outline: 3px solid var(--sage); outline-offset: 5px; border-radius: 2px; }
+    h1, h2, h3, p, ul, ol, figure { margin: 0; }
+    h1, h2, h3 { text-wrap: balance; overflow-wrap: anywhere; line-height: 1.08; }
+    p, li { max-width: var(--measure); text-wrap: pretty; }
+    .shell { width: min(100% - 4rem, 74rem); margin-inline: auto; }
+    .skip-link {
+      position: fixed;
+      z-index: 10;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--ink);
+      color: var(--surface);
+      transform: translateY(-200%);
+      font-weight: 700;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .masthead {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      min-height: 6.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.025em; text-decoration: none; }
+    .brand span { display: block; margin-top: 0.12rem; font-size: 0.9rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+    .text-link, .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      min-height: 44px;
+      max-width: 100%;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .button { padding: 0.8rem 1.05rem; text-decoration: none; background: var(--ink); color: var(--surface); }
+    .button:hover { background: var(--sage); }
+
+    .article { padding-block: 3.5rem 4.5rem; }
+    .eyebrow { color: var(--sage); font-size: 0.9rem; font-weight: 700; }
+    .article h1 { max-width: 18ch; margin-top: 0.75rem; font-size: clamp(2.1rem, 3.2vw, 3rem); font-weight: 700; letter-spacing: -0.035em; }
+    .lede { margin-top: 1.5rem; font-size: 1.2rem; line-height: 1.5; }
+    .article section { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+    .article h2 { max-width: 28ch; font-size: clamp(1.25rem, 1.75vw, 1.55rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.025em; }
+    .article section > * + * { margin-top: 1rem; }
+    .article ul, .article ol { padding-left: 1.2rem; }
+    .article li + li { margin-top: 0.6rem; }
+    .muted { color: var(--muted); }
+
+    .compare { width: 100%; max-width: 58rem; border-collapse: collapse; }
+    .table-scroll { overflow-x: auto; }
+    .compare th, .compare td { padding: 0.75rem 1rem 0.75rem 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .compare thead th { font-size: 0.9rem; color: var(--muted); font-weight: 700; }
+    .compare tbody th { font-weight: 700; white-space: nowrap; }
+
+    .hops { list-style: none; padding: 0; counter-reset: hop; }
+    .article .hops { padding-left: 0; }
+    .hops li { counter-increment: hop; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: 0 0.75rem; max-width: 58rem; }
+    .hops li + li { margin-top: 1rem; }
+    .hops li::before { content: counter(hop, decimal-leading-zero); color: var(--sage); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .hops strong { display: block; }
+
+    figure { max-width: 58rem; }
+    figure img { border: 1px solid var(--line); background: var(--surface); }
+    figcaption { margin-top: 0.6rem; color: var(--muted); font-size: 0.9rem; }
+
+    .source-list { list-style: none; padding: 0; max-width: 58rem; }
+    .article .source-list { padding-left: 0; }
+    .source-list li { max-width: none; border-top: 1px solid var(--line); }
+    .article .source-list li + li { margin-top: 0; }
+    .source-list li:last-child { border-bottom: 1px solid var(--line); }
+    .source-list a { display: grid; gap: 0.2rem; padding-block: 0.9rem; text-decoration: none; }
+    .source-list a:hover strong { text-decoration: underline; text-underline-offset: 0.2em; }
+    .source-list span { color: var(--muted); font-size: 0.9rem; }
+
+    .boundary { padding: 1.25rem 1.5rem; background: var(--sage-soft); max-width: 58rem; }
+    .next { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; }
+
+    .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 2.5rem, 74rem); }
+      .masthead { align-items: start; flex-direction: column; gap: 0.35rem; padding-block: 1.1rem 0.65rem; min-height: 0; }
+      .article { padding-block: 2.5rem 3rem; }
+      .compare tbody th { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead shell">
+    <a class="brand" href="https://ozgurkarahan.com/" aria-label="Ozgur Karahan, home">
+      Ozgur Karahan
+      <span>AI Solution Engineer at Microsoft</span>
+    </a>
+    <a class="text-link" href="https://ozgurkarahan.com/">Back to the homepage</a>
+  </header>
+
+  <main id="main" class="article shell">
+    <p class="eyebrow">Identity propagation for AI agents</p>
+    <h1>Agents should act as the person who asked.</h1>
+    <p class="lede">When an AI agent reads or changes business records, the system of record should see the signed-in user, apply that user's permissions and record that user's name. This page explains the pattern behind three public samples, and where it stops.</p>
+
+    <section aria-labelledby="problem-title">
+      <h2 id="problem-title">The shortcut that hides who acted</h2>
+      <p>Many agent integrations call business systems with one shared service account. It works in a demo. In production, every lookup and update lands in the audit log as the same technical user, whoever asked.</p>
+      <p>That account also has to cover anything any user might do, so it collects everyone's permissions and bypasses the per-user rules the systems already enforce. When someone asks who changed a record, a shared credential has no answer.</p>
+      <div class="table-scroll">
+        <table class="compare">
+          <thead>
+            <tr><th scope="col"></th><th scope="col">Shared service account</th><th scope="col">Identity propagation</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Audit trail</th><td>Every action shows the integration account</td><td>Every action shows the signed-in person</td></tr>
+            <tr><th scope="row">Permissions</th><td>One credential with the union of everyone's access</td><td>Each request carries only that user's access</td></tr>
+            <tr><th scope="row">Authorization</th><td>Rebuilt in middleware, or skipped</td><td>Enforced by each system, for each caller</td></tr>
+            <tr><th scope="row">Traceability</th><td>Hard to tie an AI action to a person</td><td>Individual accountability in the data path</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="flow-title">
+      <h2 id="flow-title">How the identity travels</h2>
+      <p>The user signs in once. The same identity then rides along on every hop, and each hop checks it before passing the request on.</p>
+      <ol class="hops">
+        <li><span><strong>Sign in once</strong>The person signs in with Microsoft Entra ID, in Teams, Microsoft 365 Copilot or a web chat.</span></li>
+        <li><span><strong>The agent calls tools with the user's token</strong>A Microsoft Foundry agent chooses the tools and calls them, through the Model Context Protocol (MCP), with the user's token rather than its own credential.</span></li>
+        <li><span><strong>A gateway checks and exchanges the token</strong>Azure API Management validates the token, then obtains a token for the same person in the target system, for example with the <a href="https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-on-behalf-of-flow">OAuth 2.0 on-behalf-of flow</a>.</span></li>
+        <li><span><strong>Each system applies its own rules</strong>Salesforce sharing rules and field-level security, ServiceNow access controls or your own API decide what this person may see and change.</span></li>
+        <li><span><strong>The record names the person</strong>Writes show the user, such as <em>Last modified by</em> in Salesforce or <em>Created by</em> in ServiceNow, not an integration user.</span></li>
+      </ol>
+      <figure>
+        <img src="../docs/assets/topics/identity.webp" width="960" height="600" loading="lazy" alt="Architecture detail: one Azure API Management gateway checks the user's Entra ID token and exchanges it for that user's tokens in Salesforce and ServiceNow, reached through two MCP servers.">
+        <figcaption>Architecture detail from the Customer 360 sample: one gateway, the same user in Salesforce and ServiceNow.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="samples-title">
+      <h2 id="samples-title">Public samples to inspect</h2>
+      <p>Each one is separately scoped. Their repositories document the exact flows, policies and setup.</p>
+      <ul class="source-list">
+        <li><a href="https://ozgurkarahan.com/customer-360/"><strong>Customer 360 Assistant ↗</strong><span>One Foundry agent in Teams works across Salesforce and ServiceNow as the signed-in user. Project page and a 2:40 video.</span></a></li>
+        <li><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation"><strong>Salesforce meta-tool, the Customer 360 source ↗</strong><span>A few generic tools discover Salesforce objects at runtime, and each per-user token exchange appears in Salesforce Login History.</span></a></li>
+        <li><a href="https://github.com/ozgurkarahan/snow-meta-tool"><strong>ServiceNow meta-tool ↗</strong><span>Three generic tools (discover, query, write) with on-behalf-of access, so records show the real creator.</span></a></li>
+        <li><a href="https://github.com/ozgurkarahan/propagate-id-entra"><strong>Entra ID identity flow ↗</strong><span>Proof of concept: browser, Foundry agent, MCP tool and API Management to a backend API, with no service account in the data path.</span></a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="limits-title">
+      <h2 id="limits-title">Carry identity. Still enforce permissions.</h2>
+      <p>Propagation gives every system the right subject. It does not make the rest of the design safe on its own.</p>
+      <ul>
+        <li><strong>Authorization still lives in each system.</strong> Roles, sharing rules, access controls and token scopes must be right; propagation only makes sure they apply to the right person.</li>
+        <li><strong>An agent can still misread intent.</strong> Keep confirmations for destructive actions, and a human decision where the agent's mandate ends.</li>
+        <li><strong>Consent and token lifetimes need a plan.</strong> Users consent once per system, tokens expire and access can be revoked. In the Customer 360 sample, a Foundry platform issue known at the time of writing can ask for consent again after about an hour.</li>
+        <li><strong>Identities must map cleanly.</strong> Each Entra ID user has to match exactly one account in every system. In the Customer 360 sample, a minimal-access service account does only that mapping and never touches business data.</li>
+        <li><strong>Logs must not leak tokens.</strong> Trace each hop, but keep credentials out of logs and traces.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="checklist-title">
+      <h2 id="checklist-title">Before adapting a sample</h2>
+      <ul>
+        <li>Validate the token at every hop: issuer, audience, expiry and scopes. API Management can do this with its <a href="https://learn.microsoft.com/en-us/azure/api-management/validate-jwt-policy">validate-jwt policy</a>.</li>
+        <li>Fail closed when a user cannot be mapped to an account in the target system.</li>
+        <li>Keep secrets in a vault and rotate them.</li>
+        <li>Test with users who have different permissions, including none.</li>
+        <li>Decide which actions need a person's confirmation before the agent acts.</li>
+      </ul>
+      <p class="boundary">These are a proof of concept and sample implementations, not audited production guarantees. Review identity mapping, token validation, permissions, secrets, logging and failure behavior against your own requirements before adapting them.</p>
+    </section>
+
+    <section aria-labelledby="next-title">
+      <h2 id="next-title">Go further</h2>
+      <p>The architecture story behind the Salesforce sample covers the design decisions in more depth.</p>
+      <div class="next">
+        <a class="button" href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">Read the architecture story <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://www.linkedin.com/in/karahanozgur/">Discuss it on LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <p>Personal work and community samples. Employment at Microsoft does not imply official endorsement. <a href="https://ozgurkarahan.com/privacy/">Privacy</a></p>
+    <span>© 2026 Ozgur Karahan</span>
+  </footer>
+</body>
+</html>

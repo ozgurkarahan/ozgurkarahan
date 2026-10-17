@@ -35,4 +35,5 @@ jobs:
             'customer-360/index.html'
             'deckfm/index.html'
             'privacy/index.html'
+            'identity-propagation/index.html'
           fail: true

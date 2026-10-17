@@ -32,7 +32,7 @@ A real recorded phone call reaches a Foundry voice agent through Voice Live and 
 
 Separate implementations explore caller identity through Entra ID, Foundry, APIM, and downstream systems. Propagating an identity does not, by itself, establish appropriate authorization.
 
-[Customer 360 project page](https://ozgurkarahan.com/customer-360/) · [Entra ID proof of concept](https://github.com/ozgurkarahan/propagate-id-entra) · [Salesforce sample](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation) · [ServiceNow sample](https://github.com/ozgurkarahan/snow-meta-tool) · [Evaluation boundaries](docs/security.md)
+[Identity propagation, explained](https://ozgurkarahan.com/identity-propagation/) · [Customer 360 project page](https://ozgurkarahan.com/customer-360/) · [Entra ID proof of concept](https://github.com/ozgurkarahan/propagate-id-entra) · [Salesforce sample](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation) · [ServiceNow sample](https://github.com/ozgurkarahan/snow-meta-tool) · [Evaluation boundaries](docs/security.md)
 
 The Entra project is a proof of concept; Salesforce and ServiceNow are sample implementations, not audited production guarantees.
 
