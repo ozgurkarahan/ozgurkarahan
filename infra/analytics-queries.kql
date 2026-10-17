@@ -1,0 +1,68 @@
+// Starter queries for ozgurkarahan.com analytics.
+// Run them in Azure portal > appi-ozgurkarahan-com-prod > Logs (rg-ozgurkarahan-com-prod),
+// or: az monitor app-insights query --app appi-ozgurkarahan-com-prod -g rg-ozgurkarahan-com-prod --analytics-query "<query>"
+// Each query skips verification traffic (utm_medium "test", campaigns "live-verify-*").
+// There are no visitor identifiers: counts are page views and events, not unique people.
+// Note: "views" is a reserved word in this query language, so the counts are named pageViewCount.
+
+// 1. Top pages, last 30 days
+pageViews
+| where timestamp > ago(30d)
+| where tostring(customDimensions["utm_medium"]) != "test" and tostring(customDimensions["utm_campaign"]) !startswith "live-verify"
+| summarize pageViewCount = count() by page = tostring(parse_url(url).Path)
+| order by pageViewCount desc
+
+// 2. Where visits come from
+pageViews
+| where timestamp > ago(30d)
+| where tostring(customDimensions["utm_medium"]) != "test" and tostring(customDimensions["utm_campaign"]) !startswith "live-verify"
+| extend referrer = tostring(customDimensions["referrer"]), utmSource = tostring(customDimensions["utm_source"])
+| extend source = case(isnotempty(utmSource), strcat("campaign: ", utmSource),
+                       referrer startswith "/", "internal page",
+                       isempty(referrer), "direct or not shared",
+                       referrer)
+| summarize pageViewCount = count() by source
+| order by pageViewCount desc
+
+// 3. Campaigns (links you tag with utm_source, utm_medium, utm_campaign)
+pageViews
+| where timestamp > ago(90d) and isnotempty(tostring(customDimensions["utm_campaign"]))
+| where tostring(customDimensions["utm_medium"]) != "test" and tostring(customDimensions["utm_campaign"]) !startswith "live-verify"
+| summarize pageViewCount = count() by campaign = tostring(customDimensions["utm_campaign"]),
+                               source = tostring(customDimensions["utm_source"]),
+                               medium = tostring(customDimensions["utm_medium"])
+| order by pageViewCount desc
+
+// 4. Outbound clicks: which projects, demos and profiles people open
+let testPageLoads = pageViews
+    | where tostring(customDimensions["utm_medium"]) == "test" or tostring(customDimensions["utm_campaign"]) startswith "live-verify"
+    | distinct operation_Id;
+customEvents
+| where timestamp > ago(30d) and name == "outbound_click" and operation_Id !in (testPageLoads)
+| summarize clickCount = count() by destination = tostring(customDimensions["destination"]),
+                                galleryCard = tostring(customDimensions["card"])
+| order by clickCount desc
+
+// 5. How far people get in the Agentic Platform deck (per deck view)
+let testPageLoads = pageViews
+    | where tostring(customDimensions["utm_medium"]) == "test" or tostring(customDimensions["utm_campaign"]) startswith "live-verify"
+    | distinct operation_Id;
+customEvents
+| where timestamp > ago(30d) and name == "deck_slide" and operation_Id !in (testPageLoads)
+| summarize furthest = max(toint(customDimensions["slide"])) by operation_Id
+| summarize deckViews = count() by furthestSlide = furthest
+| order by furthestSlide asc
+
+// 6. Daily page views
+pageViews
+| where timestamp > ago(30d)
+| where tostring(customDimensions["utm_medium"]) != "test" and tostring(customDimensions["utm_campaign"]) !startswith "live-verify"
+| summarize pageViewCount = count() by day = bin(timestamp, 1d)
+| order by day asc
+
+// 7. Countries
+pageViews
+| where timestamp > ago(30d)
+| where tostring(customDimensions["utm_medium"]) != "test" and tostring(customDimensions["utm_campaign"]) !startswith "live-verify"
+| summarize pageViewCount = count() by country = client_CountryOrRegion
+| order by pageViewCount desc
