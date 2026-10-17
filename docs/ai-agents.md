@@ -20,11 +20,11 @@ An **experimental community sample**, not an official Microsoft product or refer
 
 [Project overview](https://ozgurkarahan.github.io/foundry-openai-coding-agent/) · [Presentation](https://ozgurkarahan.github.io/foundry-openai-coding-agent/deck/) · [Video](https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/deck/agentic-platform-deck.mp4)
 
-### DeckFM
+### Oz Radio
 
-AI avatars that present, narrate and podcast your decks. A photorealistic avatar presents a PowerPoint deck live over WebRTC (Azure AI Speech Voice Live), renders it as a narrated video with subtitles and SCORM export (batch avatar), or turns it into a two-avatar podcast scripted by Azure OpenAI, in multiple languages. The public site shows published content only; everything else requires a Microsoft Entra ID sign-in on an allowlist. The **live demo** is narration-only on pre-selected decks, time-boxed and capped daily. A personal open-source sample, not a Microsoft product.
+Formerly DeckFM. AI avatars that present, narrate and podcast your decks. A photorealistic avatar presents a PowerPoint deck live over WebRTC (Azure AI Speech Voice Live), renders it as a narrated video with subtitles and SCORM export (batch avatar), or turns it into a two-avatar podcast scripted by Azure OpenAI, in multiple languages. The public site shows published content only; everything else requires a Microsoft Entra ID sign-in on an allowlist. The **live demo** runs on pre-selected decks, time-boxed and capped daily; visitors can ask the avatar a few spoken questions about the deck. A personal open-source sample, not a Microsoft product.
 
-[Repository and setup](https://github.com/ozgurkarahan/deckfm) · [Live demo](https://ozgurkarahan.com/deckfm/) · [Security model](https://github.com/ozgurkarahan/deckfm/blob/main/SECURITY.md) · [How the live demo is guarded](https://github.com/ozgurkarahan/deckfm/blob/main/docs/live-demo.md)
+[Repository and setup](https://github.com/ozgurkarahan/oz-radio) · [Live demo](https://ozgurkarahan.com/oz-radio/) · [Security model](https://github.com/ozgurkarahan/oz-radio/blob/main/SECURITY.md) · [How the live demo is guarded](https://github.com/ozgurkarahan/oz-radio/blob/main/docs/live-demo.md)
 
 ### Identity propagation series
 
