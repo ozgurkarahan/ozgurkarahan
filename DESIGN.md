@@ -96,12 +96,12 @@ components:
 
 A working architecture brief: calm stone surfaces, deep green graphite, restrained sage, measured rules, and generous humanist type. The identity is clear, architectural, and human rather than dashboard-like or dependent on decorative technology imagery.
 
-Public work previews and clearly editorial covers expose the breadth of the portfolio before individual case studies. A controlled, horizontal topic shelf is the opening's focal interaction. Flat editorial rows keep the deeper explanation, source links, and limitations together. Precision comes from hierarchy and readable descriptions, not simulated application chrome.
+Two flagship evidence figures open the work: a cited DocWiki claim traced to its source page, and a three-frame storyboard from one live Oz Radio session. Public work previews and clearly editorial covers then expose the breadth of the portfolio before individual case studies; the controlled, horizontal topic shelf is the index of everything else. Flat editorial rows keep the deeper explanation, source links, and limitations together. Precision comes from hierarchy and readable descriptions, not simulated application chrome.
 
 **Key Characteristics:**
 - Stone and sage with a graphite inverse surface.
-- Public Sans hierarchy with selective monospace durations.
-- An image-led topic shelf, ruled editorial rows, and native disclosures.
+- Public Sans hierarchy with selective monospace durations and reference numbers.
+- A flagship band of real evidence figures, an image-led topic shelf, ruled editorial rows, and native disclosures.
 - Separately scoped projects with adjacent descriptions and provenance.
 
 This refresh records the inline stylesheet and markup in `index.html`. The frontmatter owns reusable tokens; `.impeccable\design.json` supplies rendering examples and extensions. Homepage-specific direction remains in `.impeccable\surfaces\index-html.md`; the composition described below is an observed application, not a template for every surface.
@@ -112,7 +112,7 @@ Stone + Sage is one restrained accent family supported by green-tinted neutrals,
 
 ### Primary
 - **Sage** (`sage`): thesis emphasis, question numbers and arrows, selected text links, primary-action hover, and focus outlines on light surfaces.
-- **Soft Sage** (`sage-soft`): the human-judgment field, gallery-control hover, scrollbar track, and the voice-card image surround.
+- **Soft Sage** (`sage-soft`): the human-judgment field, gallery-control hover, scrollbar track, the voice-card image surround, and the emphasised station of the DocWiki pipeline.
 - **Light Signal** (`signal`): the light action on the graphite contact field, not a general-purpose text color.
 
 ### Neutral
@@ -156,13 +156,13 @@ At the intermediate breakpoint, the display becomes `clamp(3rem, 6.1vw, 4.5rem)`
 
 The reusable grammar is a centered, generous reading shell with paired explanation/evidence columns and horizontal rules. The shell is `min(100% - 4rem, 74rem)`; narrative rows commonly pair `0.85fr 1.15fr` columns with a 4rem gap. Repeated spacing includes 1rem text separations, 1.5rem list/annotation spacing, and 3.5–4.5rem major section breathing room. No separate named spacing scale is defined.
 
-The current homepage opens with the author and thesis, then a topic shelf ordered with voice/booking first, Oz Radio avatars second, and agent access on behalf of the user third, explicitly naming Salesforce and ServiceNow. Foundry Hosted Agents, memory, delivery, and platform ideas follow. Horizon remains one of seven cards, not an exclusive hero panel. The three architectural questions follow the shelf, leading into the existing case studies, human-judgment field, ideas, experiments, native archive, and graphite contact close.
+The current homepage opens with the author and thesis, then a flagship band, "Agents you can try". Its heading row carries an ink note, "Personal open-source samples, not Microsoft products.", and a muted, unlinked "Oz Antenna · in development · not public". DocWiki (`1.2fr`) and Oz Radio (`1fr`) sit in ruled columns with a 1px vertical rule and stack at 720px and below, DocWiki first; there, a ruled index under the heading names all three, so phones see every name in the first screen. The topic shelf follows with six cards: voice/booking first, then agent access on behalf of the user, explicitly naming Salesforce and ServiceNow, then Foundry Hosted Agents, memory, delivery, and platform ideas. Horizon remains one of the cards, not an exclusive hero panel. Because the band moves the shelf and its deck card down, the masthead adds "Platform deck" between "The ideas" and "All projects". The three architectural questions follow the shelf, leading into the existing case studies, human-judgment field, ideas, experiments, native archive, and graphite contact close.
 
 The opening's proposition pair uses `1.32fr 0.85fr`. The gallery spans the shell below it, with 44px arrow gutters at its left and right and Pause/Resume above. Cards use `clamp(16.5rem, 27vw, 21.5rem)` capped at 100% of the padded list's available width. They have 1.25rem gaps and 8px edge padding to protect focus outlines. Side arrows do not cover images or descriptions. The three questions form a ruled three-column row below the gallery.
 
 - **Intermediate (max-width: 1000px):** opening columns rebalance and recurring 4rem gaps tighten to 2.5rem where declared.
 - **Narrow (max-width: 720px):** the shell's total horizontal inset becomes 2.5rem. The masthead and question row stack; navigation and gallery controls wrap when required. Narrative grids use zero-minimum single columns to support enlarged text.
-- **Breadth first:** the topic shelf precedes the questions at every width. Narrow cards use `min(18rem, 100%)` with 1rem gaps. The arrow row extends 0.75rem into each shell inset and removes its gutter gaps to preserve card width.
+- **Flagships, then breadth:** the flagship band precedes the topic shelf, and the shelf precedes the questions, at every width. Narrow cards use `min(18rem, 100%)` with 1rem gaps. The arrow row extends 0.75rem into each shell inset and removes its gutter gaps to preserve card width.
 - **Progressive density:** ideas place format text below titles; archive groups and the footer stack. Only the topic shelf intentionally scrolls horizontally; the page itself must reflow.
 
 ## Elevation & Depth
@@ -203,6 +203,16 @@ A compact name and role, visible section anchors, and a stronger conversation li
 
 Numbered, ruled question links use tabular numerals, strong humanist titles, and text arrows. They point to the corresponding action, identity, and judgment anchors. Editorial case rows pair a short headline with prose and source actions; scope notes are separated by a rule, not hidden in a tooltip. Source lists and idea lists are lighter ruled variants, not equal project cards.
 
+### Flagship band and evidence figures
+
+The two products a visitor can try lead the work, each shown through what it actually produces. Each column is an article in this order: an h3 that pairs name and outcome ("DocWiki: knowledge you can trace to the page", "Oz Radio: a presentation you can interrupt"); a maturity line in the scope voice ("Live sample wiki · open source · fictional corpus", "Live demo · capped daily · AI avatar"); one description sentence; a visible action link ("Open the sample wiki ↗", "Try the live demo ↗"); the evidence figure; and a Source link. The action link is the stretched primary link, so the whole column is clickable while the link name stays the action; secondary and deep links sit above it (`z-index: 2`). Flagship links carry `data-flagship`, which the analytics beacon counts as `flagship_click` whether the link stays on this site or not.
+
+The DocWiki evidence plate shows the proof first, then how it is made. One real claim from the fictional sample wiki is set as live text ending in footnote 1 and links to its wiki page. Beneath it, the unretouched crop of the cited page from the evidence sidecar shows the four instruction bullets; a 2px sage outline and "1 · cited line" mark the cited line. This is a page annotation, not an image edit: DocWiki's own orange extraction boxes stay as captured. "Cited page · Curtailment instruction CPL-CI-2026-018, p. 1" links to the live evidence sidecar, next to a "quote verified" chip with an inline-SVG check. A four-station pipeline follows in the words of DocWiki's architecture diagram, with station 3, "every claim cites its evidence", in soft sage, then "How DocWiki works ↗" and the dated corpus line.
+
+The Oz Radio interruption storyboard shows three frames from one live session: presenting, the voice question transcribed, and the answer from the deck. The frames share one display box (`aspect-ratio: 330 / 571; object-fit: cover; object-position: top`). Each carries a baked "AI avatar / synthetic voice" chip, so the disclosure survives when an image is shared without its caption. Captions quote the question and answer verbatim. Phones show only the answer frame, from a 660w source. A muted note follows: "Also narrates decks as videos and hosts two-avatar podcasts."
+
+Flagship images are lazy and asynchronous, with no fetch priority, so the thesis heading stays the largest contentful paint. Monospace in the band is limited to reference numbers, station and step numbers, and the provenance chip. Band links keep the 3px sage focus ring but use a 3px offset so the ring clears the tightly set plate.
+
 ### Topic cards and imagery
 
 Each card is one linked visual, a topic title, a concise description, and an explicit scope/format line. Cards share height and align their scope lines; descriptions do not truncate. Bitmap covers support the HTML narrative and use empty alternative text to avoid repeating it. The first card instead uses an inline SVG with an accessible title and description, because its four system connections add information. Desktop frames use 8:5; narrow frames use 16:9. The SVG preserves its full view box instead of cropping labels.
@@ -214,7 +224,7 @@ scenario with mock systems, not a claim of new booking or payment capabilities.
 
 The voice illustration is lightweight SVG directly in `index.html`: a microphone/voice-agent symbol connects by four arrows to CRM, ERP, a knowledge base, and Teams approval via Power Platform. The first three services are explicitly mocked and the graphic is labelled illustrative. It uses the page's existing palette and font, with no Excalidraw file, image-generation service, library, or additional animation.
 
-The six 960 x 600 WebP covers total 257,846 bytes. Each is below 90 KB. The leading voice SVG is parsed with the page; the first bitmap (identity) loads eagerly with high priority and later bitmap cards load lazily. Original diagrams and presentation excerpts are previews, not small-screen reading copy or evidence of production validation.
+The five 960 x 600 WebP covers total 223,810 bytes. Each is below 90 KB. The leading voice SVG is parsed with the page; the first bitmap (identity) loads eagerly and later bitmap cards load lazily. Original diagrams and presentation excerpts are previews, not small-screen reading copy or evidence of production validation.
 
 | Asset under `docs/assets/` | Kind and source |
 |----------------------------|-----------------|
@@ -223,7 +233,8 @@ The six 960 x 600 WebP covers total 257,846 bytes. Each is below 90 KB. The lead
 | `topics/memory.webp` | Original editorial linked-Markdown illustration, grounded in [AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory); editable `memory.svg` alongside it. No private wiki was used. |
 | `topics/delivery.webp` | Public [Agentic SDLC presenter slide](https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html#slide-9); procedures, not completion results. |
 | `topics/platform.webp` | Public [Agentic Platform lifecycle slide](https://ozgurkarahan.com/agentic-platform/#3); a strategy presentation, not a deployed platform screenshot. |
-| `topics/oz-radio.webp` | Screenshot of the anonymous [Oz Radio](https://github.com/ozgurkarahan/oz-radio) (formerly DeckFM) live avatar demo (public sample AI deck, AI-generated photo avatar "Sofia") taken while presenting; the 1035 x 805 capture is centred on the app's own background (edge columns extended), padded to 8:5 and resized, no other edits. |
+| `flagships/docwiki-evidence.webp` | Unretouched crop (page px 80,716–1180,871: the four instruction bullets) of the evidence-sidecar page image `src-867a6c78f5b5/p0001` from the public [DocWiki](https://github.com/ozgurkarahan/docwiki) fictional sample release (run 2026-10-18); lossless WebP 1100 x 155. The sage outline and labels are page annotations. The pipeline strip in `index.html` is simplified from DocWiki's public [architecture diagram](https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg), using its wording. |
+| `flagships/oz-radio-1-presenting.webp`, `-2-question.webp`, `-3-answering.webp`, `-3-answering-660.webp` | Crops of one anonymous session of the public [Oz Radio](https://github.com/ozgurkarahan/oz-radio) live demo, 18 October 2026 (UTC), captured by a scripted Playwright run. The question was spoken by a synthetic test voice and transcribed by the app; the answer was generated live ("From slides 2 and 3"). The only additions are the baked "AI avatar / synthetic voice" chip and the resize to 330 px (frame 3 also 660 px for phones). The presenter is an AI-generated photo avatar ("Sofia", confirmed by the owner) animated by Azure AI Speech. |
 | Voice diagram in `index.html` | Original inline SVG showing four connections; illustrative and mock-qualified, not a deployed-architecture claim. |
 | `horizon-approval.webp` | Retained legacy 548 x 183 crop of the [public approval image](https://raw.githubusercontent.com/ozgurkarahan/horizon-famille/master/slides/html/assets/public/manon-approval.png), crop box `(68, 429, 616, 612)` from 660 x 635 pixels. No longer used in the first card; its existing public asset path is preserved. |
 
@@ -248,6 +259,7 @@ The graphite close uses inverse text, a light LinkedIn action, and a quieter Git
 - **Do** show several topics before a flagship deep dive, and preserve manual browsing whenever automatic motion is paused or unavailable.
 - **Do** retain native anchors, ruled lists, and disclosures where they already serve the content.
 - **Do** verify text and focus contrast in context rather than treating a token or source snippet as proof of WCAG conformance.
+- **Do** label synthetic presenters inside the image itself, not only in a caption.
 
 ### Don't:
 - **Don't** introduce GitHub-dark chrome, decorative neon, gradient text, or glass panels as a replacement identity.
@@ -255,3 +267,4 @@ The graphite close uses inverse text, a light LinkedIn action, and a quieter Git
 - **Don't** replace real evidence with a fabricated approval screen or imply that separately scoped samples form one production system.
 - **Don't** expose private repository slugs or identifying rows from source artifacts.
 - **Don't** promote low-contrast pairings or synthesized sidecar ramps into approved accessibility standards.
+- **Don't** publish anything about Oz Antenna beyond its name and status until its public publishing is enabled.
