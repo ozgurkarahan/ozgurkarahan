@@ -16,3 +16,4 @@ Desktop.ini
 # Local design and browser tooling
 .impeccable/
 .playwright-mcp/
+.copilot-handoff.md
