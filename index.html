@@ -7,10 +7,10 @@ rules, generous type, and authentic work artifacts. Preserve the existing identi
 STORY: Meet the author, try two flagship agents through their own evidence, browse
 distinct topics, then follow the source or the questions of action, authority, and
 human judgment. Samples remain separately scoped.
-FIRST VIEWPORT: The thesis opens onto a flagship band (DocWiki's cited page, Oz Radio's
-interruption storyboard, Oz Antenna marked in development), then image-led topic cards
-with left/right side arrows and a separate pause control. Horizon is one topic, not the
-whole opening.
+FIRST VIEWPORT: The thesis opens onto a flagship band (DocWiki's proof first: a claim, the
+page line it cites, then how it is built; Oz Radio's interruption storyboard; Oz Antenna
+marked in development), then image-led topic cards with left/right side arrows and a
+separate pause control. Horizon is one topic, not the whole opening.
 FORM: User-requested animated topic shelf extending the three-question dossier
 (original seed b859cd70). Slow reversible scrolling reveals breadth; interaction,
 reduced motion, and offscreen visibility take precedence over automatic movement.
@@ -147,11 +147,12 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .opening-position p { color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
     .opening-position .text-link { margin-top: 1.1rem; }
     /* Flagship band: two live samples shown through their own captured evidence, in ruled editorial columns (not cards). */
-    .flagships { margin-top: 2.5rem; }
-    .flagships-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1.5rem; margin-bottom: 0.85rem; }
+    .flagships { margin-top: 1.5rem; }
+    .flagships-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.3rem 1.5rem; margin-bottom: 0.7rem; }
     .flagships-heading h2 { font-size: 1.5rem; letter-spacing: -0.025em; }
-    .flagships-note { color: var(--ink); font-size: 0.9rem; }
-    .flagships-pending { margin-left: auto; color: var(--muted); font-size: 0.9rem; }
+    /* The 4px offset puts the notes on the h2's baseline. Top alignment plus a fixed offset keeps the row height independent of font metrics, so the grid below does not move when the web font lands. */
+    .flagships-note { margin-top: 4px; color: var(--ink); font-size: 0.9rem; }
+    .flagships-pending { margin: 4px 0 0 auto; color: var(--muted); font-size: 0.9rem; }
     /* Phone index (720px and below only): the three names and the two ways in, above the full articles. */
     .flagships-index { display: none; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
     .flagships-index li { padding-top: 0.5rem; }
@@ -159,7 +160,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .flagships-index li:last-child { padding-bottom: 0.6rem; color: var(--muted); }
     .index-name { display: block; font-size: 0.9rem; line-height: 1.35; }
     .flagship-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; border-top: 1px solid var(--line); }
-    .flagship { position: relative; container-type: inline-size; padding-block: 1.75rem 1.5rem; }
+    .flagship { position: relative; container-type: inline-size; padding-block: 1.25rem 1.5rem; }
     .flagship + .flagship::before { content: ""; position: absolute; top: 0; bottom: 0; left: -1.25rem; border-left: 1px solid var(--line); }
     .flagship h3 { font-size: 1.35rem; line-height: 1.2; letter-spacing: -0.025em; }
     /* Stretched link: the visible action link covers the whole column. Its overlay (z-index 1) lifts it over the plate's positioned parts; secondary and deep links (z-index 2) sit above the overlay. */
@@ -169,50 +170,49 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .flagship-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
     .flagship:has(.flagship-link:hover) h3 { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
     .flagship:has(.flagship-link:hover) .dw-page, .flagship:has(.flagship-link:hover) .storyboard-frames li { border-color: var(--sage); }
-    .flagship-scope { margin-top: 0.6rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
-    .flagship-description { margin-top: 0.7rem; color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
-    .flagship figure { margin-top: 0.8rem; }
-    .flagship figure + .flagship-description { margin-top: 1.1rem; }
+    .flagship-scope { margin-top: 0.45rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
+    .flagship-description { margin-top: 0.5rem; color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
+    .flagship figure { margin-top: 0.6rem; }
     .flagship-secondary, .dw-deeplink { position: relative; z-index: 2; }
+    /* Dense editorial rows: the same 3px sage ring, 3px off the link, so it never lands on neighbouring text or on the evidence crop. */
+    #flagships a:focus-visible { outline-offset: 3px; }
     .flagship-secondary { display: inline-flex; align-items: center; gap: 0.4em; min-height: 44px; color: var(--sage); font-size: 0.9rem; font-weight: 600; }
     .flagship-source { display: flex; width: fit-content; margin-top: 0.2rem; }
     .flagship figure + .flagship-source { margin-top: 0.6rem; }
     .dw-deeplink { text-decoration-color: var(--sage); }
-    /* DocWiki evidence plate: pipeline overview, then a zoom into one cited claim. The only bitmap is the captured source-page crop; the sage outline, trace and labels are page annotations. */
-    .dw-plate { max-width: 620px; line-height: 1.5; --dw-trace: 2.6rem; --dw-cols: minmax(0, 162fr) minmax(0, 110fr) minmax(0, 136fr) minmax(0, 158fr); }
+    /* DocWiki evidence plate: proof first (one claim, the source-page line it cites, the verified quote), then the pipeline that produced it. The only bitmap is the captured source-page crop; the sage outline, trace and labels are page annotations. */
+    .dw-plate { max-width: 620px; line-height: 1.5; --dw-trace: 1.6rem; --dw-cols: minmax(0, 162fr) minmax(0, 110fr) minmax(0, 136fr) minmax(0, 158fr); }
     .dw-plate p { max-width: none; }
     .dw-tag { font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
-    .dw-pipeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: var(--dw-cols); column-gap: 18px; row-gap: 10px; }
+    .dw-pipeline { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: var(--dw-cols); column-gap: 18px; row-gap: 10px; }
     .dw-station { position: relative; min-width: 0; margin: 0; padding: 0.5rem 0.7rem 0.55rem; border: 1px solid var(--line); background: var(--surface); overflow-wrap: anywhere; }
-    .dw-station-zoom { background: var(--sage-soft); border-color: var(--sage); }
+    .dw-station-release { background: var(--sage-soft); border-color: var(--sage); }
     .dw-station::after { content: ""; position: absolute; top: 50%; left: 100%; width: 18px; border-top: 2px solid var(--sage); }
     .dw-station::before { content: ""; position: absolute; top: 50%; left: calc(100% + 9px); width: 6px; height: 6px; border-top: 2px solid var(--sage); border-right: 2px solid var(--sage); transform: translateY(-50%) rotate(45deg); }
     .dw-station:last-child::after, .dw-station:last-child::before { display: none; }
     .dw-num { margin-right: 0.4rem; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; font-weight: 400; color: var(--sage); }
     .dw-st-title { display: block; font-size: 0.9rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
     .dw-st-sub { display: block; margin-top: 0.2rem; font-size: 0.8rem; line-height: 1.25; color: var(--muted); }
-    .dw-zoom { --dw-x3: calc(0.600707 * (100% - 54px) + 36px); position: relative; margin: 0; }
-    .dw-zoom-line { position: absolute; top: 0; bottom: 0; left: var(--dw-x3); border-left: 1px solid var(--sage); }
-    .dw-zoom-label { margin: 0.45rem 0 0.55rem calc(var(--dw-x3) + 12px); }
-    .dw-label { margin: 0.6rem 0 0.75rem; }
+    .dw-label { margin: 0 0 0.3rem; }
     .dw-claim { margin: 0; font-size: 1.2rem; line-height: 1.45; }
     .dw-claim a { display: block; min-height: 44px; }
     .dw-marker { position: relative; display: inline-block; margin-left: 0.14em; font-size: max(0.8rem, 0.72em); font-weight: 600; line-height: 0; color: var(--sage); vertical-align: 0.5em; }
     .dw-marker::after { content: ""; position: absolute; left: 50%; top: 0.5em; height: var(--dw-trace); border-left: 1px solid var(--sage); }
-    .dw-page { position: relative; margin: 0.9rem 0 0; border: 1px solid var(--line); background: var(--surface); }
+    .dw-page { position: relative; margin: 0.8rem 0 0; border: 1px solid var(--line); background: var(--surface); }
     .dw-page img { display: block; width: 100%; height: auto; }
     .dw-cited { position: absolute; left: 3.5455%; top: 49.6774%; width: 74.3636%; height: 22.5806%; outline: 2px solid var(--sage); outline-offset: 1px; pointer-events: none; }
     .dw-cited-label { position: absolute; left: calc(77.9091% + 7px); top: 60.9677%; transform: translateY(-50%); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1; color: var(--sage); white-space: nowrap; }
-    .dw-source { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 0.9rem; margin: 0.5rem 0 0; }
-    .dw-cite { flex: 1 1 100%; margin: 0; font-size: 0.9rem; line-height: 1.4; }
+    .dw-source { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.45rem 0.9rem; margin: 0.4rem 0 0; }
+    .dw-cite { flex: 0 1 auto; min-width: 0; margin: 0; font-size: 0.9rem; line-height: 1.4; }
     .dw-cite a { display: block; padding-block: 0.75rem; }
     .dw-id { white-space: nowrap; }
-    .dw-chip { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.2rem 0.55rem; border: 1px solid var(--sage); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1.3; color: var(--sage); }
+    .dw-chip { flex: none; display: inline-flex; align-items: center; gap: 0.4em; padding: 0.2rem 0.55rem; border: 1px solid var(--sage); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1.3; color: var(--sage); }
     .dw-check { flex: none; width: 0.95em; height: 0.95em; }
     .dw-check path { fill: none; stroke: var(--sage); stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; }
-    .dw-caption { margin: 0.9rem 0 0; padding-top: 0.7rem; border-top: 1px solid var(--line); font-size: 0.85rem; line-height: 1.5; color: var(--muted); }
-    @container (max-width: 599px) { .dw-cited-label .dw-long { display: none; } .dw-claim { font-size: 1rem; } }
-    @container (max-width: 559px) { .dw-pipeline { --dw-cols: minmax(0, 1fr) minmax(0, 1fr); } .dw-zoom { --dw-x3: calc((100% - 18px) / 4); } .dw-station:nth-child(2)::after, .dw-station:nth-child(2)::before { display: none; } }
+    .dw-how { display: flex; width: fit-content; margin-top: 0.4rem; }
+    .dw-caption { margin: 0.4rem 0 0; padding-top: 0.7rem; border-top: 1px solid var(--line); font-size: 0.85rem; line-height: 1.5; color: var(--muted); }
+    @container (max-width: 599px) { .dw-plate { --dw-trace: 1.45rem; } .dw-cited-label .dw-long { display: none; } .dw-claim { font-size: 1rem; } }
+    @container (max-width: 559px) { .dw-pipeline { --dw-cols: minmax(0, 1fr) minmax(0, 1fr); } .dw-station:nth-child(2)::after, .dw-station:nth-child(2)::before { display: none; } }
     /* Oz Radio interruption storyboard: three frames from one live session; step captions are live text. */
     .storyboard { max-width: 520px; }
     .storyboard-frames, .storyboard-captions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; margin: 0; padding: 0; list-style: none; }
@@ -220,6 +220,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .storyboard-frames img { display: block; width: 100%; height: auto; aspect-ratio: 330 / 571; object-fit: cover; object-position: top; }
     .storyboard-captions { margin-top: 12px; }
     .storyboard-captions li { min-width: 0; margin: 0; font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
+    .storyboard-note { margin: 12px 0 0; font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
     .storyboard-step { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500; color: var(--sage); }
     .storyboard figcaption { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
     .topic-showcase { margin-top: 2.5rem; }
@@ -404,7 +405,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       .question-link { grid-template-columns: 1.6rem minmax(0, 1fr) auto; min-height: 5.3rem; gap: 0.5rem; }
       .lab-layout { gap: 2.5rem; }
       .flagship-grid { gap: 2rem; }
-      .flagships-pending { flex-basis: 100%; text-align: right; }
+      .flagships-pending { flex-basis: 100%; margin-top: 1rem; text-align: right; }
       .flagship + .flagship::before { left: -1rem; }
       .storyboard-captions { grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 14px; }
     }
@@ -421,7 +422,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       .opening-position .text-link { margin-top: 0.65rem; }
       .flagships { margin-top: 2rem; }
       .flagships-heading h2 { font-size: 1.35rem; }
-      .flagships-note { flex-basis: 100%; }
+      .flagships-note { flex-basis: 100%; margin-top: 0; }
       .note-tail { display: block; }
       .flagship-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
       .flagship { padding-block: 1.5rem 1.25rem; }
@@ -431,7 +432,6 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       .flagships-pending { display: none; }
       .flagships-index { display: block; }
       .dw-pipeline { --dw-cols: minmax(0, 1fr) minmax(0, 1fr); }
-      .dw-zoom { --dw-x3: calc((100% - 18px) / 4); }
       .dw-station:nth-child(2)::after, .dw-station:nth-child(2)::before { display: none; }
       .storyboard-frames { grid-template-columns: minmax(0, 70%); }
       .storyboard-frames li:nth-child(-n+2) { display: none; }
@@ -528,28 +528,6 @@ reduced motion, and offscreen visibility take precedence over automatic movement
             <p class="flagship-description">Turns messy documents into a wiki where every sentence cites the page it came from, and disagreements between sources are stated, not hidden.</p>
             <a class="flagship-link" href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki" aria-describedby="flagship-docwiki-title">Open the sample wiki <span aria-hidden="true">↗</span></a>
             <figure class="dw-plate">
-              <ol class="dw-pipeline" aria-label="How DocWiki works">
-                <li class="dw-station">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">1</span>Documents</span>
-                  <span class="dw-st-sub">PDF, Word, Excel, CSV, PowerPoint, e-mail, scans, transcripts</span>
-                </li>
-                <li class="dw-station">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">2</span>Compile</span>
-                  <span class="dw-st-sub">13 stages · 15 quality gates</span>
-                </li>
-                <li class="dw-station dw-station-zoom">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">3</span>Immutable release</span>
-                  <span class="dw-st-sub">Every claim cites its evidence</span>
-                </li>
-                <li class="dw-station">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">4</span>Served to</span>
-                  <span class="dw-st-sub">Humans · agents via MCP · local coding agents</span>
-                </li>
-              </ol>
-              <div class="dw-zoom">
-                <span class="dw-zoom-line" aria-hidden="true"></span>
-                <p class="dw-tag dw-zoom-label">Zoom: one claim from the sample release</p>
-              </div>
               <p class="dw-tag dw-label">Claim · wiki page</p>
               <p class="dw-claim"><a class="dw-deeplink" href="https://docwiki.ozgurkarahan.com/topics/grid-operations" data-flagship="docwiki">Export above the limit by more than 1 MW for more than 5 minutes will be reported.<sup class="dw-marker">1</sup></a></p>
               <div class="dw-page">
@@ -560,8 +538,26 @@ reduced motion, and offscreen visibility take precedence over automatic movement
               <div class="dw-source">
                 <p class="dw-cite"><a class="dw-deeplink" href="https://docwiki.ozgurkarahan.com/evidence/src-867a6c78f5b5/p0001" data-flagship="docwiki"><span class="dw-tag">Cited page</span> · Curtailment instruction <span class="dw-id">CPL-CI-2026-018</span>, p. 1</a></p>
                 <span class="dw-chip"><svg class="dw-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2.5 8.6 6.1 12.2 13.5 4.6"/></svg>quote verified</span>
-                <a class="flagship-secondary" href="https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg">How DocWiki works <span aria-hidden="true">↗</span></a>
               </div>
+              <ol class="dw-pipeline" aria-label="How DocWiki works">
+                <li class="dw-station">
+                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">1</span>Documents</span>
+                  <span class="dw-st-sub">PDF, Word, Excel, CSV, PowerPoint, e-mail, scans, transcripts</span>
+                </li>
+                <li class="dw-station">
+                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">2</span>Compile</span>
+                  <span class="dw-st-sub">13 stages · 15 quality gates</span>
+                </li>
+                <li class="dw-station dw-station-release">
+                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">3</span>Immutable release</span>
+                  <span class="dw-st-sub">Every claim cites its evidence</span>
+                </li>
+                <li class="dw-station">
+                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">4</span>Served to</span>
+                  <span class="dw-st-sub">Humans · agents via MCP · local coding agents</span>
+                </li>
+              </ol>
+              <a class="flagship-secondary dw-how" href="https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg">How DocWiki works <span aria-hidden="true">↗</span></a>
               <figcaption class="dw-caption">Fictional wind-farm corpus · 37 sources · 854 evidence pages · run 2026-10-18</figcaption>
             </figure>
             <a class="flagship-secondary flagship-source" href="https://github.com/ozgurkarahan/docwiki" aria-describedby="flagship-docwiki-title">Source <span aria-hidden="true">↗</span></a>
@@ -575,16 +571,16 @@ reduced motion, and offscreen visibility take precedence over automatic movement
               <ol class="storyboard-frames">
                 <li><img src="docs/assets/flagships/oz-radio-1-presenting.webp" width="330" height="571" loading="lazy" decoding="async" alt="AI avatar presenting slide 1 of 5, with no question panel open. The frame's label reads AI avatar, synthetic voice."></li>
                 <li><img src="docs/assets/flagships/oz-radio-2-question.webp" width="330" height="582" loading="lazy" decoding="async" alt="AI avatar with the question panel open. The spoken question, transcribed, reads: What is the difference between a model and an agent? The frame's label reads AI avatar, synthetic voice."></li>
-                <li><img src="docs/assets/flagships/oz-radio-3-answering.webp" width="330" height="582" loading="lazy" decoding="async" alt="AI avatar answering from the deck, with the question and the start of the answer in panels. The frame's label reads AI avatar, synthetic voice."></li>
+                <li><img src="docs/assets/flagships/oz-radio-3-answering.webp" srcset="docs/assets/flagships/oz-radio-3-answering.webp 330w, docs/assets/flagships/oz-radio-3-answering-660.webp 660w" sizes="(max-width: 720px) calc(min(100vw - 2.5rem, 520px) * 0.7), 165px" width="330" height="582" loading="lazy" decoding="async" alt="AI avatar answering from the deck, with the question and the start of the answer in panels. The frame's label reads AI avatar, synthetic voice."></li>
               </ol>
               <ol class="storyboard-captions">
                 <li><span class="storyboard-step">1</span> Presenting · slide 1 of 5</li>
                 <li><span class="storyboard-step">2</span> Voice question, transcribed: 'What is the difference between a model and an agent?'</li>
                 <li><span class="storyboard-step">3</span> Answers from the deck: 'The key difference is that an agent can actually get things done, not just talk.' (From slides 2 and 3)</li>
               </ol>
+              <p class="storyboard-note">Also narrates decks as videos and hosts two-avatar podcasts.</p>
               <figcaption>Frames from one live demo session, 18 October 2026 (UTC). The question was spoken by a synthetic test voice.</figcaption>
             </figure>
-            <p class="flagship-description">It also narrates decks as videos and hosts two-avatar podcasts.</p>
             <a class="flagship-secondary flagship-source" href="https://github.com/ozgurkarahan/oz-radio" aria-describedby="flagship-oz-radio-title">Source <span aria-hidden="true">↗</span></a>
           </article>
         </div>
