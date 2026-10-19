@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="identity-cover-title" aria-describedby="identity-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+  <title id="identity-cover-title">Agent access on behalf of the user: a gateway exchanges the user's token for one token per system</title>
+  <desc id="identity-cover-desc">Illustrative drawing: a person outline (Alice, the fictional user of the public sample) points down to the &#8220;Agent&#8221;. An arrow leads from the Agent to the &#8220;Gateway&#8221; (Azure API Management), where her token stops: the gateway checks it and exchanges it on her behalf for one token per system. Two arrows leave the Gateway, each delivering a new token to a small square, the MCP server in front of &#8220;ServiceNow&#8221; and of &#8220;Salesforce&#8221;; both systems are outlined, each applying Alice&#8217;s own permissions. Below Salesforce, a badge reads &#8220;Last modified by Alice&#8221;. Bottom left: &#8220;Illustrative&#8221;.</desc>
+  <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
+  <path d="M105 52a11 11 0 1 1-22 0a11 11 0 1 1 22 0zM72 98v-6a22 24 0 0 1 44 0v6z" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
+  <rect x="24" y="132" width="140" height="72" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
+  <path d="M94 98V122M164 168H206M248 100H302M248 236H302" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
+  <path d="M88 122l6 10 6-10zM206 162l10 6-10 6zM302 94l10 6-10 6zM302 230l10 6-10 6z" style="fill:var(--muted,#485447)"/>
+  <path d="M216 76h32v184h-32zM312 84h32v32h-32zM312 220h32v32h-32z" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
+  <path d="M344 64h272v72H344zM344 200h272v72H344z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
+  <rect x="344" y="296" width="272" height="96" style="fill:var(--warm-soft,#fbf0dc)"/>
+  <text x="94" y="181" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Agent</text>
+  <text x="232" y="56" text-anchor="middle" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Gateway</text>
+  <text x="480" y="113" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">ServiceNow</text>
+  <text x="480" y="249" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Salesforce</text>
+  <path class="wk-draw" pathLength="1" d="M94 98V122" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:0.3s;--d:0.32s"/>
+  <path class="wk-stamp" d="M88 122l6 10 6-10z" style="fill:var(--sage,#305b3b);--t:0.56s;--d:0.22s"/>
+  <path class="wk-draw" pathLength="1" d="M164 168H206" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:0.88s;--d:0.48s"/>
+  <path class="wk-stamp" d="M206 162l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:1.27s;--d:0.22s"/>
+  <path class="wk-draw" pathLength="1" d="M248 100H302" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:1.92s;--d:0.52s"/>
+  <path class="wk-draw" pathLength="1" d="M248 236H302" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:1.98s;--d:0.52s"/>
+  <path class="wk-stamp" d="M302 94l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:2.36s;--d:0.22s"/>
+  <path class="wk-stamp" d="M302 230l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:2.42s;--d:0.22s"/>
+  <path class="wk-draw" pathLength="1" d="M344.5 100V64.5H615.5V135.5H344.5Z" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:2.6s;--d:0.75s"/>
+  <path class="wk-draw" pathLength="1" d="M344.5 236V200.5H615.5V271.5H344.5Z" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:2.68s;--d:0.75s"/>
+  <g class="wk-travel" style="--dx:-56px;--t:0.86s;--d:0.6s">
+    <rect class="wk-stamp" x="224" y="160" width="16" height="16" style="fill:var(--sage,#305b3b);--t:0.68s;--d:0.22s"/>
+  </g>
+  <g class="wk-travel" style="--dx:-96px;--t:1.92s;--d:0.6s">
+    <rect class="wk-stamp" x="320" y="92" width="16" height="16" style="fill:var(--sage,#305b3b);--t:1.58s;--d:0.25s"/>
+  </g>
+  <g class="wk-travel" style="--dx:-96px;--t:1.98s;--d:0.6s">
+    <rect class="wk-stamp" x="320" y="228" width="16" height="16" style="fill:var(--sage,#305b3b);--t:1.64s;--d:0.25s"/>
+  </g>
+  <path class="wk-draw" pathLength="1" d="M344 296H616V392H344Z" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.7s;--d:0.85s"/>
+  <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
+  <text text-anchor="middle" font-size="32" font-weight="600" style="fill:var(--ink,#202b21)"><tspan x="480" y="338">Last modified</tspan><tspan x="480" y="376">by Alice</tspan></text>
+</svg>

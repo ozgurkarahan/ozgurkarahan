@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="memory-cover-title" aria-describedby="memory-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+  <title id="memory-cover-title">Agent memory: one session's lesson, written to a Markdown wiki and read by the next session</title>
+  <desc id="memory-cover-desc">Illustrative drawing: a coding session, marked &#8220;Session&#8221; with a terminal prompt, runs &#8220;end session&#8221;: an arrow carries a small square, the lesson, down into a page titled &#8220;[[lessons]]&#8221; in a shared Markdown wiki. A link arrow runs from that page into &#8220;index.md&#8221;, the wiki&#8217;s content catalog, where the new entry is highlighted. From index.md another arrow brings the lesson down to &#8220;Next session&#8221;, outlined in amber: the next session, with any agent, starts by reading it. Plain Markdown read at session start, not model training.</desc>
+  <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
+  <rect x="24" y="24" width="216" height="72" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
+  <path d="M40 50l10 10-10 10" stroke-width="3" style="fill:none;stroke:var(--muted,#485447)"/>
+  <text x="64" y="73" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Session</text>
+  <path d="M56 96V158" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
+  <path d="M51 158h10l-5 10z" style="fill:var(--muted,#485447)"/>
+  <text x="80" y="145" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">end session</text>
+  <path d="M24 168H264L280 184V280H24Z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
+  <path d="M264 168V184H280" stroke-width="2" style="fill:none;stroke:var(--line,#c6d2c3)"/>
+  <text x="44" y="212" font-size="36" font-weight="700" style="fill:var(--sage,#305b3b)">[[lessons]]</text>
+  <path d="M44 236h176v8H44zM44 254h128v8H44z" style="fill:var(--line,#c6d2c3)"/>
+  <path d="M280 204H326" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
+  <path d="M326 199l10 5-10 5z" style="fill:var(--muted,#485447)"/>
+  <path d="M336 24H592L616 48V280H336Z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
+  <path d="M592 24V48H616" stroke-width="2" style="fill:none;stroke:var(--line,#c6d2c3)"/>
+  <text x="360" y="76" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">index.md</text>
+  <path d="M360 104h200v8H360zM360 136h168v8H360zM360 168h216v8H360zM360 200h184v8H360zM360 232h152v8H360z" style="fill:var(--line,#c6d2c3)"/>
+  <path d="M476 280V334" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
+  <path d="M471 334h10l-5 10z" style="fill:var(--muted,#485447)"/>
+  <rect x="336" y="344" width="280" height="48" style="fill:var(--warm-soft,#fbf0dc)"/>
+  <!-- emphasis -->
+  <path class="wk-draw" pathLength="1" d="M56 96V158" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:0.4s;--d:0.5s"/>
+  <path class="wk-stamp" d="M51 158h10l-5 10z" style="fill:var(--sage,#305b3b);--t:0.85s;--d:0.2s"/>
+  <g class="wk-travel" style="--dy:-40px;--t:0.4s;--d:0.55s">
+    <rect class="wk-stamp" x="32" y="144" width="16" height="16" style="fill:var(--sage,#305b3b);--t:0.3s;--d:0.2s"/>
+  </g>
+  <path class="wk-draw" pathLength="1" d="M56 168H264L280 184V280H24V168Z" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:0.9s;--d:0.8s"/>
+  <path class="wk-draw" pathLength="1" d="M280 204H326" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:1.55s;--d:0.3s"/>
+  <path class="wk-stamp" d="M326 199l10 5-10 5z" style="fill:var(--sage,#305b3b);--t:1.82s;--d:0.2s"/>
+  <rect class="wk-grow" x="360" y="200" width="184" height="8" style="fill:var(--sage,#305b3b);--sx:0;--o:0 50%;--t:1.92s;--d:0.5s"/>
+  <path class="wk-draw" pathLength="1" d="M476 280V334" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:2.45s;--d:0.45s"/>
+  <path class="wk-stamp" d="M471 334h10l-5 10z" style="fill:var(--sage,#305b3b);--t:2.85s;--d:0.2s"/>
+  <g class="wk-travel" style="--dy:-36px;--t:2.45s;--d:0.55s">
+    <rect class="wk-stamp" x="448" y="320" width="16" height="16" style="fill:var(--sage,#305b3b);--t:2.35s;--d:0.2s"/>
+  </g>
+  <path class="wk-draw" pathLength="1" d="M476 344H616V392H336V344Z" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.25s;--d:0.9s"/>
+  <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
+  <text x="600" y="379" text-anchor="end" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">Next session</text>
+</svg>

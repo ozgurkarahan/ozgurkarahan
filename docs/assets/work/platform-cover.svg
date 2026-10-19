@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="platform-cover-title" aria-describedby="platform-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+  <title id="platform-cover-title">The Agentic Platform: experiences on top, agent computers and shared capabilities inside one governance</title>
+  <desc id="platform-cover-desc">Illustrative drawing: three layers. On top, &#8220;Experiences&#8221;: three boxes (an IDE prompt, a chat bubble, an always-on sun), each with an arrow down into a frame. Inside the frame, &#8220;Every agent gets a computer&#8221;: two boxes (a laptop and a cloud), and &#8220;Shared capabilities&#8221;: four boxes (context, models, memory and tools glyphs). The frame around these two layers is outlined and ends in a tab labelled &#8220;One governance&#8221;.</desc>
+  <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
+  <rect x="24" y="104" width="592" height="224" style="fill:var(--surface,#ffffff)"/>
+  <rect x="296" y="328" width="320" height="64" style="fill:var(--warm-soft,#fbf0dc)"/>
+  <path d="M24 104H616V392H296V328H24Z" fill="none" stroke-width="2" style="stroke:var(--line,#c6d2c3)"/>
+  <path d="M400 24h56v48h-56zM472 24h56v48h-56zM544 24h56v48h-56zM472 140h56v48h-56zM544 140h56v48h-56zM328 252h56v48h-56zM400 252h56v48h-56zM472 252h56v48h-56zM544 252h56v48h-56z" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--line,#c6d2c3)"/>
+  <g fill="none" stroke-width="2.5" style="stroke:var(--sage,#305b3b)">
+    <path d="M416 40l8 8-8 8M428 56h14M486 37h28v19h-15l-7 7v-7h-6z"/>
+    <path d="M572 34v5M572 57v5M558 48h5M581 48h5M562 38l3.5 3.5M578.5 54.5l3.5 3.5M582 38l-3.5 3.5M565.5 54.5l-3.5 3.5"/>
+    <circle cx="572" cy="48" r="5"/>
+    <path d="M486 153h28v17h-28zM480 175h40M560 172h24a6 6 0 0 0 1-12 9 9 0 0 0-17-3 7 7 0 0 0-8 15z"/>
+    <path d="M342 264h6v6h-6zM364 264h6v6h-6zM353 283h6v6h-6zM348 267h16M346 270l8 13M366 270l-8 13"/>
+    <path d="M428 262l3.5 10.5 10.5 3.5-10.5 3.5-3.5 10.5-3.5-10.5-10.5-3.5 10.5-3.5z"/>
+    <path d="M489 266a11 4 0 0 1 22 0a11 4 0 0 1-22 0zM489 266v20a11 4 0 0 0 22 0v-20M489 276a11 4 0 0 0 22 0"/>
+    <path d="M574 278l-10 10a2.8 2.8 0 0 1-4-4l10-10a7 7 0 0 1 9-9l-4 4 1 3 3 1 4-4a7 7 0 0 1-9 9z"/>
+  </g>
+  <path d="M428 72v22M500 72v22M572 72v22" fill="none" stroke-width="2" style="stroke:var(--muted,#485447)"/>
+  <path d="M423 94h10l-5 10zM495 94h10l-5 10zM567 94h10l-5 10z" style="fill:var(--muted,#485447)"/>
+  <text x="24" y="60" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Experiences</text>
+  <text x="48" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)"><tspan x="48" y="152">Every agent gets</tspan><tspan x="48" y="192">a computer</tspan></text>
+  <text x="48" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)"><tspan x="48" y="264">Shared</tspan><tspan x="48" y="304">capabilities</tspan></text>
+  <path class="wk-stamp" d="M400 24h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.3s;--d:0.32s"/>
+  <path class="wk-stamp" d="M472 24h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.5s;--d:0.32s"/>
+  <path class="wk-stamp" d="M544 24h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.7s;--d:0.32s"/>
+  <path class="wk-stamp" d="M472 140h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.35s;--d:0.32s"/>
+  <path class="wk-stamp" d="M544 140h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.55s;--d:0.32s"/>
+  <path class="wk-stamp" d="M328 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.85s;--d:0.32s"/>
+  <path class="wk-stamp" d="M400 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.03s;--d:0.32s"/>
+  <path class="wk-stamp" d="M472 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.21s;--d:0.32s"/>
+  <path class="wk-stamp" d="M544 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.39s;--d:0.32s"/>
+  <g class="wk-grow" style="--sx:1;--sy:0;--o:50% 0;--t:0.95s;--d:0.32s">
+    <path d="M428 72v22M500 72v22M572 72v22" fill="none" stroke-width="4" style="stroke:var(--sage,#305b3b)"/>
+  </g>
+  <g class="wk-fade" style="--t:1.24s;--d:0.16s">
+    <path d="M423 94h10l-5 10zM495 94h10l-5 10zM567 94h10l-5 10z" style="fill:var(--sage,#305b3b)"/>
+  </g>
+  <path class="wk-draw" pathLength="1" d="M184 104H616V392H456" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:2.9s;--d:1s"/>
+  <path class="wk-draw" pathLength="1" d="M184 104H24V328H296V392H456" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:2.9s;--d:1s"/>
+  <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
+  <text x="456" y="376" text-anchor="middle" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">One governance</text>
+</svg>
