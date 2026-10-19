@@ -150,25 +150,34 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .flagships { margin-top: 2.5rem; }
     .flagships-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1.5rem; margin-bottom: 0.85rem; }
     .flagships-heading h2 { font-size: 1.5rem; letter-spacing: -0.025em; }
-    .flagships-note { color: var(--muted); font-size: 0.9rem; }
+    .flagships-note { color: var(--ink); font-size: 0.9rem; }
+    .flagships-pending { margin-left: auto; color: var(--muted); font-size: 0.9rem; }
+    /* Phone index (720px and below only): the three names and the two ways in, above the full articles. */
+    .flagships-index { display: none; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .flagships-index li { padding-top: 0.5rem; }
+    .flagships-index li + li { border-top: 1px solid var(--line); }
+    .flagships-index li:last-child { padding-bottom: 0.6rem; color: var(--muted); }
+    .index-name { display: block; font-size: 0.9rem; line-height: 1.35; }
     .flagship-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; border-top: 1px solid var(--line); }
     .flagship { position: relative; container-type: inline-size; padding-block: 1.75rem 1.5rem; }
     .flagship + .flagship::before { content: ""; position: absolute; top: 0; bottom: 0; left: -1.25rem; border-left: 1px solid var(--line); }
     .flagship h3 { font-size: 1.35rem; line-height: 1.2; letter-spacing: -0.025em; }
-    /* Stretched link: the heading's link covers the whole column (z-index 1 lifts it over the plate's positioned parts). Secondary links keep z-index 1 and follow the heading in the DOM, so they stay above it. */
-    .flagship-link { display: block; width: fit-content; max-width: 100%; text-decoration: none; }
+    /* Stretched link: the visible action link covers the whole column. Its overlay (z-index 1) lifts it over the plate's positioned parts; secondary and deep links (z-index 2) sit above the overlay. */
+    .flagship-link, .flagships-index a { display: flex; align-items: center; gap: 0.55rem; width: fit-content; max-width: 100%; min-height: 44px; font-weight: 700; line-height: 1.4; }
+    .flagship-link { margin-top: 0.3rem; }
+    .flagships-index a { margin-top: 0.4rem; }
     .flagship-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
-    .flagship-link:hover { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    .flagship:has(.flagship-link:hover) h3 { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
     .flagship:has(.flagship-link:hover) .dw-page, .flagship:has(.flagship-link:hover) .storyboard-frames li { border-color: var(--sage); }
-    .flagship-description { margin-top: 1.1rem; color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
     .flagship-scope { margin-top: 0.6rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
-    .flagship figure { margin-top: 1.1rem; }
-    .flagship-secondary { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 0.4em; min-height: 44px; color: var(--sage); font-size: 0.9rem; font-weight: 600; }
+    .flagship-description { margin-top: 0.7rem; color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
+    .flagship figure { margin-top: 0.8rem; }
+    .flagship figure + .flagship-description { margin-top: 1.1rem; }
+    .flagship-secondary, .dw-deeplink { position: relative; z-index: 2; }
+    .flagship-secondary { display: inline-flex; align-items: center; gap: 0.4em; min-height: 44px; color: var(--sage); font-size: 0.9rem; font-weight: 600; }
     .flagship-source { display: flex; width: fit-content; margin-top: 0.2rem; }
-    .flagships-pending { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 1.5rem; max-width: none; padding-block: 1rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .flagships-pending strong { font-weight: 600; }
-    .pending-label, .flagships-pending > span:last-child { color: var(--muted); }
-    .pending-label { font-size: 0.875rem; }
+    .flagship figure + .flagship-source { margin-top: 0.6rem; }
+    .dw-deeplink { text-decoration-color: var(--sage); }
     /* DocWiki evidence plate: pipeline overview, then a zoom into one cited claim. The only bitmap is the captured source-page crop; the sage outline, trace and labels are page annotations. */
     .dw-plate { max-width: 620px; line-height: 1.5; --dw-trace: 2.6rem; --dw-cols: minmax(0, 162fr) minmax(0, 110fr) minmax(0, 136fr) minmax(0, 158fr); }
     .dw-plate p { max-width: none; }
@@ -185,16 +194,18 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .dw-zoom { --dw-x3: calc(0.600707 * (100% - 54px) + 36px); position: relative; margin: 0; }
     .dw-zoom-line { position: absolute; top: 0; bottom: 0; left: var(--dw-x3); border-left: 1px solid var(--sage); }
     .dw-zoom-label { margin: 0.45rem 0 0.55rem calc(var(--dw-x3) + 12px); }
-    .dw-label { margin: 0.6rem 0 0.5rem; }
-    .dw-claim { margin: 0; font-size: 1.2rem; line-height: 1.45; text-wrap: pretty; }
+    .dw-label { margin: 0.6rem 0 0.75rem; }
+    .dw-claim { margin: 0; font-size: 1.2rem; line-height: 1.45; }
+    .dw-claim a { display: block; min-height: 44px; }
     .dw-marker { position: relative; display: inline-block; margin-left: 0.14em; font-size: max(0.8rem, 0.72em); font-weight: 600; line-height: 0; color: var(--sage); vertical-align: 0.5em; }
     .dw-marker::after { content: ""; position: absolute; left: 50%; top: 0.5em; height: var(--dw-trace); border-left: 1px solid var(--sage); }
     .dw-page { position: relative; margin: 0.9rem 0 0; border: 1px solid var(--line); background: var(--surface); }
     .dw-page img { display: block; width: 100%; height: auto; }
-    .dw-cited { position: absolute; left: 3.5455%; top: 54.5852%; width: 74.3636%; height: 7.6419%; outline: 2px solid var(--sage); outline-offset: 1px; pointer-events: none; }
-    .dw-cited-label { position: absolute; left: calc(77.9091% + 7px); top: 58.4061%; transform: translateY(-50%); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1; color: var(--sage); white-space: nowrap; }
-    .dw-source { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.3rem 0.9rem; margin: 0.75rem 0 0; }
+    .dw-cited { position: absolute; left: 3.5455%; top: 49.6774%; width: 74.3636%; height: 22.5806%; outline: 2px solid var(--sage); outline-offset: 1px; pointer-events: none; }
+    .dw-cited-label { position: absolute; left: calc(77.9091% + 7px); top: 60.9677%; transform: translateY(-50%); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1; color: var(--sage); white-space: nowrap; }
+    .dw-source { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 0.9rem; margin: 0.5rem 0 0; }
     .dw-cite { flex: 1 1 100%; margin: 0; font-size: 0.9rem; line-height: 1.4; }
+    .dw-cite a { display: block; padding-block: 0.75rem; }
     .dw-id { white-space: nowrap; }
     .dw-chip { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.2rem 0.55rem; border: 1px solid var(--sage); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1.3; color: var(--sage); }
     .dw-check { flex: none; width: 0.95em; height: 0.95em; }
@@ -208,7 +219,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .storyboard-frames li { min-width: 0; margin: 0; border: 1px solid var(--line); background: var(--surface); }
     .storyboard-frames img { display: block; width: 100%; height: auto; aspect-ratio: 330 / 571; object-fit: cover; object-position: top; }
     .storyboard-captions { margin-top: 12px; }
-    .storyboard-captions li { min-width: 0; margin: 0; font-size: 0.875rem; line-height: 1.45; color: var(--muted); text-wrap: pretty; }
+    .storyboard-captions li { min-width: 0; margin: 0; font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
     .storyboard-step { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500; color: var(--sage); }
     .storyboard figcaption { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
     .topic-showcase { margin-top: 2.5rem; }
@@ -393,6 +404,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       .question-link { grid-template-columns: 1.6rem minmax(0, 1fr) auto; min-height: 5.3rem; gap: 0.5rem; }
       .lab-layout { gap: 2.5rem; }
       .flagship-grid { gap: 2rem; }
+      .flagships-pending { flex-basis: 100%; text-align: right; }
       .flagship + .flagship::before { left: -1rem; }
       .storyboard-captions { grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 14px; }
     }
@@ -409,16 +421,21 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       .opening-position .text-link { margin-top: 0.65rem; }
       .flagships { margin-top: 2rem; }
       .flagships-heading h2 { font-size: 1.35rem; }
+      .flagships-note { flex-basis: 100%; }
+      .note-tail { display: block; }
       .flagship-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
       .flagship { padding-block: 1.5rem 1.25rem; }
       .flagship + .flagship { border-top: 1px solid var(--line); }
       .flagship + .flagship::before { display: none; }
       .flagship h3 { font-size: 1.3rem; }
-      .flagships-pending { column-gap: 1rem; }
+      .flagships-pending { display: none; }
+      .flagships-index { display: block; }
       .dw-pipeline { --dw-cols: minmax(0, 1fr) minmax(0, 1fr); }
       .dw-zoom { --dw-x3: calc((100% - 18px) / 4); }
       .dw-station:nth-child(2)::after, .dw-station:nth-child(2)::before { display: none; }
-      .storyboard-frames { gap: 8px; }
+      .storyboard-frames { grid-template-columns: minmax(0, 70%); }
+      .storyboard-frames li:nth-child(-n+2) { display: none; }
+      .storyboard-frames img { aspect-ratio: 330 / 582; }
       .topic-showcase { margin-top: 1.7rem; }
       .topic-heading h2 { font-size: 1.35rem; }
       .topic-showcase[data-enhanced="true"] .topic-carousel { gap: 0; margin-inline: -0.75rem; }
@@ -472,6 +489,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     <nav class="primary-nav" aria-label="Primary navigation">
       <a href="#work">The work</a>
       <a href="#ideas">The ideas</a>
+      <a href="https://ozgurkarahan.com/agentic-platform/">Platform deck</a>
       <a href="#archive">All projects</a>
       <a class="contact-link" href="#contact">Let's connect <span aria-hidden="true">&nbsp;↗</span></a>
     </nav>
@@ -489,12 +507,26 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       <section class="flagships" id="flagships" aria-labelledby="flagships-title">
         <div class="flagships-heading">
           <h2 id="flagships-title">Agents you can try</h2>
-          <p class="flagships-note">Personal open-source samples, not Microsoft products.</p>
+          <p class="flagships-note">Personal open-source samples, <span class="note-tail">not Microsoft products.</span></p>
+          <p class="flagships-pending">Oz Antenna · in development · not public</p>
         </div>
+        <ul class="flagships-index" id="flagships-index" aria-label="Flagship samples">
+          <li>
+            <span class="index-name"><strong>DocWiki</strong> — knowledge you can trace to the page</span>
+            <a href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki">Open the sample wiki <span aria-hidden="true">↗</span></a>
+          </li>
+          <li>
+            <span class="index-name"><strong>Oz Radio</strong> — a presentation you can interrupt</span>
+            <a href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio">Try the live demo <span aria-hidden="true">↗</span></a>
+          </li>
+          <li><span class="index-name"><strong>Oz Antenna</strong> · in development · not public</span></li>
+        </ul>
         <div class="flagship-grid">
           <article class="flagship" id="flagship-docwiki" aria-labelledby="flagship-docwiki-title">
-            <h3 id="flagship-docwiki-title"><a class="flagship-link" href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki">DocWiki: knowledge you can trace to the page</a></h3>
+            <h3 id="flagship-docwiki-title">DocWiki: knowledge you can trace to the page</h3>
             <p class="flagship-scope">Live sample wiki · open source · fictional corpus <span aria-hidden="true">↗</span></p>
+            <p class="flagship-description">Turns messy documents into a wiki where every sentence cites the page it came from, and disagreements between sources are stated, not hidden.</p>
+            <a class="flagship-link" href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki" aria-describedby="flagship-docwiki-title">Open the sample wiki <span aria-hidden="true">↗</span></a>
             <figure class="dw-plate">
               <ol class="dw-pipeline" aria-label="How DocWiki works">
                 <li class="dw-station">
@@ -511,7 +543,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
                 </li>
                 <li class="dw-station">
                   <span class="dw-st-title"><span class="dw-num" aria-hidden="true">4</span>Served to</span>
-                  <span class="dw-st-sub">Humans · Foundry agents via MCP · Local coding agents</span>
+                  <span class="dw-st-sub">Humans · agents via MCP · local coding agents</span>
                 </li>
               </ol>
               <div class="dw-zoom">
@@ -519,30 +551,31 @@ reduced motion, and offscreen visibility take precedence over automatic movement
                 <p class="dw-tag dw-zoom-label">Zoom: one claim from the sample release</p>
               </div>
               <p class="dw-tag dw-label">Claim · wiki page</p>
-              <p class="dw-claim">Export above the limit by more than 1 MW for more than 5 minutes will be reported.<sup class="dw-marker">1</sup></p>
+              <p class="dw-claim"><a class="dw-deeplink" href="https://docwiki.ozgurkarahan.com/topics/grid-operations" data-flagship="docwiki">Export above the limit by more than 1 MW for more than 5 minutes will be reported.<sup class="dw-marker">1</sup></a></p>
               <div class="dw-page">
-                <img src="docs/assets/flagships/docwiki-evidence.webp" width="1100" height="458" loading="eager" fetchpriority="high" decoding="async" alt="Page 1 of the source Curtailment instruction CPL-CI-2026-018, with DocWiki's highlight boxes. The cited line, outlined in sage, reads: Export above the limit by more than 1 MW for more than 5 minutes will be reported.">
+                <img src="docs/assets/flagships/docwiki-evidence.webp" width="1100" height="155" loading="lazy" decoding="async" alt="Four instruction lines from page 1 of the source Curtailment instruction CPL-CI-2026-018, with DocWiki's highlight boxes. The cited line, outlined in sage, reads: Export above the limit by more than 1 MW for more than 5 minutes will be reported.">
                 <span class="dw-cited" aria-hidden="true"></span>
                 <span class="dw-cited-label" aria-hidden="true"><span>1</span><span class="dw-long"> · cited line</span></span>
               </div>
               <div class="dw-source">
-                <p class="dw-cite"><span class="dw-tag">Cited page</span> · Curtailment instruction <span class="dw-id">CPL-CI-2026-018</span>, p. 1</p>
+                <p class="dw-cite"><a class="dw-deeplink" href="https://docwiki.ozgurkarahan.com/evidence/src-867a6c78f5b5/p0001" data-flagship="docwiki"><span class="dw-tag">Cited page</span> · Curtailment instruction <span class="dw-id">CPL-CI-2026-018</span>, p. 1</a></p>
                 <span class="dw-chip"><svg class="dw-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2.5 8.6 6.1 12.2 13.5 4.6"/></svg>quote verified</span>
                 <a class="flagship-secondary" href="https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg">How DocWiki works <span aria-hidden="true">↗</span></a>
               </div>
               <figcaption class="dw-caption">Fictional wind-farm corpus · 37 sources · 854 evidence pages · run 2026-10-18</figcaption>
             </figure>
-            <p class="flagship-description">Turns messy documents into a wiki where every sentence cites the page it came from, and disagreements between sources are stated, not hidden.</p>
             <a class="flagship-secondary flagship-source" href="https://github.com/ozgurkarahan/docwiki" aria-describedby="flagship-docwiki-title">Source <span aria-hidden="true">↗</span></a>
           </article>
           <article class="flagship" id="flagship-oz-radio" aria-labelledby="flagship-oz-radio-title">
-            <h3 id="flagship-oz-radio-title"><a class="flagship-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio">Oz Radio: a presentation you can interrupt</a></h3>
+            <h3 id="flagship-oz-radio-title">Oz Radio: a presentation you can interrupt</h3>
             <p class="flagship-scope">Live demo · capped daily · AI avatar <span aria-hidden="true">↗</span></p>
+            <p class="flagship-description">An AI avatar presents your deck live; raise your hand and ask by voice.</p>
+            <a class="flagship-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio" aria-describedby="flagship-oz-radio-title">Try the live demo <span aria-hidden="true">↗</span></a>
             <figure class="storyboard">
               <ol class="storyboard-frames">
-                <li><img src="docs/assets/flagships/oz-radio-1-presenting.webp" width="330" height="571" loading="eager" decoding="async" alt="AI avatar presenting slide 1 of 5, with no question panel open. The frame's label reads AI avatar, synthetic voice."></li>
-                <li><img src="docs/assets/flagships/oz-radio-2-question.webp" width="330" height="582" loading="eager" decoding="async" alt="AI avatar with the question panel open. The spoken question, transcribed, reads: What is the difference between a model and an agent? The frame's label reads AI avatar, synthetic voice."></li>
-                <li><img src="docs/assets/flagships/oz-radio-3-answering.webp" width="330" height="582" loading="eager" decoding="async" alt="AI avatar answering from the deck, with the question and the start of the answer in panels. The frame's label reads AI avatar, synthetic voice."></li>
+                <li><img src="docs/assets/flagships/oz-radio-1-presenting.webp" width="330" height="571" loading="lazy" decoding="async" alt="AI avatar presenting slide 1 of 5, with no question panel open. The frame's label reads AI avatar, synthetic voice."></li>
+                <li><img src="docs/assets/flagships/oz-radio-2-question.webp" width="330" height="582" loading="lazy" decoding="async" alt="AI avatar with the question panel open. The spoken question, transcribed, reads: What is the difference between a model and an agent? The frame's label reads AI avatar, synthetic voice."></li>
+                <li><img src="docs/assets/flagships/oz-radio-3-answering.webp" width="330" height="582" loading="lazy" decoding="async" alt="AI avatar answering from the deck, with the question and the start of the answer in panels. The frame's label reads AI avatar, synthetic voice."></li>
               </ol>
               <ol class="storyboard-captions">
                 <li><span class="storyboard-step">1</span> Presenting · slide 1 of 5</li>
@@ -551,11 +584,10 @@ reduced motion, and offscreen visibility take precedence over automatic movement
               </ol>
               <figcaption>Frames from one live demo session, 18 October 2026 (UTC). The question was spoken by a synthetic test voice.</figcaption>
             </figure>
-            <p class="flagship-description">An AI avatar presents your deck live; raise your hand and ask by voice. It also narrates decks as videos and hosts two-avatar podcasts.</p>
+            <p class="flagship-description">It also narrates decks as videos and hosts two-avatar podcasts.</p>
             <a class="flagship-secondary flagship-source" href="https://github.com/ozgurkarahan/oz-radio" aria-describedby="flagship-oz-radio-title">Source <span aria-hidden="true">↗</span></a>
           </article>
         </div>
-        <p class="flagships-pending"><span class="pending-label">In development</span> <strong>Oz Antenna</strong> <span>Not public yet</span></p>
       </section>
       <section class="topic-showcase" id="work" aria-labelledby="topics-title" data-topic-showcase>
         <div class="topic-heading">
