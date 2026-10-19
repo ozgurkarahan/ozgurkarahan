@@ -13,8 +13,8 @@ Read these files for full context:
 When the user says "end session", "wrap up", or "done for today":
 
 1. **Wiki compounding** — If significant lessons or patterns were discovered:
-   - Update the project's wiki page at `~/projects/memory/wiki/projects/ozgurkarahan.md`
-   - Update relevant domain pages at `~/projects/memory/wiki/domains/*.md`
+   - Update the project's wiki page at `wiki:projects/root` (resolve through Memory's `scripts/wiki_paths.py`)
+   - Update relevant domain pages at Memory's resolved `domains` catalog (via `category_index_path`)
    - Add new glossary terms to `~/projects/memory/glossary.md`
    - Append to `~/projects/memory/log.md`
 2. **Git check** — Run `git status` and warn about uncommitted changes.
@@ -26,4 +26,4 @@ When the user says "end session", "wrap up", or "done for today":
 - Pin important files in chat for persistent context
 - Use Copilot Edits (Ctrl+Shift+I) for multi-file changes
 - Run tests manually — Copilot cannot execute them
-- When corrected, update the project's wiki page at `~/projects/memory/wiki/projects/ozgurkarahan.md`
+- When corrected, update the project's wiki page at `wiki:projects/root` (resolve through Memory's `scripts/wiki_paths.py`)
