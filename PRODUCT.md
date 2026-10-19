@@ -55,13 +55,13 @@ The site must not resemble a developer profile, an enlarged GitHub README, or a 
 - Exception: Oz Antenna, a private side project, may be named on the homepage only as "In development · not public", with no link, image, description, date or counts, until its public publishing is enabled
 - The public Agentic Platform presentation lives at `/agentic-platform/`
 - Public projects may link to their repositories; private work should communicate capability without implying public source access
-- Audience measurement is owner-only and cookie-free: `docs/assets/telemetry.js` sends page paths, referring domains, UTM tags, outbound clicks and deck slide views to Azure Application Insights (90-day retention). It honours Global Privacy Control, Do Not Track and the opt-out on `/privacy/`, which must describe any change to what is collected
+- Audience measurement is owner-only and cookie-free: `docs/assets/telemetry.js` sends page paths, referring domains, UTM tags, outbound clicks, clicks on the home page's featured project links and deck slide views to Azure Application Insights (90-day retention). It honours Global Privacy Control, Do Not Track and the opt-out on `/privacy/`, which must describe any change to what is collected
 - Fonts and scripts are served from the site itself; the analytics beacon is the only third-party request
 
 ## Success Criteria
 
 - The positioning and primary value are understandable within ten seconds
-- One or two flagship projects clearly dominate the page hierarchy
+- One or two flagship projects clearly lead the page hierarchy
 - The page provides an obvious route to the Agentic Platform presentation and professional contact
 - The visual system is recognizably personal without borrowing GitHub's interface language
 - The page remains fast, responsive, and accessible without requiring a frontend framework

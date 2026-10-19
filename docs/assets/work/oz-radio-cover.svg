@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="ozr-cover-title ozr-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+  <title id="ozr-cover-title">Oz Radio: a live presentation paused for a spoken question</title>
+  <desc id="ozr-cover-desc">Illustrative drawing: an AI avatar's presentation is paused at slide 1 of 5 while a raised hand asks "What is the difference between a model and an agent?", and the answer is marked as coming from slides 2 and 3.</desc>
+  <rect x="24" y="24" width="272" height="180" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
+  <text x="44" y="65" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">AI avatar</text>
+  <path d="M230 86h14v56h-14zM258 86h14v56h-14z" style="fill:var(--sage,#305b3b)"/>
+  <text x="44" y="179" font-size="32" style="fill:var(--muted,#485447)">Slide 1 of 5</text>
+  <rect x="24" y="220" width="48" height="32" stroke-width="2" style="fill:var(--sage,#305b3b);stroke:var(--sage,#305b3b)"/>
+  <path d="M80 220h48v32h-48zM136 220h48v32h-48z" stroke-width="3" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
+  <path d="M192 220h48v32h-48zM248 220h48v32h-48z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
+  <path d="M80 264v10h104v-10M132 274v12" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b)"/>
+  <text x="24" y="318" font-size="32" font-weight="700" style="fill:var(--sage,#305b3b)">From slides 2 and 3</text>
+  <path d="M304 24h322v180H477l-14 26-14-26H304z" stroke-width="3" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
+  <text x="324" y="65" font-size="32" font-weight="500" style="fill:var(--ink,#202b21)"><tspan x="324">What is the</tspan><tspan x="324" dy="38">difference</tspan><tspan x="324" dy="38">between a model</tspan><tspan x="324" dy="38">and an agent?</tspan></text>
+  <g transform="translate(420 228) scale(1.2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--sage,#305b3b)">
+    <path d="M20 84 18 62 6 50a6 6 0 0 1 8-8l4 4V22a6 6 0 0 1 12 0v-6a6 6 0 0 1 12 0v3a6 6 0 0 1 12 0v9a6 6 0 0 1 12 0v34l-4 22z" style="fill:var(--sage-soft,#e1f0e1)"/>
+    <path d="M30 22v26M42 19v29M54 28v20" fill="none"/>
+  </g>
+  <text x="616" y="376" font-size="32" text-anchor="end" style="fill:var(--muted,#485447)">Illustrative</text>
+</svg>
