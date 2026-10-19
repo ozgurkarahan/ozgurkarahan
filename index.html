@@ -6,9 +6,9 @@ and IBM Plex Mono, square shapes, measured rules. One warm accent marks LIVE sta
 STORY: Meet the author and two live samples, browse the moving work wall, follow the
 Point of view (action, authority, human judgment) to write-ups and source, open the
 archive, then the contact close.
-FIRST VIEWPORT: Thesis headline, a small square portrait, one factual line, "Live now:
-DocWiki · Oz Radio" and "Let's connect"; the moving work wall begins inside the first
-screen, under its provenance line.
+FIRST VIEWPORT: The portrait beside the name in the masthead; the thesis headline, one factual
+line, "Live now: DocWiki · Oz Radio" and "Let's connect"; the moving work wall begins inside
+the first screen, under its provenance line.
 FORM: A flat editorial dossier around one authored motion feature, the native-scroll
 topic shelf; interaction, reduced motion and visibility override automatic movement.
 Status chips replace hedges; each card keeps its scope line.
@@ -132,8 +132,10 @@ Status chips replace hedges; each card keeps its scope line.
       min-height: 5.5rem;
       border-bottom: 1px solid var(--line);
     }
-    .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.025em; text-decoration: none; }
-    .brand span { display: block; margin-top: 0.12rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+    .brand { display: inline-flex; align-items: center; gap: 0.85rem; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.025em; text-decoration: none; }
+    .brand-portrait { flex: none; }
+    .brand-portrait img { display: block; width: 64px; height: 64px; border: 1px solid var(--line); background: var(--surface); object-fit: cover; }
+    .brand-text > span { display: block; margin-top: 0.12rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
     .primary-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; max-width: 100%; font-size: 0.9rem; }
     .primary-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; text-decoration: none; }
     .primary-nav a:hover { text-decoration: underline; }
@@ -142,12 +144,12 @@ Status chips replace hedges; each card keeps its scope line.
     .opening { padding-block: 2.25rem 2rem; container-type: inline-size; }
     .opening-grid {
       display: grid;
-      grid-template-columns: 148px minmax(0, 1fr) minmax(0, 21.5rem);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 21.5rem);
       grid-template-rows: 1fr auto auto;
       grid-template-areas:
-        "portrait title lede"
-        "portrait title proof"
-        "portrait title action";
+        "title lede"
+        "title proof"
+        "title action";
       align-items: end;
       gap: 0.5rem 2.5rem;
     }
@@ -160,8 +162,6 @@ Status chips replace hedges; each card keeps its scope line.
       letter-spacing: -0.035em;
     }
     .opening-title em { font-style: normal; color: var(--sage); }
-    .opening-portrait { grid-area: portrait; }
-    .opening-portrait img { width: 148px; height: 148px; border: 1px solid var(--line); background: var(--surface); object-fit: cover; }
     .opening-grid > p { margin: 0; }
     .opening-lede { grid-area: lede; color: var(--muted); font-size: 1.08rem; }
     .opening-proof { grid-area: proof; color: var(--muted); }
@@ -312,17 +312,16 @@ Status chips replace hedges; each card keeps its scope line.
     .site-footer p { max-width: 76ch; }
     .site-footer > span { white-space: nowrap; }
 
-    @container (max-width: 66rem) {
+    @container (max-width: 56rem) {
       .opening-grid {
-        grid-template-columns: 148px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         grid-template-rows: none;
         grid-template-areas:
-          "portrait title"
-          "portrait lede"
-          "portrait proof"
-          "portrait action";
+          "title"
+          "lede"
+          "proof"
+          "action";
         align-items: start;
-        column-gap: 2rem;
       }
       .opening-title { margin-bottom: 0.75rem; }
     }
@@ -340,6 +339,7 @@ Status chips replace hedges; each card keeps its scope line.
     }
     @media (min-width: 721px) and (max-height: 820px) {
       .masthead { min-height: 4.5rem; }
+      .brand-portrait img { width: 56px; height: 56px; }
       .opening { padding-block: 1.75rem 1.5rem; }
       .topic-heading { margin-bottom: 0.6rem; }
       .topic-image { aspect-ratio: 16 / 9; }
@@ -347,21 +347,21 @@ Status chips replace hedges; each card keeps its scope line.
     @media (max-width: 720px) {
       .shell { width: min(100% - 2.5rem, 74rem); }
       .masthead { align-items: start; flex-direction: column; gap: 0.35rem; padding-block: 1.1rem 0.65rem; min-height: 0; }
-      .brand { font-size: 1.15rem; }
-      .brand span { font-size: 0.75rem; }
+      .brand { gap: 0.7rem; font-size: 1.15rem; }
+      .brand-portrait img { width: 48px; height: 48px; }
+      .brand-text > span { font-size: 0.75rem; }
       .primary-nav { justify-content: space-between; width: 100%; gap: 0.8rem; font-size: 0.85rem; }
       .opening { padding-block: 1.6rem 2rem; }
       .opening-grid {
-        grid-template-columns: 64px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
-          "title title"
-          "portrait lede"
-          "proof proof"
-          "action action";
+          "title"
+          "lede"
+          "proof"
+          "action";
         gap: 0.6rem 1rem;
       }
       .opening-title { margin-bottom: 0.5rem; font-size: clamp(1.85rem, 8.2vw, 2.25rem); line-height: 1.08; }
-      .opening-portrait img { width: 64px; height: 64px; }
       .opening-lede { font-size: 1rem; }
       .topic-showcase { padding-top: 1.1rem; }
       .topic-heading { column-gap: 1rem; }
@@ -394,8 +394,14 @@ Status chips replace hedges; each card keeps its scope line.
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="masthead shell">
     <a class="brand" href="https://ozgurkarahan.com/">
-      Ozgur Karahan
-      <span>AI Solution Engineer at Microsoft</span>
+      <picture class="brand-portrait">
+        <source srcset="docs/assets/portrait.webp" type="image/webp">
+        <img src="docs/assets/portrait.jpg" width="296" height="296" decoding="async" alt="">
+      </picture>
+      <span class="brand-text">
+        Ozgur Karahan
+        <span>AI Solution Engineer at Microsoft</span>
+      </span>
     </a>
     <nav class="primary-nav" aria-label="Primary navigation">
       <a href="#work">Work</a>
@@ -410,10 +416,6 @@ Status chips replace hedges; each card keeps its scope line.
     <section class="opening shell" id="opening" aria-labelledby="opening-title">
       <div class="opening-grid">
         <h1 class="opening-title" id="opening-title">Agents that act for you, cite their sources, and <em>stop for a human.</em></h1>
-        <picture class="opening-portrait">
-          <source srcset="docs/assets/portrait.webp" type="image/webp">
-          <img src="docs/assets/portrait.jpg" width="296" height="296" decoding="async" alt="Ozgur Karahan">
-        </picture>
         <p class="opening-lede">I build and share enterprise agent patterns where business workflows, user identity, and human decisions meet.</p>
         <p class="opening-proof">Live now: <a href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki">DocWiki<span aria-hidden="true">&nbsp;↗</span></a>&nbsp;<span aria-hidden="true">·</span> <a href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio">Oz Radio<span aria-hidden="true">&nbsp;↗</span></a></p>
         <a class="button opening-action" href="https://www.linkedin.com/in/karahanozgur/" rel="me"><span>Let's connect<span class="visually-hidden"> on LinkedIn</span></span> <span aria-hidden="true">↗</span></a>
