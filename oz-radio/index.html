@@ -15,25 +15,98 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/ozgurkarahan/oz-radio/main/docs/screenshots/social-preview.png">
   <meta name="twitter:card" content="summary_large_image">
   <script src="../docs/assets/telemetry.js"></script>
-  <script>window.location.replace("https://ca-p5g2ueh6psqao.nicepebble-1683e1b3.swedencentral.azurecontainerapps.io/" + window.location.hash);</script>
   <style>
+    :root { color-scheme: light; }
     body {
       margin: 0;
       min-height: 100vh;
+      min-height: 100dvh;
       display: grid;
       place-items: center;
-      background: oklch(0.98 0.006 145);
-      color: oklch(0.22 0.02 145);
+      background: #F6F1E8;
+      color: #1C1917;
       font: 1.05rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
     }
-    main { max-width: 36rem; padding: 2rem; text-align: center; }
-    a { color: oklch(0.4 0.07 150); font-weight: 600; }
+    [hidden] { display: none !important; }
+    main { max-width: 30rem; padding: 2rem; text-align: center; }
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.875rem, 1.3rem + 2vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+    }
+    p { margin: 0; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      color: #3B3631;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .meter { display: inline-flex; align-items: flex-end; gap: 3px; height: 14px; }
+    .meter span {
+      width: 3px;
+      height: 100%;
+      background: #B8461E;
+      transform-origin: bottom;
+      animation: meter 1.2s ease-in-out infinite;
+    }
+    .meter span:nth-child(2) { animation-delay: -0.4s; }
+    .meter span:nth-child(3) { animation-delay: -0.8s; }
+    @keyframes meter {
+      0%, 100% { transform: scaleY(0.3); }
+      50% { transform: scaleY(1); }
+    }
+    .detail, .slow { margin-top: 0.75rem; color: #3B3631; }
+    .continue { margin-top: 1rem; }
+    .continue a { display: inline-block; padding: 0.75rem 0.25rem; }
+    .links { margin-top: 2.5rem; color: #6B645D; font-size: 0.875rem; }
+    a { color: #A63D17; font-weight: 600; }
+    a:focus-visible { outline: 3px solid #A63D17; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      .meter span { animation: none; transform: scaleY(0.6); }
+    }
   </style>
 </head>
 <body>
   <main>
-    <p>Taking you to the Oz Radio live avatar demo.</p>
-    <p><a href="https://ca-p5g2ueh6psqao.nicepebble-1683e1b3.swedencentral.azurecontainerapps.io/">Continue to the demo</a> · <a href="https://github.com/ozgurkarahan/oz-radio">Source on GitHub</a> · <a href="https://ozgurkarahan.com/privacy/">Privacy</a></p>
+    <p class="brand"><span class="meter" aria-hidden="true"><span></span><span></span><span></span></span>Oz Radio</p>
+    <div role="status">
+      <h1>Opening Oz Radio…</h1>
+      <p class="detail">Taking you to the live avatar demo.</p>
+      <p class="slow" hidden>This is taking longer than expected.</p>
+    </div>
+    <p class="continue" hidden><a href="https://ca-p5g2ueh6psqao.nicepebble-1683e1b3.swedencentral.azurecontainerapps.io/">Continue to Oz Radio</a></p>
+    <p class="links"><a href="https://github.com/ozgurkarahan/oz-radio">Source on GitHub</a> · <a href="https://ozgurkarahan.com/privacy/">Privacy</a></p>
   </main>
+  <script>
+    (function () {
+      var target = "https://ca-p5g2ueh6psqao.nicepebble-1683e1b3.swedencentral.azurecontainerapps.io/";
+      var redirected = false;
+      function redirect() {
+        if (redirected) return;
+        redirected = true;
+        window.location.replace(target + window.location.hash);
+      }
+      // Two frames: the redirect is queued only once this view has been painted.
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () { setTimeout(redirect, 0); });
+      });
+      // Backstop for hidden tabs, where animation frames do not run.
+      setTimeout(redirect, 2000);
+      // Cold start: after 8 s say so and offer the link. The redirect keeps running.
+      setTimeout(function () {
+        document.querySelector(".slow").hidden = false;
+        var link = document.querySelector(".continue");
+        link.hidden = false;
+        link.querySelector("a").href = target + window.location.hash;
+      }, 8000);
+    })();
+  </script>
 </body>
 </html>
