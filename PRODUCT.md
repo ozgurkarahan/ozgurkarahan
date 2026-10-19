@@ -52,6 +52,7 @@ The site must not resemble a developer profile, an enlarged GitHub README, or a 
 - Use the approved generic labels:
   - `Enterprise Document RAG`
   - `AI Agent Project Template`
+- Exception: Oz Antenna, a private side project, may be named on the homepage only as "In development · not public", with no link, image, description, date or counts, until its public publishing is enabled
 - The public Agentic Platform presentation lives at `/agentic-platform/`
 - Public projects may link to their repositories; private work should communicate capability without implying public source access
 - Audience measurement is owner-only and cookie-free: `docs/assets/telemetry.js` sends page paths, referring domains, UTM tags, outbound clicks and deck slide views to Azure Application Insights (90-day retention). It honours Global Privacy Control, Do Not Track and the opt-out on `/privacy/`, which must describe any change to what is collected

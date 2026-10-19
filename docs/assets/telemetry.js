@@ -3,9 +3,10 @@
  *
  * No SDK and no cookies. Nothing is sent when Global Privacy Control, Do Not Track or the
  * site opt-out is set. Only the page path, the referring site (domain only, or the path
- * when it is a page of this site), allowlisted UTM values, outbound link clicks and deck
- * slide views are recorded. Items go to Azure Application Insights with
- * navigator.sendBeacon; failures are ignored so navigation never depends on analytics.
+ * when it is a page of this site), allowlisted UTM values, outbound link clicks, clicks on
+ * the featured project links of the home page and deck slide views are recorded. Items go
+ * to Azure Application Insights with navigator.sendBeacon; failures are ignored so
+ * navigation never depends on analytics.
  *
  * The instrumentation key is public by design: browsers cannot authenticate.
  */
@@ -119,8 +120,16 @@
     if (!link) return;
     var url;
     try { url = new URL(link.href, window.location.href); } catch (error) { return; }
-    if (url.origin === window.location.origin || !/^https?:$/.test(url.protocol)) return;
     var section = link.closest("[id]");
+    // Featured project links are counted the same way whether they stay on this site or not.
+    var flagship = link.closest("[data-flagship]");
+    if (flagship) {
+      trackEvent("flagship_click", {
+        product: flagship.getAttribute("data-flagship"),
+        section: section ? section.id : ""
+      });
+    }
+    if (url.origin === window.location.origin || !/^https?:$/.test(url.protocol)) return;
     var card = link.closest(".topic-card");
     var cardTitle = card && card.querySelector("h3");
     trackEvent("outbound_click", {
