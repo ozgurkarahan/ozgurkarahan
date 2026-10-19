@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="dw-cover-title dw-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+  <title id="dw-cover-title">DocWiki: a claim traced to its cited source line</title>
+  <desc id="dw-cover-desc">Illustrative drawing: the wiki claim &#8220;Export above the limit by more than 1 MW for more than 5 minutes will be reported.&#8221; ends in footnote 1, which points down to the cited line outlined on page 1 of its source, marked quote verified.</desc>
+  <defs>
+    <marker id="dw-cover-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10Z" style="fill:var(--sage,#305b3b)"/>
+    </marker>
+  </defs>
+  <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
+  <text font-size="36" font-weight="600" style="fill:var(--ink,#202b21)"><tspan x="40" y="64" textLength="422">Export above the limit by</tspan><tspan x="40" y="116" textLength="509">more than 1 MW for more than</tspan><tspan x="40" y="168" textLength="452">5 minutes will be reported.</tspan></text>
+  <g style="fill:var(--sage,#305b3b)">
+    <rect x="40" y="72" width="422" height="3"/>
+    <rect x="40" y="124" width="509" height="3"/>
+    <rect x="40" y="176" width="452" height="3"/>
+  </g>
+  <text x="497" y="158" font-size="32" font-weight="700" style="fill:var(--sage,#305b3b)">1</text>
+  <path d="M336 192H578L600 214V320H336Z" style="fill:var(--surface,#fff);stroke:var(--line,#c6d2c3)" stroke-width="2"/>
+  <path d="M578 192V214H600" style="fill:none;stroke:var(--line,#c6d2c3)" stroke-width="2"/>
+  <g style="fill:var(--line,#c6d2c3)">
+    <rect x="356" y="205" width="120" height="10"/>
+    <rect x="356" y="276" width="204" height="10"/>
+    <rect x="356" y="296" width="168" height="10"/>
+  </g>
+  <rect x="326" y="226" width="284" height="36" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)" stroke-width="3"/>
+  <rect x="356" y="239" width="216" height="10" style="fill:var(--muted,#485447)"/>
+  <path d="M504 166V222" style="fill:none;stroke:var(--sage,#305b3b)" stroke-width="3" marker-end="url(#dw-cover-arrow)"/>
+  <text x="312" y="255" text-anchor="end" font-size="32" font-weight="700" style="fill:var(--sage,#305b3b)">p. 1 &#183; cited line</text>
+  <rect x="306" y="334" width="324" height="46" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)" stroke-width="2"/>
+  <path d="M322 357l8 8 16-17" style="fill:none;stroke:var(--sage,#305b3b)" stroke-width="3"/>
+  <text x="356" y="368" font-size="32" font-weight="600" style="fill:var(--ink,#202b21)">quote verified</text>
+  <text x="40" y="368" font-size="32" font-weight="400" style="fill:var(--muted,#485447)">Illustrative</text>
+</svg>

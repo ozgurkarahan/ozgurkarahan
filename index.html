@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <!--
-THESIS: Useful agents need more than a model. Show the breadth of the work
-before developing the architectural questions; no single demo stands for it all.
-OWN-WORLD: Blueprint Field Notes: stone, sage, graphite, Public Sans, measured
-rules, generous type, and authentic work artifacts. Preserve the existing identity.
-STORY: Meet the author, try two flagship agents through their own evidence, browse
-distinct topics, then follow the source or the questions of action, authority, and
-human judgment. Samples remain separately scoped.
-FIRST VIEWPORT: The thesis opens onto a flagship band (DocWiki's proof first: a claim, the
-page line it cites, then how it is built; Oz Radio's interruption storyboard; Oz Antenna
-marked in development), then image-led topic cards with left/right side arrows and a
-separate pause control. Horizon is one topic, not the whole opening.
-FORM: User-requested animated topic shelf extending the three-question dossier
-(original seed b859cd70). Slow reversible scrolling reveals breadth; interaction,
-reduced motion, and offscreen visibility take precedence over automatic movement.
+THESIS: Agents that act for you, cite their sources, and stop for a human.
+OWN-WORLD: Blueprint Field Notes, evolved: Stone + Sage, a graphite close, Public Sans
+and IBM Plex Mono, square shapes, measured rules. One warm accent marks LIVE status only.
+STORY: Meet the author and two live samples, browse the moving work wall, follow the
+Point of view (action, authority, human judgment) to write-ups and source, open the
+archive, then the contact close.
+FIRST VIEWPORT: Thesis headline, a small square portrait, one factual line, "Live now:
+DocWiki · Oz Radio" and "Let's connect"; the moving work wall begins inside the first
+screen, under its provenance line.
+FORM: A flat editorial dossier around one authored motion feature, the native-scroll
+topic shelf; interaction, reduced motion and visibility override automatic movement.
+Status chips replace hedges; each card keeps its scope line.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ozgur Karahan — Useful agents need more than a model</title>
+  <title>Ozgur Karahan — Agents that act for you, cite their sources, and stop for a human</title>
   <meta name="description" content="Enterprise AI through business workflows, user identity, and human oversight. Explore Ozgur Karahan's demonstrations, open-source patterns, and architectural ideas.">
   <meta name="theme-color" content="#f1f5ef">
   <link rel="canonical" href="https://ozgurkarahan.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ozgurkarahan.com/">
-  <meta property="og:title" content="Ozgur Karahan — Useful agents need more than a model">
+  <meta property="og:title" content="Ozgur Karahan — Agents that act for you, cite their sources, and stop for a human">
   <meta property="og:description" content="What can it change? Whose authority does it use? When should a person decide? Enterprise AI, explored through real demonstrations and open-source patterns.">
-  <meta property="og:image" content="https://ozgurkarahan.com/docs/assets/profile-social.png">
+  <meta property="og:image" content="https://ozgurkarahan.com/docs/assets/social/home-2026-10-19.png">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:height" content="627">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Ozgur Karahan. Useful agents need more than a model. Action, authority, human judgment.">
+  <meta property="og:image:alt" content="Ozgur Karahan. Agents that act for you, cite their sources, and stop for a human.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ozgur Karahan — Useful agents need more than a model">
+  <meta name="twitter:title" content="Ozgur Karahan — Agents that act for you, cite their sources, and stop for a human">
   <meta name="twitter:description" content="Business workflows, user identity, and human oversight. Demonstrations, patterns, and ideas for enterprise AI.">
-  <meta name="twitter:image" content="https://ozgurkarahan.com/docs/assets/profile-social.png">
-  <meta name="twitter:image:alt" content="Ozgur Karahan. Useful agents need more than a model. Action, authority, human judgment.">
+  <meta name="twitter:image" content="https://ozgurkarahan.com/docs/assets/social/home-2026-10-19.png">
+  <meta name="twitter:image:alt" content="Ozgur Karahan. Agents that act for you, cite their sources, and stop for a human.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231f2a1f'/><text x='50' y='65' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='700' fill='%23e1f0e1'>OK</text></svg>">
   <link rel="preload" href="docs/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="docs/assets/fonts/fonts.css">
@@ -71,6 +69,8 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       --dark-muted: #d1dfce;
       --signal: #c4dcb8;
       --line: #c6d2c3;
+      --warm: #8a4b06;
+      --warm-soft: #fbf0dc;
       --measure: 70ch;
     }
 
@@ -95,7 +95,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     }
     button { font: inherit; color: inherit; }
     h1, h2, h3, p, figure { margin: 0; }
-    h1, h2, h3 { text-wrap: balance; overflow-wrap: anywhere; }
+    h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
     h1, h2, h3 { line-height: 1.08; }
     p { max-width: var(--measure); text-wrap: pretty; }
     p + p { margin-top: 1rem; }
@@ -113,119 +113,65 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       font-weight: 700;
     }
     .skip-link:focus { transform: translateY(0); }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
     .masthead {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1.5rem;
-      min-height: 6.5rem;
+      min-height: 5.5rem;
       border-bottom: 1px solid var(--line);
     }
     .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.025em; text-decoration: none; }
     .brand span { display: block; margin-top: 0.12rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
     .primary-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; max-width: 100%; font-size: 0.9rem; }
-    .primary-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+    .primary-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; text-decoration: none; }
     .primary-nav a:hover { text-decoration: underline; }
     .primary-nav .contact-link { font-weight: 700; }
 
-    .opening { padding-block: 3.5rem 4.5rem; }
+    .opening { padding-block: 2.25rem 2rem; container-type: inline-size; }
+    .opening-grid {
+      display: grid;
+      grid-template-columns: 148px minmax(0, 1fr) minmax(0, 21.5rem);
+      grid-template-rows: 1fr auto auto;
+      grid-template-areas:
+        "portrait title lede"
+        "portrait title proof"
+        "portrait title action";
+      align-items: end;
+      gap: 0.5rem 2.5rem;
+    }
     .opening-title {
-      max-width: 16ch;
-      font-size: clamp(3.2rem, 5.8vw, 5.3rem);
+      grid-area: title;
+      max-width: 22ch;
+      font-size: clamp(2.6rem, 4vw, 3.2rem);
       font-weight: 800;
-      line-height: 1.01;
-      letter-spacing: -0.04em;
+      line-height: 1.04;
+      letter-spacing: -0.035em;
     }
     .opening-title em { font-style: normal; color: var(--sage); }
-    .opening-intro {
-      display: grid;
-      grid-template-columns: 1.32fr 0.85fr;
-      align-items: end;
-      gap: 3.5rem;
-    }
-    .opening-position { padding-bottom: 0.2rem; }
-    .opening-position p { color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
-    .opening-position .text-link { margin-top: 1.1rem; }
-    /* Flagship band: two live samples shown through their own captured evidence, in ruled editorial columns (not cards). */
-    .flagships { margin-top: 1.5rem; }
-    .flagships-heading { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.3rem 1.5rem; margin-bottom: 0.7rem; }
-    .flagships-heading h2 { font-size: 1.5rem; letter-spacing: -0.025em; }
-    /* The 4px offset puts the notes on the h2's baseline. Top alignment plus a fixed offset keeps the row height independent of font metrics, so the grid below does not move when the web font lands. */
-    .flagships-note { margin-top: 4px; color: var(--ink); font-size: 0.9rem; }
-    .flagships-pending { margin: 4px 0 0 auto; color: var(--muted); font-size: 0.9rem; }
-    /* Phone index (720px and below only): the three names and the two ways in, above the full articles. */
-    .flagships-index { display: none; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-    .flagships-index li { padding-top: 0.5rem; }
-    .flagships-index li + li { border-top: 1px solid var(--line); }
-    .flagships-index li:last-child { padding-bottom: 0.6rem; color: var(--muted); }
-    .index-name { display: block; font-size: 0.9rem; line-height: 1.35; }
-    .flagship-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; border-top: 1px solid var(--line); }
-    .flagship { position: relative; container-type: inline-size; padding-block: 1.25rem 1.5rem; }
-    .flagship + .flagship::before { content: ""; position: absolute; top: 0; bottom: 0; left: -1.25rem; border-left: 1px solid var(--line); }
-    .flagship h3 { font-size: 1.35rem; line-height: 1.2; letter-spacing: -0.025em; }
-    /* Stretched link: the visible action link covers the whole column. Its overlay (z-index 1) lifts it over the plate's positioned parts; secondary and deep links (z-index 2) sit above the overlay. */
-    .flagship-link, .flagships-index a { display: flex; align-items: center; gap: 0.55rem; width: fit-content; max-width: 100%; min-height: 44px; font-weight: 700; line-height: 1.4; }
-    .flagship-link { margin-top: 0.3rem; }
-    .flagships-index a { margin-top: 0.4rem; }
-    .flagship-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
-    .flagship:has(.flagship-link:hover) h3 { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
-    .flagship:has(.flagship-link:hover) .dw-page, .flagship:has(.flagship-link:hover) .storyboard-frames li { border-color: var(--sage); }
-    .flagship-scope { margin-top: 0.45rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
-    .flagship-description { margin-top: 0.5rem; color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
-    .flagship figure { margin-top: 0.6rem; }
-    .flagship-secondary, .dw-deeplink { position: relative; z-index: 2; }
-    /* Dense editorial rows: the same 3px sage ring, 3px off the link, so it never lands on neighbouring text or on the evidence crop. */
-    #flagships a:focus-visible { outline-offset: 3px; }
-    .flagship-secondary { display: inline-flex; align-items: center; gap: 0.4em; min-height: 44px; color: var(--sage); font-size: 0.9rem; font-weight: 600; }
-    .flagship-source { display: flex; width: fit-content; margin-top: 0.2rem; }
-    .flagship figure + .flagship-source { margin-top: 0.6rem; }
-    .dw-deeplink { text-decoration-color: var(--sage); }
-    /* DocWiki evidence plate: proof first (one claim, the source-page line it cites, the verified quote), then the pipeline that produced it. The only bitmap is the captured source-page crop; the sage outline, trace and labels are page annotations. */
-    .dw-plate { max-width: 620px; line-height: 1.5; --dw-trace: 1.6rem; --dw-cols: minmax(0, 162fr) minmax(0, 110fr) minmax(0, 136fr) minmax(0, 158fr); }
-    .dw-plate p { max-width: none; }
-    .dw-tag { font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
-    .dw-pipeline { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: var(--dw-cols); column-gap: 18px; row-gap: 10px; }
-    .dw-station { position: relative; min-width: 0; margin: 0; padding: 0.5rem 0.7rem 0.55rem; border: 1px solid var(--line); background: var(--surface); overflow-wrap: anywhere; }
-    .dw-station-release { background: var(--sage-soft); border-color: var(--sage); }
-    .dw-station::after { content: ""; position: absolute; top: 50%; left: 100%; width: 18px; border-top: 2px solid var(--sage); }
-    .dw-station::before { content: ""; position: absolute; top: 50%; left: calc(100% + 9px); width: 6px; height: 6px; border-top: 2px solid var(--sage); border-right: 2px solid var(--sage); transform: translateY(-50%) rotate(45deg); }
-    .dw-station:last-child::after, .dw-station:last-child::before { display: none; }
-    .dw-num { margin-right: 0.4rem; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; font-weight: 400; color: var(--sage); }
-    .dw-st-title { display: block; font-size: 0.9rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
-    .dw-st-sub { display: block; margin-top: 0.2rem; font-size: 0.8rem; line-height: 1.25; color: var(--muted); }
-    .dw-label { margin: 0 0 0.3rem; }
-    .dw-claim { margin: 0; font-size: 1.2rem; line-height: 1.45; }
-    .dw-claim a { display: block; min-height: 44px; }
-    .dw-marker { position: relative; display: inline-block; margin-left: 0.14em; font-size: max(0.8rem, 0.72em); font-weight: 600; line-height: 0; color: var(--sage); vertical-align: 0.5em; }
-    .dw-marker::after { content: ""; position: absolute; left: 50%; top: 0.5em; height: var(--dw-trace); border-left: 1px solid var(--sage); }
-    .dw-page { position: relative; margin: 0.8rem 0 0; border: 1px solid var(--line); background: var(--surface); }
-    .dw-page img { display: block; width: 100%; height: auto; }
-    .dw-cited { position: absolute; left: 3.5455%; top: 49.6774%; width: 74.3636%; height: 22.5806%; outline: 2px solid var(--sage); outline-offset: 1px; pointer-events: none; }
-    .dw-cited-label { position: absolute; left: calc(77.9091% + 7px); top: 60.9677%; transform: translateY(-50%); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1; color: var(--sage); white-space: nowrap; }
-    .dw-source { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.45rem 0.9rem; margin: 0.4rem 0 0; }
-    .dw-cite { flex: 0 1 auto; min-width: 0; margin: 0; font-size: 0.9rem; line-height: 1.4; }
-    .dw-cite a { display: block; padding-block: 0.75rem; }
-    .dw-id { white-space: nowrap; }
-    .dw-chip { flex: none; display: inline-flex; align-items: center; gap: 0.4em; padding: 0.2rem 0.55rem; border: 1px solid var(--sage); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.9rem; line-height: 1.3; color: var(--sage); }
-    .dw-check { flex: none; width: 0.95em; height: 0.95em; }
-    .dw-check path { fill: none; stroke: var(--sage); stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter; }
-    .dw-how { display: flex; width: fit-content; margin-top: 0.4rem; }
-    .dw-caption { margin: 0.4rem 0 0; padding-top: 0.7rem; border-top: 1px solid var(--line); font-size: 0.85rem; line-height: 1.5; color: var(--muted); }
-    @container (max-width: 599px) { .dw-plate { --dw-trace: 1.45rem; } .dw-cited-label .dw-long { display: none; } .dw-claim { font-size: 1rem; } }
-    @container (max-width: 559px) { .dw-pipeline { --dw-cols: minmax(0, 1fr) minmax(0, 1fr); } .dw-station:nth-child(2)::after, .dw-station:nth-child(2)::before { display: none; } }
-    /* Oz Radio interruption storyboard: three frames from one live session; step captions are live text. */
-    .storyboard { max-width: 520px; }
-    .storyboard-frames, .storyboard-captions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; margin: 0; padding: 0; list-style: none; }
-    .storyboard-frames li { min-width: 0; margin: 0; border: 1px solid var(--line); background: var(--surface); }
-    .storyboard-frames img { display: block; width: 100%; height: auto; aspect-ratio: 330 / 571; object-fit: cover; object-position: top; }
-    .storyboard-captions { margin-top: 12px; }
-    .storyboard-captions li { min-width: 0; margin: 0; font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
-    .storyboard-note { margin: 12px 0 0; font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
-    .storyboard-step { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 500; color: var(--sage); }
-    .storyboard figcaption { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 0.875rem; line-height: 1.45; color: var(--muted); }
-    .topic-showcase { margin-top: 2.5rem; }
-    .topic-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.85rem 1.5rem; margin-bottom: 0.85rem; }
+    .opening-portrait { grid-area: portrait; }
+    .opening-portrait img { width: 148px; height: 148px; border: 1px solid var(--line); background: var(--surface); object-fit: cover; }
+    .opening-grid > p { margin: 0; }
+    .opening-lede { grid-area: lede; color: var(--muted); font-size: 1.08rem; }
+    .opening-proof { grid-area: proof; color: var(--muted); }
+    .opening-proof a { display: inline-block; padding-block: 0.6rem; color: var(--ink); font-weight: 700; }
+    .opening-action { grid-area: action; justify-self: start; }
+    .topic-showcase { padding-top: 1.35rem; border-top: 1px solid var(--line); }
+    .topic-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 1.5rem; margin-bottom: 0.85rem; }
     .topic-heading h2 { font-size: 1.5rem; letter-spacing: -0.025em; }
+    .topic-heading p { margin: 0; font-size: 0.9rem; }
+    .topic-heading .topic-pending { margin-left: auto; color: var(--muted); }
     .topic-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; max-width: 100%; }
     .topic-controls[hidden], .topic-arrow[hidden] { display: none; }
     .topic-control {
@@ -246,7 +192,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .topic-control:hover:not(:disabled) { background: var(--sage-soft); }
     .topic-control:disabled { border-color: var(--line); color: var(--muted); background: var(--canvas); cursor: default; }
     .topic-control svg { width: 18px; height: 18px; }
-    .topic-control-motion { width: 8.8rem; max-width: 100%; }
+    .topic-control-motion { width: auto; min-width: 9.5em; max-width: 100%; }
     .topic-carousel { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; }
     .topic-showcase[data-enhanced="true"] .topic-carousel { grid-template-columns: 44px minmax(0, 1fr) 44px; gap: 0.75rem; }
     .topic-arrow { width: 44px; height: 44px; padding: 0; align-self: center; }
@@ -271,34 +217,34 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       text-decoration: none;
     }
     .topic-card-link:hover { border-color: var(--sage); }
+    .topic-card-link:focus-visible { outline-offset: -4px; }
     .topic-card-link:hover h3 { text-decoration: underline; text-underline-offset: 0.18em; }
     .topic-image { aspect-ratio: 8 / 5; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--surface); }
     .topic-image img { width: 100%; height: 100%; object-fit: cover; }
-    .topic-image-voice { background: var(--canvas); }
-    .topic-image-voice svg { width: 100%; height: 100%; }
-    .topic-copy { display: flex; flex: 1; flex-direction: column; gap: 0.7rem; padding: 1.15rem; overflow-wrap: anywhere; }
+    .topic-image-drawing { background: var(--canvas); }
+    .topic-image-drawing svg { width: 100%; height: 100%; }
+    .topic-image-end { display: flex; flex-direction: column; justify-content: space-between; padding: 1.25rem 1.4rem; overflow: visible; background: var(--sage-soft); }
+    .topic-end-line { max-width: 12ch; color: var(--ink); font-size: clamp(1.25rem, 1.75vw, 1.55rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.025em; }
+    .topic-end-arrow { align-self: flex-end; color: var(--sage); font-size: clamp(2.1rem, 3.2vw, 3rem); font-weight: 700; line-height: 1; }
+    .topic-copy { display: flex; flex: 1; flex-direction: column; gap: 0.7rem; padding: 1.15rem; overflow-wrap: anywhere; hyphens: auto; hyphenate-limit-chars: 10 4 4; }
     .topic-copy h3 { font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.025em; }
+    .topic-chip {
+      align-self: flex-start;
+      padding: 0.1rem 0.45rem;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--sage);
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .topic-chip-live { border-color: var(--warm); background: var(--warm-soft); color: var(--warm); }
     .topic-description { color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
     .topic-copy p + p { margin-top: 0; }
     .topic-copy > .topic-scope { margin-top: auto; padding-top: 0.4rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
     .topic-status { min-height: 1.65em; margin-top: 0.65rem; color: var(--muted); font-size: 0.875rem; }
-    .question-panel { margin-top: 2.2rem; }
-    .questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .questions li + li { border-left: 1px solid var(--line); padding-left: 1.25rem; }
-    .question-link {
-      display: grid;
-      grid-template-columns: 1.5rem minmax(0, 1fr) auto;
-      gap: 0.5rem;
-      align-items: center;
-      min-height: 5.2rem;
-      padding: 0.75rem 1rem 0.75rem 0;
-      text-decoration: none;
-    }
-    .question-number { color: var(--sage); font-size: 0.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-    .question-link strong { font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.3; letter-spacing: -0.02em; overflow-wrap: anywhere; }
-    .question-link .arrow { color: var(--sage); font-size: 1.3rem; }
-    .question-link:hover strong { text-decoration: underline; text-underline-offset: 0.2em; }
-    .question-context { margin-top: 1rem; color: var(--muted); font-size: 0.88rem; }
     .button, .text-link {
       display: inline-flex;
       align-items: center;
@@ -317,55 +263,23 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .button-light:hover { background: var(--surface); }
     .duration { font-family: "IBM Plex Mono", monospace; font-size: 0.82em; font-weight: 400; white-space: nowrap; }
 
-    .work-section { border-top: 1px solid var(--line); }
-    .case-study { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 4rem; padding-block: 4rem; }
-    .case-study + .case-study { border-top: 1px solid var(--line); }
-    .case-title { max-width: 13ch; font-size: clamp(2.1rem, 3.2vw, 3rem); font-weight: 700; letter-spacing: -0.035em; }
-    .case-question { margin-top: 1.2rem; color: var(--sage); font-size: 1.1rem; font-weight: 600; }
-    .case-body > p { color: var(--muted); }
-    .case-body > p:first-child { color: var(--ink); font-size: 1.13rem; }
-    .case-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; margin-top: 1.1rem; }
-    .case-links a { min-height: 44px; }
-    .boundary { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
-    .boundary strong { color: var(--ink); }
-    .source-list { list-style: none; padding: 0; margin: 1.1rem 0 0; }
-    .source-list li { border-top: 1px solid var(--line); }
-    .source-list a { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.25rem 1rem; min-height: 3.5rem; padding-block: 0.5rem; text-decoration: none; }
-    .source-list strong { font-size: 1rem; }
-    .source-list span { color: var(--muted); font-size: 0.9rem; }
-    .source-list a:hover strong { text-decoration: underline; }
-
-    .judgment-field { background: var(--sage-soft); }
-    .judgment { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 4rem; padding-block: 3.5rem; }
-    .judgment h2 { max-width: 14ch; font-size: clamp(2.1rem, 3.2vw, 3rem); letter-spacing: -0.035em; }
-    .judgment .text-link { margin-top: 1rem; color: var(--sage); }
-    .judgment p { color: var(--muted); font-size: 1.08rem; }
-    .judgment strong { color: var(--ink); }
-
-    .ideas { padding-block: 4.5rem; }
-    .section-heading { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 4rem; align-items: end; margin-bottom: 2rem; }
-    .section-heading h2 { max-width: 16ch; font-size: clamp(2.1rem, 3vw, 2.8rem); letter-spacing: -0.035em; }
-    .section-heading p { color: var(--muted); }
-    .idea-list { list-style: none; margin: 0; padding: 0; }
-    .idea-list li { border-top: 1px solid var(--line); }
-    .idea-list li:last-child { border-bottom: 1px solid var(--line); }
-    .idea-link { display: grid; grid-template-columns: 2fr 1fr auto; gap: 1.5rem; align-items: center; padding-block: 1.5rem; text-decoration: none; }
-    .idea-link h3 { max-width: 28ch; font-size: clamp(1.25rem, 1.75vw, 1.55rem); line-height: 1.25; font-weight: 600; letter-spacing: -0.025em; }
-    .idea-link .idea-format { color: var(--muted); font-size: 0.9rem; }
-    .idea-link:hover h3 { text-decoration: underline; text-underline-offset: 0.18em; }
-    .idea-link > span:last-child { font-size: 1.3rem; color: var(--sage); }
-    .vision-note { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 1rem; font-size: 0.9rem; color: var(--muted); }
-
-    .lab { padding-bottom: 4rem; }
-    .lab h2 { font-size: clamp(2rem, 2.8vw, 2.7rem); letter-spacing: -0.03em; }
-    .lab-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; margin-top: 2rem; }
-    .runtime-note { padding-top: 1.5rem; border-top: 1px solid var(--line); }
-    .runtime-note h3, .supporting-note h3 { font-size: 1.2rem; line-height: 1.3; }
-    .runtime-note p, .supporting-note p { margin-top: 0.6rem; color: var(--muted); font-size: 0.95rem; }
-    .runtime-note .text-link { margin-top: 1rem; }
-    .supporting-note { padding-top: 1.5rem; border-top: 1px solid var(--line); }
-    .supporting-note + .supporting-note { margin-top: 1.5rem; }
-    .supporting-note h3 a { display: inline-flex; align-items: center; min-height: 44px; }
+    .ideas { padding-block: 4rem 3.5rem; }
+    .section-heading { margin-bottom: 2rem; }
+    .section-heading h2 { max-width: 24ch; font-size: clamp(1.75rem, 2.4vw, 2.1rem); letter-spacing: -0.03em; }
+    .section-heading p { margin-top: 0.75rem; color: var(--muted); }
+    .pov-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+    .pov-item { min-width: 0; padding: 1.5rem 1.5rem 1.25rem; }
+    .pov-item:first-child { padding-left: 0; }
+    .pov-item:last-child { padding-right: 0; }
+    .pov-item + .pov-item { border-left: 1px solid var(--line); }
+    .pov-item h3 { font-size: clamp(1.25rem, 1.75vw, 1.55rem); line-height: 1.25; letter-spacing: -0.025em; }
+    .pov-number { display: block; margin-bottom: 0.4rem; color: var(--sage); font-size: 0.9rem; letter-spacing: 0; font-variant-numeric: tabular-nums; }
+    .pov-item p { margin-top: 0.75rem; color: var(--muted); }
+    .pov-item .pov-stance { margin-top: 0.9rem; color: var(--ink); font-size: 1.08rem; font-weight: 700; line-height: 1.4; }
+    .pov-links { list-style: none; margin: 0.6rem 0 0; padding: 0; }
+    .pov-links a { display: inline-block; padding-block: 0.7rem; font-weight: 700; line-height: 1.4; }
+    .pov-item .pov-scope { margin-top: 0.6rem; padding-top: 0.75rem; border-top: 1px solid var(--line); font-size: 0.9rem; }
+    .pov-scope strong { color: var(--ink); }
 
     .archive { padding-block: 1rem 3.5rem; }
     .project-archive { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -398,16 +312,37 @@ reduced motion, and offscreen visibility take precedence over automatic movement
     .site-footer p { max-width: 76ch; }
     .site-footer > span { white-space: nowrap; }
 
+    @container (max-width: 66rem) {
+      .opening-grid {
+        grid-template-columns: 148px minmax(0, 1fr);
+        grid-template-rows: none;
+        grid-template-areas:
+          "portrait title"
+          "portrait lede"
+          "portrait proof"
+          "portrait action";
+        align-items: start;
+        column-gap: 2rem;
+      }
+      .opening-title { margin-bottom: 0.75rem; }
+    }
+    @media (max-width: 1100px) {
+      .topic-heading { row-gap: 0.15rem; }
+      .topic-heading h2 { order: -2; }
+      .topic-controls { order: -1; margin-left: auto; }
+      .topic-note, .topic-pending { flex-basis: 100%; }
+      .topic-heading .topic-pending { margin-left: 0; }
+    }
     @media (max-width: 1000px) {
-      .opening-intro { grid-template-columns: 1.2fr 0.8fr; gap: 2rem; }
-      .opening-title { font-size: clamp(3rem, 6.1vw, 4.5rem); }
-      .case-study, .judgment, .section-heading { gap: 2.5rem; }
-      .question-link { grid-template-columns: 1.6rem minmax(0, 1fr) auto; min-height: 5.3rem; gap: 0.5rem; }
-      .lab-layout { gap: 2.5rem; }
-      .flagship-grid { gap: 2rem; }
-      .flagships-pending { flex-basis: 100%; margin-top: 1rem; text-align: right; }
-      .flagship + .flagship::before { left: -1rem; }
-      .storyboard-captions { grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 14px; }
+      .pov-grid { grid-template-columns: minmax(0, 1fr); }
+      .pov-item, .pov-item:first-child, .pov-item:last-child { padding: 1.5rem 0 1.25rem; }
+      .pov-item + .pov-item { border-left: 0; border-top: 1px solid var(--line); }
+    }
+    @media (min-width: 721px) and (max-height: 820px) {
+      .masthead { min-height: 4.5rem; }
+      .opening { padding-block: 1.75rem 1.5rem; }
+      .topic-heading { margin-bottom: 0.6rem; }
+      .topic-image { aspect-ratio: 16 / 9; }
     }
     @media (max-width: 720px) {
       .shell { width: min(100% - 2.5rem, 74rem); }
@@ -415,63 +350,39 @@ reduced motion, and offscreen visibility take precedence over automatic movement
       .brand { font-size: 1.15rem; }
       .brand span { font-size: 0.75rem; }
       .primary-nav { justify-content: space-between; width: 100%; gap: 0.8rem; font-size: 0.85rem; }
-      .opening { padding-block: 2.2rem 3rem; }
-      .opening-intro { grid-template-columns: 1fr; gap: 1.35rem; }
-      .opening-title { max-width: 16ch; font-size: clamp(2.65rem, 10.4vw, 4rem); line-height: 1.04; }
-      .opening-position p { font-size: 1rem; }
-      .opening-position .text-link { margin-top: 0.65rem; }
-      .flagships { margin-top: 2rem; }
-      .flagships-heading h2 { font-size: 1.35rem; }
-      .flagships-note { flex-basis: 100%; margin-top: 0; }
-      .note-tail { display: block; }
-      .flagship-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
-      .flagship { padding-block: 1.5rem 1.25rem; }
-      .flagship + .flagship { border-top: 1px solid var(--line); }
-      .flagship + .flagship::before { display: none; }
-      .flagship h3 { font-size: 1.3rem; }
-      .flagships-pending { display: none; }
-      .flagships-index { display: block; }
-      .dw-pipeline { --dw-cols: minmax(0, 1fr) minmax(0, 1fr); }
-      .dw-station:nth-child(2)::after, .dw-station:nth-child(2)::before { display: none; }
-      .storyboard-frames { grid-template-columns: minmax(0, 70%); }
-      .storyboard-frames li:nth-child(-n+2) { display: none; }
-      .storyboard-frames img { aspect-ratio: 330 / 582; }
-      .topic-showcase { margin-top: 1.7rem; }
+      .opening { padding-block: 1.6rem 2rem; }
+      .opening-grid {
+        grid-template-columns: 64px minmax(0, 1fr);
+        grid-template-areas:
+          "title title"
+          "portrait lede"
+          "proof proof"
+          "action action";
+        gap: 0.6rem 1rem;
+      }
+      .opening-title { margin-bottom: 0.5rem; font-size: clamp(1.85rem, 8.2vw, 2.25rem); line-height: 1.08; }
+      .opening-portrait img { width: 64px; height: 64px; }
+      .opening-lede { font-size: 1rem; }
+      .topic-showcase { padding-top: 1.1rem; }
+      .topic-heading { column-gap: 1rem; }
       .topic-heading h2 { font-size: 1.35rem; }
       .topic-showcase[data-enhanced="true"] .topic-carousel { gap: 0; margin-inline: -0.75rem; }
       .topic-list { gap: 1rem; }
       .topic-card { flex-basis: min(18rem, 100%); }
       .topic-copy { padding: 1rem; }
       .topic-image { aspect-ratio: 16 / 9; }
-      .question-panel { margin-top: 1.8rem; }
-      .questions { grid-template-columns: minmax(0, 1fr); }
-      .questions li + li { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
-      .question-link { min-height: 4.2rem; grid-template-columns: 1.7rem minmax(0, 1fr) auto; }
-      .question-link strong { font-size: 1.15rem; }
-      .question-context { margin-top: 0.75rem; }
-      .case-study, .judgment, .section-heading, .lab-layout, .contact { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-      .case-study { padding-block: 2.8rem; }
-      .case-title { max-width: 20ch; font-size: 2.25rem; }
-      .case-question { margin-top: 0.75rem; font-size: 1rem; }
-      .case-body > p:first-child { font-size: 1.06rem; }
-      .judgment { padding-block: 2.8rem; }
-      .judgment h2 { max-width: 20ch; font-size: 2.2rem; }
-      .judgment p { font-size: 1rem; }
-      .ideas { padding-block: 3rem; }
-      .section-heading { margin-bottom: 1.6rem; gap: 1rem; }
-      .section-heading h2, .lab h2 { font-size: 2.2rem; }
-      .idea-link { grid-template-columns: 1fr auto; gap: 0.7rem 1rem; padding-block: 1.35rem; }
-      .idea-link h3 { font-size: 1.3rem; }
-      .idea-format { grid-row: 2; }
-      .idea-link > span:last-child { grid-column: 2; grid-row: 1 / 3; }
-      .lab { padding-bottom: 2.8rem; }
-      .lab-layout { margin-top: 1.5rem; gap: 2rem; }
+      .contact { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+      .ideas { padding-block: 3rem 2.5rem; }
+      .section-heading { margin-bottom: 1.6rem; }
       .archive { padding-bottom: 2.5rem; }
       .archive-group { grid-template-columns: 1fr; gap: 1rem; }
       .project-archive > summary { gap: 1rem; }
       .contact { padding-block: 3rem 2rem; gap: 1.7rem; }
       .contact h2 { max-width: 18ch; }
       .site-footer { flex-direction: column; gap: 0.75rem; }
+    }
+    @media (max-width: 380px) {
+      .primary-nav { gap: 0.5rem; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -482,113 +393,39 @@ reduced motion, and offscreen visibility take precedence over automatic movement
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="masthead shell">
-    <a class="brand" href="https://ozgurkarahan.com/" aria-label="Ozgur Karahan, home">
+    <a class="brand" href="https://ozgurkarahan.com/">
       Ozgur Karahan
       <span>AI Solution Engineer at Microsoft</span>
     </a>
     <nav class="primary-nav" aria-label="Primary navigation">
-      <a href="#work">The work</a>
-      <a href="#ideas">The ideas</a>
-      <a href="https://ozgurkarahan.com/agentic-platform/">Platform deck</a>
-      <a href="#archive">All projects</a>
-      <a class="contact-link" href="#contact">Let's connect <span aria-hidden="true">&nbsp;↗</span></a>
+      <a href="#work">Work</a>
+      <a href="#ideas">Ideas</a>
+      <a href="https://ozgurkarahan.com/agentic-platform/">Deck<span class="visually-hidden"> (The Agentic Platform)</span></a>
+      <a href="#archive">Archive</a>
+      <a class="contact-link" href="#contact">Let's connect<span aria-hidden="true">&nbsp;↓</span></a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="opening shell" aria-labelledby="opening-title">
-      <div class="opening-intro">
-        <h1 class="opening-title" id="opening-title">Useful agents need <em>more than a model.</em></h1>
-        <div class="opening-position">
-          <p>I build and share enterprise agent patterns where business workflows, user identity, and human decisions meet.</p>
-          <a class="text-link" href="#work">Explore the topics <span aria-hidden="true">↓</span></a>
-        </div>
+    <section class="opening shell" id="opening" aria-labelledby="opening-title">
+      <div class="opening-grid">
+        <h1 class="opening-title" id="opening-title">Agents that act for you, cite their sources, and <em>stop for a human.</em></h1>
+        <picture class="opening-portrait">
+          <source srcset="docs/assets/portrait.webp" type="image/webp">
+          <img src="docs/assets/portrait.jpg" width="296" height="296" decoding="async" alt="Ozgur Karahan">
+        </picture>
+        <p class="opening-lede">I build and share enterprise agent patterns where business workflows, user identity, and human decisions meet.</p>
+        <p class="opening-proof">Live now: <a href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki">DocWiki<span aria-hidden="true">&nbsp;↗</span></a>&nbsp;<span aria-hidden="true">·</span> <a href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio">Oz Radio<span aria-hidden="true">&nbsp;↗</span></a></p>
+        <a class="button opening-action" href="https://www.linkedin.com/in/karahanozgur/" rel="me"><span>Let's connect<span class="visually-hidden"> on LinkedIn</span></span> <span aria-hidden="true">↗</span></a>
       </div>
-      <section class="flagships" id="flagships" aria-labelledby="flagships-title">
-        <div class="flagships-heading">
-          <h2 id="flagships-title">Agents you can try</h2>
-          <p class="flagships-note">Personal open-source samples, <span class="note-tail">not Microsoft products.</span></p>
-          <p class="flagships-pending">Oz Antenna · in development · not public</p>
-        </div>
-        <ul class="flagships-index" id="flagships-index" aria-label="Flagship samples">
-          <li>
-            <span class="index-name"><strong>DocWiki</strong> — knowledge you can trace to the page</span>
-            <a href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki">Open the sample wiki <span aria-hidden="true">↗</span></a>
-          </li>
-          <li>
-            <span class="index-name"><strong>Oz Radio</strong> — a presentation you can interrupt</span>
-            <a href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio">Try the live demo <span aria-hidden="true">↗</span></a>
-          </li>
-          <li><span class="index-name"><strong>Oz Antenna</strong> · in development · not public</span></li>
-        </ul>
-        <div class="flagship-grid">
-          <article class="flagship" id="flagship-docwiki" aria-labelledby="flagship-docwiki-title">
-            <h3 id="flagship-docwiki-title">DocWiki: knowledge you can trace to the page</h3>
-            <p class="flagship-scope">Live sample wiki · open source · fictional corpus <span aria-hidden="true">↗</span></p>
-            <p class="flagship-description">Turns messy documents into a wiki where every sentence cites the page it came from, and disagreements between sources are stated, not hidden.</p>
-            <a class="flagship-link" href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki" aria-describedby="flagship-docwiki-title">Open the sample wiki <span aria-hidden="true">↗</span></a>
-            <figure class="dw-plate">
-              <p class="dw-tag dw-label">Claim · wiki page</p>
-              <p class="dw-claim"><a class="dw-deeplink" href="https://docwiki.ozgurkarahan.com/topics/grid-operations" data-flagship="docwiki">Export above the limit by more than 1 MW for more than 5 minutes will be reported.<sup class="dw-marker">1</sup></a></p>
-              <div class="dw-page">
-                <img src="docs/assets/flagships/docwiki-evidence.webp" width="1100" height="155" loading="lazy" decoding="async" alt="Four instruction lines from page 1 of the source Curtailment instruction CPL-CI-2026-018, with DocWiki's highlight boxes. The cited line, outlined in sage, reads: Export above the limit by more than 1 MW for more than 5 minutes will be reported.">
-                <span class="dw-cited" aria-hidden="true"></span>
-                <span class="dw-cited-label" aria-hidden="true"><span>1</span><span class="dw-long"> · cited line</span></span>
-              </div>
-              <div class="dw-source">
-                <p class="dw-cite"><a class="dw-deeplink" href="https://docwiki.ozgurkarahan.com/evidence/src-867a6c78f5b5/p0001" data-flagship="docwiki"><span class="dw-tag">Cited page</span> · Curtailment instruction <span class="dw-id">CPL-CI-2026-018</span>, p. 1</a></p>
-                <span class="dw-chip"><svg class="dw-check" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2.5 8.6 6.1 12.2 13.5 4.6"/></svg>quote verified</span>
-              </div>
-              <ol class="dw-pipeline" aria-label="How DocWiki works">
-                <li class="dw-station">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">1</span>Documents</span>
-                  <span class="dw-st-sub">PDF, Word, Excel, CSV, PowerPoint, e-mail, scans, transcripts</span>
-                </li>
-                <li class="dw-station">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">2</span>Compile</span>
-                  <span class="dw-st-sub">13 stages · 15 quality gates</span>
-                </li>
-                <li class="dw-station dw-station-release">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">3</span>Immutable release</span>
-                  <span class="dw-st-sub">Every claim cites its evidence</span>
-                </li>
-                <li class="dw-station">
-                  <span class="dw-st-title"><span class="dw-num" aria-hidden="true">4</span>Served to</span>
-                  <span class="dw-st-sub">Humans · agents via MCP · local coding agents</span>
-                </li>
-              </ol>
-              <a class="flagship-secondary dw-how" href="https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg">How DocWiki works <span aria-hidden="true">↗</span></a>
-              <figcaption class="dw-caption">Fictional wind-farm corpus · 37 sources · 854 evidence pages · run 2026-10-18</figcaption>
-            </figure>
-            <a class="flagship-secondary flagship-source" href="https://github.com/ozgurkarahan/docwiki" aria-describedby="flagship-docwiki-title">Source <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="flagship" id="flagship-oz-radio" aria-labelledby="flagship-oz-radio-title">
-            <h3 id="flagship-oz-radio-title">Oz Radio: a presentation you can interrupt</h3>
-            <p class="flagship-scope">Live demo · capped daily · AI avatar <span aria-hidden="true">↗</span></p>
-            <p class="flagship-description">An AI avatar presents your deck live; raise your hand and ask by voice.</p>
-            <a class="flagship-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio" aria-describedby="flagship-oz-radio-title">Try the live demo <span aria-hidden="true">↗</span></a>
-            <figure class="storyboard">
-              <ol class="storyboard-frames">
-                <li><img src="docs/assets/flagships/oz-radio-1-presenting.webp" width="330" height="571" loading="lazy" decoding="async" alt="AI avatar presenting slide 1 of 5, with no question panel open. The frame's label reads AI avatar, synthetic voice."></li>
-                <li><img src="docs/assets/flagships/oz-radio-2-question.webp" width="330" height="582" loading="lazy" decoding="async" alt="AI avatar with the question panel open. The spoken question, transcribed, reads: What is the difference between a model and an agent? The frame's label reads AI avatar, synthetic voice."></li>
-                <li><img src="docs/assets/flagships/oz-radio-3-answering.webp" srcset="docs/assets/flagships/oz-radio-3-answering.webp 330w, docs/assets/flagships/oz-radio-3-answering-660.webp 660w" sizes="(max-width: 720px) calc(min(100vw - 2.5rem, 520px) * 0.7), 165px" width="330" height="582" loading="lazy" decoding="async" alt="AI avatar answering from the deck, with the question and the start of the answer in panels. The frame's label reads AI avatar, synthetic voice."></li>
-              </ol>
-              <ol class="storyboard-captions">
-                <li><span class="storyboard-step">1</span> Presenting · slide 1 of 5</li>
-                <li><span class="storyboard-step">2</span> Voice question, transcribed: 'What is the difference between a model and an agent?'</li>
-                <li><span class="storyboard-step">3</span> Answers from the deck: 'The key difference is that an agent can actually get things done, not just talk.' (From slides 2 and 3)</li>
-              </ol>
-              <p class="storyboard-note">Also narrates decks as videos and hosts two-avatar podcasts.</p>
-              <figcaption>Frames from one live demo session, 18 October 2026 (UTC). The question was spoken by a synthetic test voice.</figcaption>
-            </figure>
-            <a class="flagship-secondary flagship-source" href="https://github.com/ozgurkarahan/oz-radio" aria-describedby="flagship-oz-radio-title">Source <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-      </section>
-      <section class="topic-showcase" id="work" aria-labelledby="topics-title" data-topic-showcase>
+    </section>
+
+    <section class="topic-showcase shell" id="work" aria-labelledby="topics-title" data-topic-showcase>
         <div class="topic-heading">
-          <h2 id="topics-title">Explore the work</h2>
-          <div class="topic-controls" aria-label="Topic gallery controls" data-showcase-controls hidden>
+          <h2 id="topics-title"><span id="flagships"></span>Explore the work</h2>
+          <p class="topic-note">Personal open-source samples, not Microsoft products.</p>
+          <p class="topic-pending">Oz Antenna · in development · not public</p>
+          <div class="topic-controls" role="group" aria-label="Topic gallery controls" data-showcase-controls hidden>
             <button class="topic-control topic-control-motion" type="button" aria-controls="topic-track" data-showcase-motion>Pause motion</button>
           </div>
         </div>
@@ -598,9 +435,85 @@ reduced motion, and offscreen visibility take precedence over automatic movement
           </button>
         <div class="topic-viewport" id="topic-track" role="region" aria-label="Scrollable portfolio topics" tabindex="0" data-showcase-track>
           <ul class="topic-list">
+            <li class="topic-card" id="flagship-docwiki">
+              <a class="topic-card-link" href="https://docwiki.ozgurkarahan.com/" data-flagship="docwiki" aria-labelledby="card-docwiki-chip card-docwiki-title" aria-describedby="card-docwiki-scope">
+                <div class="topic-image topic-image-drawing">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="dw-cover-title dw-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+                    <title id="dw-cover-title">DocWiki: a claim traced to its cited source line</title>
+                    <desc id="dw-cover-desc">Illustrative drawing: the wiki claim &#8220;Export above the limit by more than 1 MW for more than 5 minutes will be reported.&#8221; ends in footnote 1, which points down to the cited line outlined on page 1 of its source, marked quote verified.</desc>
+                    <defs>
+                      <marker id="dw-cover-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                        <path d="M0 0 10 5 0 10Z" style="fill:var(--sage,#305b3b)"/>
+                      </marker>
+                    </defs>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
+                    <text font-size="36" font-weight="600" style="fill:var(--ink,#202b21)"><tspan x="40" y="64" textLength="422">Export above the limit by</tspan><tspan x="40" y="116" textLength="509">more than 1 MW for more than</tspan><tspan x="40" y="168" textLength="452">5 minutes will be reported.</tspan></text>
+                    <g style="fill:var(--sage,#305b3b)">
+                      <rect x="40" y="72" width="422" height="3"/>
+                      <rect x="40" y="124" width="509" height="3"/>
+                      <rect x="40" y="176" width="452" height="3"/>
+                    </g>
+                    <text x="497" y="158" font-size="32" font-weight="700" style="fill:var(--sage,#305b3b)">1</text>
+                    <path d="M336 192H578L600 214V320H336Z" style="fill:var(--surface,#fff);stroke:var(--line,#c6d2c3)" stroke-width="2"/>
+                    <path d="M578 192V214H600" style="fill:none;stroke:var(--line,#c6d2c3)" stroke-width="2"/>
+                    <g style="fill:var(--line,#c6d2c3)">
+                      <rect x="356" y="205" width="120" height="10"/>
+                      <rect x="356" y="276" width="204" height="10"/>
+                      <rect x="356" y="296" width="168" height="10"/>
+                    </g>
+                    <rect x="326" y="226" width="284" height="36" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)" stroke-width="3"/>
+                    <rect x="356" y="239" width="216" height="10" style="fill:var(--muted,#485447)"/>
+                    <path d="M504 166V222" style="fill:none;stroke:var(--sage,#305b3b)" stroke-width="3" marker-end="url(#dw-cover-arrow)"/>
+                    <text x="312" y="255" text-anchor="end" font-size="32" font-weight="700" style="fill:var(--sage,#305b3b)">p. 1 &#183; cited line</text>
+                    <rect x="306" y="334" width="324" height="46" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)" stroke-width="2"/>
+                    <path d="M322 357l8 8 16-17" style="fill:none;stroke:var(--sage,#305b3b)" stroke-width="3"/>
+                    <text x="356" y="368" font-size="32" font-weight="600" style="fill:var(--ink,#202b21)">quote verified</text>
+                    <text x="40" y="368" font-size="32" font-weight="400" style="fill:var(--muted,#485447)">Illustrative</text>
+                  </svg>
+                </div>
+                <div class="topic-copy">
+                  <span class="topic-chip topic-chip-live" id="card-docwiki-chip">Live</span>
+                  <h3 id="card-docwiki-title">DocWiki: all your documents in one wiki</h3>
+                  <p class="topic-description">Consolidates all your documents into one wiki: easy for your staff to navigate, and agent-ready to find the answers you need, cited to the page.</p>
+                  <p class="topic-scope" id="card-docwiki-scope">Live sample wiki&nbsp;· fictional corpus&nbsp;· 37&nbsp;sources&nbsp;· 854&nbsp;evidence pages<span aria-hidden="true">&nbsp;↗</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card" id="flagship-oz-radio">
+              <a class="topic-card-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio" aria-labelledby="card-oz-radio-chip card-oz-radio-title" aria-describedby="card-oz-radio-scope">
+                <div class="topic-image topic-image-drawing">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="ozr-cover-title ozr-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+                    <title id="ozr-cover-title">Oz Radio: a live presentation paused for a spoken question</title>
+                    <desc id="ozr-cover-desc">Illustrative drawing: an AI avatar's presentation is paused at slide 1 of 5 while a raised hand asks "What is the difference between a model and an agent?", and the answer is marked as coming from slides 2 and 3.</desc>
+                    <rect x="24" y="24" width="272" height="180" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
+                    <text x="44" y="65" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">AI avatar</text>
+                    <path d="M230 86h14v56h-14zM258 86h14v56h-14z" style="fill:var(--sage,#305b3b)"/>
+                    <text x="44" y="179" font-size="32" style="fill:var(--muted,#485447)">Slide 1 of 5</text>
+                    <rect x="24" y="220" width="48" height="32" stroke-width="2" style="fill:var(--sage,#305b3b);stroke:var(--sage,#305b3b)"/>
+                    <path d="M80 220h48v32h-48zM136 220h48v32h-48z" stroke-width="3" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
+                    <path d="M192 220h48v32h-48zM248 220h48v32h-48z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
+                    <path d="M80 264v10h104v-10M132 274v12" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b)"/>
+                    <text x="24" y="318" font-size="32" font-weight="700" style="fill:var(--sage,#305b3b)">From slides 2 and 3</text>
+                    <path d="M304 24h322v180H477l-14 26-14-26H304z" stroke-width="3" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
+                    <text x="324" y="65" font-size="32" font-weight="500" style="fill:var(--ink,#202b21)"><tspan x="324">What is the</tspan><tspan x="324" dy="38">difference</tspan><tspan x="324" dy="38">between a model</tspan><tspan x="324" dy="38">and an agent?</tspan></text>
+                    <g transform="translate(420 228) scale(1.2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--sage,#305b3b)">
+                      <path d="M20 84 18 62 6 50a6 6 0 0 1 8-8l4 4V22a6 6 0 0 1 12 0v-6a6 6 0 0 1 12 0v3a6 6 0 0 1 12 0v9a6 6 0 0 1 12 0v34l-4 22z" style="fill:var(--sage-soft,#e1f0e1)"/>
+                      <path d="M30 22v26M42 19v29M54 28v20" fill="none"/>
+                    </g>
+                    <text x="616" y="376" font-size="32" text-anchor="end" style="fill:var(--muted,#485447)">Illustrative</text>
+                  </svg>
+                </div>
+                <div class="topic-copy">
+                  <span class="topic-chip topic-chip-live" id="card-oz-radio-chip">Live</span>
+                  <h3 id="card-oz-radio-title">Oz Radio: a presentation you can interrupt</h3>
+                  <p class="topic-description">An AI avatar presents your deck live; raise your hand and ask by voice.</p>
+                  <p class="topic-scope" id="card-oz-radio-scope">Live demo&nbsp;· AI&nbsp;avatar&nbsp;· capped&nbsp;daily<span aria-hidden="true">&nbsp;↗</span></p>
+                </div>
+              </a>
+            </li>
             <li class="topic-card">
-              <a class="topic-card-link" href="https://ozgurkarahan.github.io/horizon-famille/">
-                <div class="topic-image topic-image-voice">
+              <a class="topic-card-link" href="https://ozgurkarahan.github.io/horizon-famille/" aria-labelledby="card-voice-chip card-voice-title" aria-describedby="card-voice-scope">
+                <div class="topic-image topic-image-drawing">
                   <svg id="voice-agent-systems" viewBox="0 0 640 400" role="img" aria-labelledby="voice-flow-title voice-flow-description" focusable="false">
                     <title id="voice-flow-title">A voice agent connected to four systems</title>
                     <desc id="voice-flow-description">Illustrative demo flow connecting a voice agent to mock CRM, ERP and knowledge-base services, plus human approval in Teams through Power Platform.</desc>
@@ -621,81 +534,96 @@ reduced motion, and offscreen visibility take precedence over automatic movement
                     <text x="104" y="300" text-anchor="middle" fill="var(--ink)" font-size="34" font-weight="700">Voice agent</text>
                     <g class="voice-system" transform="translate(355 35)">
                       <rect width="250" height="60" rx="9" fill="var(--surface)" stroke="var(--sage)" stroke-width="2" stroke-dasharray="6 4"/>
-                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="30" font-weight="700">CRM</text>
-                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">mock service</text>
+                      <text class="voice-system-label" x="125" y="41" text-anchor="middle" fill="var(--ink)" font-size="30" font-weight="700">CRM</text>
                     </g>
                     <g class="voice-system" transform="translate(355 125)">
                       <rect width="250" height="60" rx="9" fill="var(--surface)" stroke="var(--sage)" stroke-width="2" stroke-dasharray="6 4"/>
-                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="30" font-weight="700">ERP</text>
-                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">mock service</text>
+                      <text class="voice-system-label" x="125" y="41" text-anchor="middle" fill="var(--ink)" font-size="30" font-weight="700">ERP</text>
                     </g>
                     <g class="voice-system" transform="translate(355 215)">
                       <rect width="250" height="60" rx="9" fill="var(--surface)" stroke="var(--sage)" stroke-width="2" stroke-dasharray="6 4"/>
-                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="700">Knowledge base</text>
-                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">mock service</text>
+                      <text class="voice-system-label" x="125" y="40" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="700">Knowledge base</text>
                     </g>
                     <g class="voice-system" transform="translate(355 305)">
                       <rect width="250" height="60" rx="9" fill="var(--sage-soft)" stroke="var(--sage)" stroke-width="2"/>
-                      <text class="voice-system-label" x="125" y="29" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="700">Teams approval</text>
-                      <text x="125" y="49" text-anchor="middle" fill="var(--muted)" font-size="16">via Power Platform</text>
+                      <text class="voice-system-label" x="125" y="40" text-anchor="middle" fill="var(--ink)" font-size="28" font-weight="700">Teams approval</text>
                     </g>
-                    <text x="40" y="378" fill="var(--muted)" font-size="18">Illustrative demo flow</text>
+                    <text x="24" y="388" fill="var(--muted)" font-size="32">Illustrative demo flow</text>
                   </svg>
                 </div>
                 <div class="topic-copy">
-                  <h3>Voice agents for the full booking journey</h3>
+                  <span class="topic-chip" id="card-voice-chip">Video 6:19</span>
+                  <h3 id="card-voice-title">Voice agents for the full booking journey</h3>
                   <p class="topic-description">Horizon Famille: a recorded booking-change journey with mock business systems and human approval in Teams.</p>
-                  <p class="topic-scope">Recorded demo · French, English subtitles <span aria-hidden="true">↗</span></p>
+                  <p class="topic-scope" id="card-voice-scope">Recorded demo&nbsp;· mock systems&nbsp;· French, English subtitles<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card">
-              <a class="topic-card-link" href="https://ozgurkarahan.com/customer-360/">
-                <div class="topic-image"><img src="docs/assets/topics/identity.webp" width="960" height="600" decoding="async" draggable="false" alt=""></div>
+              <a class="topic-card-link" href="https://ozgurkarahan.com/customer-360/" aria-labelledby="card-identity-chip card-identity-title" aria-describedby="card-identity-scope">
+                <div class="topic-image"><img src="docs/assets/topics/identity.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
                 <div class="topic-copy">
-                  <h3>Agent access on behalf of the user</h3>
+                  <span class="topic-chip" id="card-identity-chip">Sample</span>
+                  <h3 id="card-identity-title">Agent access on behalf of the user</h3>
                   <p class="topic-description"><strong>Salesforce and ServiceNow.</strong> Samples for carrying the caller's identity across agent, MCP, and enterprise-system boundaries.</p>
-                  <p class="topic-scope">Reference sample &amp; video <span aria-hidden="true">↗</span></p>
+                  <p class="topic-scope" id="card-identity-scope">Reference sample &amp; video<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card">
-              <a class="topic-card-link" href="https://ozgurkarahan.github.io/foundry-openai-coding-agent/">
+              <a class="topic-card-link" href="https://ozgurkarahan.github.io/foundry-openai-coding-agent/" aria-labelledby="card-foundry-chip card-foundry-title" aria-describedby="card-foundry-scope">
                 <div class="topic-image"><img src="docs/assets/topics/runtime.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
                 <div class="topic-copy">
-                  <h3>Foundry Hosted Agents</h3>
+                  <span class="topic-chip" id="card-foundry-chip">Sample</span>
+                  <h3 id="card-foundry-title">Foundry Hosted Agents</h3>
                   <p class="topic-description">Tools, persistent workspaces, and browser verification inside a Foundry-hosted coding agent.</p>
-                  <p class="topic-scope">Experimental community sample <span aria-hidden="true">↗</span></p>
+                  <p class="topic-scope" id="card-foundry-scope">Experimental community sample<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card">
-              <a class="topic-card-link" href="https://github.com/ozgurkarahan/ai-agent-memory">
+              <a class="topic-card-link" href="https://github.com/ozgurkarahan/ai-agent-memory" aria-labelledby="card-memory-chip card-memory-title" aria-describedby="card-memory-scope">
                 <div class="topic-image"><img src="docs/assets/topics/memory.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
                 <div class="topic-copy">
-                  <h3>Agent memory</h3>
+                  <span class="topic-chip" id="card-memory-chip">Sample</span>
+                  <h3 id="card-memory-title">Agent memory</h3>
                   <p class="topic-description">Connect project knowledge and lessons in a linked Markdown wiki across coding-agent sessions.</p>
-                  <p class="topic-scope">Developer knowledge pattern <span aria-hidden="true">↗</span></p>
+                  <p class="topic-scope" id="card-memory-scope">Developer knowledge pattern<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card">
-              <a class="topic-card-link" href="https://github.com/ozgurkarahan/agentic-sdlc-demo">
+              <a class="topic-card-link" href="https://github.com/ozgurkarahan/agentic-sdlc-demo" aria-labelledby="card-sdlc-chip card-sdlc-title" aria-describedby="card-sdlc-scope">
                 <div class="topic-image"><img src="docs/assets/topics/delivery.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
                 <div class="topic-copy">
-                  <h3>Agentic software delivery</h3>
+                  <span class="topic-chip" id="card-sdlc-chip">Sample</span>
+                  <h3 id="card-sdlc-title">Agentic software delivery</h3>
                   <p class="topic-description">Explore a presenter-led software-delivery demonstration and a reusable agent harness.</p>
-                  <p class="topic-scope">Demo &amp; evolving harness <span aria-hidden="true">↗</span></p>
+                  <p class="topic-scope" id="card-sdlc-scope">Demo &amp; evolving harness<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card">
-              <a class="topic-card-link" href="https://ozgurkarahan.com/agentic-platform/">
+              <a class="topic-card-link" href="https://ozgurkarahan.com/agentic-platform/" aria-labelledby="card-platform-chip card-platform-title" aria-describedby="card-platform-scope">
                 <div class="topic-image"><img src="docs/assets/topics/platform.webp" width="960" height="600" loading="lazy" decoding="async" draggable="false" alt=""></div>
                 <div class="topic-copy">
-                  <h3>The Agentic Platform</h3>
+                  <span class="topic-chip" id="card-platform-chip">Deck</span>
+                  <h3 id="card-platform-title">The Agentic Platform</h3>
                   <p class="topic-description">Connect the ideas behind building, deploying, operating, and governing agents.</p>
-                  <p class="topic-scope">Interactive presentation <span aria-hidden="true">↗</span></p>
+                  <p class="topic-scope" id="card-platform-scope">Interactive presentation<span aria-hidden="true">&nbsp;↗</span></p>
+                </div>
+              </a>
+            </li>
+            <li class="topic-card">
+              <a class="topic-card-link" href="#contact" aria-labelledby="card-workflow-title" aria-describedby="card-workflow-scope">
+                <div class="topic-image topic-image-end" aria-hidden="true">
+                  <span class="topic-end-line">Bring a workflow.</span>
+                  <span class="topic-end-arrow">→</span>
+                </div>
+                <div class="topic-copy">
+                  <h3 id="card-workflow-title">Your workflow</h3>
+                  <p class="topic-description">For conversations about enterprise agents, caller identity, human oversight, or the architecture behind them.</p>
+                  <p class="topic-scope" id="card-workflow-scope">Let's examine the boundaries<span aria-hidden="true">&nbsp;↓</span></p>
                 </div>
               </a>
             </li>
@@ -706,132 +634,54 @@ reduced motion, and offscreen visibility take precedence over automatic movement
           </button>
         </div>
         <p class="topic-status" role="status" data-showcase-status>Scroll or swipe to browse the topics. Each card opens the work or its source.</p>
-      </section>
-      <div class="question-panel">
-          <nav aria-label="Three questions behind the work">
-            <ol class="questions">
-              <li><a class="question-link" href="#horizon"><span class="question-number" aria-hidden="true">01</span><strong>What can it change?</strong><span class="arrow" aria-hidden="true">↓</span></a></li>
-              <li><a class="question-link" href="#identity"><span class="question-number" aria-hidden="true">02</span><strong>Whose authority does it use?</strong><span class="arrow" aria-hidden="true">↓</span></a></li>
-              <li><a class="question-link" href="#judgment"><span class="question-number" aria-hidden="true">03</span><strong>When should a person decide?</strong><span class="arrow" aria-hidden="true">↓</span></a></li>
-            </ol>
-          </nav>
-          <p class="question-context">Three questions I bring to enterprise AI.<br>The projects below explore them in different ways.</p>
-      </div>
-    </section>
-
-    <div class="work-section shell">
-      <article class="case-study" id="horizon" aria-labelledby="horizon-title">
-        <div>
-          <h2 class="case-title" id="horizon-title">A task, not just an answer.</h2>
-          <p class="case-question">01 — What can it change?</p>
-        </div>
-        <div class="case-body">
-          <p><strong>Horizon Famille.</strong> A customer calls about a booking. The agent checks the situation, quotes a change before acting, and routes a discount outside its mandate to a person in Teams.</p>
-          <p>The useful part is the journey: a request becomes a concrete business action, with a visible point of human decision.</p>
-          <div class="case-links">
-            <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/">Watch the call <span class="duration">6m19s</span><span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://github.com/ozgurkarahan/horizon-famille">Inspect the source <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Open the presentation <span aria-hidden="true">↗</span></a>
-          </div>
-          <p class="boundary"><strong>Demonstration scope.</strong> A real recorded phone call through Voice Live and Azure Communication Services; mock CRM, ERP, and knowledge-base services; Power Platform approval in Teams. Not live Dynamics or SAP integrations, a production deployment, or a public number to call.</p>
-        </div>
-      </article>
-
-      <article class="case-study" id="identity" aria-labelledby="identity-title">
-        <div>
-          <h2 class="case-title" id="identity-title">The caller's identity matters.</h2>
-          <p class="case-question">02 — Whose authority does it use?</p>
-        </div>
-        <div class="case-body">
-          <p>An agent's connection to a business system should not erase the person making the request.</p>
-          <p>These separate implementations explore caller identity through Entra ID, Foundry, API Management, and downstream systems. Carrying an identity is only part of the job: authorization still needs to be enforced at each boundary.</p>
-          <ul class="source-list" aria-label="Identity implementations">
-            <li><a href="https://ozgurkarahan.com/identity-propagation/"><strong>Identity propagation, explained <span aria-hidden="true">→</span></strong><span>Write-up</span></a></li>
-            <li><a href="https://ozgurkarahan.com/customer-360/"><strong>Customer 360 Assistant <span aria-hidden="true">↗</span></strong><span>Project page &amp; video</span></a></li>
-            <li><a href="https://github.com/ozgurkarahan/propagate-id-entra"><strong>Entra ID identity flow <span aria-hidden="true">↗</span></strong><span>Proof of concept</span></a></li>
-            <li><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation"><strong>Salesforce meta-tool <span aria-hidden="true">↗</span></strong><span>Sample implementation</span></a></li>
-            <li><a href="https://github.com/ozgurkarahan/snow-meta-tool"><strong>ServiceNow meta-tool <span aria-hidden="true">↗</span></strong><span>Sample implementation</span></a></li>
-          </ul>
-          <p class="boundary">These samples are not audited production guarantees. <a href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/security.md">Read the evaluation boundaries</a> before adapting a pattern.</p>
-        </div>
-      </article>
-    </div>
-
-    <section class="judgment-field" id="judgment" aria-labelledby="judgment-title">
-      <div class="judgment shell">
-        <div>
-          <h2 id="judgment-title">A capable agent also needs a stop line.</h2>
-          <p class="case-question">03 — When should a person decide?</p>
-        </div>
-        <div>
-          <p>More autonomy is not automatically a better outcome. My starting point is to make the permitted action, the escalation condition, and the human decision explicit.</p>
-          <p>A useful handoff explains <strong>what is being requested, why approval is needed, and what the person can decide</strong>. Horizon's discount-approval workflow is one concrete example of that broader principle.</p>
-          <a class="text-link" href="https://github.com/ozgurkarahan/horizon-famille/tree/master/power-platform">Explore the approval workflow <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
     </section>
 
     <section class="ideas shell" id="ideas" aria-labelledby="ideas-title">
       <div class="section-heading">
         <h2 id="ideas-title">The ideas behind the work.</h2>
-        <p>Start with a question. Follow it into a demonstration, an architectural explanation, or a presentation.</p>
+        <p>Three questions I bring to enterprise AI.</p>
       </div>
-      <ul class="idea-list">
-        <li id="idea-work">
-          <a class="idea-link" href="https://ozgurkarahan.github.io/horizon-famille/">
-            <h3>Start with the work, not the chatbot.</h3>
-            <span class="idea-format">Horizon Famille · recorded demonstration</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li id="idea-identity">
-          <a class="idea-link" href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">
-            <h3>Carry identity. Still enforce permissions.</h3>
-            <span class="idea-format">Identity propagation · architecture story</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li id="vision">
-          <a class="idea-link" href="https://ozgurkarahan.com/agentic-platform/">
-            <h3>An agent needs an operating model.</h3>
-            <span class="idea-format">The Agentic Platform · interactive presentation</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </li>
-      </ul>
-      <div class="vision-note">
-        <span>The Agentic Platform connects build, deployment, operations, and governance.</span>
-        <a class="text-link" href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">Presentation source <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <section class="lab shell" aria-labelledby="lab-title">
-      <h2 id="lab-title">Patterns to inspect, not promises to accept.</h2>
-      <div class="lab-layout">
-        <article class="runtime-note">
-          <h3>Foundry hosted coding agent</h3>
-          <p>An experimental runtime combining the OpenAI Agents SDK, a terminal, persistent workspace, browser verification, and scoped Azure access.</p>
-          <p>Community sample: not an official Microsoft product or reference implementation, not production-ready, and no SLA or bundled infrastructure provisioning.</p>
-          <div class="case-links">
-            <a class="text-link" href="https://ozgurkarahan.github.io/foundry-openai-coding-agent/">Explore the project <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://github.com/ozgurkarahan/foundry-openai-coding-agent">Source <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/limitations.md">Limitations <span aria-hidden="true">↗</span></a>
-          </div>
+      <div class="pov-grid">
+        <article class="pov-item" id="horizon" aria-labelledby="horizon-title">
+          <span id="idea-work"></span>
+          <h3 id="horizon-title"><span class="pov-number" aria-hidden="true">01</span> What can it change?</h3>
+          <p class="pov-stance">A task, not just an answer.</p>
+          <p>Horizon Famille: a customer calls about a booking. The agent checks the situation, quotes a change before acting, and routes a discount outside its mandate to a person in Teams.</p>
+          <ul class="pov-links">
+            <li><a href="https://ozgurkarahan.github.io/horizon-famille/">Watch the call <span class="duration">6m19s</span><span aria-hidden="true">&nbsp;↗</span></a></li>
+            <li><a href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Open the presentation<span aria-hidden="true">&nbsp;↗</span></a></li>
+            <li><a href="https://github.com/ozgurkarahan/horizon-famille">Inspect the source<span aria-hidden="true">&nbsp;↗</span></a></li>
+          </ul>
+          <p class="pov-scope"><strong>Demonstration scope.</strong> A real recorded phone call through Voice Live and Azure Communication Services; mock CRM, ERP, and knowledge-base services; Power Platform approval in Teams. Not a production deployment.</p>
         </article>
-        <div>
-          <article class="supporting-note">
-            <h3><a href="https://github.com/ozgurkarahan/ai-agent-memory">AI Agent Memory <span aria-hidden="true">&nbsp;↗</span></a></h3>
-            <p>A linked Markdown wiki for coding-agent knowledge across projects and sessions. A developer workflow, not a customer-data memory solution.</p>
-          </article>
-          <article class="supporting-note">
-            <h3><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC <span aria-hidden="true">&nbsp;↗</span></a></h3>
-            <p>A presenter-led software-delivery demo and reusable harness. The repository documents its current setup and status; this is not a claim of a complete, verified workflow.</p>
-          </article>
-        </div>
+        <article class="pov-item" id="identity" aria-labelledby="identity-title">
+          <span id="idea-identity"></span>
+          <h3 id="identity-title"><span class="pov-number" aria-hidden="true">02</span> Whose authority does it use?</h3>
+          <p class="pov-stance">The caller's identity matters.</p>
+          <p>An agent's connection to a business system should not erase the person making the request. Carrying an identity is only part of the job: authorization still needs to be enforced at each boundary.</p>
+          <ul class="pov-links">
+            <li><a href="https://ozgurkarahan.com/identity-propagation/">Identity propagation, explained<span aria-hidden="true">&nbsp;→</span></a></li>
+            <li><a href="https://ozgurkarahan.com/customer-360/">Customer 360 Assistant<span aria-hidden="true">&nbsp;↗</span></a></li>
+            <li><a href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">The article on identity in Salesforce meta-tools<span aria-hidden="true">&nbsp;↗</span></a></li>
+          </ul>
+          <p class="pov-scope">These samples are not audited production guarantees. <a href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/security.md">Read the evaluation boundaries</a> before adapting a pattern.</p>
+        </article>
+        <article class="pov-item" id="judgment" aria-labelledby="judgment-title">
+          <span id="vision"></span>
+          <h3 id="judgment-title"><span class="pov-number" aria-hidden="true">03</span> When should a person decide?</h3>
+          <p class="pov-stance">A capable agent also needs a stop line.</p>
+          <p>More autonomy is not automatically a better outcome. My starting point is to make the permitted action, the escalation condition, and the human decision explicit. Horizon's discount-approval workflow is one concrete example.</p>
+          <ul class="pov-links">
+            <li><a href="https://github.com/ozgurkarahan/horizon-famille/tree/master/power-platform">Explore the approval workflow<span aria-hidden="true">&nbsp;↗</span></a></li>
+            <li><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform presentation<span aria-hidden="true">&nbsp;↗</span></a></li>
+            <li><a href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">Presentation source<span aria-hidden="true">&nbsp;↗</span></a></li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section class="archive shell" id="archive" aria-label="Project archive">
+    <section class="archive shell" id="archive" aria-labelledby="archive-title">
+      <h2 class="visually-hidden" id="archive-title">Project archive</h2>
       <details class="project-archive">
         <summary>
           <span class="archive-summary">Explore the full collection<span>Public projects and clearly labelled private work.</span></span>
@@ -842,7 +692,7 @@ reduced motion, and offscreen visibility take precedence over automatic movement
             <h3 id="archive-agents">Agents and developer workflows</h3>
             <ul class="archive-list">
               <li><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille</a><p>A recorded voice-agent journey with mock business systems and human approval in Teams.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent">Foundry Hosted Coding Agent</a><p>Experimental community runtime. Inspect the architecture and limitations before evaluating it.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent">Foundry Hosted Coding Agent</a><p class="archive-description">Experimental community runtime. Inspect the architecture and <a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/limitations.md">limitations</a> before evaluating it.</p></li>
               <li><a href="https://github.com/ozgurkarahan/ai-agent-memory">AI Agent Memory</a><p>Local, linked Markdown knowledge for coding-agent workflows.</p></li>
               <li><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC Demo</a><p class="archive-description">Presenter-led delivery harness; <a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">lifecycle presentation</a> and <a href="https://github.com/ozgurkarahan/agentic-sdlc-demo-live">companion validation repository</a>.</p></li>
               <li><span class="private-name">AI Agent Project Template</span> <span class="private-scope">— Private repository</span><p>Internal project-structure and agent-configuration conventions.</p></li>
@@ -860,8 +710,8 @@ reduced motion, and offscreen visibility take precedence over automatic movement
           <section class="archive-group" aria-labelledby="archive-applications">
             <h3 id="archive-applications">Applications, operations, and learning</h3>
             <ul class="archive-list">
-              <li><a href="https://github.com/ozgurkarahan/docwiki">DocWiki</a><p class="archive-description">Turn messy documents into a wiki humans can browse and agents can trust, cited to the page. Explore the <a href="https://docwiki.ozgurkarahan.com/">live sample wiki</a>.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio</a><p class="archive-description">AI avatars that present, narrate and podcast your decks. Try the <a href="https://ozgurkarahan.com/oz-radio/">live demo</a>: time-boxed, with voice questions, capped daily.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/docwiki">DocWiki<span class="visually-hidden"> on GitHub</span></a><p class="archive-description">Consolidate all your documents into one wiki your staff can navigate and agents can query for answers, cited to the page. Explore the <a href="https://docwiki.ozgurkarahan.com/">live sample wiki</a> (fictional corpus, run 2026-10-18): follow <a href="https://docwiki.ozgurkarahan.com/topics/grid-operations">a cited claim</a> to <a href="https://docwiki.ozgurkarahan.com/evidence/src-867a6c78f5b5/p0001">its evidence page</a>, or see <a href="https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg">how it works</a>.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio<span class="visually-hidden"> on GitHub</span></a><p class="archive-description">AI avatars that present, narrate and podcast your decks. Try the <a href="https://ozgurkarahan.com/oz-radio/">live demo</a>: time-boxed, with voice questions, capped daily.</p></li>
               <li><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">Azure SRE Agent for Synapse</a><p>Infrastructure and investigation scaffolding for Synapse observability scenarios.</p></li>
               <li><a href="https://github.com/ozgurkarahan/anthropic-academy">Anthropic Academy</a><p>Worked learning examples.</p></li>
               <li><span class="private-name">Enterprise Document RAG</span> <span class="private-scope">— Private repository</span><p>Document intelligence and retrieval-augmented generation for an enterprise engagement.</p></li>

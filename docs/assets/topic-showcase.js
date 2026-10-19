@@ -26,9 +26,13 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const speed = 22;
   const endRest = 1600;
+  // The lead cards stay in place for a moment before the first drift.
+  const startRest = 8000;
+  const startedAt = performance.now();
   let userPaused = false;
   let hovered = window.matchMedia("(hover: hover)").matches && viewport.matches(":hover");
   let focused = viewport.contains(document.activeElement);
+  let arrowFocused = document.activeElement === previous || document.activeElement === next;
   let inView = false;
   let maximum = 0;
   let step = 0;
@@ -40,14 +44,28 @@
 
   function canMove() {
     return maximum > 1 && !userPaused && !reducedMotion.matches &&
-      !hovered && !focused && inView && !document.hidden;
+      !hovered && !focused && !arrowFocused && inView && !document.hidden;
+  }
+
+  function setDisabled(button, disabled, opposite, oppositeEnabled) {
+    if (button.disabled === disabled) return;
+    if (disabled && document.activeElement === button) {
+      // A disabled button drops focus to the page; keep keyboard users on the controls.
+      if (oppositeEnabled) {
+        opposite.disabled = false;
+        opposite.focus({ preventScroll: true });
+      } else {
+        viewport.focus({ preventScroll: true });
+      }
+    }
+    button.disabled = disabled;
   }
 
   function updateButtons() {
     const atStart = maximum <= 1 || viewport.scrollLeft <= 1;
     const atEnd = maximum <= 1 || viewport.scrollLeft >= maximum - 1;
-    if (previous.disabled !== atStart) previous.disabled = atStart;
-    if (next.disabled !== atEnd) next.disabled = atEnd;
+    setDisabled(previous, atStart, next, !atEnd);
+    setDisabled(next, atEnd, previous, !atStart);
   }
 
   function updateControls() {
@@ -75,7 +93,7 @@
 
     const elapsed = lastTime ? Math.min(time - lastTime, 64) : 0;
     lastTime = time;
-    if (time >= restingUntil) {
+    if (time >= restingUntil && time - startedAt >= startRest) {
       // Keep fractional position here; reading rounded scrollLeft each frame can stall slow motion.
       position += direction * speed * elapsed / 1000;
       if (direction > 0 && position >= maximum) {
@@ -133,17 +151,35 @@
     if (step <= 0) {
       throw new Error("Topic cards cannot be measured for navigation.");
     }
-    const slot = offset > 0
-      ? Math.floor((viewport.scrollLeft + 1) / step) + 1
-      : Math.ceil((viewport.scrollLeft - 1) / step) - 1;
+    // Card slots plus the true end, so the last press never moves only a few pixels.
+    const slots = [];
+    for (let left = 0; left < maximum - step / 2; left += step) slots.push(left);
+    slots.push(maximum);
+    const current = viewport.scrollLeft;
+    const target = offset > 0
+      ? slots.find(left => left > current + 1) ?? maximum
+      : slots.findLast(left => left < current - 1) ?? 0;
     viewport.scrollTo({
-      left: Math.min(maximum, Math.max(0, slot * step)),
+      left: target,
       behavior: reducedMotion.matches ? "auto" : "smooth",
     });
   }
 
   previous.addEventListener("click", () => moveByCard(-1));
   next.addEventListener("click", () => moveByCard(1));
+  for (const arrow of [previous, next]) {
+    // A focused arrow is a manual browsing intent; drift must not move focus or the track under it.
+    arrow.addEventListener("focus", () => {
+      arrowFocused = true;
+      queueMicrotask(refresh);
+    });
+    arrow.addEventListener("blur", () => {
+      queueMicrotask(() => {
+        arrowFocused = document.activeElement === previous || document.activeElement === next;
+        refresh();
+      });
+    });
+  }
   motion.addEventListener("click", () => {
     userPaused = !userPaused;
     refresh();

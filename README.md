@@ -2,7 +2,7 @@
 
 **AI Solution Engineer at Microsoft**
 
-**Useful agents need more than a model.**
+**Agents that act for you, cite their sources, and stop for a human.**
 
 I build and share enterprise agent patterns where business workflows, user identity, and human decisions meet.
 
@@ -47,7 +47,7 @@ Not an official Microsoft product or reference implementation, not production-re
 ## Explore the approach
 
 - **[The Agentic Platform](https://ozgurkarahan.com/agentic-platform/)** — an interactive presentation connecting how agents are built, deployed, operated, and governed.
-- **[DocWiki](https://github.com/ozgurkarahan/docwiki)** — turn messy documents into a wiki humans can browse and agents can trust, cited to the page, on Azure Container Apps, Microsoft Foundry agents, MCP and Agent Skills. [Explore the live sample wiki](https://docwiki.ozgurkarahan.com/) (fictional corpus) · [How it works](https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg). A personal open-source sample, not a Microsoft product.
+- **[DocWiki](https://github.com/ozgurkarahan/docwiki)** — consolidate all your documents into one wiki your staff can navigate and agents can query for answers, cited to the page, on Azure Container Apps, Microsoft Foundry agents, MCP and Agent Skills. [Explore the live sample wiki](https://docwiki.ozgurkarahan.com/) (fictional corpus) · [How it works](https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg). A personal open-source sample, not a Microsoft product.
 - **[Oz Radio](https://github.com/ozgurkarahan/oz-radio)** (formerly DeckFM) — AI avatars that present, narrate and podcast your decks, built on Azure AI Speech (Voice Live and batch avatar) and Azure OpenAI. [Try the live demo](https://ozgurkarahan.com/oz-radio/): time-boxed, with voice questions, capped daily. A personal open-source sample, not a Microsoft product.
 - **[Identity propagation: the architecture story](https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/)** — the reasoning behind the Salesforce meta-tool and identity flow.
 - **[AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory)** — a local Markdown wiki for coding-agent knowledge across projects and sessions, not a customer-data memory solution.
