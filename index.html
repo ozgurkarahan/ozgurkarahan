@@ -77,8 +77,8 @@ Status chips replace hedges; each card keeps its scope line.
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    /* The bottom scroll padding makes focus scrolling lift an element sitting at the window's edge, so its ring stays whole. */
-    html { scroll-behavior: smooth; scroll-padding-bottom: 0.75rem; }
+    /* The block scroll padding makes focus scrolling lift an element sitting at either edge of the window, so its ring stays whole. */
+    html { scroll-behavior: smooth; scroll-padding-block: 0.75rem; }
     body {
       margin: 0;
       background: var(--canvas);
@@ -105,7 +105,8 @@ Status chips replace hedges; each card keeps its scope line.
     h1, h2, h3 { line-height: 1.08; }
     p { max-width: var(--measure); text-wrap: pretty; }
     p + p { margin-top: 1rem; }
-    [id] { scroll-margin-top: 2rem; }
+    /* With the 0.75rem scroll padding, anchor targets still land 2rem below the top of the window. */
+    [id] { scroll-margin-top: 1.25rem; }
     .shell { width: min(100% - 4rem, 74rem); margin-inline: auto; }
     .skip-link {
       position: fixed;
@@ -306,6 +307,8 @@ Status chips replace hedges; each card keeps its scope line.
     .topic-description { color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
     .topic-copy p + p { margin-top: 0; }
     .topic-copy > .topic-scope { margin-top: auto; padding-top: 0.4rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
+    .topic-more { margin-top: 0.75rem; font-size: 0.9rem; }
+    .topic-more a { display: inline-block; padding-block: 0.75rem; font-weight: 700; line-height: 1.4; }
     .button, .text-link {
       display: inline-flex;
       align-items: center;
@@ -957,6 +960,7 @@ Status chips replace hedges; each card keeps its scope line.
           </ul>
         </div>
         <div class="visually-hidden" aria-live="polite" aria-atomic="true" data-showcase-live></div>
+        <p class="topic-more"><a href="https://ozgurkarahan.com/work/oz-radio/">See Oz Radio take a spoken question, frame by frame<span aria-hidden="true">&nbsp;→</span></a></p>
     </section>
 
     <section class="ideas shell" id="ideas" aria-labelledby="ideas-title">
@@ -1034,7 +1038,7 @@ Status chips replace hedges; each card keeps its scope line.
             <h3 id="archive-applications">Applications, operations, and learning</h3>
             <ul class="archive-list">
               <li><a href="https://github.com/ozgurkarahan/docwiki">DocWiki<span class="visually-hidden"> on GitHub</span></a><p class="archive-description">Consolidate all your documents into one wiki your staff can navigate and agents can query for answers, cited to the page. Explore the <a href="https://docwiki.ozgurkarahan.com/">live sample wiki</a> (fictional corpus, run 2026-10-18): follow <a href="https://docwiki.ozgurkarahan.com/topics/grid-operations">a cited claim</a> to <a href="https://docwiki.ozgurkarahan.com/evidence/src-867a6c78f5b5/p0001">its evidence page</a>, or see <a href="https://github.com/ozgurkarahan/docwiki/blob/main/docs/assets/architecture.svg">how it works</a>.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio<span class="visually-hidden"> on GitHub</span></a><p class="archive-description">AI avatars that present, narrate and podcast your decks. Try the <a href="https://ozgurkarahan.com/oz-radio/">live demo</a>: time-boxed, with voice questions, capped daily.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio<span class="visually-hidden"> on GitHub</span></a><p class="archive-description">AI avatars that present, narrate and podcast your decks. Try the <a href="https://ozgurkarahan.com/oz-radio/">live demo</a>: time-boxed, with voice questions, capped daily. <a href="https://ozgurkarahan.com/work/oz-radio/">See it take a question, frame by frame</a>.</p></li>
               <li><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">Azure SRE Agent for Synapse</a><p>Infrastructure and investigation scaffolding for Synapse observability scenarios.</p></li>
               <li><a href="https://github.com/ozgurkarahan/anthropic-academy">Anthropic Academy</a><p>Worked learning examples.</p></li>
               <li><span class="private-name">Enterprise Document RAG</span> <span class="private-scope">— Private repository</span><p>Document intelligence and retrieval-augmented generation for an enterprise engagement.</p></li>

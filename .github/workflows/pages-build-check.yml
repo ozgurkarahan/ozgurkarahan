@@ -29,9 +29,11 @@ jobs:
           required = [
               "index.html", "robots.txt", "sitemap.xml", "LICENSE",
               "agentic-platform/index.html", "deckfm/index.html", "oz-radio/index.html", "customer-360/index.html",
-              "privacy/index.html", "identity-propagation/index.html", "docs/assets/telemetry.js", "docs/assets/fonts/fonts.css",
+              "privacy/index.html", "identity-propagation/index.html", "work/oz-radio/index.html",
+              "docs/assets/telemetry.js", "docs/assets/fonts/fonts.css",
               "docs/assets/fonts/deck-fonts.css",
               "docs/assets/topic-showcase.js", "docs/ai-agents.html",
+              "docs/assets/social/oz-radio.svg", "docs/assets/social/oz-radio-2026-10-20.png",
           ]
           forbidden = [
               f"{name}{ext}"
