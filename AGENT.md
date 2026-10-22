@@ -2,43 +2,87 @@
 
 ## What This Repo Is
 
-This is `ozgurkarahan/ozgurkarahan` — a GitHub profile hub repository. The README.md is automatically rendered on the GitHub profile page. This is **not** a code project; it is a curated index of projects and resources.
+This is `ozgurkarahan/ozgurkarahan`, which serves two purposes:
+
+1. **GitHub profile** — `README.md` is rendered on the GitHub profile page.
+2. **Portfolio website** — the repo is the source of `https://ozgurkarahan.com/`, a static site built by GitHub Pages (Jekyll) from `master`.
+
+It also holds a small Azure backend for owner-only site analytics. There is no application code or build step beyond the Pages build.
+
+`PRODUCT.md` defines the site's purpose, audience, and desired outcomes. `DESIGN.md` records its design system ("Blueprint Field Notes"). Read both before changing the homepage or adding a page.
 
 ## Repo Structure
 
 ```
-README.md                  — Main hub displayed on GitHub profile
-AGENT.md                   — Project instructions (public)
-index.html                 — GitHub Pages site (ozgurkarahan.com)
-CNAME                      — Custom domain config
-.gitignore                 — Standard gitignore
-LICENSE                    — MIT license
+README.md                    — GitHub profile page
+index.html                   — Site homepage
+identity-propagation/        — Identity propagation write-up page
+work/oz-radio/               — Oz Radio work page
+agentic-platform/            — "The Agentic Platform" presentation
+  index.html                 —   Presentation shell
+  slides/slide_01..08.html   —   One file per slide
+privacy/                     — Privacy notice for the site analytics
+oz-radio/                    — Redirect to the Oz Radio live demo (Azure Container Apps)
+deckfm/                      — Legacy redirect to /oz-radio/ (DeckFM was renamed Oz Radio)
+customer-360/                — Redirect to the Salesforce identity propagation project page
 docs/
-  ai-agents.md             — Detailed AI agent project docs
-  learning-resources.md    — Curated AI learning resources
-  security.md              — Security-focused project docs
-.github/
-  workflows/
-    link-check.yml         — Automated link validation
+  ai-agents.md               — AI agent project write-ups (also published as /docs/ai-agents.html)
+  security.md                — Identity and security project write-ups
+  learning-resources.md      — Curated AI learning resources
+  assets/
+    telemetry.js             — Analytics beacon, loaded by every top-level page
+    topic-showcase.js        — Homepage work wall ("Explore the work" moving shelf)
+    fonts/                   — Self-hosted woff2 fonts and OFL licenses
+      fonts.css              —   Site pages
+      deck-fonts.css         —   Agentic Platform slides
+    work/                    — Work card cover drawings (SVG)
+    flagships/               — Screenshots for the Oz Radio work page
+    topics/                  — Topic images
+    social/                  — Social preview images (SVG source + dated PNG)
+    portrait.{webp,jpg}      — Masthead portrait
+CNAME, robots.txt, sitemap.xml
+_config.yml                  — Jekyll settings, including the exclude list
+infra/
+  main.bicep                 — Log Analytics workspace + Application Insights for analytics
+  main.parameters.json
+  analytics-queries.kql      — Queries for reading the analytics
+scripts/
+  deploy-telemetry.ps1       — Deploys infra/ and sets the daily caps
+PRODUCT.md, DESIGN.md        — Product definition and design system (not published)
+AGENT.md, AGENTS.md, CLAUDE.md, .github/copilot-instructions.md — Agent instructions (not published)
+.github/workflows/
+  link-check.yml             — Lychee link check on push, PR, and weekly
+  pages-build-check.yml      — Builds the site on PRs and checks published files and links
 ```
 
-## How to Add a New Project
+## Publishing Rules
 
-1. Pick the correct category table in `README.md` (AI Agents & MCP, Security, or Learning).
-2. Add a new `<tr>` row following the existing HTML table format (icon cell + description cell with badges).
-3. If the project needs a detailed write-up, add it to the appropriate `docs/*.md` file.
-4. Keep descriptions concise — one sentence max in the table.
+- Everything not listed in the `_config.yml` `exclude` list is published. Repository-only files (agent instructions, `PRODUCT.md`, `DESIGN.md`, `infra/`, `scripts/`) must stay excluded; `pages-build-check.yml` fails the PR if any of them is published.
+- The custom `exclude` list replaces Jekyll's defaults, so keep the default entries when editing it.
+- Use self-hosted fonts from `docs/assets/fonts/`, not Google Fonts.
+
+## How to Add a Page
+
+1. Create `<page>/index.html`, following the existing pages: `fonts.css`, `telemetry.js`, and a canonical URL (plus Open Graph tags if the page should be shared).
+2. Add it to `sitemap.xml` if it should be indexed (redirect pages use `noindex` and stay out of the sitemap).
+3. Add it to the `required` list in `pages-build-check.yml` and to the `paths` and file arguments in `link-check.yml`.
+4. To rename a page, keep the old path as a `noindex` redirect page (see `deckfm/`) so existing links keep working.
+
+## How to Add a Project to the README
+
+1. Put flagship work under "See the evidence" (H3 per project, links line, then a **Scope** caveat) or "Explore the approach" (one bullet).
+2. Put smaller or private work in the "Other projects" table (columns: Project, Focus).
+3. If the project needs a longer write-up, add it to the matching `docs/*.md` file.
+4. State scope and limitations honestly: demos, samples, and proofs of concept must not read as production systems or Microsoft products.
 
 ## Formatting Conventions
 
-- **Tables**: Use Markdown tables for project listings. Columns: Project (link), Description, Stack.
-- **Badges**: Use shields.io flat style: `https://img.shields.io/badge/Label-Color?style=flat&logo=name&logoColor=white`
-- **Links**: Always use full URLs to GitHub repos: `https://github.com/ozgurkarahan/repo-name`
-- **Headings**: H1 for name, H2 for sections, H3 for sub-categories.
+- **Links**: Use full URLs to GitHub repos (`https://github.com/ozgurkarahan/repo-name`) and to site pages (`https://ozgurkarahan.com/...`).
+- **Headings**: H1 for name, H2 for sections, H3 for individual projects.
 - **Tone**: Professional, concise. No emojis.
 
-## Important Notes
+## Analytics
 
-- Keep the README clean and scannable — it is the profile landing page.
-- Do not add files outside of `docs/` unless there is a strong reason.
-- All project links point to `https://github.com/ozgurkarahan/`.
+- `infra/main.bicep` is deployed with `scripts/deploy-telemetry.ps1 -SubscriptionId <id>` (use `-WhatIfOnly` to preview). Never commit the subscription ID.
+- The Application Insights instrumentation key and ingestion endpoint in `telemetry.js` are public by design; daily caps and the ingestion kill switch documented in the script limit abuse.
+- Any change to what is collected must be reflected in `privacy/index.html`.
