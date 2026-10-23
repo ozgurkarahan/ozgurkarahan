@@ -1,36 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="foundry-cover-title" aria-describedby="foundry-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-  <title id="foundry-cover-title">Foundry Hosted Agents: a file kept in one session's sandbox across turns, then checked in a browser</title>
-  <desc id="foundry-cover-desc">Illustrative drawing: inside a frame labelled "Per-session sandbox" (one per-session VM-isolated sandbox), a first request arrives at the "Terminal", where a command runs, and its output lands as a file in the persistent "$HOME". On "Turn 2" of the same session a second request arrives in the same sandbox; the file is taken from $HOME into the "Browser", which carries a check mark for a rendered browser verification step, not a guaranteed result.</desc>
-  <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-  <rect x="56" y="24" width="560" height="304" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-  <text x="80" y="64" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Per-session sandbox</text>
-  <rect x="96" y="88" width="256" height="96" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-  <path d="M120 156l10 8-10 8" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b)"/>
-  <rect x="138" y="161" width="96" height="6" style="fill:var(--line,#c6d2c3)"/>
-  <text x="120" y="133" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Terminal</text>
-  <rect x="408" y="88" width="184" height="96" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-  <path d="M424 148h16v8h8v20h-24z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-  <text x="424" y="133" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">$HOME</text>
-  <rect x="360" y="248" width="232" height="64" style="fill:var(--warm-soft,#fbf0dc)"/>
-  <path d="M374 281l7 7 14-15" fill="none" stroke-width="3" style="stroke:var(--ink,#202b21)"/>
-  <text x="408" y="293" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Browser</text>
-  <path d="M24 136H80M352 160H392M436 184V232M24 280H344" fill="none" stroke-width="2" style="stroke:var(--muted,#485447)"/>
-  <path d="M80 130l10 6-10 6zM392 154l10 6-10 6zM430 232l6 10 6-10zM344 274l10 6-10 6z" style="fill:var(--muted,#485447)"/>
-  <text x="80" y="264" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Turn 2</text>
-  <path class="wk-draw" pathLength="1" d="M24 136H80" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.3s;--d:0.3s"/>
-  <path class="wk-stamp" d="M80 130l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:0.56s;--d:0.2s"/>
-  <g class="wk-travel" style="--dx:-40px;--t:0.3s;--d:0.5s"><rect x="64" y="144" width="16" height="16" style="fill:var(--sage,#305b3b)"/></g>
-  <path class="wk-draw" pathLength="1" d="M96 88H352V184H96Z" fill="none" stroke-width="3" stroke-miterlimit="1.5" style="stroke:var(--sage,#305b3b);--t:0.76s;--d:0.7s"/>
-  <rect class="wk-grow" x="138" y="161" width="96" height="6" style="fill:var(--sage,#305b3b);--sx:0;--o:0 50%;--t:1.02s;--d:0.42s"/>
-  <path class="wk-draw" pathLength="1" d="M352 160H392" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.44s;--d:0.3s"/>
-  <path class="wk-stamp" d="M392 154l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:1.68s;--d:0.2s"/>
-  <path class="wk-stamp" d="M424 148h16v8h8v20h-24z" stroke-width="2" style="fill:var(--sage,#305b3b);stroke:var(--sage,#305b3b);--t:1.84s;--d:0.3s"/>
-  <path class="wk-draw" pathLength="1" d="M24 280H344" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.3s;--d:0.52s"/>
-  <path class="wk-stamp" d="M344 274l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:2.74s;--d:0.2s"/>
-  <g class="wk-travel" style="--dx:-298px;--t:2.3s;--d:0.6s"><rect x="322" y="288" width="16" height="16" style="fill:var(--sage,#305b3b)"/></g>
-  <path class="wk-draw" pathLength="1" d="M436 184V232" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.94s;--d:0.3s"/>
-  <path class="wk-stamp" d="M430 232l6 10 6-10z" style="fill:var(--sage,#305b3b);--t:3.18s;--d:0.2s"/>
-  <path class="wk-draw" pathLength="1" d="M360 248H592V312H360Z" fill="none" stroke-width="4" stroke-miterlimit="1.5" style="stroke:var(--warm,#8a4b06);--t:3.3s;--d:0.65s"/>
-  <path class="wk-draw" pathLength="1" d="M374 281l7 7 14-15" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.88s;--d:0.4s"/>
-  <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
+  <title id="foundry-cover-title">Foundry Hosted Agents: a coding agent runs in its own per-session sandbox, a computer per agent</title>
+  <desc id="foundry-cover-desc">Illustrative drawing. On the left, the &#8220;Coding agent&#8221;; an arrow carries its request into a large frame, the point of the drawing, outlined in amber and labelled &#8220;Per-session sandbox&#8221;. Inside the frame are three tools of its own: &#8220;Workspace&#8221; with a folder, &#8220;Terminal&#8221; with a prompt, and &#8220;Browser check&#8221; with a browser window marked with a tick.</desc>
+  <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+  <path d="M200 172H230" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+  <path d="M230 166L240 172L230 178Z" style="fill:var(--muted,#535568)"/>
+  <rect x="24" y="124" width="176" height="96" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+  <text x="112" y="164" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Coding</text>
+  <text x="112" y="198" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">agent</text>
+  <rect x="240" y="24" width="376" height="312" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="264" y="68" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Per-session sandbox</text>
+  <rect x="264" y="92" width="328" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="328" y="134" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Workspace</text>
+  <rect x="264" y="172" width="328" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="328" y="214" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Terminal</text>
+  <rect x="264" y="252" width="328" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="328" y="294" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Browser check</text>
+  <path d="M284 114h9l3 4h14v16h-26zM286 196l9 8-9 8M284 273h28M284 276v-6a3 3 0 0 1 3-3h22a3 3 0 0 1 3 3v22a3 3 0 0 1-3 3h-22a3 3 0 0 1-3-3z" stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:var(--muted,#535568)"/>
+  <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+  <g class="wk-travel" style="--dx:-56px;--t:0.2s;--d:0.45s"><circle cx="214" cy="172" r="7" style="fill:var(--brand-mid,#5e5cb3)"/></g>
+  <path class="wk-stamp" d="M284 114h9l3 4h14v16h-26z" stroke-width="2" stroke-linejoin="round" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b);--t:0.7s;--d:0.3s"/>
+  <rect class="wk-grow" x="299" y="208" width="14" height="4" style="fill:var(--brand,#2f2a6b);--sx:0;--t:1s;--d:0.35s"/>
+  <path class="wk-draw" pathLength="1" d="M291 284l5 5 9-10" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:1.4s;--d:0.35s"/>
+  <path class="wk-draw" pathLength="1" d="M248 24H608A8 8 0 0 1 616 32V328A8 8 0 0 1 608 336H248A8 8 0 0 1 240 328V32A8 8 0 0 1 248 24Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:1.9s;--d:1s"/>
 </svg>

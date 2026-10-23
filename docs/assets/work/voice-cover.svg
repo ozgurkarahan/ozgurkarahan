@@ -1,58 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="voice-cover-title" aria-describedby="voice-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-  <title id="voice-cover-title">Horizon Famille: a voice agent consults mock systems and stops for Teams approval</title>
-  <desc id="voice-cover-desc">Illustrative drawing: on the left, a voice glyph (a microphone and a waveform, no face) stands for the voice agent. Right-angled routes lead from it to three dashed boxes, the mock systems &#8220;CRM&#8221;, &#8220;ERP&#8221; and &#8220;Knowledge base&#8221;; a small square token has visited each one, and each box is shaded as consulted. A fourth route, labelled &#8220;Outside its mandate&#8221; (in the recorded demo, a discount), runs down toward Teams and halts at a stop bar, where the token waits in front of the badge &#8220;Teams approval&#8221;: a person decides there.</desc>
-  <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-  <!-- BASE LAYER: complete meaning, never animated. -->
-  <rect x="24" y="72" width="144" height="128" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-  <path d="M52 114a10 10 0 0 1 20 0v20a10 10 0 0 1-20 0z" style="fill:var(--sage,#305b3b)"/>
-  <path d="M42 126v4a20 20 0 0 0 40 0v-4M62 150v14M50 166h24" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-  <path d="M92 136H154" stroke-width="2" style="fill:none;stroke:var(--sage,#305b3b)"/>
-  <path d="M168 136H236M250 56H236V368H282M236 136H250M236 216H250" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-  <path d="M250 50l10 6-10 6zM250 130l10 6-10 6zM250 210l10 6-10 6z" style="fill:var(--muted,#485447)"/>
-  <rect x="282" y="348" width="6" height="40" style="fill:var(--ink,#202b21)"/>
-  <rect x="260" y="24" width="356" height="64" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-  <rect class="wk-fade" x="261" y="25" width="354" height="62" style="fill:var(--sage-soft,#e1f0e1);--t:1.5s;--d:0.35s"/>
-  <text x="438" y="69" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">CRM</text>
-  <rect x="260" y="104" width="356" height="64" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-  <rect class="wk-fade" x="261" y="105" width="354" height="62" style="fill:var(--sage-soft,#e1f0e1);--t:2.2s;--d:0.35s"/>
-  <text x="438" y="149" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">ERP</text>
-  <rect x="260" y="184" width="356" height="64" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-  <rect class="wk-fade" x="261" y="185" width="354" height="62" style="fill:var(--sage-soft,#e1f0e1);--t:2.8s;--d:0.35s"/>
-  <text x="438" y="229" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Knowledge base</text>
-  <text x="438" y="308" text-anchor="middle" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Outside its mandate</text>
-  <rect x="304" y="344" width="312" height="48" style="fill:var(--warm-soft,#fbf0dc)"/>
-  <!-- EMPHASIS LAYER: drawn over the base; only stroke-dashoffset / transform / opacity animate. -->
-  <path class="wk-grow" d="M96 126h6v20h-6zM108 114h6v44h-6zM120 104h6v64h-6zM132 118h6v36h-6zM144 128h6v16h-6z" style="fill:var(--sage,#305b3b);--sx:1;--sy:0.15;--o:50% 50%;--t:0.3s;--d:0.45s"/>
-  <path class="wk-draw" pathLength="1" d="M168 136H236V54" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:0.55s;--d:0.4s"/>
-  <g class="wk-fade" style="--t:1.4s;--d:0.25s">
-    <path d="M234 56H250" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-    <path d="M250 50l10 6-10 6z" style="fill:var(--sage,#305b3b)"/>
+  <title id="voice-cover-title">Horizon Famille: a phone call reaches a voice agent that checks mock systems and stops at a Teams approval</title>
+  <desc id="voice-cover-desc">Illustrative drawing. A caller at the top left reaches the &#8220;Voice agent&#8221;. From the agent, right-angled arrows lead to three dashed boxes, the mock systems &#8220;CRM&#8221;, &#8220;ERP&#8221; and &#8220;Knowledge base&#8221;, each ticked as checked. A fourth arrow, labelled &#8220;Outside its mandate&#8221;, runs down and right to the point of the drawing, outlined in amber: &#8220;Teams approval&#8221;. A small circle, the request, waits in front of it: a person decides there.</desc>
+  <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+  <g stroke-width="2" style="fill:none;stroke:var(--ink,#191a2c)">
+    <circle cx="128" cy="40" r="10"/>
+    <path d="M110 74A18 18 0 0 1 146 74"/>
   </g>
-  <g class="wk-fade" style="--t:2.1s;--d:0.25s">
-    <path d="M236 136H250" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-    <path d="M250 130l10 6-10 6z" style="fill:var(--sage,#305b3b)"/>
-  </g>
-  <path class="wk-draw" pathLength="1" d="M236 136V216" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:2.2s;--d:0.25s"/>
-  <g class="wk-fade" style="--t:2.7s;--d:0.25s">
-    <path d="M236 216H250" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-    <path d="M250 210l10 6-10 6z" style="fill:var(--sage,#305b3b)"/>
-  </g>
-  <path class="wk-draw" pathLength="1" d="M236 216V368H282" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:2.95s;--d:0.4s"/>
-  <g class="wk-travel" style="--dx:-52px;--t:0.65s;--d:0.4s">
-    <g class="wk-travel" style="--dy:80px;--t:1.05s;--d:0.45s">
-      <g class="wk-travel" style="--dy:-80px;--t:1.75s;--d:0.45s">
-        <g class="wk-travel" style="--dy:-80px;--t:2.4s;--d:0.4s">
-          <g class="wk-travel" style="--dy:-152px;--t:3s;--d:0.5s">
-            <g class="wk-travel" style="--dx:-30px;--t:3.5s;--d:0.4s">
-              <rect x="258" y="360" width="16" height="16" style="fill:var(--sage,#305b3b)"/>
-            </g>
-          </g>
-        </g>
-      </g>
+  <text x="160" y="66" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Caller</text>
+  <path d="M128 82V98M232 144H302M272 72V216M272 72H302M272 216H302M48 180V320H302" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+  <path d="M122 98L128 108L134 98ZM302 66L312 72L302 78ZM302 138L312 144L302 150ZM302 210L312 216L302 222ZM302 314L312 320L302 326Z" style="fill:var(--muted,#535568)"/>
+  <rect x="24" y="108" width="208" height="72" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+  <text x="128" y="154" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Voice agent</text>
+  <rect x="312" y="44" width="304" height="56" rx="8" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="368" y="82" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">CRM</text>
+  <rect x="312" y="116" width="304" height="56" rx="8" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="368" y="154" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">ERP</text>
+  <rect x="312" y="188" width="304" height="56" rx="8" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="368" y="226" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Knowledge base</text>
+  <text x="64" y="276" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Outside its mandate</text>
+  <rect x="312" y="288" width="304" height="64" rx="8" stroke-width="2" style="fill:var(--accent-soft,#fef2dd);stroke:var(--line,#d9dae4)"/>
+  <text x="464" y="330" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Teams approval</text>
+  <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+  <path class="wk-draw" pathLength="1" d="M332 72l7 7 13-14" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.30s;--d:0.3s"/>
+  <path class="wk-draw" pathLength="1" d="M332 144l7 7 13-14" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.55s;--d:0.3s"/>
+  <path class="wk-draw" pathLength="1" d="M332 216l7 7 13-14" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.80s;--d:0.3s"/>
+  <g class="wk-travel" style="--dy:-132px;--t:1.2s;--d:0.5s">
+    <g class="wk-travel" style="--dx:-240px;--t:1.75s;--d:0.5s">
+      <circle cx="288" cy="320" r="7" style="fill:var(--brand-mid,#5e5cb3)"/>
     </g>
   </g>
-  <path class="wk-draw" pathLength="1" d="M460 344H616V392H304V344Z" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.7s;--d:0.85s"/>
-  <!-- BOTTOM BAND y 336–392: "Illustrative" fixed at (24, 376); the key badge right-aligned to x 616. -->
-  <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-  <text x="460" y="376" text-anchor="middle" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">Teams approval</text>
+  <path class="wk-draw" pathLength="1" d="M320 288H608A8 8 0 0 1 616 296V344A8 8 0 0 1 608 352H320A8 8 0 0 1 312 344V296A8 8 0 0 1 320 288Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:2.4s;--d:0.8s"/>
 </svg>

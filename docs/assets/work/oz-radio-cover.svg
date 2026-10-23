@@ -1,32 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="ozr-cover-title" aria-describedby="ozr-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-  <title id="ozr-cover-title">Oz Radio: a live presentation paused for a spoken question</title>
-  <desc id="ozr-cover-desc">Illustrative drawing: a live presentation paused for a question. A panel labelled "AI avatar" and "Slide 1 of 5" shows pause bars; below it is a strip of five slide thumbnails, with progress stopped partway through the first. A raised hand asks, in a speech bubble, "What is the difference between a model and an agent?". Slides 2 and 3 are highlighted and outlined, with an arrow down to the citation "From slides 2 and 3".</desc>
-  <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-  <rect x="24" y="24" width="312" height="144" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-  <text x="48" y="72" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">AI avatar</text>
-  <text x="48" y="144" font-size="32" font-weight="500" style="fill:var(--muted,#485447)">Slide 1 of 5</text>
-  <rect x="24" y="192" width="56" height="32" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-  <path d="M88 192h56v32H88zM152 192h56v32h-56z" stroke-width="2" style="fill:var(--warm-soft,#fbf0dc);stroke:var(--line,#c6d2c3)"/>
-  <path d="M216 192h56v32h-56zM280 192h56v32h-56z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-  <path d="M148 224v40" fill="none" stroke-width="2" style="stroke:var(--muted,#485447)"/>
-  <path d="M142 264h12l-6 10z" style="fill:var(--muted,#485447)"/>
-  <text x="24" y="308" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">From slides 2 and 3</text>
-  <path d="M360 24h256v200H496l-12 16-12-16H360z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-  <text x="384" y="64" font-size="32" font-weight="500" style="fill:var(--ink,#202b21)"><tspan x="384">What is the</tspan><tspan x="384" dy="36">difference</tspan><tspan x="384" dy="36">between a</tspan><tspan x="384" dy="36">model and</tspan><tspan x="384" dy="36">an agent?</tspan></text>
-  <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-  <path class="wk-draw" pathLength="1" d="M456 224h16l12 16 12-16h120V24H360v200z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.65s;--d:1.55s"/>
-  <path class="wk-draw" pathLength="1" d="M116 224H88v-32h56v32z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:3s;--d:0.35s"/>
-  <path class="wk-draw" pathLength="1" d="M180 224h-28v-32h56v32z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:3.1s;--d:0.35s"/>
-  <path class="wk-draw" pathLength="1" d="M116 224H88v-32h56v32z" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.65s;--d:0.4s"/>
-  <path class="wk-draw" pathLength="1" d="M180 224h-28v-32h56v32z" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.75s;--d:0.4s"/>
-  <path class="wk-draw" pathLength="1" d="M148 224v40" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:4.05s;--d:0.3s"/>
-  <rect class="wk-grow" x="24" y="192" width="34" height="32" style="fill:var(--sage,#305b3b);--t:0.3s;--d:0.8s"/>
-  <path class="wk-stamp" d="M272 48h16v56h-16zM304 48h16v56h-16z" style="fill:var(--sage,#305b3b);--t:1.45s;--d:0.3s"/>
-  <path class="wk-stamp" d="M141 263h14l-7 12z" style="fill:var(--warm,#8a4b06);--t:4.3s;--d:0.25s"/>
-  <g class="wk-travel" style="--dy:48px;--t:0.95s;--d:0.6s">
-    <g transform="translate(453 250)" stroke-width="3" style="stroke:var(--sage,#305b3b)">
-      <path d="M14 78V52H0V30H10v10h4V8h12V0h12v4h12v12h12v62z" style="fill:var(--sage-soft,#e1f0e1)"/>
-      <path d="M26 8v28M38 4v32M50 16v20" fill="none"/>
-    </g>
+  <title id="ozr-cover-title">Oz Radio: a live presentation pauses for a spoken question and answers from the slides it cites</title>
+  <desc id="ozr-cover-desc">Illustrative drawing. A person at the top left asks a spoken question; an arrow leads down to the AI presenter, shown paused. An arrow runs from the presenter to a strip of five slides, numbered 1 to 5; slides 2 and 3 are highlighted as cited. An arrow from those two slides leads down to the point of the drawing, outlined in amber: &#8220;Answer: slides 2, 3&#8221;.</desc>
+  <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+  <g stroke-width="2" style="fill:none;stroke:var(--ink,#191a2c)">
+    <circle cx="128" cy="40" r="10"/>
+    <path d="M110 74A18 18 0 0 1 146 74"/>
   </g>
+  <text x="160" y="66" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Spoken question</text>
+  <path d="M128 82V98M232 160H302M432 192V262" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+  <path d="M122 98L128 108L134 98ZM302 154L312 160L302 166ZM426 262L432 272L438 262Z" style="fill:var(--muted,#535568)"/>
+  <rect x="24" y="108" width="208" height="104" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+  <text x="128" y="150" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">AI presenter</text>
+  <text x="96" y="194" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Paused</text>
+  <text x="312" y="112" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Slides</text>
+  <rect x="312" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <rect x="376" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <rect x="440" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <rect x="504" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <rect x="568" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <rect x="312" y="272" width="304" height="72" rx="8" stroke-width="2" style="fill:var(--accent-soft,#fef2dd);stroke:var(--line,#d9dae4)"/>
+  <text x="464" y="318" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Answer: slides 2, 3</text>
+  <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+  <path class="wk-stamp" d="M64 172h7v22h-7zM78 172h7v22h-7z" style="fill:var(--brand,#2f2a6b);--t:0.3s;--d:0.3s"/>
+  <rect class="wk-fade" x="376" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b);--t:0.8s;--d:0.3s"/>
+  <rect class="wk-fade" x="440" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b);--t:1.05s;--d:0.3s"/>
+  <path class="wk-draw" pathLength="1" d="M320 272H608A8 8 0 0 1 616 280V336A8 8 0 0 1 608 344H320A8 8 0 0 1 312 336V280A8 8 0 0 1 320 272Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:1.6s;--d:0.8s"/>
+  <text x="336" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--muted,#535568)">1</text>
+  <text x="400" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">2</text>
+  <text x="464" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">3</text>
+  <text x="528" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--muted,#535568)">4</text>
+  <text x="592" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--muted,#535568)">5</text>
 </svg>

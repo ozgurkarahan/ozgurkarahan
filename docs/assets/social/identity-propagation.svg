@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" width="1200" height="627" role="img" aria-labelledby="social-title">
+  <title id="social-title">Identity propagation for AI agents: agents should act as the person who asked.</title>
+  <!-- Source for the dated PNG. Generated from docs/assets/work/identity-cover.svg; render with the site fonts loaded. -->
+  <rect width="1200" height="627" fill="#f8f8fb"/>
+  <rect width="1200" height="10" fill="#2f2a6b"/>
+  <rect x="72" y="80" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="88" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="96" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="104" width="34" height="5" rx="2" fill="#2f2a6b"/><rect x="72" y="112" width="34" height="5" rx="2" fill="#d9dae4"/>
+  <text x="122" y="105" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="500" letter-spacing="3" fill="#2f2a6b">04 · IDENTITY</text>
+  <text font-family="Bricolage Grotesque, Public Sans, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.5" fill="#191a2c"><tspan x="72" y="210">Agents should act</tspan><tspan x="72" y="274">as the person</tspan><tspan x="72" y="338">who asked.</tspan></text>
+  <text x="72" y="430" font-family="Public Sans, sans-serif" font-size="24" fill="#535568">Identity propagation for AI agents</text>
+  <text x="72" y="590" font-family="IBM Plex Mono, monospace" font-size="20" fill="#2f2a6b">ozgurkarahan.com</text>
+  <g transform="translate(600 100) scale(0.9)">
+    <clipPath id="frame"><rect width="640" height="400" rx="16"/></clipPath>
+    <svg width="640" height="400" viewBox="0 0 640 400" clip-path="url(#frame)" font-family="Public Sans, Segoe UI, sans-serif">
+  
+  
+  <rect width="640" height="400" style="fill:#f8f8fb"/>
+  <g stroke-width="2" style="fill:none;stroke:#191a2c">
+    <circle cx="128" cy="40" r="10"/>
+    <path d="M110 74A18 18 0 0 1 146 74"/>
+  </g>
+  <text x="160" y="66" font-size="28" font-weight="600" style="fill:#191a2c">Alice</text>
+  <path d="M128 82V98M128 180V226M232 272H272V68H302M272 164H302M464 196V238" stroke-width="2" style="fill:none;stroke:#535568"/>
+  <path d="M122 98L128 108L134 98ZM122 226L128 236L134 226ZM302 62L312 68L302 74ZM302 158L312 164L302 170ZM458 238L464 248L470 238Z" style="fill:#535568"/>
+  <rect x="24" y="108" width="208" height="72" rx="8" stroke-width="2" style="fill:#eeeffe;stroke:#2f2a6b"/>
+  <text x="128" y="154" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Agent</text>
+  <rect x="24" y="236" width="208" height="72" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <text x="128" y="282" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Gateway</text>
+  <rect x="312" y="36" width="304" height="64" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <text x="464" y="78" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">ServiceNow</text>
+  <rect x="312" y="132" width="304" height="64" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <text x="464" y="174" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Salesforce</text>
+  <rect x="312" y="248" width="304" height="96" rx="8" stroke-width="2" style="fill:#fef2dd;stroke:#d9dae4"/>
+  <text x="464" y="290" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Last modified</text>
+  <text x="464" y="326" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">by Alice</text>
+  <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:#535568">Illustrative</text>
+  <g style=""><circle cx="128" cy="203" r="7" style="fill:#5e5cb3"/></g>
+  <circle cx="290" cy="68" r="7" style="fill:#5e5cb3"/>
+  <circle cx="290" cy="164" r="7" style="fill:#5e5cb3"/>
+  <circle cx="464" cy="220" r="7" style="fill:#5e5cb3"/>
+  <path pathLength="1" d="M320 248H608A8 8 0 0 1 616 256V336A8 8 0 0 1 608 344H320A8 8 0 0 1 312 336V256A8 8 0 0 1 320 248Z" stroke-width="4" style="fill:none;stroke:#b8791a"/>
+</svg>
+    <rect width="640" height="400" rx="16" fill="none" stroke="#d9dae4" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,52 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-labelledby="ozr-social-title ozr-social-desc">
-  <title id="ozr-social-title">Ozgur Karahan: Oz Radio, a presentation you can interrupt.</title>
-  <desc id="ozr-social-desc">Ozgur Karahan, AI Solution Engineer at Microsoft. Headline "Oz Radio: a presentation you can interrupt" beside an illustrative drawing on a stone background: a presentation paused at slide 1 of 5 for a raised hand's question, answered from slides 2 and 3. Live demo · AI avatar · capped daily. ozgurkarahan.com</desc>
-  <!-- Source of oz-radio-2026-10-20.png. Set in the self-hosted Public Sans (docs/assets/fonts/fonts.css); other fonts change the line widths. The nested drawing is docs/assets/work/oz-radio-cover.svg without its title and desc, at 0.75 scale. -->
-  <rect width="1200" height="627" fill="#f6faf6"/>
-  <rect x="64" y="116" width="1072" height="1" fill="#305b3b"/>
-  <rect x="64" y="517" width="1072" height="1" fill="#c6d2c3"/>
-  <g font-family="'Public Sans', 'Segoe UI', Arial, sans-serif">
-    <text x="63" y="86" fill="#202b21" font-size="32" font-weight="700">Ozgur Karahan</text>
-    <text x="1137" y="86" fill="#485447" font-size="23" text-anchor="end">AI Solution Engineer at Microsoft</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" width="1200" height="627" role="img" aria-labelledby="social-title">
+  <title id="social-title">Oz Radio: a presentation you can interrupt.</title>
+  <!-- Source for the dated PNG. Generated from docs/assets/work/oz-radio-cover.svg; render with the site fonts loaded. -->
+  <rect width="1200" height="627" fill="#f8f8fb"/>
+  <rect width="1200" height="10" fill="#2f2a6b"/>
+  <rect x="72" y="80" width="34" height="5" rx="2" fill="#2f2a6b"/><rect x="72" y="88" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="96" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="104" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="112" width="34" height="5" rx="2" fill="#d9dae4"/>
+  <text x="122" y="105" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="500" letter-spacing="3" fill="#2f2a6b">01 · VOICE</text>
+  <text font-family="Bricolage Grotesque, Public Sans, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.5" fill="#191a2c"><tspan x="72" y="210">Oz Radio:</tspan><tspan x="72" y="274">a presentation</tspan><tspan x="72" y="338">you can interrupt.</tspan></text>
+  <text x="72" y="430" font-family="Public Sans, sans-serif" font-size="24" fill="#535568">An AI avatar presents; raise your hand and ask.</text>
+  <text x="72" y="590" font-family="IBM Plex Mono, monospace" font-size="20" fill="#2f2a6b">ozgurkarahan.com</text>
+  <g transform="translate(600 100) scale(0.9)">
+    <clipPath id="frame"><rect width="640" height="400" rx="16"/></clipPath>
+    <svg width="640" height="400" viewBox="0 0 640 400" clip-path="url(#frame)" font-family="Public Sans, Segoe UI, sans-serif">
+  
+  
+  <rect width="640" height="400" style="fill:#f8f8fb"/>
+  <g stroke-width="2" style="fill:none;stroke:#191a2c">
+    <circle cx="128" cy="40" r="10"/>
+    <path d="M110 74A18 18 0 0 1 146 74"/>
   </g>
-  <g font-family="'Public Sans', 'Segoe UI', Arial, sans-serif" fill="#202b21" font-size="68" font-weight="800" letter-spacing="-2.72">
-    <text x="61" y="268">Oz Radio:</text>
-    <text x="62" y="341">a presentation</text>
-    <text x="63" y="414" fill="#305b3b">you can interrupt</text>
+  <text x="160" y="66" font-size="28" font-weight="500" style="fill:#535568">Spoken question</text>
+  <path d="M128 82V98M232 160H302M432 192V262" stroke-width="2" style="fill:none;stroke:#535568"/>
+  <path d="M122 98L128 108L134 98ZM302 154L312 160L302 166ZM426 262L432 272L438 262Z" style="fill:#535568"/>
+  <rect x="24" y="108" width="208" height="104" rx="8" stroke-width="2" style="fill:#eeeffe;stroke:#2f2a6b"/>
+  <text x="128" y="150" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">AI presenter</text>
+  <text x="96" y="194" font-size="28" font-weight="500" style="fill:#535568">Paused</text>
+  <text x="312" y="112" font-size="28" font-weight="500" style="fill:#535568">Slides</text>
+  <rect x="312" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <rect x="376" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <rect x="440" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <rect x="504" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <rect x="568" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <rect x="312" y="272" width="304" height="72" rx="8" stroke-width="2" style="fill:#fef2dd;stroke:#d9dae4"/>
+  <text x="464" y="318" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Answer: slides 2, 3</text>
+  <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:#535568">Illustrative</text>
+  <path d="M64 172h7v22h-7zM78 172h7v22h-7z" style="fill:#2f2a6b"/>
+  <rect x="376" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:#eeeffe;stroke:#2f2a6b"/>
+  <rect x="440" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:#eeeffe;stroke:#2f2a6b"/>
+  <path pathLength="1" d="M320 272H608A8 8 0 0 1 616 280V336A8 8 0 0 1 608 344H320A8 8 0 0 1 312 336V280A8 8 0 0 1 320 272Z" stroke-width="4" style="fill:none;stroke:#b8791a"/>
+  <text x="336" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:#535568">1</text>
+  <text x="400" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:#191a2c">2</text>
+  <text x="464" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:#191a2c">3</text>
+  <text x="528" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:#535568">4</text>
+  <text x="592" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:#535568">5</text>
+</svg>
+    <rect width="640" height="400" rx="16" fill="none" stroke="#d9dae4" stroke-width="2"/>
   </g>
-  <g font-family="'Public Sans', 'Segoe UI', Arial, sans-serif" font-size="23">
-    <text x="62" y="563" fill="#485447" font-weight="500">Live demo · AI avatar · capped daily</text>
-    <text x="1137" y="563" fill="#305b3b" font-weight="600" text-anchor="end">ozgurkarahan.com</text>
-  </g>
-  <svg x="656" y="167" width="480" height="300" viewBox="0 0 640 400" font-family="Public Sans, Segoe UI, sans-serif">
-    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-    <rect x="24" y="24" width="312" height="144" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-    <text x="48" y="72" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">AI avatar</text>
-    <text x="48" y="144" font-size="32" font-weight="500" style="fill:var(--muted,#485447)">Slide 1 of 5</text>
-    <rect x="24" y="192" width="56" height="32" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-    <path d="M88 192h56v32H88zM152 192h56v32h-56z" stroke-width="2" style="fill:var(--warm-soft,#fbf0dc);stroke:var(--line,#c6d2c3)"/>
-    <path d="M216 192h56v32h-56zM280 192h56v32h-56z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-    <path d="M148 224v40" fill="none" stroke-width="2" style="stroke:var(--muted,#485447)"/>
-    <path d="M142 264h12l-6 10z" style="fill:var(--muted,#485447)"/>
-    <text x="24" y="308" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">From slides 2 and 3</text>
-    <path d="M360 24h256v200H496l-12 16-12-16H360z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-    <text x="384" y="64" font-size="32" font-weight="500" style="fill:var(--ink,#202b21)"><tspan x="384">What is the</tspan><tspan x="384" dy="36">difference</tspan><tspan x="384" dy="36">between a</tspan><tspan x="384" dy="36">model and</tspan><tspan x="384" dy="36">an agent?</tspan></text>
-    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-    <path class="wk-draw" pathLength="1" d="M456 224h16l12 16 12-16h120V24H360v200z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.65s;--d:1.55s"/>
-    <path class="wk-draw" pathLength="1" d="M116 224H88v-32h56v32z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:3s;--d:0.35s"/>
-    <path class="wk-draw" pathLength="1" d="M180 224h-28v-32h56v32z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:3.1s;--d:0.35s"/>
-    <path class="wk-draw" pathLength="1" d="M116 224H88v-32h56v32z" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.65s;--d:0.4s"/>
-    <path class="wk-draw" pathLength="1" d="M180 224h-28v-32h56v32z" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.75s;--d:0.4s"/>
-    <path class="wk-draw" pathLength="1" d="M148 224v40" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:4.05s;--d:0.3s"/>
-    <rect class="wk-grow" x="24" y="192" width="34" height="32" style="fill:var(--sage,#305b3b);--t:0.3s;--d:0.8s"/>
-    <path class="wk-stamp" d="M272 48h16v56h-16zM304 48h16v56h-16z" style="fill:var(--sage,#305b3b);--t:1.45s;--d:0.3s"/>
-    <path class="wk-stamp" d="M141 263h14l-7 12z" style="fill:var(--warm,#8a4b06);--t:4.3s;--d:0.25s"/>
-    <g class="wk-travel" style="--dy:48px;--t:0.95s;--d:0.6s">
-      <g transform="translate(453 250)" stroke-width="3" style="stroke:var(--sage,#305b3b)">
-        <path d="M14 78V52H0V30H10v10h4V8h12V0h12v4h12v12h12v62z" style="fill:var(--sage-soft,#e1f0e1)"/>
-        <path d="M26 8v28M38 4v32M50 16v20" fill="none"/>
-      </g>
-    </g>
-  </svg>
-  <rect x="656.5" y="167.5" width="479" height="299" fill="none" stroke="#c6d2c3" stroke-width="1"/>
 </svg>

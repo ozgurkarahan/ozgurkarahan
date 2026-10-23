@@ -5,43 +5,43 @@
 <title>Slide 7 — Operate & Improve (product zoom)</title>
 <link rel="stylesheet" href="../../docs/assets/fonts/deck-fonts.css">
 <style>
-  :root{--bg:#EDF1F7;--paper:#FFFFFF;--line:#E2E8F2;--ink:#16202F;--muted:#6B7790;
-    --azure:#0F6CBD;--azure-soft:#EAF3FC;--azure-line:#BBD7F0;--sand:#9FB4D0;
-    --amber:#C2620A;--amber-soft:#FFF4E4;--amber-line:#F0C078;--ok:#1F9D6B;--node:#F7F9FC}
+  :root{--bg:#eef0f6;--paper:#FFFFFF;--line:#d9dae4;--ink:#191a2c;--muted:#535568;
+    --brand:#2f2a6b; --brand-mid:#5e5cb3;--brand-soft:#eeeffe;--brand-line:#ccceeb;--sand:#acaece;
+    --amber:#b8791a; --amber-text:#905c16;--amber-soft:#fef2dd;--amber-line:#ecc98a;--node:#f8f8fb}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);font-family:"Instrument Sans",system-ui,sans-serif;color:var(--ink);
+  body{background:var(--bg);font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);
     display:flex;align-items:center;justify-content:center;min-height:100vh;padding:0}
   .slide{width:100vw;aspect-ratio:16/9;container-type:inline-size;background:var(--paper);
-    border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(22,32,47,.10)}
+    border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(25,26,44,.10)}
   .slide-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:3cqw 4cqw 2cqw;gap:1.3cqw}
   @keyframes fadeUp{from{opacity:0;transform:translateY(.6cqw)}to{opacity:1;transform:none}}
   @keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
   @keyframes slipR{from{opacity:0;transform:translateX(-.8cqw)}to{opacity:1;transform:none}}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(194,98,10,.4)}70%{box-shadow:0 0 0 .6cqw rgba(194,98,10,0)}100%{box-shadow:0 0 0 0 rgba(194,98,10,0)}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(184,121,26,.4)}70%{box-shadow:0 0 0 .6cqw rgba(184,121,26,0)}100%{box-shadow:0 0 0 0 rgba(184,121,26,0)}}
 
   .header-band{display:flex;align-items:flex-end;gap:2.4cqw}
   .header-left{display:flex;flex-direction:column;gap:.8cqw}
-  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.95cqw;letter-spacing:.22em;text-transform:uppercase;color:var(--azure);opacity:0;animation:fadeUp .6s ease forwards .2s}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.95cqw;letter-spacing:.22em;text-transform:uppercase;color:var(--brand);opacity:0;animation:fadeUp .6s ease forwards .2s}
   .w-solo{font-size:3.2cqw;font-weight:800;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.02em;opacity:0;animation:fadeUp .6s ease forwards .5s}
-  .w-solo .gold{color:var(--amber)}
+  .w-solo .gold{color:var(--amber-text)}
   .subtitle{margin-left:auto;text-align:right;font-size:1.2cqw;line-height:1.5;color:var(--muted);align-self:flex-end;padding-bottom:.4cqw;opacity:0;animation:fadeUp .6s ease forwards 1s}
   .subtitle b{color:var(--ink);font-weight:600}
 
   .stepper{display:flex;align-items:center;gap:.6cqw;opacity:0;animation:fadeUp .5s ease forwards 1.3s}
   .stepper .s{font-family:"IBM Plex Mono",monospace;font-size:.78cqw;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:.3cqw .8cqw;border:1px solid var(--line);border-radius:99px;background:#fff}
-  .stepper .s.on{color:#fff;background:var(--azure);border-color:var(--azure)}
-  .stepper .s.on-amber{color:#fff;background:var(--amber);border-color:var(--amber)}
-  .stepper .sep{color:#B7C3D8;font-size:.9cqw}
+  .stepper .s.on{color:#fff;background:var(--brand);border-color:var(--brand)}
+  .stepper .s.on-amber{color:#fff;background:var(--amber-text);border-color:var(--amber-text)}
+  .stepper .sep{color:#bdbfd4;font-size:.9cqw}
 
   /* body : 4 etapes en chaine, Improve en ambre, fleche retour */
   .flow{flex:1;display:flex;align-items:stretch;gap:.7cqw;position:relative;margin-bottom:2.2cqw}
-  .arrow{align-self:center;color:#B7C3D8;font-size:1.5cqw;opacity:0;animation:slipR .4s ease forwards}
+  .arrow{align-self:center;color:#bdbfd4;font-size:1.5cqw;opacity:0;animation:slipR .4s ease forwards}
   .st{flex:1;border:1px solid var(--line);border-radius:12px;background:#fff;padding:1.1cqw 1cqw;display:flex;flex-direction:column;gap:.7cqw;opacity:0;animation:pop .5s cubic-bezier(.2,.8,.3,1.12) forwards}
   .st .sh{display:flex;align-items:center;gap:.7cqw}
-  .st .sh svg{width:1.7cqw;height:1.7cqw;stroke:var(--azure);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .st .sh svg{width:1.7cqw;height:1.7cqw;stroke:var(--brand-mid);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
   .st .sh b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.3cqw;font-weight:700;letter-spacing:-.01em}
   .st .have{font-family:"IBM Plex Mono",monospace;font-size:.62cqw;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:auto}
-  .st .prod{font-family:"IBM Plex Mono",monospace;font-size:.75cqw;color:var(--azure);background:var(--azure-soft);border:1px solid var(--azure-line);border-radius:6px;padding:.35cqw .55cqw;display:inline-block;width:max-content}
+  .st .prod{font-family:"IBM Plex Mono",monospace;font-size:.75cqw;color:var(--brand);background:var(--brand-soft);border:1px solid var(--brand-line);border-radius:6px;padding:.35cqw .55cqw;display:inline-block;width:max-content}
   .st p{font-size:.92cqw;color:var(--muted);line-height:1.4}
   .st.observe{animation-delay:1.7s}
   .arrow.a1{animation-delay:2.1s}
@@ -51,14 +51,14 @@
   .arrow.a3{animation-delay:3.3s}
   .st.improve{animation-delay:3.5s;background:var(--amber-soft);border-color:var(--amber-line)}
   .st.improve .sh svg{stroke:var(--amber)}
-  .st.improve .prod{color:var(--amber);background:#fff;border-color:var(--amber-line)}
-  .st.improve .newtag{font-family:"IBM Plex Mono",monospace;font-size:.62cqw;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);font-weight:500;margin-top:auto}
+  .st.improve .prod{color:var(--amber-text);background:#fff;border-color:var(--amber-line)}
+  .st.improve .newtag{font-family:"IBM Plex Mono",monospace;font-size:.62cqw;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-text);font-weight:500;margin-top:auto}
 
   .loopback{position:absolute;left:0;right:0;bottom:-1.7cqw;height:2cqw;pointer-events:none}
   .loopback svg{width:100%;height:100%;overflow:visible}
   .loopback path{fill:none;stroke:var(--amber);stroke-width:2;stroke-dasharray:5 4;stroke-dashoffset:1900;animation:draw 1.1s ease forwards 4.2s}
   @keyframes draw{to{stroke-dashoffset:0}}
-  .lb-label{position:absolute;left:50%;bottom:.1cqw;transform:translateX(-50%);background:var(--paper);padding:0 .8cqw;font-family:"IBM Plex Mono",monospace;font-size:.78cqw;color:var(--amber);letter-spacing:.06em;opacity:0;animation:fadeUp .5s ease forwards 5s}
+  .lb-label{position:absolute;left:50%;bottom:.1cqw;transform:translateX(-50%);background:var(--paper);padding:0 .8cqw;font-family:"IBM Plex Mono",monospace;font-size:.78cqw;color:var(--amber-text);letter-spacing:.06em;opacity:0;animation:fadeUp .5s ease forwards 5s}
 
   .outcome{display:flex;align-items:center;gap:1cqw;background:var(--amber-soft);border:1px solid var(--amber-line);border-radius:10px;padding:.85cqw 1.2cqw;opacity:0;animation:fadeUp .5s ease forwards 5.2s}
   .outcome .pulse{width:.6cqw;height:.6cqw;border-radius:50%;background:var(--amber);flex:none;animation:pulse 2.2s infinite 5.4s}
@@ -66,12 +66,12 @@
   .outcome span{font-size:1cqw;color:var(--muted)}
 
   .foot{display:flex;align-items:center;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:.9cqw;color:var(--muted);letter-spacing:.08em;padding-top:.2cqw}
-  .foot .num{color:var(--azure)}
+  .foot .num{color:var(--brand)}
   @media (prefers-reduced-motion: reduce){*{animation-duration:.01s !important;animation-delay:0s !important}}
 </style>
 </head>
 <body>
-<section class="slide"><div class="slide-inner">
+<section class="slide" aria-label="Slide 7"><div class="slide-inner">
 
   <div class="header-band">
     <div class="header-left">

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" role="img" aria-labelledby="idp-diagram-title" aria-describedby="idp-diagram-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+  <title id="idp-diagram-title">Identity propagation: the same person reaches every system</title>
+  <desc id="idp-diagram-desc">Diagram, read left to right. Alice signs in with Entra ID, in Teams or Copilot. A small circle, her identity token, travels along every arrow: from Teams or Copilot to the Foundry agent, which calls MCP tools with her token; to API Management, which validates the token and exchanges it on her behalf (on-behalf-of); then to Salesforce and to ServiceNow, which each apply their own rules. Both arrows end at the record, highlighted in amber, which names the person: &#8220;Last modified by Alice&#8221; in Salesforce and &#8220;Created by Alice&#8221; in ServiceNow.</desc>
+  <rect width="1280" height="560" style="fill:var(--canvas,#f8f8fb)"/>
+  <path d="M116 132V226M208 300H254M448 300H494M712 300H744M744 196V404M744 196H790M744 404H790M984 196H1022M984 404H1022" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+  <path d="M110 226L116 236L122 226ZM254 294L264 300L254 306ZM494 294L504 300L494 306ZM790 190L800 196L790 202ZM790 398L800 404L790 410ZM1022 190L1032 196L1022 202ZM1022 398L1032 404L1022 410Z" style="fill:var(--muted,#535568)"/>
+  <g stroke-width="2" style="fill:none;stroke:var(--ink,#191a2c)">
+    <circle cx="116" cy="84" r="10"/>
+    <path d="M98 118A18 18 0 0 1 134 118"/>
+  </g>
+  <text x="152" y="96" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Alice signs in</text>
+  <text x="152" y="128" font-size="24" font-weight="500" style="fill:var(--muted,#535568)">with Entra ID</text>
+  <rect x="24" y="236" width="184" height="128" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="116" y="292" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Teams /</text>
+  <text x="116" y="326" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Copilot</text>
+  <rect x="264" y="236" width="184" height="128" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+  <text x="356" y="292" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Foundry</text>
+  <text x="356" y="326" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">agent</text>
+  <text x="356" y="400" text-anchor="middle" font-size="24" font-weight="500" style="fill:var(--muted,#535568)">calls MCP tools</text>
+  <text x="356" y="430" text-anchor="middle" font-size="24" font-weight="500" style="fill:var(--muted,#535568)">with her token</text>
+  <rect x="504" y="236" width="208" height="128" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="608" y="292" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">API</text>
+  <text x="608" y="326" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Management</text>
+  <text x="608" y="400" text-anchor="middle" font-size="24" font-weight="500" style="fill:var(--muted,#535568)">validates, exchanges</text>
+  <text x="608" y="430" text-anchor="middle" font-size="24" font-weight="500" style="fill:var(--muted,#535568)">on-behalf-of</text>
+  <rect x="800" y="140" width="184" height="112" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="892" y="190" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Salesforce</text>
+  <text x="892" y="224" text-anchor="middle" font-size="24" font-weight="500" style="fill:var(--muted,#535568)">its own rules</text>
+  <rect x="800" y="348" width="184" height="112" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="892" y="398" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">ServiceNow</text>
+  <text x="892" y="432" text-anchor="middle" font-size="24" font-weight="500" style="fill:var(--muted,#535568)">its own rules</text>
+  <rect x="1032" y="140" width="224" height="320" rx="8" stroke-width="4" style="fill:var(--accent-soft,#fef2dd);stroke:var(--accent,#b8791a)"/>
+  <path d="M1056 300H1232" stroke-width="2" style="fill:none;stroke:var(--line,#d9dae4)"/>
+  <text x="1144" y="190" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Last modified</text>
+  <text x="1144" y="224" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">by Alice</text>
+  <text x="1144" y="398" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Created</text>
+  <text x="1144" y="432" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">by Alice</text>
+  <g><circle cx="116" cy="180" r="7" style="fill:var(--brand-mid,#5e5cb3)"/><circle cx="228" cy="300" r="7" style="fill:var(--brand-mid,#5e5cb3)"/><circle cx="468" cy="300" r="7" style="fill:var(--brand-mid,#5e5cb3)"/><circle cx="728" cy="300" r="7" style="fill:var(--brand-mid,#5e5cb3)"/><circle cx="768" cy="196" r="7" style="fill:var(--brand-mid,#5e5cb3)"/><circle cx="768" cy="404" r="7" style="fill:var(--brand-mid,#5e5cb3)"/><circle cx="1004" cy="196" r="7" style="fill:var(--brand-mid,#5e5cb3)"/><circle cx="1004" cy="404" r="7" style="fill:var(--brand-mid,#5e5cb3)"/></g>
+  <text x="24" y="536" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+</svg>
