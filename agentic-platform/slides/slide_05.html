@@ -7,35 +7,35 @@
 <link rel="stylesheet" href="../../docs/assets/fonts/deck-fonts.css">
 <style>
   :root{
-    --bg:#EDF1F7; --paper:#FFFFFF; --line:#E2E8F2;
-    --ink:#16202F; --muted:#6B7790;
-    --azure:#0F6CBD; --azure-soft:#EAF3FC; --azure-line:#BBD7F0;
-    --sand:#9FB4D0;
-    --amber:#C2620A; --amber-soft:#FFF4E4; --amber-line:#F0C078;
-    --ok:#1F9D6B; --node:#F7F9FC;
+    --bg:#eef0f6; --paper:#FFFFFF; --line:#d9dae4;
+    --ink:#191a2c; --muted:#535568;
+    --brand:#2f2a6b; --brand-mid:#5e5cb3; --brand-soft:#eeeffe; --brand-line:#ccceeb;
+    --sand:#acaece;
+    --amber:#b8791a; --amber-text:#905c16; --amber-soft:#fef2dd; --amber-line:#ecc98a;
+    --node:#f8f8fb;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);font-family:"Instrument Sans",system-ui,sans-serif;color:var(--ink);
+  body{background:var(--bg);font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);
     display:flex;align-items:center;justify-content:center;min-height:100vh;padding:0}
   .deck-label{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
   .slide{width:100vw;aspect-ratio:16/9;container-type:inline-size;
     background:var(--paper);border:1px solid var(--line);border-radius:12px;
-    overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(22,32,47,.10)}
+    overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(25,26,44,.10)}
   .slide-inner{position:absolute;inset:0;display:flex;flex-direction:column;padding:3cqw 4cqw 2cqw;gap:1.3cqw}
 
   @keyframes fadeUp{from{opacity:0;transform:translateY(.6cqw)}to{opacity:1;transform:none}}
   @keyframes pop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
   @keyframes slipR{from{opacity:0;transform:translateX(-.8cqw)}to{opacity:1;transform:none}}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,157,107,.4)}70%{box-shadow:0 0 0 .6cqw rgba(31,157,107,0)}100%{box-shadow:0 0 0 0 rgba(31,157,107,0)}}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(94,92,179,.4)}70%{box-shadow:0 0 0 .6cqw rgba(94,92,179,0)}100%{box-shadow:0 0 0 0 rgba(94,92,179,0)}}
 
   /* header */
   .header-band{display:flex;align-items:flex-end;gap:2.4cqw}
   .header-left{display:flex;flex-direction:column;gap:.8cqw}
   .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.95cqw;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--azure);opacity:0;animation:fadeUp .6s ease forwards .2s}
+    color:var(--brand);opacity:0;animation:fadeUp .6s ease forwards .2s}
   .w-solo{font-size:3.2cqw;font-weight:800;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;
     letter-spacing:-.02em;opacity:0;animation:fadeUp .6s ease forwards .5s}
-  .w-solo .blue{color:var(--azure)}
+  .w-solo .blue{color:var(--brand)}
   .subtitle{margin-left:auto;text-align:right;font-size:1.2cqw;line-height:1.5;color:var(--muted);
     align-self:flex-end;padding-bottom:.4cqw;opacity:0;animation:fadeUp .6s ease forwards 1s}
   .subtitle b{color:var(--ink);font-weight:600}
@@ -44,8 +44,8 @@
   .stepper{display:flex;align-items:center;gap:.6cqw;opacity:0;animation:fadeUp .5s ease forwards 1.3s}
   .stepper .s{font-family:"IBM Plex Mono",monospace;font-size:.78cqw;letter-spacing:.1em;text-transform:uppercase;
     color:var(--muted);padding:.3cqw .8cqw;border:1px solid var(--line);border-radius:99px;background:#fff}
-  .stepper .s.on{color:#fff;background:var(--azure);border-color:var(--azure)}
-  .stepper .sep{color:#B7C3D8;font-size:.9cqw}
+  .stepper .s.on{color:#fff;background:var(--brand);border-color:var(--brand)}
+  .stepper .sep{color:#bdbfd4;font-size:.9cqw}
 
   /* body : probleme -> reponse */
   .body{flex:1;display:grid;grid-template-columns:.85fr auto 2fr;gap:1.6cqw;align-items:stretch}
@@ -60,20 +60,20 @@
 
   .bridge{align-self:center;display:flex;flex-direction:column;align-items:center;gap:.5cqw;
     opacity:0;animation:slipR .5s ease forwards 2.1s}
-  .bridge .ar{color:var(--azure);font-size:2cqw}
-  .bridge .lb{font-family:"IBM Plex Mono",monospace;font-size:.7cqw;color:var(--azure);letter-spacing:.1em;text-transform:uppercase}
+  .bridge .ar{color:var(--brand);font-size:2cqw}
+  .bridge .lb{font-family:"IBM Plex Mono",monospace;font-size:.7cqw;color:var(--brand);letter-spacing:.1em;text-transform:uppercase}
 
   .answer{display:flex;flex-direction:column;gap:.9cqw}
-  .answer .lt{font-family:"IBM Plex Mono",monospace;font-size:.72cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--azure);
+  .answer .lt{font-family:"IBM Plex Mono",monospace;font-size:.72cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);
     opacity:0;animation:fadeUp .5s ease forwards 2.3s}
   .cards{display:grid;grid-template-columns:1fr 1fr;gap:.9cqw;flex:1}
-  .card{background:#fff;border:1px solid var(--azure-line);border-radius:11px;padding:1cqw 1.1cqw;
+  .card{background:#fff;border:1px solid var(--brand-line);border-radius:11px;padding:1cqw 1.1cqw;
     display:flex;flex-direction:column;gap:.5cqw;opacity:0;animation:pop .45s cubic-bezier(.2,.8,.3,1.15) forwards}
   .card .ch{display:flex;align-items:center;gap:.7cqw}
-  .card .ch svg{width:1.8cqw;height:1.8cqw;stroke:var(--azure);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .card .ch svg{width:1.8cqw;height:1.8cqw;stroke:var(--brand-mid);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
   .card .ch b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.18cqw;font-weight:700;letter-spacing:-.01em}
   .card .ch .tag{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:.6cqw;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--azure);border:1px solid var(--azure-line);border-radius:99px;padding:.16cqw .55cqw;background:var(--azure-soft);white-space:nowrap}
+    color:var(--brand);border:1px solid var(--brand-line);border-radius:99px;padding:.16cqw .55cqw;background:var(--brand-soft);white-space:nowrap}
   .card p{font-size:.92cqw;color:var(--muted);line-height:1.4}
   .card code{font-family:"IBM Plex Mono",monospace;font-size:.82cqw;color:var(--ink);
     background:var(--node);border:1px solid var(--line);border-radius:4px;padding:.05cqw .35cqw}
@@ -81,23 +81,23 @@
   .card.c3{animation-delay:2.9s} .card.c4{animation-delay:3.1s}
   .card.feat{border-color:var(--amber-line)}
   .card.feat .ch svg{stroke:var(--amber)}
-  .card.feat .ch .tag{color:var(--amber);border-color:var(--amber-line);background:var(--amber-soft)}
+  .card.feat .ch .tag{color:var(--amber-text);border-color:var(--amber-line);background:var(--amber-soft)}
 
   /* outcome bar */
-  .outcome{display:flex;align-items:center;gap:1cqw;background:var(--azure-soft);border:1px solid var(--azure-line);
+  .outcome{display:flex;align-items:center;gap:1cqw;background:var(--brand-soft);border:1px solid var(--brand-line);
     border-radius:10px;padding:.85cqw 1.2cqw;opacity:0;animation:fadeUp .5s ease forwards 3.4s}
-  .outcome .pulse{width:.6cqw;height:.6cqw;border-radius:50%;background:var(--ok);flex:none;animation:pulse 2.2s infinite 3.6s}
+  .outcome .pulse{width:.6cqw;height:.6cqw;border-radius:50%;background:var(--brand-mid);flex:none;animation:pulse 2.2s infinite 3.6s}
   .outcome b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15cqw;font-weight:600;color:var(--ink)}
   .outcome span{font-size:1cqw;color:var(--muted)}
 
   .foot{display:flex;align-items:center;justify-content:space-between;font-family:"IBM Plex Mono",monospace;
     font-size:.9cqw;color:var(--muted);letter-spacing:.08em;padding-top:.2cqw}
-  .foot .num{color:var(--azure)}
+  .foot .num{color:var(--brand)}
   @media (prefers-reduced-motion: reduce){*{animation-duration:.01s !important;animation-delay:0s !important}}
 </style>
 </head>
 <body>
-<section class="slide">
+<section class="slide" aria-label="Slide 5">
   <div class="slide-inner">
 
     <div class="header-band">

@@ -9,7 +9,7 @@ This is `ozgurkarahan/ozgurkarahan`, which serves two purposes:
 
 It also holds a small Azure backend for owner-only site analytics. There is no application code or build step beyond the Pages build.
 
-`PRODUCT.md` defines the site's purpose, audience, and desired outcomes. `DESIGN.md` records its design system ("Blueprint Field Notes"). Read both before changing the homepage or adding a page.
+`PRODUCT.md` defines the site's purpose, audience, and desired outcomes. `DESIGN.md` defines its design system ("Five Building Blocks": voice, identity, context, governance, distribution as the site structure; indigo and amber tokens; the diagram grammar). Read both before changing the homepage or adding a page.
 
 ## Repo Structure
 
@@ -31,13 +31,12 @@ docs/
   learning-resources.md      — Curated AI learning resources
   assets/
     telemetry.js             — Analytics beacon, loaded by every top-level page
-    topic-showcase.js        — Homepage work wall ("Explore the work" moving shelf)
+    work-play.js             — Plays each homepage work drawing once it is fully in view
     fonts/                   — Self-hosted woff2 fonts and OFL licenses
       fonts.css              —   Site pages
       deck-fonts.css         —   Agentic Platform slides
     work/                    — Work card cover drawings (SVG)
     flagships/               — Screenshots for the Oz Radio work page
-    topics/                  — Topic images
     social/                  — Social preview images (SVG source + dated PNG)
     portrait.{webp,jpg}      — Masthead portrait
 CNAME, robots.txt, sitemap.xml

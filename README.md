@@ -2,21 +2,25 @@
 
 **AI Solution Engineer at Microsoft**
 
-**Agents that act for you, cite their sources, and stop for a human.**
+**Models matter. What surrounds them decides whether agents get used.**
 
-I build and share enterprise agent patterns where business workflows, user identity, and human decisions meet.
+A better model arrives every few weeks, and that matters. But in real enterprise projects, an agent succeeds or fails on everything around it: people talking to it, finding it in Teams or Copilot, reaching the company's workflows and data, acting as the person who asked, and staying under rules everyone can see. Those five topics are what I build and test, in the open. (Cost control and the value of each token are coming fast too; I don't cover them yet.)
 
-[Explore the work and ideas](https://ozgurkarahan.com/) · [Connect on LinkedIn](https://www.linkedin.com/in/karahanozgur/)
+[See how they fit together](https://ozgurkarahan.com/#stack) · [Connect on LinkedIn](https://www.linkedin.com/in/karahanozgur/)
 
-## Three questions behind the work
+## Five building blocks around the model
 
-| Question | What I explore |
-|----------|----------------|
-| What can it change? | A concrete business action, not just a conversational answer. |
-| Whose authority does it use? | Caller identity and authorization across system boundaries. |
-| When should a person decide? | An explicit mandate, escalation condition, and human handoff. |
+A request goes down three layers, voice, distribution and context, to the systems of record. Identity and governance cross every layer.
 
-These are design questions, not a claim that the separate projects below form one production system.
+| Block | The idea | Evidence |
+|-------|----------|----------|
+| **01 Voice**: the new channel | Voice is becoming the way we talk to agents; even developers now speak to their coding agents. | [Oz Radio](https://ozgurkarahan.com/work/oz-radio/) (present any deck live, narrated videos, two-host podcasts, 10+ languages), [Horizon Famille](https://ozgurkarahan.github.io/horizon-famille/) |
+| **02 Distribution**: where users are | Build the agent once and publish it where people work: Teams and Microsoft 365 Copilot. | [Customer 360](https://ozgurkarahan.com/customer-360/) |
+| **03 Context**: workflows and data | MCP servers for workflows and data, knowledge bases, and RAG over company documents. | [DocWiki](https://github.com/ozgurkarahan/docwiki), [ServiceNow meta-tool](https://github.com/ozgurkarahan/snow-meta-tool), [AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory), [Simple Order Agent](https://github.com/ozgurkarahan/simple-order-agent) |
+| **04 Identity**: from the voice to the system | The user's identity travels through every layer to Salesforce or ServiceNow, which apply their own authentication and authorization. | [Identity propagation, explained](https://ozgurkarahan.com/identity-propagation/), [Entra identity flow](https://github.com/ozgurkarahan/propagate-id-entra) |
+| **05 Governance**: across every layer | Every agent, tool and skill has an owner and a rule; agents that code or browse get their own isolated compute. | [Foundry hosted coding agent](https://ozgurkarahan.github.io/foundry-openai-coding-agent/), [The Agentic Platform](https://ozgurkarahan.com/agentic-platform/) |
+
+The building blocks are a way to read the work, not a claim that the separate projects below form one production system.
 
 ## See the evidence
 

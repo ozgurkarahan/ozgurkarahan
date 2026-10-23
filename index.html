@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <!--
-THESIS: Agents that act for you, cite their sources, and stop for a human.
-OWN-WORLD: Blueprint Field Notes, evolved: Stone + Sage, a graphite close, Public Sans
-and IBM Plex Mono, square shapes, measured rules. One warm accent marks Live status and each
-drawing's key moment.
-STORY: Meet the author and the live sample, browse the moving work wall, follow the
-Point of view (action, authority, human judgment) to write-ups and source, open the
-archive, then the contact close.
-FIRST VIEWPORT: The portrait beside the name in the masthead; the thesis headline, one factual
-line, "Live now: Oz Radio" and "Let's connect"; the moving work wall begins inside
-the first screen, under its provenance line.
-FORM: A flat editorial dossier around one authored motion feature, the native-scroll
-work shelf whose drawings play as they come fully into view; interaction, reduced motion
-and visibility override automatic movement.
-Status chips replace hedges; each card keeps its scope line.
+THESIS: Models matter; what surrounds them decides whether agents get used: voice, distribution, context,
+with identity and governance crossing every layer.
+OWN-WORLD: "The Stack": indigo ink on a cool paper, one amber accent for the point of each drawing,
+Bricolage Grotesque for display, Public Sans for text, IBM Plex Mono for numbers and labels.
+STORY: Meet the author and the five building blocks, walk them in order (what, why, the evidence
+and its source), then the contact close.
+FIRST VIEWPORT: The thesis headline and lede beside the five blocks, which are also the page's navigation.
+FORM: One section per building block, readable at three depths: the stance for everyone, the reasoning for
+strategists, the cards and source links for builders. Each card keeps its scope line; status chips replace hedges.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ozgur Karahan — Agents that act for you, cite their sources, and stop for a human</title>
-  <meta name="description" content="Enterprise AI through business workflows, user identity, and human oversight. Explore Ozgur Karahan's demonstrations, open-source patterns, and architectural ideas.">
-  <meta name="theme-color" content="#f1f5ef">
+  <title>Ozgur Karahan — Enterprise agents, five building blocks</title>
+  <meta name="description" content="Voice, distribution, context, identity and governance: the five building blocks enterprise agents need. Ozgur Karahan's live demos, open-source samples and talks for each one.">
+  <meta name="theme-color" content="#f8f8fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f19" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://ozgurkarahan.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ozgurkarahan.com/">
-  <meta property="og:title" content="Ozgur Karahan — Agents that act for you, cite their sources, and stop for a human">
-  <meta property="og:description" content="What can it change? Whose authority does it use? When should a person decide? Enterprise AI, explored through real demonstrations and open-source patterns.">
-  <meta property="og:image" content="https://ozgurkarahan.com/docs/assets/social/home-2026-10-21.png">
+  <meta property="og:title" content="Ozgur Karahan — Enterprise agents, five building blocks">
+  <meta property="og:description" content="Models matter, but agents succeed on what surrounds them: voice, distribution in Teams and Copilot, company context, the user's identity end to end, and governance. Live demos and samples for each.">
+  <meta property="og:image" content="https://ozgurkarahan.com/docs/assets/social/home-2026-10-22.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Ozgur Karahan. Agents that act for you, cite their sources, and stop for a human.">
+  <meta property="og:image:alt" content="Ozgur Karahan. Enterprise agents need five building blocks: voice, distribution, context, identity and governance.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ozgur Karahan — Agents that act for you, cite their sources, and stop for a human">
-  <meta name="twitter:description" content="Business workflows, user identity, and human oversight. Demonstrations, patterns, and ideas for enterprise AI.">
-  <meta name="twitter:image" content="https://ozgurkarahan.com/docs/assets/social/home-2026-10-21.png">
-  <meta name="twitter:image:alt" content="Ozgur Karahan. Agents that act for you, cite their sources, and stop for a human.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231f2a1f'/><text x='50' y='65' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='700' fill='%23e1f0e1'>OK</text></svg>">
+  <meta name="twitter:title" content="Ozgur Karahan — Enterprise agents, five building blocks">
+  <meta name="twitter:description" content="Voice, distribution, context, identity and governance. Live demos and open-source samples for each.">
+  <meta name="twitter:image" content="https://ozgurkarahan.com/docs/assets/social/home-2026-10-22.png">
+  <meta name="twitter:image:alt" content="Ozgur Karahan. Enterprise agents need five building blocks: voice, distribution, context, identity and governance.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232f2a6b'/><rect x='22' y='70' width='56' height='8' rx='3' fill='%23ecb259'/><text x='50' y='58' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='700' fill='%23f2f3f9'>OK</text></svg>">
   <link rel="preload" href="docs/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="docs/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="docs/assets/fonts/fonts.css">
   <script type="application/ld+json">
     {
@@ -48,32 +45,54 @@ Status chips replace hedges; each card keeps its scope line.
       "url": "https://ozgurkarahan.com/",
       "jobTitle": "AI Solution Engineer",
       "worksFor": { "@type": "Organization", "name": "Microsoft" },
-      "description": "Building and sharing enterprise agent patterns across business workflows, user identity, and human oversight.",
+      "description": "Building and sharing enterprise agent patterns across five building blocks: voice, distribution, context, identity and governance.",
       "sameAs": [
         "https://github.com/ozgurkarahan",
         "https://www.linkedin.com/in/karahanozgur/"
       ]
     }
   </script>
-  <script src="docs/assets/topic-showcase.js" defer></script>
+  <script src="docs/assets/work-play.js" defer></script>
   <script src="docs/assets/telemetry.js" defer></script>
   <style>
+    /* Brand tokens: OKLCH is the source of truth (see DESIGN.md); hex values are the rendered sRGB. */
     :root {
-      color-scheme: light;
-      --canvas: #f6faf6;
+      color-scheme: light dark;
+      --canvas: #f8f8fb;
       --surface: #ffffff;
-      --ink: #202b21;
-      --muted: #485447;
-      --sage: #305b3b;
-      --sage-soft: #e1f0e1;
-      --graphite: #26362a;
-      --dark-ink: #f2f7f1;
-      --dark-muted: #d1dfce;
-      --signal: #c4dcb8;
-      --line: #c6d2c3;
-      --warm: #8a4b06;
-      --warm-soft: #fbf0dc;
-      --measure: 70ch;
+      --ink: #191a2c;
+      --muted: #535568;
+      --line: #d9dae4;
+      --brand: #2f2a6b;
+      --brand-soft: #eeeffe;
+      --brand-mid: #5e5cb3;
+      --accent: #b8791a;
+      --accent-text: #905c16;
+      --accent-soft: #fef2dd;
+      --deep: #181737;
+      --on-deep: #f2f3f9;
+      --on-deep-muted: #c7c9de;
+      --cta: #ecb259;
+      --on-cta: #191a2c;
+      --display: "Bricolage Grotesque", "Public Sans", "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      --measure: 68ch;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --canvas: #0f0f19;
+        --surface: #171825;
+        --ink: #ebecf4;
+        --muted: #b4b6c7;
+        --line: #353647;
+        --brand: #a7a9ef;
+        --brand-soft: #23233e;
+        --brand-mid: #8d8ee0;
+        --accent: #e7ab54;
+        --accent-text: #eab35f;
+        --accent-soft: #3c2a13;
+        --deep: #070715;
+      }
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -91,21 +110,17 @@ Status chips replace hedges; each card keeps its scope line.
     img, svg { display: block; max-width: 100%; height: auto; }
     a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.24em; }
     a:hover { text-decoration-thickness: 0.14em; }
-    a:focus-visible, button:focus-visible, summary:focus-visible, .topic-viewport:focus-visible {
-      outline: 3px solid var(--sage);
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--brand-mid);
       outline-offset: 5px;
-      border-radius: 2px;
+      border-radius: 4px;
     }
-    /* The full-bleed track draws its ring inside; links and controls keep room for their ring when focus scrolls. */
-    .topic-viewport:focus-visible { outline-offset: -3px; }
     a, button, summary { scroll-margin-block: 0.75rem; }
-    button { font: inherit; color: inherit; }
     h1, h2, h3, p, figure { margin: 0; }
-    h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
-    h1, h2, h3 { line-height: 1.08; }
+    h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; line-height: 1.08; }
+    h1, h2 { font-family: var(--display); font-weight: 700; letter-spacing: -0.03em; }
     p { max-width: var(--measure); text-wrap: pretty; }
     p + p { margin-top: 1rem; }
-    /* With the 0.75rem scroll padding, anchor targets still land 2rem below the top of the window. */
     [id] { scroll-margin-top: 1.25rem; }
     .shell { width: min(100% - 4rem, 74rem); margin-inline: auto; }
     .skip-link {
@@ -115,7 +130,7 @@ Status chips replace hedges; each card keeps its scope line.
       left: 1rem;
       padding: 0.75rem 1rem;
       background: var(--ink);
-      color: var(--surface);
+      color: var(--canvas);
       transform: translateY(-200%);
       font-weight: 700;
     }
@@ -131,6 +146,9 @@ Status chips replace hedges; each card keeps its scope line.
       white-space: nowrap;
       border: 0;
     }
+    .mono { font-family: var(--mono); }
+
+    /* Masthead */
     .masthead {
       display: flex;
       align-items: center;
@@ -139,127 +157,197 @@ Status chips replace hedges; each card keeps its scope line.
       min-height: 5.5rem;
       border-bottom: 1px solid var(--line);
     }
-    .brand { display: inline-flex; align-items: center; gap: 0.85rem; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.025em; text-decoration: none; }
+    .brand { display: inline-flex; align-items: center; gap: 0.85rem; font-family: var(--display); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; }
     .brand-portrait { flex: none; }
-    .brand-portrait img { display: block; width: 64px; height: 64px; border: 1px solid var(--line); background: var(--surface); object-fit: cover; }
-    .brand-text > span { display: block; margin-top: 0.12rem; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+    .brand-portrait img { display: block; width: 60px; height: 60px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); object-fit: cover; }
+    .brand-text > span { display: block; margin-top: 0.12rem; font-family: "Public Sans", "Segoe UI", sans-serif; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
     .primary-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; max-width: 100%; font-size: 0.9rem; }
     .primary-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; text-decoration: none; }
     .primary-nav a:hover { text-decoration: underline; }
     .primary-nav .contact-link { font-weight: 700; }
 
-    .opening { padding-block: 2.25rem 2rem; container-type: inline-size; }
-    .opening-grid {
+    /* Opening: thesis beside the stack */
+    .opening {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 21.5rem);
-      grid-template-rows: 1fr auto auto;
-      grid-template-areas:
-        "title lede"
-        "title proof"
-        "title action";
-      align-items: end;
-      gap: 0.5rem 2.5rem;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+      padding-block: 3.25rem 3.75rem;
     }
-    .opening-title {
-      grid-area: title;
-      max-width: 22ch;
-      font-size: clamp(2.6rem, 4vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.04;
-      letter-spacing: -0.035em;
+    .eyebrow { margin-bottom: 1.1rem; color: var(--brand); font-family: var(--mono); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+    .opening-title { max-width: 17ch; font-size: clamp(2.4rem, 4.2vw, 3.3rem); line-height: 1.03; }
+    .opening-title em { font-style: normal; color: var(--brand); }
+    .opening-lede { margin-top: 1.4rem; color: var(--muted); font-size: 1.1rem; }
+    .opening-lede + .opening-lede { margin-top: 0.8rem; color: var(--ink); font-weight: 600; }
+    .opening-aside { margin-top: 1rem; padding-left: 0.85rem; border-left: 3px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+    .opening-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; margin-top: 1.75rem; }
+    .live-link { display: inline-flex; align-items: center; gap: 0.55rem; min-height: 44px; font-weight: 700; }
+    .live-dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+
+    /* The architecture: three layers a request goes down (voice, distribution, context) to the systems of record,
+       crossed by two verticals: identity (the user's own access, end to end) and governance (present at every layer).
+       It is also the page's navigation. */
+    .arch { --rail: 3.25rem; --gap: 0.75rem; margin: 0; }
+    .arch-caption { margin-bottom: 0.9rem; color: var(--muted); font-size: 0.9rem; }
+    .arch-grid { display: grid; grid-template-columns: var(--rail) minmax(0, 1fr) var(--rail); grid-template-rows: repeat(4, auto); gap: 0.6rem var(--gap); }
+    .arch-row {
+      position: relative;
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: auto auto minmax(0, 1fr);
+      align-items: center;
+      gap: 0.8rem;
+      min-height: 4.5rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      text-decoration: none;
+      transition: border-color 0.15s, background-color 0.15s;
     }
-    .opening-title em { font-style: normal; color: var(--sage); }
-    .opening-grid > p { margin: 0; }
-    .opening-lede { grid-area: lede; color: var(--muted); font-size: 1.08rem; }
-    .opening-proof { grid-area: proof; color: var(--muted); }
-    .opening-proof a { display: inline-block; padding-block: 0.6rem; color: var(--ink); font-weight: 700; }
-    .opening-action { grid-area: action; justify-self: start; }
-    .topic-showcase { position: relative; padding-top: 1.35rem; border-top: 1px solid var(--line); }
-    .topic-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 1.5rem; margin-bottom: 0.85rem; }
-    .topic-heading h2 { font-size: 1.5rem; letter-spacing: -0.025em; }
-    .topic-heading p { margin: 0; font-size: 0.9rem; }
-    .topic-heading .topic-pending { color: var(--muted); }
-    .topic-controls { display: flex; align-items: center; gap: 8px; margin-left: auto; }
-    .topic-showcase:not([data-enhanced]) .topic-controls { visibility: hidden; }
-    .topic-control {
-      display: inline-flex;
+    a.arch-row:hover { border-color: var(--brand); background: var(--brand-soft); }
+    .arch-row:nth-child(1) { grid-row: 1; }
+    .arch-row:nth-child(2) { grid-row: 2; }
+    .arch-row:nth-child(3) { grid-row: 3; }
+    /* Each layer touches both verticals: a thread tick to identity, a tick into governance. */
+    .arch-row::before, .arch-row::after { content: ""; position: absolute; top: 50%; height: 2px; margin-top: -1px; }
+    .arch-row::before { right: 100%; width: calc(var(--gap) + var(--rail) / 2); background: var(--brand-mid); }
+    .arch-row::after { left: 100%; width: var(--gap); background: var(--accent); }
+    .arch-num { color: var(--brand); font-family: var(--mono); font-size: 0.75rem; font-weight: 500; }
+    .arch-icon { width: 1.6rem; height: 1.6rem; fill: none; stroke: var(--brand); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .arch-name { display: block; font-family: var(--display); font-size: 1.25rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+    .arch-detail { display: block; margin-top: 0.1rem; color: var(--muted); font-size: 0.875rem; line-height: 1.4; }
+    .arch-systems { grid-row: 4; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; border-style: dashed; background: var(--canvas); }
+    .arch-systems-label { color: var(--muted); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .arch-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .arch-chips span { padding: 0.12rem 0.5rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); font-size: 0.8rem; font-weight: 600; }
+    .arch-identity, .arch-gov {
+      position: relative;
+      grid-row: 1 / 5;
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 44px;
-      min-height: 44px;
-      padding: 0.55rem 0.75rem;
-      border: 1px solid var(--sage);
-      background: var(--surface);
-      color: var(--ink);
-      font-size: 0.875rem;
-      font-weight: 600;
-      line-height: 1.3;
-      cursor: pointer;
+      border-radius: 10px;
+      text-decoration: none;
     }
-    .topic-control:hover:not([aria-disabled="true"]) { background: var(--sage-soft); }
-    .topic-control[aria-disabled="true"] { border-color: var(--line); color: var(--muted); background: var(--canvas); cursor: default; }
-    .topic-control svg { width: 1.25em; height: 1.25em; }
-    .topic-controls .topic-control { width: 44px; height: 44px; padding: 0; }
-    .topic-control-motion[data-action="resume"] .topic-icon-pause,
-    .topic-control-motion:not([data-action="resume"]) .topic-icon-play { display: none; }
-    .topic-counter {
-      display: inline-flex;
-      align-items: center;
-      align-self: baseline;
-      min-height: 44px;
-      padding-inline: 0.2rem;
-      color: var(--ink);
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 0.875rem;
-      font-variant-numeric: tabular-nums;
-      white-space: nowrap;
+    .arch-identity { grid-column: 1; color: var(--brand); }
+    /* The identity thread runs from the voice down to the systems of record, ending in an arrow. */
+    .arch-identity::before { content: ""; position: absolute; top: 2.25rem; bottom: 2.6rem; left: 50%; width: 3px; margin-left: -1.5px; border-radius: 2px; background: var(--brand-mid); }
+    .arch-identity::after { content: ""; position: absolute; bottom: 2rem; left: 50%; margin-left: -7px; border: 7px solid transparent; border-top: 10px solid var(--brand-mid); border-bottom: 0; }
+    .arch-gov { grid-column: 3; border: 2px solid var(--accent); background: var(--accent-soft); color: var(--accent-text); }
+    .arch-vlabel { position: relative; z-index: 1; writing-mode: vertical-rl; padding: 0.7rem 0.3rem; font-family: var(--display); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
+    .arch-identity .arch-vlabel { border-radius: 8px; background: var(--canvas); padding-block: 0.5rem; }
+    .arch-vlabel .arch-num { color: inherit; font-size: 0.7rem; }
+    .arch-vsub { margin-top: 0.4rem; font-family: "Public Sans", "Segoe UI", sans-serif; font-size: 0.8rem; font-weight: 400; letter-spacing: 0; }
+    .arch-identity:hover .arch-vlabel, .arch-gov:hover .arch-vlabel { text-decoration: underline; text-underline-offset: 0.2em; }
+    .arch-gov:hover { background: var(--surface); }
+    .arch-pulse { display: none; }
+    /* Motion: the layers stack in, the identity thread draws down, governance closes around them; then one request
+       travels from the voice to the systems of record, touching each layer. Hovering the diagram replays the request.
+       Runs once: no loop. Reduced motion shows the final frame. */
+    @media (prefers-reduced-motion: no-preference) {
+      .arch-row { animation: arch-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards, arch-hit 0.7s ease-out 2.4s; }
+      .arch-row:nth-child(1) { animation-delay: 0.1s, 1.75s; }
+      .arch-row:nth-child(2) { animation-delay: 0.22s, 2.15s; }
+      .arch-row:nth-child(3) { animation-delay: 0.34s, 2.55s; }
+      .arch-systems { animation-delay: 0.46s, 2.95s; }
+      .arch-identity::before { transform-origin: top; animation: arch-grow 0.8s cubic-bezier(0.65, 0, 0.35, 1) 0.5s backwards; }
+      .arch-identity::after, .arch-row::before, .arch-row::after { animation: arch-fade 0.3s ease-out 1.15s backwards; }
+      .arch-gov { animation: arch-fade 0.6s ease-out 0.9s backwards; }
+      .arch-pulse {
+        display: block;
+        position: absolute;
+        left: 50%;
+        width: 13px;
+        height: 13px;
+        margin: -6.5px 0 0 -6.5px;
+        border-radius: 50%;
+        background: var(--brand-mid);
+        box-shadow: 0 0 0 4px var(--brand-soft);
+        opacity: 0;
+        animation: arch-travel 1.7s cubic-bezier(0.45, 0, 0.55, 1) 1.5s;
+      }
+      .arch:hover .arch-pulse { animation-name: arch-travel-again; animation-delay: 0s; }
+      .arch:hover .arch-row { animation-name: arch-in, arch-hit-again; animation-duration: 0s, 0.7s; }
+      .arch:hover .arch-row:nth-child(1) { animation-delay: 0s, 0.25s; }
+      .arch:hover .arch-row:nth-child(2) { animation-delay: 0s, 0.65s; }
+      .arch:hover .arch-row:nth-child(3) { animation-delay: 0s, 1.05s; }
+      .arch:hover .arch-systems { animation-delay: 0s, 1.45s; }
     }
-    .topic-viewport {
-      min-width: 0;
-      overflow-x: auto;
-      scroll-behavior: auto;
-      overscroll-behavior-x: contain;
-      scrollbar-width: none;
+    @keyframes arch-in { from { opacity: 0; transform: translateY(0.6rem); } }
+    @keyframes arch-fade { from { opacity: 0; } }
+    @keyframes arch-grow { from { transform: scaleY(0); } }
+    @keyframes arch-travel { 0% { top: 2.25rem; opacity: 0; } 8%, 92% { opacity: 1; } 100% { top: calc(100% - 2.4rem); opacity: 0; } }
+    @keyframes arch-travel-again { 0% { top: 2.25rem; opacity: 0; } 8%, 92% { opacity: 1; } 100% { top: calc(100% - 2.4rem); opacity: 0; } }
+    @keyframes arch-hit { 35% { border-color: var(--brand-mid); box-shadow: 0 0 0 3px var(--brand-soft); } }
+    @keyframes arch-hit-again { 35% { border-color: var(--brand-mid); box-shadow: 0 0 0 3px var(--brand-soft); } }
+
+    /* Layer sections */
+    .layers { border-top: 1px solid var(--line); }
+    .layer {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.6fr);
+      gap: 2.5rem 3.5rem;
+      padding-block: 4rem;
+      border-bottom: 1px solid var(--line);
     }
-    .topic-viewport::-webkit-scrollbar { display: none; }
-    .topic-list { display: flex; align-items: stretch; gap: 1.25rem; width: 100%; list-style: none; margin: 0; padding: 0; }
-    .topic-card { display: flex; flex: 0 0 clamp(16.5rem, 27vw, 21.5rem); min-width: 0; scroll-snap-align: start; }
-    .topic-probe { position: absolute; left: 0; width: 1px; visibility: hidden; pointer-events: none; }
+    .layer-head { align-self: start; position: sticky; top: 1.5rem; }
+    .layer-kicker { display: flex; align-items: center; gap: 0.75rem; color: var(--brand); font-family: var(--mono); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+    /* "You are here": four bars, the current layer filled. */
+    .layer-marker { display: inline-grid; gap: 3px; width: 1.75rem; }
+    .layer-marker i { display: block; height: 5px; border-radius: 2px; background: var(--line); }
+    .layer-marker[data-layer="1"] i:nth-child(1),
+    .layer-marker[data-layer="2"] i:nth-child(2),
+    .layer-marker[data-layer="3"] i:nth-child(3),
+    .layer-marker[data-layer="4"] i:nth-child(4),
+    .layer-marker[data-layer="5"] i:nth-child(5) { background: var(--brand); }
+    .layer-head h2 { margin-top: 0.7rem; font-size: clamp(2rem, 3.2vw, 2.6rem); }
+    .layer-stance { margin-top: 1rem; font-size: 1.2rem; font-weight: 700; line-height: 1.4; }
+    .layer-why { margin-top: 0.9rem; color: var(--muted); }
+    .layer-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.1rem 0 0; padding: 0; list-style: none; }
+    .layer-tags li { padding: 0.15rem 0.55rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--muted); font-family: var(--mono); font-size: 0.75rem; }
+
+    .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
+    .topic-card { display: flex; min-width: 0; }
     .topic-card-link {
       display: flex;
       flex-direction: column;
       width: 100%;
+      overflow: hidden;
       border: 1px solid var(--line);
+      border-radius: 12px;
       background: var(--surface);
       text-decoration: none;
+      transition: border-color 0.15s, transform 0.15s;
     }
-    .topic-card-link:hover { border-color: var(--sage); }
-    .topic-card-link:focus-visible { outline-offset: -4px; }
+    .topic-card-link:hover { border-color: var(--brand); }
+    .topic-card-link:focus-visible { outline-offset: 3px; }
     .topic-card-link:hover h3 { text-decoration: underline; text-underline-offset: 0.18em; }
-    .topic-image { aspect-ratio: 8 / 5; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--surface); }
-    .topic-image-drawing { background: var(--canvas); }
-    .topic-image-drawing svg { width: 100%; height: 100%; }
-    .topic-image-end { display: flex; flex-direction: column; justify-content: space-between; padding: 1.25rem 1.4rem; overflow: visible; background: var(--sage-soft); }
-    .topic-end-line { max-width: 12ch; color: var(--ink); font-size: clamp(1.25rem, 1.75vw, 1.55rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.025em; }
-    .topic-end-arrow { align-self: flex-end; color: var(--sage); font-size: clamp(2.1rem, 3.2vw, 3rem); font-weight: 700; line-height: 1; }
+    .topic-image { aspect-ratio: 8 / 5; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--canvas); }
+    .topic-image svg { width: 100%; height: 100%; }
     /* The copy's own opaque backdrop keeps card text on LCD antialiasing while a drawing's marks play. */
-    .topic-copy { display: flex; flex: 1; flex-direction: column; gap: 0.7rem; padding: 1.15rem; background: var(--surface); overflow-wrap: break-word; hyphens: auto; hyphenate-limit-chars: 8 4 3; }
-    .topic-copy h3 { font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.025em; }
+    .topic-copy { display: flex; flex: 1; flex-direction: column; gap: 0.6rem; padding: 1.15rem 1.2rem 1.2rem; background: var(--surface); overflow-wrap: break-word; }
+    .topic-copy h3 { font-size: 1.2rem; line-height: 1.25; letter-spacing: -0.02em; }
     .topic-chip {
       align-self: flex-start;
-      padding: 0.1rem 0.45rem;
+      padding: 0.1rem 0.5rem;
       border: 1px solid var(--line);
+      border-radius: 6px;
       background: var(--surface);
-      color: var(--sage);
-      font-size: 0.75rem;
-      font-weight: 700;
+      color: var(--brand);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
       line-height: 1.5;
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
-    .topic-chip-live { border-color: var(--warm); background: var(--warm-soft); color: var(--warm); }
+    .topic-chip-live { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text); }
+    .topic-description { color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
+    .topic-copy p + p { margin-top: 0; }
+    .topic-copy > .topic-scope { margin-top: auto; padding-top: 0.4rem; color: var(--brand); font-size: 0.85rem; font-weight: 600; }
 /* wk:motion start */
-/* Work drawings: one pen for all eight covers.
+/* Work drawings: one pen for every cover.
    The static SVG is the final frame, and its base layer (every label, node, connector and check) never animates.
    A play (li.topic-card[data-play]) animates only emphasis marks drawn over that base: each mark first rewinds for
    --wk-rewind, then redraws after its own delay (--t, counted from the end of the rewind) for --d.
@@ -304,11 +392,25 @@ Status chips replace hedges; each card keeps its scope line.
 @keyframes wk-fade-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes wk-fade-out { from { opacity: 1; } to { opacity: 0; } }
 /* wk:motion end */
-    .topic-description { color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
-    .topic-copy p + p { margin-top: 0; }
-    .topic-copy > .topic-scope { margin-top: auto; padding-top: 0.4rem; color: var(--sage); font-size: 0.875rem; font-weight: 600; }
-    .topic-more { margin-top: 0.75rem; font-size: 0.9rem; }
-    .topic-more a { display: inline-block; padding-block: 0.75rem; font-weight: 700; line-height: 1.4; }
+
+    /* More on this layer: the builder's depth */
+    .layer-more { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+    .layer-more h3 { color: var(--muted); font-family: var(--mono); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+    .more-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.25rem 2rem; margin: 0.5rem 0 0; padding: 0; list-style: none; }
+    .more-list a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; line-height: 1.35; }
+    .more-list .private-name { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+    .more-list p { margin-top: -0.25rem; color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
+    .layer-scope { margin-top: 1.1rem; color: var(--muted); font-size: 0.85rem; }
+    .layer-scope strong { color: var(--ink); }
+    /* A layer with a single card shows it beside its links. */
+    .layer-evidence[data-single] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem 2rem; align-items: start; }
+    .layer-evidence[data-single] .work-grid { grid-template-columns: minmax(0, 1fr); }
+    .layer-evidence[data-single] .layer-more { margin-top: 0; padding-top: 0; border-top: 0; }
+    .layer-evidence[data-single] .more-list { grid-template-columns: minmax(0, 1fr); }
+
+    .further { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1.5rem; padding-block: 1.75rem 3.5rem; color: var(--muted); font-size: 0.9rem; }
+    .further a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-weight: 600; }
+
     .button, .text-link {
       display: inline-flex;
       align-items: center;
@@ -320,139 +422,51 @@ Status chips replace hedges; each card keeps its scope line.
       line-height: 1.4;
       overflow-wrap: anywhere;
     }
-    .button { padding: 0.8rem 1.05rem; text-decoration: none; background: var(--ink); color: var(--surface); }
-    .button:hover { background: var(--sage); }
+    .button { padding: 0.8rem 1.15rem; border-radius: 8px; text-decoration: none; background: var(--brand); color: var(--on-deep); }
+    .button:hover { background: var(--ink); }
+    @media (prefers-color-scheme: dark) {
+      .button { background: var(--cta); color: var(--on-cta); }
+      .button:hover { background: var(--on-deep); }
+    }
     .text-link { justify-content: flex-start; }
-    .button-light { background: var(--signal); color: var(--ink); }
-    .button-light:hover { background: var(--surface); }
-    .duration { font-family: "IBM Plex Mono", monospace; font-size: 0.82em; font-weight: 400; white-space: nowrap; }
+    .button-light, .button-light:hover { background: var(--cta); color: var(--on-cta); }
+    .button-light:hover { background: var(--on-deep); }
 
-    .ideas { padding-block: 4rem 3.5rem; }
-    .section-heading { margin-bottom: 2rem; }
-    .section-heading h2 { max-width: 24ch; font-size: clamp(1.75rem, 2.4vw, 2.1rem); letter-spacing: -0.03em; }
-    .section-heading p { margin-top: 0.75rem; color: var(--muted); }
-    .pov-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-    .pov-item { min-width: 0; padding: 1.5rem 1.5rem 1.25rem; }
-    .pov-item:first-child { padding-left: 0; }
-    .pov-item:last-child { padding-right: 0; }
-    .pov-item + .pov-item { border-left: 1px solid var(--line); }
-    .pov-item h3 { font-size: clamp(1.25rem, 1.75vw, 1.55rem); line-height: 1.25; letter-spacing: -0.025em; }
-    .pov-number { display: block; margin-bottom: 0.4rem; color: var(--sage); font-size: 0.9rem; letter-spacing: 0; font-variant-numeric: tabular-nums; }
-    .pov-item p { margin-top: 0.75rem; color: var(--muted); }
-    .pov-item .pov-stance { margin-top: 0.9rem; color: var(--ink); font-size: 1.08rem; font-weight: 700; line-height: 1.4; }
-    .pov-links { list-style: none; margin: 0.6rem 0 0; padding: 0; }
-    .pov-links a { display: inline-block; padding-block: 0.7rem; font-weight: 700; line-height: 1.4; }
-    .pov-item .pov-scope { margin-top: 0.6rem; padding-top: 0.75rem; border-top: 1px solid var(--line); font-size: 0.9rem; }
-    .pov-scope strong { color: var(--ink); }
-
-    .archive { padding-block: 1rem 3.5rem; }
-    .project-archive { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .project-archive > summary { display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 5rem; padding-block: 1rem; cursor: pointer; list-style: none; }
-    .project-archive > summary::-webkit-details-marker { display: none; }
-    .archive-summary { font-size: 1.15rem; font-weight: 700; }
-    .archive-summary span { display: block; color: var(--muted); font-size: 0.875rem; font-weight: 400; margin-top: 0.2rem; }
-    .archive-toggle { flex: 0 0 2rem; width: 2rem; height: 2rem; display: grid; place-items: center; border: 1px solid var(--line); }
-    .archive-toggle::before { content: "+"; font-size: 1.4rem; }
-    .project-archive[open] .archive-toggle::before { content: "−"; }
-    .archive-content { padding-block: 0.5rem 2rem; }
-    .archive-group { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 3rem; padding-block: 1.5rem; border-top: 1px solid var(--line); }
-    .archive-group h3 { font-size: 1.1rem; line-height: 1.4; }
-    .archive-list { list-style: none; padding: 0; margin: 0; }
-    .archive-list li + li { margin-top: 1.1rem; }
-    .archive-list a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; line-height: 1.35; }
-    .archive-list p { color: var(--muted); font-size: 0.9rem; }
-    .archive-list .private-name { font-weight: 600; }
-    .archive-list .private-scope { color: var(--muted); font-size: 0.85rem; }
-    .archive-description a { min-height: auto; display: inline; }
-    .archive-guides { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; border-top: 1px solid var(--line); padding-top: 1rem; font-size: 0.9rem; }
-
-    .contact-field { color: var(--dark-ink); background: var(--graphite); }
-    .contact-field a:focus-visible { outline-color: var(--dark-ink); }
-    .contact { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; padding-block: 3.8rem; align-items: end; }
-    .contact h2 { max-width: 16ch; font-size: clamp(2.1rem, 3.4vw, 3.3rem); letter-spacing: -0.035em; hyphens: auto; }
-    .contact p { color: var(--dark-muted); margin-top: 1.2rem; }
+    .contact-field { color: var(--on-deep); background: var(--deep); }
+    .contact-field a:focus-visible { outline-color: var(--cta); }
+    .contact { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; padding-block: 4rem; align-items: end; }
+    .contact h2 { max-width: 16ch; font-size: clamp(2.1rem, 3.4vw, 3.2rem); }
+    .contact p { color: var(--on-deep-muted); margin-top: 1.2rem; }
     .contact-actions { display: flex; flex-wrap: wrap; gap: 0.7rem 1.3rem; align-items: center; }
-    .site-footer { display: flex; align-items: start; justify-content: space-between; gap: 2rem; padding-block: 1.5rem; border-top: 1px solid #6f846f; color: var(--dark-muted); font-size: 0.82rem; }
+    .site-footer { display: flex; align-items: start; justify-content: space-between; gap: 2rem; padding-block: 1.5rem; border-top: 1px solid rgb(199 201 222 / 0.3); color: var(--on-deep-muted); font-size: 0.82rem; }
     .site-footer p { max-width: 76ch; }
     .site-footer > span { white-space: nowrap; }
 
-    @container (max-width: 56rem) {
-      .opening-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: none;
-        grid-template-areas:
-          "title"
-          "lede"
-          "proof"
-          "action";
-        align-items: start;
-      }
-      .opening-title { margin-bottom: 0.75rem; }
-    }
     @media (max-width: 1000px) {
-      .pov-grid { grid-template-columns: minmax(0, 1fr); }
-      .pov-item, .pov-item:first-child, .pov-item:last-child { padding: 1.5rem 0 1.25rem; }
-      .pov-item + .pov-item { border-left: 0; border-top: 1px solid var(--line); }
-    }
-    @media (min-width: 721px) {
-      /* Desktop cards fit their longest word even at 200 % text; automatic hyphenation stays for phones. */
-      .topic-copy { hyphens: manual; }
-    }
-    @media (min-width: 721px) and (max-width: 979px) {
-      /* Two full cards and a peek of the third, so the shelf never ends flush on a card edge. */
-      .topic-card { flex-basis: clamp(16.5rem, calc((100% - 1.25rem) / 2.35), 21.5rem); }
-    }
-    @media (min-width: 721px) and (max-height: 820px) {
-      .masthead { min-height: 4.5rem; }
-      .brand-portrait img { width: 56px; height: 56px; }
-      .opening { padding-block: 1.75rem 1.5rem; }
-      .topic-heading { margin-bottom: 0.6rem; }
-      .topic-image { aspect-ratio: 16 / 9; }
-    }
-    @media (min-width: 721px) and (max-height: 700px) {
-      .opening { padding-block: 1.25rem; }
-      .opening-grid { row-gap: 0.25rem; }
-      .topic-showcase { padding-top: 0.75rem; }
-      .topic-heading { margin-bottom: 0.5rem; }
-      .topic-copy { gap: 0.45rem; padding-top: 0.75rem; }
+      .opening { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+      .opening-title { max-width: 18ch; }
+      .layer { grid-template-columns: minmax(0, 1fr); padding-block: 3.25rem; }
+      .layer-head { position: static; }
     }
     @media (max-width: 720px) {
-      .shell { width: min(100% - 2.5rem, 74rem); }
+      .shell { width: min(100% - 2rem, 74rem); }
       .masthead { align-items: start; flex-direction: column; gap: 0.35rem; padding-block: 1.1rem 0.65rem; min-height: 0; }
       .brand { gap: 0.7rem; font-size: 1.15rem; }
       .brand-portrait img { width: 48px; height: 48px; }
       .brand-text > span { font-size: 0.75rem; }
       .primary-nav { justify-content: space-between; width: 100%; gap: 0.8rem; font-size: 0.85rem; }
-      .opening { padding-block: 1.6rem 2rem; }
-      .opening-grid {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-areas:
-          "title"
-          "lede"
-          "proof"
-          "action";
-        gap: 0.6rem 1rem;
-      }
-      .opening-title { margin-bottom: 0.5rem; font-size: clamp(1.85rem, 8.2vw, 2.25rem); line-height: 1.08; }
+      .opening { padding-block: 2rem 2.75rem; }
+      .opening-title { font-size: clamp(2rem, 9vw, 2.5rem); line-height: 1.06; }
       .opening-lede { font-size: 1rem; }
-      .topic-showcase { padding-top: 1.1rem; }
-      .topic-heading { column-gap: 1rem; }
-      .topic-heading h2 { font-size: 1.35rem; }
-      .topic-controls { flex-basis: 100%; justify-content: flex-end; }
-      /* Full-bleed shelf: cards align with the text column and the next card peeks. */
-      .topic-viewport { margin-inline: -1.25rem; scroll-padding-inline: 1.25rem; }
-      .topic-showcase:is([data-mode="step"], [data-mode="manual"]) .topic-viewport { scroll-snap-type: x mandatory; }
-      .topic-list { gap: 12px; padding-left: 1.25rem; }
-      .topic-list::after { content: ""; flex: 0 0 calc(1.25rem - 12px); }
-      .topic-card { flex-basis: min(82vw, 21.5rem); }
-      .topic-copy { padding: 1rem; }
-      .contact { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
-      .ideas { padding-block: 3rem 2.5rem; }
-      .section-heading { margin-bottom: 1.6rem; }
-      .archive { padding-bottom: 2.5rem; }
-      .archive-group { grid-template-columns: 1fr; gap: 1rem; }
-      .project-archive > summary { gap: 1rem; }
-      .contact { padding-block: 3rem 2rem; gap: 1.7rem; }
+      .arch { --rail: 2.6rem; --gap: 0.5rem; }
+      .arch-row { grid-template-columns: auto minmax(0, 1fr); gap: 0.6rem; padding: 0.65rem 0.8rem; }
+      .arch-icon { display: none; }
+      .arch-name { font-size: 1.1rem; }
+      .arch-vlabel { font-size: 1rem; }
+      .work-grid, .more-list, .layer-evidence[data-single] { grid-template-columns: minmax(0, 1fr); }
+      .layer-evidence[data-single] .layer-more { padding-top: 1.25rem; border-top: 1px solid var(--line); }
+      .layer { padding-block: 2.75rem; gap: 1.75rem; }
+      .contact { grid-template-columns: minmax(0, 1fr); gap: 1.7rem; padding-block: 3rem 2rem; }
       .contact h2 { max-width: 18ch; }
       .site-footer { flex-direction: column; gap: 0.75rem; }
     }
@@ -462,20 +476,8 @@ Status chips replace hedges; each card keeps its scope line.
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
-      /* Manual shelf: the Pause slot stays reserved so a live preference change never reflows the controls. */
-      .topic-control-motion { visibility: hidden; }
     }
   </style>
-  <noscript>
-    <style>
-      /* Without JavaScript the shelf becomes a wrapped grid, so every focused card is fully visible. */
-      .topic-controls { display: none; }
-      .topic-viewport { overflow: visible; margin-inline: 0; }
-      .topic-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr)); gap: 1.25rem; padding: 0; }
-      .topic-list::after { content: none; }
-      @media (max-width: 720px) { .topic-list { grid-template-columns: minmax(0, 1fr); } }
-    </style>
-  </noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -491,531 +493,528 @@ Status chips replace hedges; each card keeps its scope line.
       </span>
     </a>
     <nav class="primary-nav" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#ideas">Ideas</a>
+      <a href="#stack">Building blocks</a>
       <a href="https://ozgurkarahan.com/agentic-platform/">Deck<span class="visually-hidden"> (The Agentic Platform)</span></a>
-      <a href="#archive">Archive</a>
+      <a href="https://github.com/ozgurkarahan" rel="me">GitHub</a>
       <a class="contact-link" href="#contact">Let's connect<span aria-hidden="true">&nbsp;↓</span></a>
     </nav>
   </header>
 
   <main id="main">
     <section class="opening shell" id="opening" aria-labelledby="opening-title">
-      <div class="opening-grid">
-        <h1 class="opening-title" id="opening-title">Agents that act for you, cite their sources, and <em>stop for a human.</em></h1>
-        <p class="opening-lede">I build and share enterprise agent patterns where business workflows, user identity, and human decisions meet.</p>
-        <p class="opening-proof">Live now: <a href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio">Oz Radio<span aria-hidden="true">&nbsp;↗</span></a></p>
-        <a class="button opening-action" href="https://www.linkedin.com/in/karahanozgur/" rel="me"><span>Let's connect<span class="visually-hidden"> on LinkedIn</span></span> <span aria-hidden="true">↗</span></a>
+      <div>
+        <p class="eyebrow">Enterprise AI architecture</p>
+        <h1 class="opening-title" id="opening-title">Models matter. What surrounds them decides <em>whether agents get used.</em></h1>
+        <p class="opening-lede">A better model arrives every few weeks, and that matters. But in real enterprise projects, an agent succeeds or fails on everything around it: people talking to it, finding it in Teams or Copilot, reaching the company's workflows and data, acting as the person who asked, and staying under rules everyone can see.</p>
+        <p class="opening-lede">Those five topics matter more every month. They are what I build and test, in the open.</p>
+        <p class="opening-aside">Not covered here, yet: cost control and the value of each token. They are coming fast too.</p>
+        <div class="opening-actions">
+          <a class="button" href="https://www.linkedin.com/in/karahanozgur/" rel="me"><span>Let's connect<span class="visually-hidden"> on LinkedIn</span></span> <span aria-hidden="true">↗</span></a>
+          <a class="live-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio"><span class="live-dot" aria-hidden="true"></span>Live now: Oz Radio<span aria-hidden="true">&nbsp;↗</span></a>
+        </div>
       </div>
+
+      <nav class="arch" id="stack" aria-labelledby="arch-title">
+        <p class="arch-caption" id="arch-title">One request, from a voice to the system of record</p>
+        <div class="arch-grid">
+          <a class="arch-row arch-voice" href="#voice">
+            <span class="arch-num">01</span>
+            <svg class="arch-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg>
+            <span class="arch-text"><span class="arch-name">Voice</span><span class="arch-detail">People speak, the agent listens</span></span>
+          </a>
+          <a class="arch-row" href="#distribution">
+            <span class="arch-num">02</span>
+            <svg class="arch-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8 21h8M12 17v4"/></svg>
+            <span class="arch-text"><span class="arch-name">Distribution</span><span class="arch-detail">Teams · Microsoft 365 Copilot</span></span>
+          </a>
+          <a class="arch-row" href="#context">
+            <span class="arch-num">03</span>
+            <svg class="arch-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h7M4 12h10M4 17h6"/><circle cx="18" cy="7" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M18 9.5v5"/></svg>
+            <span class="arch-text"><span class="arch-name">Context</span><span class="arch-detail">Workflows and data · MCP · RAG</span></span>
+          </a>
+          <div class="arch-row arch-systems">
+            <span class="arch-systems-label">Systems of record</span>
+            <span class="arch-chips"><span>Salesforce</span><span>ServiceNow</span><span>SAP</span><span>Dynamics</span></span>
+          </div>
+          <a class="arch-identity" href="#identity">
+            <span class="arch-pulse" aria-hidden="true"></span><span class="arch-vlabel"><span class="arch-num">04</span> Identity</span><span class="visually-hidden">: the same user, from the voice to the system of record</span>
+          </a>
+          <a class="arch-gov" href="#governance">
+            <span class="arch-vlabel"><span class="arch-num">05</span> Governance <span class="arch-vsub">agents, tools, skills</span></span>
+          </a>
+        </div>
+      </nav>
     </section>
 
-    <section class="topic-showcase shell" id="work" aria-labelledby="topics-title" data-topic-showcase>
-        <div class="topic-heading">
-          <h2 id="topics-title"><span id="flagships"></span>Explore the work</h2>
-          <p class="topic-note">Personal open-source samples, not Microsoft products.</p>
-          <p class="topic-pending">Oz Antenna · in development · not public</p>
-          <div class="topic-controls" role="group" aria-label="Work gallery controls" data-showcase-controls>
-            <button class="topic-control topic-control-motion" type="button" aria-label="Pause motion" aria-controls="topic-track" data-action="pause" data-showcase-motion>
-              <svg class="topic-icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 5.5h3v13h-3zM13.5 5.5h3v13h-3z"/></svg>
-              <svg class="topic-icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13L18.5 12z"/></svg>
-            </button>
-            <button class="topic-control topic-arrow" type="button" aria-label="Previous works" aria-controls="topic-track" aria-disabled="true" data-showcase-previous>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg>
-            </button>
-            <span class="topic-counter"><span aria-hidden="true" data-showcase-count>01 / 08</span><span class="visually-hidden" data-showcase-count-text>Work 1 of 8</span></span>
-            <button class="topic-control topic-arrow" type="button" aria-label="Next works" aria-controls="topic-track" data-showcase-next>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg>
-            </button>
-          </div>
+    <div class="layers">
+      <!-- Anchors kept from earlier versions of the homepage, so older shared links still land on the matching block. -->
+      <span id="work"></span><span id="flagships"></span><span id="ideas"></span>
+      <section class="layer shell" id="voice" aria-labelledby="layer-1-title">
+        <div class="layer-head">
+          <span id="engagement"></span><span id="horizon"></span><span id="idea-work"></span>
+          <p class="layer-kicker"><span class="layer-marker" data-layer="1" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>01 · The new channel</p>
+          <h2 id="layer-1-title">Voice</h2>
+          <p class="layer-stance">Voice is becoming the way we talk to agents.</p>
+          <p class="layer-why">Typing was the first interface. Speaking is faster and more natural, and it is spreading quickly: customers call voice agents, and even developers now talk to their coding agents. A voice agent has to listen, act, and know when to hand over to a person.</p>
+          <ul class="layer-tags" aria-label="Building blocks"><li>Voice Live</li><li>Speech</li><li>Phone</li><li>Avatars</li></ul>
         </div>
-        <div class="topic-viewport" id="topic-track" role="region" aria-label="Scrollable portfolio topics" data-showcase-track>
-          <ul class="topic-list" role="list">
+        <div class="layer-evidence">
+          <ul class="work-grid" role="list">
             <li class="topic-card" id="flagship-oz-radio" data-work="oz-radio">
               <a class="topic-card-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio" aria-labelledby="card-oz-radio-chip card-oz-radio-title" aria-describedby="card-oz-radio-scope">
-                <div class="topic-image topic-image-drawing">
+                <div class="topic-image">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="ozr-cover-title" aria-describedby="ozr-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-                    <title id="ozr-cover-title">Oz Radio: a live presentation paused for a spoken question</title>
-                    <desc id="ozr-cover-desc">Illustrative drawing: a live presentation paused for a question. A panel labelled "AI avatar" and "Slide 1 of 5" shows pause bars; below it is a strip of five slide thumbnails, with progress stopped partway through the first. A raised hand asks, in a speech bubble, "What is the difference between a model and an agent?". Slides 2 and 3 are highlighted and outlined, with an arrow down to the citation "From slides 2 and 3".</desc>
-                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-                    <rect x="24" y="24" width="312" height="144" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-                    <text x="48" y="72" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">AI avatar</text>
-                    <text x="48" y="144" font-size="32" font-weight="500" style="fill:var(--muted,#485447)">Slide 1 of 5</text>
-                    <rect x="24" y="192" width="56" height="32" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-                    <path d="M88 192h56v32H88zM152 192h56v32h-56z" stroke-width="2" style="fill:var(--warm-soft,#fbf0dc);stroke:var(--line,#c6d2c3)"/>
-                    <path d="M216 192h56v32h-56zM280 192h56v32h-56z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <path d="M148 224v40" fill="none" stroke-width="2" style="stroke:var(--muted,#485447)"/>
-                    <path d="M142 264h12l-6 10z" style="fill:var(--muted,#485447)"/>
-                    <text x="24" y="308" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">From slides 2 and 3</text>
-                    <path d="M360 24h256v200H496l-12 16-12-16H360z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <text x="384" y="64" font-size="32" font-weight="500" style="fill:var(--ink,#202b21)"><tspan x="384">What is the</tspan><tspan x="384" dy="36">difference</tspan><tspan x="384" dy="36">between a</tspan><tspan x="384" dy="36">model and</tspan><tspan x="384" dy="36">an agent?</tspan></text>
-                    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-                    <path class="wk-draw" pathLength="1" d="M456 224h16l12 16 12-16h120V24H360v200z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.65s;--d:1.55s"/>
-                    <path class="wk-draw" pathLength="1" d="M116 224H88v-32h56v32z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:3s;--d:0.35s"/>
-                    <path class="wk-draw" pathLength="1" d="M180 224h-28v-32h56v32z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:3.1s;--d:0.35s"/>
-                    <path class="wk-draw" pathLength="1" d="M116 224H88v-32h56v32z" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.65s;--d:0.4s"/>
-                    <path class="wk-draw" pathLength="1" d="M180 224h-28v-32h56v32z" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.75s;--d:0.4s"/>
-                    <path class="wk-draw" pathLength="1" d="M148 224v40" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:4.05s;--d:0.3s"/>
-                    <rect class="wk-grow" x="24" y="192" width="34" height="32" style="fill:var(--sage,#305b3b);--t:0.3s;--d:0.8s"/>
-                    <path class="wk-stamp" d="M272 48h16v56h-16zM304 48h16v56h-16z" style="fill:var(--sage,#305b3b);--t:1.45s;--d:0.3s"/>
-                    <path class="wk-stamp" d="M141 263h14l-7 12z" style="fill:var(--warm,#8a4b06);--t:4.3s;--d:0.25s"/>
-                    <g class="wk-travel" style="--dy:48px;--t:0.95s;--d:0.6s">
-                      <g transform="translate(453 250)" stroke-width="3" style="stroke:var(--sage,#305b3b)">
-                        <path d="M14 78V52H0V30H10v10h4V8h12V0h12v4h12v12h12v62z" style="fill:var(--sage-soft,#e1f0e1)"/>
-                        <path d="M26 8v28M38 4v32M50 16v20" fill="none"/>
-                      </g>
+                    <title id="ozr-cover-title">Oz Radio: a live presentation pauses for a spoken question and answers from the slides it cites</title>
+                    <desc id="ozr-cover-desc">Illustrative drawing. A person at the top left asks a spoken question; an arrow leads down to the AI presenter, shown paused. An arrow runs from the presenter to a strip of five slides, numbered 1 to 5; slides 2 and 3 are highlighted as cited. An arrow from those two slides leads down to the point of the drawing, outlined in amber: &#8220;Answer: slides 2, 3&#8221;.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <g stroke-width="2" style="fill:none;stroke:var(--ink,#191a2c)">
+                      <circle cx="128" cy="40" r="10"/>
+                      <path d="M110 74A18 18 0 0 1 146 74"/>
                     </g>
+                    <text x="160" y="66" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Spoken question</text>
+                    <path d="M128 82V98M232 160H302M432 192V262" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M122 98L128 108L134 98ZM302 154L312 160L302 166ZM426 262L432 272L438 262Z" style="fill:var(--muted,#535568)"/>
+                    <rect x="24" y="108" width="208" height="104" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="128" y="150" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">AI presenter</text>
+                    <text x="96" y="194" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Paused</text>
+                    <text x="312" y="112" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Slides</text>
+                    <rect x="312" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <rect x="376" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <rect x="440" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <rect x="504" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <rect x="568" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <rect x="312" y="272" width="304" height="72" rx="8" stroke-width="2" style="fill:var(--accent-soft,#fef2dd);stroke:var(--line,#d9dae4)"/>
+                    <text x="464" y="318" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Answer: slides 2, 3</text>
+                    <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <path class="wk-stamp" d="M64 172h7v22h-7zM78 172h7v22h-7z" style="fill:var(--brand,#2f2a6b);--t:0.3s;--d:0.3s"/>
+                    <rect class="wk-fade" x="376" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b);--t:0.8s;--d:0.3s"/>
+                    <rect class="wk-fade" x="440" y="128" width="48" height="64" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b);--t:1.05s;--d:0.3s"/>
+                    <path class="wk-draw" pathLength="1" d="M320 272H608A8 8 0 0 1 616 280V336A8 8 0 0 1 608 344H320A8 8 0 0 1 312 336V280A8 8 0 0 1 320 272Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:1.6s;--d:0.8s"/>
+                    <text x="336" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--muted,#535568)">1</text>
+                    <text x="400" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">2</text>
+                    <text x="464" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">3</text>
+                    <text x="528" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--muted,#535568)">4</text>
+                    <text x="592" y="170" text-anchor="middle" font-size="28" font-weight="600" style="fill:var(--muted,#535568)">5</text>
                   </svg>
                 </div>
                 <div class="topic-copy">
                   <span class="topic-chip topic-chip-live" id="card-oz-radio-chip">Live</span>
-                  <h3 id="card-oz-radio-title">Oz Radio: a presentation you can interrupt</h3>
-                  <p class="topic-description">An AI avatar presents your deck live; raise your hand and ask by voice.</p>
-                  <p class="topic-scope" id="card-oz-radio-scope">Live demo&nbsp;· AI&nbsp;avatar&nbsp;· capped&nbsp;daily<span aria-hidden="true">&nbsp;↗</span></p>
+                  <h3 id="card-oz-radio-title">Oz Radio: an AI presenter for any deck</h3>
+                  <p class="topic-description">An avatar presents your deck live and answers spoken questions. It also turns a deck into a narrated video or a two-host podcast, in more than ten languages.</p>
+                  <p class="topic-scope" id="card-oz-radio-scope">Live demo&nbsp;· present, narrate, podcast&nbsp;· capped&nbsp;daily<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card" data-work="voice">
               <a class="topic-card-link" href="https://ozgurkarahan.github.io/horizon-famille/" aria-labelledby="card-voice-chip card-voice-title" aria-describedby="card-voice-scope">
-                <div class="topic-image topic-image-drawing">
+                <div class="topic-image">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="voice-cover-title" aria-describedby="voice-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-                    <title id="voice-cover-title">Horizon Famille: a voice agent consults mock systems and stops for Teams approval</title>
-                    <desc id="voice-cover-desc">Illustrative drawing: on the left, a voice glyph (a microphone and a waveform, no face) stands for the voice agent. Right-angled routes lead from it to three dashed boxes, the mock systems &#8220;CRM&#8221;, &#8220;ERP&#8221; and &#8220;Knowledge base&#8221;; a small square token has visited each one, and each box is shaded as consulted. A fourth route, labelled &#8220;Outside its mandate&#8221; (in the recorded demo, a discount), runs down toward Teams and halts at a stop bar, where the token waits in front of the badge &#8220;Teams approval&#8221;: a person decides there.</desc>
-                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-                    <!-- BASE LAYER: complete meaning, never animated. -->
-                    <rect x="24" y="72" width="144" height="128" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-                    <path d="M52 114a10 10 0 0 1 20 0v20a10 10 0 0 1-20 0z" style="fill:var(--sage,#305b3b)"/>
-                    <path d="M42 126v4a20 20 0 0 0 40 0v-4M62 150v14M50 166h24" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-                    <path d="M92 136H154" stroke-width="2" style="fill:none;stroke:var(--sage,#305b3b)"/>
-                    <path d="M168 136H236M250 56H236V368H282M236 136H250M236 216H250" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <path d="M250 50l10 6-10 6zM250 130l10 6-10 6zM250 210l10 6-10 6z" style="fill:var(--muted,#485447)"/>
-                    <rect x="282" y="348" width="6" height="40" style="fill:var(--ink,#202b21)"/>
-                    <rect x="260" y="24" width="356" height="64" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-                    <rect class="wk-fade" x="261" y="25" width="354" height="62" style="fill:var(--sage-soft,#e1f0e1);--t:1.5s;--d:0.35s"/>
-                    <text x="438" y="69" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">CRM</text>
-                    <rect x="260" y="104" width="356" height="64" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-                    <rect class="wk-fade" x="261" y="105" width="354" height="62" style="fill:var(--sage-soft,#e1f0e1);--t:2.2s;--d:0.35s"/>
-                    <text x="438" y="149" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">ERP</text>
-                    <rect x="260" y="184" width="356" height="64" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-                    <rect class="wk-fade" x="261" y="185" width="354" height="62" style="fill:var(--sage-soft,#e1f0e1);--t:2.8s;--d:0.35s"/>
-                    <text x="438" y="229" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Knowledge base</text>
-                    <text x="438" y="308" text-anchor="middle" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Outside its mandate</text>
-                    <rect x="304" y="344" width="312" height="48" style="fill:var(--warm-soft,#fbf0dc)"/>
-                    <!-- EMPHASIS LAYER: drawn over the base; only stroke-dashoffset / transform / opacity animate. -->
-                    <path class="wk-grow" d="M96 126h6v20h-6zM108 114h6v44h-6zM120 104h6v64h-6zM132 118h6v36h-6zM144 128h6v16h-6z" style="fill:var(--sage,#305b3b);--sx:1;--sy:0.15;--o:50% 50%;--t:0.3s;--d:0.45s"/>
-                    <path class="wk-draw" pathLength="1" d="M168 136H236V54" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:0.55s;--d:0.4s"/>
-                    <g class="wk-fade" style="--t:1.4s;--d:0.25s">
-                      <path d="M234 56H250" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-                      <path d="M250 50l10 6-10 6z" style="fill:var(--sage,#305b3b)"/>
+                    <title id="voice-cover-title">Horizon Famille: a phone call reaches a voice agent that checks mock systems and stops at a Teams approval</title>
+                    <desc id="voice-cover-desc">Illustrative drawing. A caller at the top left reaches the &#8220;Voice agent&#8221;. From the agent, right-angled arrows lead to three dashed boxes, the mock systems &#8220;CRM&#8221;, &#8220;ERP&#8221; and &#8220;Knowledge base&#8221;, each ticked as checked. A fourth arrow, labelled &#8220;Outside its mandate&#8221;, runs down and right to the point of the drawing, outlined in amber: &#8220;Teams approval&#8221;. A small circle, the request, waits in front of it: a person decides there.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <g stroke-width="2" style="fill:none;stroke:var(--ink,#191a2c)">
+                      <circle cx="128" cy="40" r="10"/>
+                      <path d="M110 74A18 18 0 0 1 146 74"/>
                     </g>
-                    <g class="wk-fade" style="--t:2.1s;--d:0.25s">
-                      <path d="M236 136H250" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-                      <path d="M250 130l10 6-10 6z" style="fill:var(--sage,#305b3b)"/>
-                    </g>
-                    <path class="wk-draw" pathLength="1" d="M236 136V216" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:2.2s;--d:0.25s"/>
-                    <g class="wk-fade" style="--t:2.7s;--d:0.25s">
-                      <path d="M236 216H250" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b)"/>
-                      <path d="M250 210l10 6-10 6z" style="fill:var(--sage,#305b3b)"/>
-                    </g>
-                    <path class="wk-draw" pathLength="1" d="M236 216V368H282" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:2.95s;--d:0.4s"/>
-                    <g class="wk-travel" style="--dx:-52px;--t:0.65s;--d:0.4s">
-                      <g class="wk-travel" style="--dy:80px;--t:1.05s;--d:0.45s">
-                        <g class="wk-travel" style="--dy:-80px;--t:1.75s;--d:0.45s">
-                          <g class="wk-travel" style="--dy:-80px;--t:2.4s;--d:0.4s">
-                            <g class="wk-travel" style="--dy:-152px;--t:3s;--d:0.5s">
-                              <g class="wk-travel" style="--dx:-30px;--t:3.5s;--d:0.4s">
-                                <rect x="258" y="360" width="16" height="16" style="fill:var(--sage,#305b3b)"/>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
+                    <text x="160" y="66" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Caller</text>
+                    <path d="M128 82V98M232 144H302M272 72V216M272 72H302M272 216H302M48 180V320H302" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M122 98L128 108L134 98ZM302 66L312 72L302 78ZM302 138L312 144L302 150ZM302 210L312 216L302 222ZM302 314L312 320L302 326Z" style="fill:var(--muted,#535568)"/>
+                    <rect x="24" y="108" width="208" height="72" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="128" y="154" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Voice agent</text>
+                    <rect x="312" y="44" width="304" height="56" rx="8" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="368" y="82" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">CRM</text>
+                    <rect x="312" y="116" width="304" height="56" rx="8" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="368" y="154" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">ERP</text>
+                    <rect x="312" y="188" width="304" height="56" rx="8" stroke-width="2" stroke-dasharray="8 6" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="368" y="226" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Knowledge base</text>
+                    <text x="64" y="276" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Outside its mandate</text>
+                    <rect x="312" y="288" width="304" height="64" rx="8" stroke-width="2" style="fill:var(--accent-soft,#fef2dd);stroke:var(--line,#d9dae4)"/>
+                    <text x="464" y="330" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Teams approval</text>
+                    <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <path class="wk-draw" pathLength="1" d="M332 72l7 7 13-14" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.30s;--d:0.3s"/>
+                    <path class="wk-draw" pathLength="1" d="M332 144l7 7 13-14" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.55s;--d:0.3s"/>
+                    <path class="wk-draw" pathLength="1" d="M332 216l7 7 13-14" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.80s;--d:0.3s"/>
+                    <g class="wk-travel" style="--dy:-132px;--t:1.2s;--d:0.5s">
+                      <g class="wk-travel" style="--dx:-240px;--t:1.75s;--d:0.5s">
+                        <circle cx="288" cy="320" r="7" style="fill:var(--brand-mid,#5e5cb3)"/>
                       </g>
                     </g>
-                    <path class="wk-draw" pathLength="1" d="M460 344H616V392H304V344Z" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.7s;--d:0.85s"/>
-                    <!-- BOTTOM BAND y 336–392: "Illustrative" fixed at (24, 376); the key badge right-aligned to x 616. -->
-                    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-                    <text x="460" y="376" text-anchor="middle" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">Teams approval</text>
+                    <path class="wk-draw" pathLength="1" d="M320 288H608A8 8 0 0 1 616 296V344A8 8 0 0 1 608 352H320A8 8 0 0 1 312 344V296A8 8 0 0 1 320 288Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:2.4s;--d:0.8s"/>
                   </svg>
                 </div>
                 <div class="topic-copy">
                   <span class="topic-chip" id="card-voice-chip">Video 6:19</span>
-                  <h3 id="card-voice-title">Voice agents for the full booking journey</h3>
-                  <p class="topic-description">Horizon Famille: a recorded booking-change journey with mock business systems and human approval in Teams.</p>
+                  <h3 id="card-voice-title">A phone call that becomes an action</h3>
+                  <p class="topic-description">Horizon Famille: a voice agent checks the booking, quotes a change before acting, and hands a discount outside its mandate to a person in Teams.</p>
                   <p class="topic-scope" id="card-voice-scope">Recorded demo&nbsp;· mock systems&nbsp;· French, English subtitles<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
-            <li class="topic-card" data-work="identity">
-              <a class="topic-card-link" href="https://ozgurkarahan.com/customer-360/" aria-labelledby="card-identity-chip card-identity-title" aria-describedby="card-identity-scope">
-                <div class="topic-image topic-image-drawing">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="identity-cover-title" aria-describedby="identity-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-                    <title id="identity-cover-title">Agent access on behalf of the user: a gateway exchanges the user's token for one token per system</title>
-                    <desc id="identity-cover-desc">Illustrative drawing: a person outline (Alice, the fictional user of the public sample) points down to the &#8220;Agent&#8221;. An arrow leads from the Agent to the &#8220;Gateway&#8221; (Azure API Management), where her token stops: the gateway checks it and exchanges it on her behalf for one token per system. Two arrows leave the Gateway, each delivering a new token to a small square, the MCP server in front of &#8220;ServiceNow&#8221; and of &#8220;Salesforce&#8221;; both systems are outlined, each applying Alice&#8217;s own permissions. Below Salesforce, a badge reads &#8220;Last modified by Alice&#8221;. Bottom left: &#8220;Illustrative&#8221;.</desc>
-                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-                    <path d="M105 52a11 11 0 1 1-22 0a11 11 0 1 1 22 0zM72 98v-6a22 24 0 0 1 44 0v6z" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-                    <rect x="24" y="132" width="140" height="72" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <path d="M94 98V122M164 168H206M248 100H302M248 236H302" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <path d="M88 122l6 10 6-10zM206 162l10 6-10 6zM302 94l10 6-10 6zM302 230l10 6-10 6z" style="fill:var(--muted,#485447)"/>
-                    <path d="M216 76h32v184h-32zM312 84h32v32h-32zM312 220h32v32h-32z" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-                    <path d="M344 64h272v72H344zM344 200h272v72H344z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <rect x="344" y="296" width="272" height="96" style="fill:var(--warm-soft,#fbf0dc)"/>
-                    <text x="94" y="181" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Agent</text>
-                    <text x="232" y="56" text-anchor="middle" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Gateway</text>
-                    <text x="480" y="113" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">ServiceNow</text>
-                    <text x="480" y="249" text-anchor="middle" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Salesforce</text>
-                    <path class="wk-draw" pathLength="1" d="M94 98V122" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:0.3s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M88 122l6 10 6-10z" style="fill:var(--sage,#305b3b);--t:0.56s;--d:0.22s"/>
-                    <path class="wk-draw" pathLength="1" d="M164 168H206" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:0.88s;--d:0.48s"/>
-                    <path class="wk-stamp" d="M206 162l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:1.27s;--d:0.22s"/>
-                    <path class="wk-draw" pathLength="1" d="M248 100H302" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:1.92s;--d:0.52s"/>
-                    <path class="wk-draw" pathLength="1" d="M248 236H302" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:1.98s;--d:0.52s"/>
-                    <path class="wk-stamp" d="M302 94l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:2.36s;--d:0.22s"/>
-                    <path class="wk-stamp" d="M302 230l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:2.42s;--d:0.22s"/>
-                    <path class="wk-draw" pathLength="1" d="M344.5 100V64.5H615.5V135.5H344.5Z" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:2.6s;--d:0.75s"/>
-                    <path class="wk-draw" pathLength="1" d="M344.5 236V200.5H615.5V271.5H344.5Z" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:2.68s;--d:0.75s"/>
-                    <g class="wk-travel" style="--dx:-56px;--t:0.86s;--d:0.6s">
-                      <rect class="wk-stamp" x="224" y="160" width="16" height="16" style="fill:var(--sage,#305b3b);--t:0.68s;--d:0.22s"/>
+          </ul>
+          <div class="layer-more">
+            <h3>Go deeper</h3>
+            <ul class="more-list">
+              <li><a href="https://ozgurkarahan.com/work/oz-radio/">Oz Radio, frame by frame<span aria-hidden="true">&nbsp;→</span></a><p>One spoken question, from raised hand to cited answer.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio source<span aria-hidden="true">&nbsp;↗</span></a><p>Live presenting, narrated videos and two-host podcasts, in 10+ languages.</p></li>
+              <li><a href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Horizon Famille presentation<span aria-hidden="true">&nbsp;↗</span></a><p>How the call, the systems and the approval fit together.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille source<span aria-hidden="true">&nbsp;↗</span></a><p>Voice Live, Azure Communication Services and Foundry.</p></li>
+            </ul>
+            <p class="layer-scope"><strong>Demonstration scope.</strong> Horizon Famille is a real recorded phone call with mock CRM, ERP and knowledge-base services; it is not a production deployment.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="layer shell" id="distribution" aria-labelledby="layer-2-title">
+        <div class="layer-head">
+          <p class="layer-kicker"><span class="layer-marker" data-layer="2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>02 · Where users are</p>
+          <h2 id="layer-2-title">Distribution</h2>
+          <p class="layer-stance">Bring agents to where people already work.</p>
+          <p class="layer-why">An agent nobody finds is an agent nobody uses. Build it once and publish it where users already are, in Microsoft Teams and Microsoft 365 Copilot, with the same identity and governance behind every channel.</p>
+          <ul class="layer-tags" aria-label="Building blocks"><li>Teams</li><li>Microsoft 365 Copilot</li><li>Foundry publishing</li></ul>
+        </div>
+        <div class="layer-evidence" data-single>
+          <ul class="work-grid" role="list">
+            <li class="topic-card" data-work="distribution">
+              <a class="topic-card-link" href="https://ozgurkarahan.com/customer-360/" aria-labelledby="card-distribution-chip card-distribution-title" aria-describedby="card-distribution-scope">
+                <div class="topic-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="distribution-cover-title" aria-describedby="distribution-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+                    <title id="distribution-cover-title">Customer 360: one agent, built once, published where people work</title>
+                    <desc id="distribution-cover-desc">Illustrative drawing. On the left, a single node, &#8220;One agent, built once&#8221;. A right-angled route splits in two and leads to &#8220;Teams&#8221; and to &#8220;Microsoft 365 Copilot&#8221;; a small circle, the user's request, sits on each branch. The point of the drawing, outlined in amber, is the frame around both surfaces, labelled &#8220;Where people work&#8221;.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <rect x="32" y="146" width="200" height="112" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="132" y="194" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">One agent</text>
+                    <text x="132" y="232" text-anchor="middle" font-size="26" font-weight="500" style="fill:var(--muted,#535568)">built once</text>
+                    <path d="M232 202H286M286 128V258M286 128H344M286 258H344" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M344 122L354 128L344 134ZM344 252L354 258L344 264Z" style="fill:var(--muted,#535568)"/>
+                    <rect x="356" y="88" width="248" height="80" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="480" y="139" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Teams</text>
+                    <rect x="356" y="200" width="248" height="116" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="480" y="250" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Microsoft 365</text>
+                    <text x="480" y="288" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Copilot</text>
+                    <text x="482" y="62" text-anchor="middle" font-size="26" font-weight="600" style="fill:var(--accent-text,#905c16)">Where people work</text>
+                    <text x="32" y="372" font-family="IBM Plex Mono, monospace" font-size="22" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <g class="wk-travel" style="--dx:-26px;--dy:74px;--t:0.3s;--d:0.6s">
+                      <circle cx="312" cy="128" r="7" style="fill:var(--brand-mid,#5e5cb3)"/>
                     </g>
-                    <g class="wk-travel" style="--dx:-96px;--t:1.92s;--d:0.6s">
-                      <rect class="wk-stamp" x="320" y="92" width="16" height="16" style="fill:var(--sage,#305b3b);--t:1.58s;--d:0.25s"/>
+                    <g class="wk-travel" style="--dx:-26px;--dy:-56px;--t:0.55s;--d:0.6s">
+                      <circle cx="312" cy="258" r="7" style="fill:var(--brand-mid,#5e5cb3)"/>
                     </g>
-                    <g class="wk-travel" style="--dx:-96px;--t:1.98s;--d:0.6s">
-                      <rect class="wk-stamp" x="320" y="228" width="16" height="16" style="fill:var(--sage,#305b3b);--t:1.64s;--d:0.25s"/>
-                    </g>
-                    <path class="wk-draw" pathLength="1" d="M344 296H616V392H344Z" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.7s;--d:0.85s"/>
-                    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-                    <text text-anchor="middle" font-size="32" font-weight="600" style="fill:var(--ink,#202b21)"><tspan x="480" y="338">Last modified</tspan><tspan x="480" y="376">by Alice</tspan></text>
+                    <path class="wk-draw" pathLength="1" d="M352 26H612A12 12 0 0 1 624 38V330A12 12 0 0 1 612 342H352A12 12 0 0 1 340 330V38A12 12 0 0 1 352 26Z" fill="none" stroke-width="4" style="stroke:var(--accent,#b8791a);--t:1.4s;--d:1.1s"/>
                   </svg>
                 </div>
                 <div class="topic-copy">
-                  <span class="topic-chip" id="card-identity-chip">Sample</span>
-                  <h3 id="card-identity-title">Agent access on behalf of the user</h3>
-                  <p class="topic-description"><strong>Salesforce and ServiceNow.</strong> Samples for carrying the caller's identity across agent, MCP, and enterprise-system boundaries.</p>
-                  <p class="topic-scope" id="card-identity-scope">Reference sample &amp; video<span aria-hidden="true">&nbsp;↗</span></p>
+                  <span class="topic-chip" id="card-distribution-chip">Sample &amp; video</span>
+                  <h3 id="card-distribution-title">Customer 360: build the engagement layer once</h3>
+                  <p class="topic-description">One Foundry agent, published to Teams chats and Microsoft 365 Copilot, routes each request to the right system as the signed-in user.</p>
+                  <p class="topic-scope" id="card-distribution-scope">Reference sample&nbsp;· 2:40 video<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
-            <li class="topic-card" data-work="foundry">
-              <a class="topic-card-link" href="https://ozgurkarahan.github.io/foundry-openai-coding-agent/" aria-labelledby="card-foundry-chip card-foundry-title" aria-describedby="card-foundry-scope">
-                <div class="topic-image topic-image-drawing">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="foundry-cover-title" aria-describedby="foundry-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-                    <title id="foundry-cover-title">Foundry Hosted Agents: a file kept in one session's sandbox across turns, then checked in a browser</title>
-                    <desc id="foundry-cover-desc">Illustrative drawing: inside a frame labelled "Per-session sandbox" (one per-session VM-isolated sandbox), a first request arrives at the "Terminal", where a command runs, and its output lands as a file in the persistent "$HOME". On "Turn 2" of the same session a second request arrives in the same sandbox; the file is taken from $HOME into the "Browser", which carries a check mark for a rendered browser verification step, not a guaranteed result.</desc>
-                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-                    <rect x="56" y="24" width="560" height="304" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-                    <text x="80" y="64" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Per-session sandbox</text>
-                    <rect x="96" y="88" width="256" height="96" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <path d="M120 156l10 8-10 8" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b)"/>
-                    <rect x="138" y="161" width="96" height="6" style="fill:var(--line,#c6d2c3)"/>
-                    <text x="120" y="133" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Terminal</text>
-                    <rect x="408" y="88" width="184" height="96" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-                    <path d="M424 148h16v8h8v20h-24z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--sage,#305b3b)"/>
-                    <text x="424" y="133" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">$HOME</text>
-                    <rect x="360" y="248" width="232" height="64" style="fill:var(--warm-soft,#fbf0dc)"/>
-                    <path d="M374 281l7 7 14-15" fill="none" stroke-width="3" style="stroke:var(--ink,#202b21)"/>
-                    <text x="408" y="293" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Browser</text>
-                    <path d="M24 136H80M352 160H392M436 184V232M24 280H344" fill="none" stroke-width="2" style="stroke:var(--muted,#485447)"/>
-                    <path d="M80 130l10 6-10 6zM392 154l10 6-10 6zM430 232l6 10 6-10zM344 274l10 6-10 6z" style="fill:var(--muted,#485447)"/>
-                    <text x="80" y="264" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Turn 2</text>
-                    <path class="wk-draw" pathLength="1" d="M24 136H80" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.3s;--d:0.3s"/>
-                    <path class="wk-stamp" d="M80 130l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:0.56s;--d:0.2s"/>
-                    <g class="wk-travel" style="--dx:-40px;--t:0.3s;--d:0.5s"><rect x="64" y="144" width="16" height="16" style="fill:var(--sage,#305b3b)"/></g>
-                    <path class="wk-draw" pathLength="1" d="M96 88H352V184H96Z" fill="none" stroke-width="3" stroke-miterlimit="1.5" style="stroke:var(--sage,#305b3b);--t:0.76s;--d:0.7s"/>
-                    <rect class="wk-grow" x="138" y="161" width="96" height="6" style="fill:var(--sage,#305b3b);--sx:0;--o:0 50%;--t:1.02s;--d:0.42s"/>
-                    <path class="wk-draw" pathLength="1" d="M352 160H392" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.44s;--d:0.3s"/>
-                    <path class="wk-stamp" d="M392 154l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:1.68s;--d:0.2s"/>
-                    <path class="wk-stamp" d="M424 148h16v8h8v20h-24z" stroke-width="2" style="fill:var(--sage,#305b3b);stroke:var(--sage,#305b3b);--t:1.84s;--d:0.3s"/>
-                    <path class="wk-draw" pathLength="1" d="M24 280H344" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.3s;--d:0.52s"/>
-                    <path class="wk-stamp" d="M344 274l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:2.74s;--d:0.2s"/>
-                    <g class="wk-travel" style="--dx:-298px;--t:2.3s;--d:0.6s"><rect x="322" y="288" width="16" height="16" style="fill:var(--sage,#305b3b)"/></g>
-                    <path class="wk-draw" pathLength="1" d="M436 184V232" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.94s;--d:0.3s"/>
-                    <path class="wk-stamp" d="M430 232l6 10 6-10z" style="fill:var(--sage,#305b3b);--t:3.18s;--d:0.2s"/>
-                    <path class="wk-draw" pathLength="1" d="M360 248H592V312H360Z" fill="none" stroke-width="4" stroke-miterlimit="1.5" style="stroke:var(--warm,#8a4b06);--t:3.3s;--d:0.65s"/>
-                    <path class="wk-draw" pathLength="1" d="M374 281l7 7 14-15" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:3.88s;--d:0.4s"/>
-                    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
+          </ul>
+          <div class="layer-more">
+            <h3>Go deeper</h3>
+            <ul class="more-list">
+              <li><a href="https://ozgurkarahan.github.io/horizon-famille/">Horizon Famille<span aria-hidden="true">&nbsp;↗</span></a><p>A voice agent on a phone line whose approvals reach a person in Teams.</p></li>
+              <li><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform<span aria-hidden="true">&nbsp;↗</span></a><p>Experiences on top: where each kind of user meets their agents.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="layer shell" id="context" aria-labelledby="layer-3-title">
+        <div class="layer-head">
+          <p class="layer-kicker"><span class="layer-marker" data-layer="3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>03 · Workflows and data</p>
+          <h2 id="layer-3-title">Context</h2>
+          <p class="layer-stance">An agent is only as good as the company knowledge it can reach.</p>
+          <p class="layer-why">Bring the company's knowledge to the agent in three ways: MCP servers for workflows and data in systems such as Salesforce, ServiceNow or SAP; knowledge bases; and retrieval (RAG) over company documents. Each choice trades freshness, cost and control differently.</p>
+          <ul class="layer-tags" aria-label="Building blocks"><li>MCP</li><li>RAG</li><li>Knowledge bases</li><li>Citations</li><li>Salesforce</li><li>ServiceNow</li></ul>
+        </div>
+        <div class="layer-evidence">
+          <ul class="work-grid" role="list">
+            <li class="topic-card" data-work="docwiki">
+              <a class="topic-card-link" href="https://github.com/ozgurkarahan/docwiki" aria-labelledby="card-docwiki-chip card-docwiki-title" aria-describedby="card-docwiki-scope">
+                <div class="topic-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="docwiki-cover-title" aria-describedby="docwiki-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+                    <title id="docwiki-cover-title">DocWiki: a wiki claim traced to the line it cites</title>
+                    <desc id="docwiki-cover-desc">Illustrative drawing. On the left, a &#8220;Wiki page&#8221; with a highlighted &#8220;Claim&#8221; that carries footnote 1. An arrow runs from the footnote to the right, into a &#8220;Source, page 1&#8221;, where the point of the drawing, outlined in amber, is the &#8220;Cited line&#8221;. Below the source, a badge reads &#8220;Quote verified&#8221;.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <rect x="24" y="32" width="268" height="248" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="48" y="80" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Wiki page</text>
+                    <rect x="48" y="104" width="196" height="10" rx="5" style="fill:var(--line,#d9dae4)"/>
+                    <rect x="48" y="134" width="220" height="60" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="66" y="174" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Claim</text>
+                    <text x="206" y="174" font-family="IBM Plex Mono, monospace" font-size="26" font-weight="500" style="fill:var(--brand,#2f2a6b)">[1]</text>
+                    <rect x="48" y="214" width="176" height="10" rx="5" style="fill:var(--line,#d9dae4)"/>
+                    <rect x="48" y="240" width="140" height="10" rx="5" style="fill:var(--line,#d9dae4)"/>
+                    <rect x="348" y="32" width="268" height="248" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="372" y="80" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Source · p. 1</text>
+                    <rect x="372" y="104" width="190" height="10" rx="5" style="fill:var(--line,#d9dae4)"/>
+                    <rect x="368" y="134" width="228" height="60" rx="8" style="fill:var(--accent-soft,#fef2dd)"/>
+                    <text x="386" y="174" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Cited line</text>
+                    <rect x="372" y="214" width="200" height="10" rx="5" style="fill:var(--line,#d9dae4)"/>
+                    <rect x="372" y="240" width="150" height="10" rx="5" style="fill:var(--line,#d9dae4)"/>
+                    <path d="M268 164H350" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M350 158L360 164L350 170Z" style="fill:var(--muted,#535568)"/>
+                    <rect x="348" y="300" width="268" height="52" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <path d="M398 326l8 8 16-16" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--brand,#2f2a6b)"/>
+                    <text x="436" y="336" font-size="26" font-weight="600" style="fill:var(--ink,#191a2c)">Quote verified</text>
+                    <text x="24" y="372" font-family="IBM Plex Mono, monospace" font-size="22" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <g class="wk-travel" style="--dx:-56px;--t:0.3s;--d:0.7s">
+                      <circle cx="324" cy="164" r="7" style="fill:var(--brand-mid,#5e5cb3)"/>
+                    </g>
+                    <path class="wk-draw" pathLength="1" d="M376 134H588A8 8 0 0 1 596 142V186A8 8 0 0 1 588 194H376A8 8 0 0 1 368 186V142A8 8 0 0 1 376 134Z" fill="none" stroke-width="4" style="stroke:var(--accent,#b8791a);--t:1.1s;--d:0.9s"/>
+                    <path class="wk-draw" pathLength="1" d="M398 326l8 8 16-16" fill="none" stroke-width="3" stroke-linecap="butt" stroke-linejoin="round" style="stroke:var(--brand,#2f2a6b);--t:2.1s;--d:0.35s"/>
                   </svg>
                 </div>
                 <div class="topic-copy">
-                  <span class="topic-chip" id="card-foundry-chip">Sample</span>
-                  <h3 id="card-foundry-title">Foundry Hosted Agents</h3>
-                  <p class="topic-description">Tools, persistent workspaces, and browser verification inside a Foundry-hosted coding agent.</p>
-                  <p class="topic-scope" id="card-foundry-scope">Experimental community sample<span aria-hidden="true">&nbsp;↗</span></p>
+                  <span class="topic-chip" id="card-docwiki-chip">Sample</span>
+                  <h3 id="card-docwiki-title">DocWiki: every answer cited to the page</h3>
+                  <p class="topic-description">Turns a pile of company documents into a wiki people can browse and agents can trust: answers come with checked citations, and wiki changes wait for a person's approval.</p>
+                  <p class="topic-scope" id="card-docwiki-scope">Open-source sample&nbsp;· fictional corpus&nbsp;· MCP<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card" data-work="memory">
               <a class="topic-card-link" href="https://github.com/ozgurkarahan/ai-agent-memory" aria-labelledby="card-memory-chip card-memory-title" aria-describedby="card-memory-scope">
-                <div class="topic-image topic-image-drawing">
+                <div class="topic-image">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="memory-cover-title" aria-describedby="memory-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-                    <title id="memory-cover-title">Agent memory: one session's lesson, written to a Markdown wiki and read by the next session</title>
-                    <desc id="memory-cover-desc">Illustrative drawing: a coding session, marked &#8220;Session&#8221; with a terminal prompt, runs &#8220;end session&#8221;: an arrow carries a small square, the lesson, down into a page titled &#8220;[[lessons]]&#8221; in a shared Markdown wiki. A link arrow runs from that page into &#8220;index.md&#8221;, the wiki&#8217;s content catalog, where the new entry is highlighted. From index.md another arrow brings the lesson down to &#8220;Next session&#8221;, outlined in amber: the next session, with any agent, starts by reading it. Plain Markdown read at session start, not model training.</desc>
-                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-                    <rect x="24" y="24" width="216" height="72" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <path d="M40 50l10 10-10 10" stroke-width="3" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <text x="64" y="73" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Session</text>
-                    <path d="M56 96V158" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <path d="M51 158h10l-5 10z" style="fill:var(--muted,#485447)"/>
-                    <text x="80" y="145" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">end session</text>
-                    <path d="M24 168H264L280 184V280H24Z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <path d="M264 168V184H280" stroke-width="2" style="fill:none;stroke:var(--line,#c6d2c3)"/>
-                    <text x="44" y="212" font-size="36" font-weight="700" style="fill:var(--sage,#305b3b)">[[lessons]]</text>
-                    <path d="M44 236h176v8H44zM44 254h128v8H44z" style="fill:var(--line,#c6d2c3)"/>
-                    <path d="M280 204H326" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <path d="M326 199l10 5-10 5z" style="fill:var(--muted,#485447)"/>
-                    <path d="M336 24H592L616 48V280H336Z" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <path d="M592 24V48H616" stroke-width="2" style="fill:none;stroke:var(--line,#c6d2c3)"/>
-                    <text x="360" y="76" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">index.md</text>
-                    <path d="M360 104h200v8H360zM360 136h168v8H360zM360 168h216v8H360zM360 200h184v8H360zM360 232h152v8H360z" style="fill:var(--line,#c6d2c3)"/>
-                    <path d="M476 280V334" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <path d="M471 334h10l-5 10z" style="fill:var(--muted,#485447)"/>
-                    <rect x="336" y="344" width="280" height="48" style="fill:var(--warm-soft,#fbf0dc)"/>
-                    <!-- emphasis -->
-                    <path class="wk-draw" pathLength="1" d="M56 96V158" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:0.4s;--d:0.5s"/>
-                    <path class="wk-stamp" d="M51 158h10l-5 10z" style="fill:var(--sage,#305b3b);--t:0.85s;--d:0.2s"/>
-                    <g class="wk-travel" style="--dy:-40px;--t:0.4s;--d:0.55s">
-                      <rect class="wk-stamp" x="32" y="144" width="16" height="16" style="fill:var(--sage,#305b3b);--t:0.3s;--d:0.2s"/>
-                    </g>
-                    <path class="wk-draw" pathLength="1" d="M56 168H264L280 184V280H24V168Z" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:0.9s;--d:0.8s"/>
-                    <path class="wk-draw" pathLength="1" d="M280 204H326" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:1.55s;--d:0.3s"/>
-                    <path class="wk-stamp" d="M326 199l10 5-10 5z" style="fill:var(--sage,#305b3b);--t:1.82s;--d:0.2s"/>
-                    <rect class="wk-grow" x="360" y="200" width="184" height="8" style="fill:var(--sage,#305b3b);--sx:0;--o:0 50%;--t:1.92s;--d:0.5s"/>
-                    <path class="wk-draw" pathLength="1" d="M476 280V334" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:2.45s;--d:0.45s"/>
-                    <path class="wk-stamp" d="M471 334h10l-5 10z" style="fill:var(--sage,#305b3b);--t:2.85s;--d:0.2s"/>
-                    <g class="wk-travel" style="--dy:-36px;--t:2.45s;--d:0.55s">
-                      <rect class="wk-stamp" x="448" y="320" width="16" height="16" style="fill:var(--sage,#305b3b);--t:2.35s;--d:0.2s"/>
-                    </g>
-                    <path class="wk-draw" pathLength="1" d="M476 344H616V392H336V344Z" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.25s;--d:0.9s"/>
-                    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-                    <text x="600" y="379" text-anchor="end" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">Next session</text>
+                    <title id="memory-cover-title">Agent memory: coding agents write and read linked Markdown knowledge that persists across sessions</title>
+                    <desc id="memory-cover-desc">Illustrative drawing. On the left, two coding-agent sessions, &#8220;Session 1&#8221; and, below it on the &#8220;Next day&#8221;, &#8220;Session 2&#8221;. An arrow labelled &#8220;writes&#8221; runs from Session 1 into a frame titled &#8220;Markdown wiki&#8221;, the point of the drawing, outlined in amber. Inside it, three pages are linked to each other; the newest page is highlighted. An arrow labelled &#8220;reads&#8221; runs from the wiki back to Session 2.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <path d="M216 76H310M320 284H226" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M310 70L320 76L310 82ZM226 278L216 284L226 290Z" style="fill:var(--muted,#535568)"/>
+                    <text x="268" y="62" text-anchor="middle" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">writes</text>
+                    <text x="268" y="270" text-anchor="middle" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">reads</text>
+                    <rect x="24" y="40" width="192" height="72" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="120" y="86" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Session 1</text>
+                    <text x="120" y="190" text-anchor="middle" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Next day</text>
+                    <rect x="24" y="248" width="192" height="72" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="120" y="294" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Session 2</text>
+                    <rect x="320" y="40" width="296" height="280" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="344" y="84" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Markdown wiki</text>
+                    <path d="M432 146H504M388 176V262H424" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <rect x="344" y="116" width="88" height="60" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <path d="M358 134h60v6h-60zM358 150h40v6h-40z" style="fill:var(--line,#d9dae4)"/>
+                    <rect x="504" y="116" width="88" height="60" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <path d="M518 134h60v6h-60zM518 150h40v6h-40z" style="fill:var(--line,#d9dae4)"/>
+                    <rect x="424" y="232" width="88" height="60" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <path d="M438 250h60v6h-60zM438 266h40v6h-40z" style="fill:var(--line,#d9dae4)"/>
+                    <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <g class="wk-travel" style="--dx:-64px;--t:0.3s;--d:0.5s"><circle cx="296" cy="76" r="7" style="fill:var(--brand-mid,#5e5cb3)"/></g>
+                    <rect class="wk-fade" x="424" y="232" width="88" height="60" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b);--t:0.85s;--d:0.3s"/>
+                    <path d="M438 250h60v6h-60zM438 266h40v6h-40z" style="fill:var(--line,#d9dae4)"/>
+                    <path class="wk-draw" pathLength="1" d="M548 176V262H512" stroke-width="2" style="fill:none;stroke:var(--muted,#535568);--t:1.15s;--d:0.4s"/>
+                    <g class="wk-travel" style="--dx:56px;--t:1.6s;--d:0.5s"><circle cx="240" cy="284" r="7" style="fill:var(--brand-mid,#5e5cb3)"/></g>
+                    <path class="wk-draw" pathLength="1" d="M328 40H608A8 8 0 0 1 616 48V312A8 8 0 0 1 608 320H328A8 8 0 0 1 320 312V48A8 8 0 0 1 328 40Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:2.2s;--d:0.9s"/>
                   </svg>
                 </div>
                 <div class="topic-copy">
                   <span class="topic-chip" id="card-memory-chip">Sample</span>
                   <h3 id="card-memory-title">Agent memory</h3>
-                  <p class="topic-description">Connect project knowledge and lessons in a linked Markdown wiki across coding-agent sessions.</p>
+                  <p class="topic-description">Coding agents read and write a linked Markdown wiki, so project knowledge and lessons persist across sessions.</p>
                   <p class="topic-scope" id="card-memory-scope">Developer knowledge pattern<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
-            <li class="topic-card" data-work="sdlc">
-              <a class="topic-card-link" href="https://github.com/ozgurkarahan/agentic-sdlc-demo" aria-labelledby="card-sdlc-chip card-sdlc-title" aria-describedby="card-sdlc-scope">
-                <div class="topic-image topic-image-drawing">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="sdlc-cover-title" aria-describedby="sdlc-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-                    <title id="sdlc-cover-title">Agentic software delivery: a pull request waits at the human review stop</title>
-                    <desc id="sdlc-cover-desc">Illustrative drawing: an &#8220;Issue&#8221; leads to &#8220;Plan approval&#8221;, a human stop marked passed with a check. Below it, a &#8220;Pull request&#8221; carries its &#8220;Required checks&#8221;, also marked with a check. A line runs from the pull request to the &#8220;Human review&#8221; stop, which shows a person outline; a small square, the pull request, waits just before it. Nothing is merged.</desc>
-                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-                    <rect x="24" y="24" width="152" height="72" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <text x="48" y="72" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Issue</text>
-                    <path d="M176 60H222M336 96V126M416 252H520V334" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <path d="M222 54l10 6-10 6zM330 126l6 10 6-10zM514 334l6 10 6-10z" style="fill:var(--muted,#485447)"/>
-                    <rect x="232" y="24" width="384" height="72" stroke-width="3" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--sage,#305b3b)"/>
-                    <text x="296" y="72" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Plan approval</text>
-                    <rect x="24" y="136" width="392" height="152" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#c6d2c3)"/>
-                    <rect x="25" y="216" width="390" height="71" style="fill:var(--sage-soft,#e1f0e1)"/>
-                    <path d="M24 216H416" stroke-width="2" style="fill:none;stroke:var(--sage,#305b3b)"/>
-                    <path d="M256 60l8 8 16-18" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <path d="M48 254l8 8 16-18" stroke-width="2" style="fill:none;stroke:var(--muted,#485447)"/>
-                    <text x="48" y="184" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Pull request</text>
-                    <text x="88" y="264" font-size="32" font-weight="600" style="fill:var(--sage,#305b3b)">Required checks</text>
-                    <rect x="304" y="344" width="312" height="48" style="fill:var(--warm-soft,#fbf0dc)"/>
-                    <path d="M328 357a6 6 0 1 1-12 0a6 6 0 1 1 12 0M311 384c0-8 4.5-13 11-13s11 5 11 13" stroke-width="2.5" style="fill:none;stroke:var(--ink,#202b21)"/>
-                    <path class="wk-draw" pathLength="1" d="M176 60V96H24V24H176Z" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:0.3s;--d:0.65s"/>
-                    <path class="wk-draw" pathLength="1" d="M176 60H222" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:0.8s;--d:0.25s"/>
-                    <path class="wk-stamp" d="M222 54l10 6-10 6z" style="fill:var(--sage,#305b3b);--t:1.02s;--d:0.2s"/>
-                    <path class="wk-draw" pathLength="1" d="M256 60l8 8 16-18" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:1.1s;--d:0.35s"/>
-                    <path class="wk-draw" pathLength="1" d="M336 96V126" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:1.4s;--d:0.25s"/>
-                    <path class="wk-stamp" d="M330 126l6 10 6-10z" style="fill:var(--sage,#305b3b);--t:1.62s;--d:0.2s"/>
-                    <path class="wk-draw" pathLength="1" d="M336 136H24V288H104" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:1.65s;--d:0.75s"/>
-                    <path class="wk-draw" pathLength="1" d="M336 136H416V288H104" stroke-width="3" style="fill:none;stroke:var(--sage,#305b3b);--t:1.65s;--d:0.75s"/>
-                    <path class="wk-draw" pathLength="1" d="M48 254l8 8 16-18" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:2.25s;--d:0.35s"/>
-                    <path class="wk-draw" pathLength="1" d="M416 252H520V334" stroke-width="4" style="fill:none;stroke:var(--sage,#305b3b);--t:2.6s;--d:0.4s"/>
-                    <path class="wk-stamp" d="M514 334l6 10 6-10z" style="fill:var(--sage,#305b3b);--t:2.96s;--d:0.2s"/>
-                    <g class="wk-travel" style="--dy:-68px;--t:4.02s;--d:0.53s">
-                      <g class="wk-travel" style="--dx:-88px;--t:3.55s;--d:0.47s">
-                        <rect class="wk-stamp" x="512" y="312" width="16" height="16" style="fill:var(--sage,#305b3b);--t:2.5s;--d:0.25s"/>
-                      </g>
+          </ul>
+          <div class="layer-more">
+            <h3>Go deeper</h3>
+            <ul class="more-list">
+              <li><a href="https://github.com/ozgurkarahan/snow-meta-tool">ServiceNow meta-tool<span aria-hidden="true">&nbsp;↗</span></a><p>An MCP server: three generic tools (discover, query, write) cover ServiceNow's data model at runtime.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">Salesforce meta-tool<span aria-hidden="true">&nbsp;↗</span></a><p>A few generic tools discover Salesforce objects at runtime instead of one tool per object.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/simple-order-agent">Simple Order Agent<span aria-hidden="true">&nbsp;↗</span></a><p>An order workflow through MuleSoft MCP and A2A, with the Claude Agent SDK.</p></li>
+              <li><span class="private-name">Enterprise Document RAG</span><p>Private work: document intelligence and retrieval over company documents.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/docwiki/blob/main/README.md">How DocWiki works<span aria-hidden="true">&nbsp;↗</span></a><p>Foundry agents, MCP and Agent Skills on Azure Container Apps.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="layer shell" id="identity" aria-labelledby="layer-4-title">
+        <div class="layer-head">
+          <span id="idea-identity"></span>
+          <p class="layer-kicker"><span class="layer-marker" data-layer="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>04 · From the voice to the system</p>
+          <h2 id="layer-4-title">Identity</h2>
+          <p class="layer-stance">The agent acts as the person who asked.</p>
+          <p class="layer-why">Identity is not a layer; it runs through all of them. Agents take more and more actions for users, in more and more systems, so the user's identity has to travel from the voice that asks, through Teams or Copilot, all the way to Salesforce or ServiceNow. Each system then applies the authentication and authorization rules it already has, instead of rebuilding them in middleware or hiding everyone behind one service account.</p>
+          <ul class="layer-tags" aria-label="Building blocks"><li>Entra ID</li><li>On-behalf-of</li><li>API Management</li><li>MCP</li></ul>
+        </div>
+        <div class="layer-evidence" data-single>
+          <ul class="work-grid" role="list">
+            <li class="topic-card" data-work="identity">
+              <a class="topic-card-link" href="https://ozgurkarahan.com/identity-propagation/" aria-labelledby="card-identity-chip card-identity-title" aria-describedby="card-identity-scope">
+                <div class="topic-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="identity-cover-title" aria-describedby="identity-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+                    <title id="identity-cover-title">Customer 360: one agent reaches ServiceNow and Salesforce through a gateway as the signed-in user</title>
+                    <desc id="identity-cover-desc">Illustrative drawing. Alice, the fictional signed-in user, sits at the top left; her token, a small circle, travels down through the &#8220;Agent&#8221; to the &#8220;Gateway&#8221;. From the gateway, right-angled arrows lead to &#8220;ServiceNow&#8221; and &#8220;Salesforce&#8221;, each reached with a token for Alice. An arrow from Salesforce leads down to the point of the drawing, outlined in amber: the record reads &#8220;Last modified by Alice&#8221;.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <g stroke-width="2" style="fill:none;stroke:var(--ink,#191a2c)">
+                      <circle cx="128" cy="40" r="10"/>
+                      <path d="M110 74A18 18 0 0 1 146 74"/>
                     </g>
-                    <path class="wk-draw" pathLength="1" d="M520 344H304V392H400" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.05s;--d:0.6s"/>
-                    <path class="wk-draw" pathLength="1" d="M520 344H616V392H400" stroke-width="4" style="fill:none;stroke:var(--warm,#8a4b06);--t:3.05s;--d:0.6s"/>
-                    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-                    <text x="342" y="379" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">Human review</text>
+                    <text x="160" y="66" font-size="28" font-weight="600" style="fill:var(--ink,#191a2c)">Alice</text>
+                    <path d="M128 82V98M128 180V226M232 272H272V68H302M272 164H302M464 196V238" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M122 98L128 108L134 98ZM122 226L128 236L134 226ZM302 62L312 68L302 74ZM302 158L312 164L302 170ZM458 238L464 248L470 238Z" style="fill:var(--muted,#535568)"/>
+                    <rect x="24" y="108" width="208" height="72" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="128" y="154" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Agent</text>
+                    <rect x="24" y="236" width="208" height="72" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="128" y="282" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Gateway</text>
+                    <rect x="312" y="36" width="304" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="464" y="78" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">ServiceNow</text>
+                    <rect x="312" y="132" width="304" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="464" y="174" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Salesforce</text>
+                    <rect x="312" y="248" width="304" height="96" rx="8" stroke-width="2" style="fill:var(--accent-soft,#fef2dd);stroke:var(--line,#d9dae4)"/>
+                    <text x="464" y="290" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Last modified</text>
+                    <text x="464" y="326" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">by Alice</text>
+                    <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <g class="wk-travel" style="--dy:-115px;--t:0.3s;--d:0.7s"><circle cx="128" cy="203" r="7" style="fill:var(--brand-mid,#5e5cb3)"/></g>
+                    <circle class="wk-stamp" cx="290" cy="68" r="7" style="fill:var(--brand-mid,#5e5cb3);--t:1.15s;--d:0.28s"/>
+                    <circle class="wk-stamp" cx="290" cy="164" r="7" style="fill:var(--brand-mid,#5e5cb3);--t:1.3s;--d:0.28s"/>
+                    <circle class="wk-stamp" cx="464" cy="220" r="7" style="fill:var(--brand-mid,#5e5cb3);--t:1.6s;--d:0.28s"/>
+                    <path class="wk-draw" pathLength="1" d="M320 248H608A8 8 0 0 1 616 256V336A8 8 0 0 1 608 344H320A8 8 0 0 1 312 336V256A8 8 0 0 1 320 248Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:1.95s;--d:0.8s"/>
                   </svg>
                 </div>
                 <div class="topic-copy">
-                  <span class="topic-chip" id="card-sdlc-chip">Sample</span>
-                  <h3 id="card-sdlc-title">Agentic software delivery</h3>
-                  <p class="topic-description">Explore a presenter-led software-delivery demonstration and a reusable agent harness.</p>
-                  <p class="topic-scope" id="card-sdlc-scope">Demo &amp; evolving harness<span aria-hidden="true">&nbsp;↗</span></p>
+                  <span class="topic-chip" id="card-identity-chip">Article &amp; samples</span>
+                  <h3 id="card-identity-title">The same user in Salesforce and ServiceNow</h3>
+                  <p class="topic-description">How the user's identity travels hop by hop, so each system's permissions and audit fields apply; three public samples, and where the pattern stops.</p>
+                  <p class="topic-scope" id="card-identity-scope">Identity propagation, explained<span aria-hidden="true">&nbsp;→</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="layer-more">
+            <h3>Go deeper</h3>
+            <ul class="more-list">
+              <li><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">Customer 360 source<span aria-hidden="true">&nbsp;↗</span></a><p>One Foundry agent, the signed-in user in Salesforce and ServiceNow.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/propagate-id-entra">Entra identity flow<span aria-hidden="true">&nbsp;↗</span></a><p>Browser, agent, MCP and API Management to a backend, with no service account.</p></li>
+              <li><a href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">The architecture story<span aria-hidden="true">&nbsp;↗</span></a><p>Design decisions behind the Salesforce sample.</p></li>
+            </ul>
+            <p class="layer-scope">These samples are not audited production guarantees. <a href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/security.md">Read the evaluation boundaries</a> before adapting a pattern.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="layer shell" id="governance" aria-labelledby="layer-5-title">
+        <div class="layer-head">
+          <span id="judgment"></span><span id="vision"></span>
+          <p class="layer-kicker"><span class="layer-marker" data-layer="5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>05 · Across every layer</p>
+          <h2 id="layer-5-title">Governance</h2>
+          <p class="layer-stance">Every agent, tool and skill needs an owner and a rule.</p>
+          <p class="layer-why">Governance is not a layer either; it applies at every one. As agents multiply, so do their tools and skills: which channels an agent is published to, which workflows and data it may touch, which skills it carries, where it runs, and where a person must decide. Agents that code or browse also need their own isolated compute, a sandbox per session rather than a shared server.</p>
+          <ul class="layer-tags" aria-label="Building blocks"><li>Foundry</li><li>Sandboxes</li><li>Approvals</li><li>Observability</li></ul>
+        </div>
+        <div class="layer-evidence">
+          <ul class="work-grid" role="list">
+            <li class="topic-card" data-work="foundry">
+              <a class="topic-card-link" href="https://ozgurkarahan.github.io/foundry-openai-coding-agent/" aria-labelledby="card-foundry-chip card-foundry-title" aria-describedby="card-foundry-scope">
+                <div class="topic-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="foundry-cover-title" aria-describedby="foundry-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+                    <title id="foundry-cover-title">Foundry Hosted Agents: a coding agent runs in its own per-session sandbox, a computer per agent</title>
+                    <desc id="foundry-cover-desc">Illustrative drawing. On the left, the &#8220;Coding agent&#8221;; an arrow carries its request into a large frame, the point of the drawing, outlined in amber and labelled &#8220;Per-session sandbox&#8221;. Inside the frame are three tools of its own: &#8220;Workspace&#8221; with a folder, &#8220;Terminal&#8221; with a prompt, and &#8220;Browser check&#8221; with a browser window marked with a tick.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <path d="M200 172H230" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M230 166L240 172L230 178Z" style="fill:var(--muted,#535568)"/>
+                    <rect x="24" y="124" width="176" height="96" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="112" y="164" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Coding</text>
+                    <text x="112" y="198" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">agent</text>
+                    <rect x="240" y="24" width="376" height="312" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="264" y="68" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Per-session sandbox</text>
+                    <rect x="264" y="92" width="328" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="328" y="134" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Workspace</text>
+                    <rect x="264" y="172" width="328" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="328" y="214" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Terminal</text>
+                    <rect x="264" y="252" width="328" height="64" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="328" y="294" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Browser check</text>
+                    <path d="M284 114h9l3 4h14v16h-26zM286 196l9 8-9 8M284 273h28M284 276v-6a3 3 0 0 1 3-3h22a3 3 0 0 1 3 3v22a3 3 0 0 1-3 3h-22a3 3 0 0 1-3-3z" stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <g class="wk-travel" style="--dx:-56px;--t:0.2s;--d:0.45s"><circle cx="214" cy="172" r="7" style="fill:var(--brand-mid,#5e5cb3)"/></g>
+                    <path class="wk-stamp" d="M284 114h9l3 4h14v16h-26z" stroke-width="2" stroke-linejoin="round" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b);--t:0.7s;--d:0.3s"/>
+                    <rect class="wk-grow" x="299" y="208" width="14" height="4" style="fill:var(--brand,#2f2a6b);--sx:0;--t:1s;--d:0.35s"/>
+                    <path class="wk-draw" pathLength="1" d="M291 284l5 5 9-10" stroke-width="3" style="fill:none;stroke:var(--brand,#2f2a6b);--t:1.4s;--d:0.35s"/>
+                    <path class="wk-draw" pathLength="1" d="M248 24H608A8 8 0 0 1 616 32V328A8 8 0 0 1 608 336H248A8 8 0 0 1 240 328V32A8 8 0 0 1 248 24Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:1.9s;--d:1s"/>
+                  </svg>
+                </div>
+                <div class="topic-copy">
+                  <span class="topic-chip" id="card-foundry-chip">Sample</span>
+                  <h3 id="card-foundry-title">A computer per agent</h3>
+                  <p class="topic-description">A coding agent hosted in Foundry, with a per-session sandbox: workspace, terminal and browser checks.</p>
+                  <p class="topic-scope" id="card-foundry-scope">Experimental community sample<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
             <li class="topic-card" data-work="platform">
               <a class="topic-card-link" href="https://ozgurkarahan.com/agentic-platform/" aria-labelledby="card-platform-chip card-platform-title" aria-describedby="card-platform-scope">
-                <div class="topic-image topic-image-drawing">
+                <div class="topic-image">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="platform-cover-title" aria-describedby="platform-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
-                    <title id="platform-cover-title">The Agentic Platform: experiences on top, agent computers and shared capabilities inside one governance</title>
-                    <desc id="platform-cover-desc">Illustrative drawing: three layers. On top, &#8220;Experiences&#8221;: three boxes (an IDE prompt, a chat bubble, an always-on sun), each with an arrow down into a frame. Inside the frame, &#8220;Every agent gets a computer&#8221;: two boxes (a laptop and a cloud), and &#8220;Shared capabilities&#8221;: four boxes (context, models, memory and tools glyphs). The frame around these two layers is outlined and ends in a tab labelled &#8220;One governance&#8221;.</desc>
-                    <rect width="640" height="400" style="fill:var(--canvas,#f6faf6)"/>
-                    <rect x="24" y="104" width="592" height="224" style="fill:var(--surface,#ffffff)"/>
-                    <rect x="296" y="328" width="320" height="64" style="fill:var(--warm-soft,#fbf0dc)"/>
-                    <path d="M24 104H616V392H296V328H24Z" fill="none" stroke-width="2" style="stroke:var(--line,#c6d2c3)"/>
-                    <path d="M400 24h56v48h-56zM472 24h56v48h-56zM544 24h56v48h-56zM472 140h56v48h-56zM544 140h56v48h-56zM328 252h56v48h-56zM400 252h56v48h-56zM472 252h56v48h-56zM544 252h56v48h-56z" stroke-width="2" style="fill:var(--sage-soft,#e1f0e1);stroke:var(--line,#c6d2c3)"/>
-                    <g fill="none" stroke-width="2.5" style="stroke:var(--sage,#305b3b)">
-                      <path d="M416 40l8 8-8 8M428 56h14M486 37h28v19h-15l-7 7v-7h-6z"/>
-                      <path d="M572 34v5M572 57v5M558 48h5M581 48h5M562 38l3.5 3.5M578.5 54.5l3.5 3.5M582 38l-3.5 3.5M565.5 54.5l-3.5 3.5"/>
-                      <circle cx="572" cy="48" r="5"/>
-                      <path d="M486 153h28v17h-28zM480 175h40M560 172h24a6 6 0 0 0 1-12 9 9 0 0 0-17-3 7 7 0 0 0-8 15z"/>
-                      <path d="M342 264h6v6h-6zM364 264h6v6h-6zM353 283h6v6h-6zM348 267h16M346 270l8 13M366 270l-8 13"/>
-                      <path d="M428 262l3.5 10.5 10.5 3.5-10.5 3.5-3.5 10.5-3.5-10.5-10.5-3.5 10.5-3.5z"/>
-                      <path d="M489 266a11 4 0 0 1 22 0a11 4 0 0 1-22 0zM489 266v20a11 4 0 0 0 22 0v-20M489 276a11 4 0 0 0 22 0"/>
-                      <path d="M574 278l-10 10a2.8 2.8 0 0 1-4-4l10-10a7 7 0 0 1 9-9l-4 4 1 3 3 1 4-4a7 7 0 0 1-9 9z"/>
+                    <title id="platform-cover-title">The Agentic Platform: experiences on top, a computer per agent, one governance across them</title>
+                    <desc id="platform-cover-desc">Illustrative drawing. A top band, &#8220;Experiences&#8221; (chat, IDE, always-on), sends three arrows down to three &#8220;Agent&#8221; boxes, each with a computer of its own. A single frame encloses the three agents: the point of the drawing, outlined in amber and labelled &#8220;One governance&#8221;.</desc>
+                    <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+                    <rect x="24" y="24" width="592" height="72" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <text x="48" y="70" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Experiences</text>
+                    <text x="592" y="70" text-anchor="end" font-size="28" font-weight="500" style="fill:var(--muted,#535568)">Chat · IDE · always-on</text>
+                    <rect x="24" y="128" width="592" height="216" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+                    <path d="M128 96V142M320 96V142M512 96V142" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+                    <path d="M122 142L128 152L134 142ZM314 142L320 152L326 142ZM506 142L512 152L518 142Z" style="fill:var(--muted,#535568)"/>
+                    <rect x="56" y="152" width="144" height="128" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="128" y="196" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Agent</text>
+                    <rect x="248" y="152" width="144" height="128" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="320" y="196" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Agent</text>
+                    <rect x="440" y="152" width="144" height="128" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+                    <text x="512" y="196" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Agent</text>
+                    <text x="48" y="324" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">One governance</text>
+                    <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:var(--muted,#535568)">Illustrative</text>
+                    <g class="wk-stamp" stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.3s;--d:0.3s">
+                      <rect x="102" y="214" width="52" height="32" rx="4" style="fill:var(--surface,#ffffff)"/>
+                      <path d="M128 246v10M114 256h28"/>
                     </g>
-                    <path d="M428 72v22M500 72v22M572 72v22" fill="none" stroke-width="2" style="stroke:var(--muted,#485447)"/>
-                    <path d="M423 94h10l-5 10zM495 94h10l-5 10zM567 94h10l-5 10z" style="fill:var(--muted,#485447)"/>
-                    <text x="24" y="60" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)">Experiences</text>
-                    <text x="48" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)"><tspan x="48" y="152">Every agent gets</tspan><tspan x="48" y="192">a computer</tspan></text>
-                    <text x="48" font-size="36" font-weight="700" style="fill:var(--ink,#202b21)"><tspan x="48" y="264">Shared</tspan><tspan x="48" y="304">capabilities</tspan></text>
-                    <path class="wk-stamp" d="M400 24h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.3s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M472 24h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.5s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M544 24h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:0.7s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M472 140h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.35s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M544 140h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.55s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M328 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:1.85s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M400 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.03s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M472 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.21s;--d:0.32s"/>
-                    <path class="wk-stamp" d="M544 252h56v48h-56z" fill="none" stroke-width="3" style="stroke:var(--sage,#305b3b);--t:2.39s;--d:0.32s"/>
-                    <g class="wk-grow" style="--sx:1;--sy:0;--o:50% 0;--t:0.95s;--d:0.32s">
-                      <path d="M428 72v22M500 72v22M572 72v22" fill="none" stroke-width="4" style="stroke:var(--sage,#305b3b)"/>
+                    <g class="wk-stamp" stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.5s;--d:0.3s">
+                      <rect x="294" y="214" width="52" height="32" rx="4" style="fill:var(--surface,#ffffff)"/>
+                      <path d="M320 246v10M306 256h28"/>
                     </g>
-                    <g class="wk-fade" style="--t:1.24s;--d:0.16s">
-                      <path d="M423 94h10l-5 10zM495 94h10l-5 10zM567 94h10l-5 10z" style="fill:var(--sage,#305b3b)"/>
+                    <g class="wk-stamp" stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:var(--brand,#2f2a6b);--t:0.7s;--d:0.3s">
+                      <rect x="486" y="214" width="52" height="32" rx="4" style="fill:var(--surface,#ffffff)"/>
+                      <path d="M512 246v10M498 256h28"/>
                     </g>
-                    <path class="wk-draw" pathLength="1" d="M184 104H616V392H456" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:2.9s;--d:1s"/>
-                    <path class="wk-draw" pathLength="1" d="M184 104H24V328H296V392H456" fill="none" stroke-width="4" style="stroke:var(--warm,#8a4b06);--t:2.9s;--d:1s"/>
-                    <text x="24" y="376" font-size="32" style="fill:var(--muted,#485447)">Illustrative</text>
-                    <text x="456" y="376" text-anchor="middle" font-size="32" font-weight="700" style="fill:var(--ink,#202b21)">One governance</text>
+                    <path class="wk-draw" pathLength="1" d="M32 128H608A8 8 0 0 1 616 136V336A8 8 0 0 1 608 344H32A8 8 0 0 1 24 336V136A8 8 0 0 1 32 128Z" stroke-width="4" style="fill:none;stroke:var(--accent,#b8791a);--t:1.2s;--d:1s"/>
                   </svg>
                 </div>
                 <div class="topic-copy">
                   <span class="topic-chip" id="card-platform-chip">Deck</span>
                   <h3 id="card-platform-title">The Agentic Platform</h3>
-                  <p class="topic-description">Connect the ideas behind building, deploying, operating, and governing agents.</p>
+                  <p class="topic-description">Experiences on top, a computer per agent, one governance across them: the platform in eight slides.</p>
                   <p class="topic-scope" id="card-platform-scope">Interactive presentation<span aria-hidden="true">&nbsp;↗</span></p>
                 </div>
               </a>
             </li>
-            <li class="topic-card" data-work="workflow">
-              <a class="topic-card-link" href="#contact" aria-labelledby="card-workflow-title" aria-describedby="card-workflow-scope">
-                <div class="topic-image topic-image-end" aria-hidden="true">
-                  <span class="topic-end-line">Bring a workflow.</span>
-                  <span class="topic-end-arrow">→</span>
-                </div>
-                <div class="topic-copy">
-                  <h3 id="card-workflow-title">Your workflow</h3>
-                  <p class="topic-description">For conversations about enterprise agents, caller identity, human oversight, or the architecture behind them.</p>
-                  <p class="topic-scope" id="card-workflow-scope">Let's examine the boundaries<span aria-hidden="true">&nbsp;↓</span></p>
-                </div>
-              </a>
-            </li>
           </ul>
+          <div class="layer-more">
+            <h3>Go deeper</h3>
+            <ul class="more-list">
+              <li><a href="https://github.com/ozgurkarahan/horizon-famille/tree/master/power-platform">The approval workflow<span aria-hidden="true">&nbsp;↗</span></a><p>Where Horizon's mandate ends, a person decides in Teams.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent">Foundry coding agent source<span aria-hidden="true">&nbsp;↗</span></a><p>Read the <a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/limitations.md">limitations</a> before evaluating it.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC demo<span aria-hidden="true">&nbsp;↗</span></a><p>A presenter-led delivery harness with human checkpoints.</p></li>
+              <li><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">Azure SRE Agent for Synapse<span aria-hidden="true">&nbsp;↗</span></a><p>Investigation scaffolding for Synapse observability.</p></li>
+            </ul>
+          </div>
         </div>
-        <div class="visually-hidden" aria-live="polite" aria-atomic="true" data-showcase-live></div>
-        <p class="topic-more"><a href="https://ozgurkarahan.com/work/oz-radio/">See Oz Radio take a spoken question, frame by frame<span aria-hidden="true">&nbsp;→</span></a></p>
-    </section>
+      </section>
 
-    <section class="ideas shell" id="ideas" aria-labelledby="ideas-title">
-      <div class="section-heading">
-        <h2 id="ideas-title">The ideas behind the work.</h2>
-        <p>Three questions I bring to enterprise AI.</p>
-      </div>
-      <div class="pov-grid">
-        <article class="pov-item" id="horizon" aria-labelledby="horizon-title">
-          <span id="idea-work"></span>
-          <h3 id="horizon-title"><span class="pov-number" aria-hidden="true">01</span> What can it change?</h3>
-          <p class="pov-stance">A task, not just an answer.</p>
-          <p>Horizon Famille: a customer calls about a booking. The agent checks the situation, quotes a change before acting, and routes a discount outside its mandate to a person in Teams.</p>
-          <ul class="pov-links">
-            <li><a href="https://ozgurkarahan.github.io/horizon-famille/">Watch the call <span class="duration">6m19s</span><span aria-hidden="true">&nbsp;↗</span></a></li>
-            <li><a href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Open the presentation<span aria-hidden="true">&nbsp;↗</span></a></li>
-            <li><a href="https://github.com/ozgurkarahan/horizon-famille">Inspect the source<span aria-hidden="true">&nbsp;↗</span></a></li>
-          </ul>
-          <p class="pov-scope"><strong>Demonstration scope.</strong> A real recorded phone call through Voice Live and Azure Communication Services; mock CRM, ERP, and knowledge-base services; Power Platform approval in Teams. Not a production deployment.</p>
-        </article>
-        <article class="pov-item" id="identity" aria-labelledby="identity-title">
-          <span id="idea-identity"></span>
-          <h3 id="identity-title"><span class="pov-number" aria-hidden="true">02</span> Whose authority does it use?</h3>
-          <p class="pov-stance">The caller's identity matters.</p>
-          <p>An agent's connection to a business system should not erase the person making the request. Carrying an identity is only part of the job: authorization still needs to be enforced at each boundary.</p>
-          <ul class="pov-links">
-            <li><a href="https://ozgurkarahan.com/identity-propagation/">Identity propagation, explained<span aria-hidden="true">&nbsp;→</span></a></li>
-            <li><a href="https://ozgurkarahan.com/customer-360/">Customer 360 Assistant<span aria-hidden="true">&nbsp;↗</span></a></li>
-            <li><a href="https://www.linkedin.com/pulse/from-theory-production-salesforce-meta-tools-identity-ozgur-karahan-ch30e/">The article on identity in Salesforce meta-tools<span aria-hidden="true">&nbsp;↗</span></a></li>
-          </ul>
-          <p class="pov-scope">These samples are not audited production guarantees. <a href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/security.md">Read the evaluation boundaries</a> before adapting a pattern.</p>
-        </article>
-        <article class="pov-item" id="judgment" aria-labelledby="judgment-title">
-          <span id="vision"></span>
-          <h3 id="judgment-title"><span class="pov-number" aria-hidden="true">03</span> When should a person decide?</h3>
-          <p class="pov-stance">A capable agent also needs a stop line.</p>
-          <p>More autonomy is not automatically a better outcome. My starting point is to make the permitted action, the escalation condition, and the human decision explicit. Horizon's discount-approval workflow is one concrete example.</p>
-          <ul class="pov-links">
-            <li><a href="https://github.com/ozgurkarahan/horizon-famille/tree/master/power-platform">Explore the approval workflow<span aria-hidden="true">&nbsp;↗</span></a></li>
-            <li><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform presentation<span aria-hidden="true">&nbsp;↗</span></a></li>
-            <li><a href="https://github.com/ozgurkarahan/ozgurkarahan/tree/master/agentic-platform">Presentation source<span aria-hidden="true">&nbsp;↗</span></a></li>
-          </ul>
-        </article>
-      </div>
-    </section>
+    </div>
 
-    <section class="archive shell" id="archive" aria-labelledby="archive-title">
-      <h2 class="visually-hidden" id="archive-title">Project archive</h2>
-      <details class="project-archive">
-        <summary>
-          <span class="archive-summary">Explore the full collection<span>Public projects and clearly labelled private work.</span></span>
-          <span class="archive-toggle" aria-hidden="true"></span>
-        </summary>
-        <div class="archive-content">
-          <section class="archive-group" aria-labelledby="archive-agents">
-            <h3 id="archive-agents">Agents and developer workflows</h3>
-            <ul class="archive-list">
-              <li><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille</a><p>A recorded voice-agent journey with mock business systems and human approval in Teams.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent">Foundry Hosted Coding Agent</a><p class="archive-description">Experimental community runtime. Inspect the architecture and <a href="https://github.com/ozgurkarahan/foundry-openai-coding-agent/blob/main/docs/limitations.md">limitations</a> before evaluating it.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/ai-agent-memory">AI Agent Memory</a><p>Local, linked Markdown knowledge for coding-agent workflows.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/agentic-sdlc-demo">Agentic SDLC Demo</a><p class="archive-description">Presenter-led delivery harness; <a href="https://ozgurkarahan.github.io/agentic-sdlc-demo/slides/agentic-sdlc-lifecycle.html">lifecycle presentation</a> and <a href="https://github.com/ozgurkarahan/agentic-sdlc-demo-live">companion validation repository</a>.</p></li>
-              <li><span class="private-name">AI Agent Project Template</span> <span class="private-scope">— Private repository</span><p>Internal project-structure and agent-configuration conventions.</p></li>
-            </ul>
-          </section>
-          <section class="archive-group" aria-labelledby="archive-identity">
-            <h3 id="archive-identity">Identity and enterprise integration</h3>
-            <ul class="archive-list">
-              <li><a href="https://github.com/ozgurkarahan/propagate-id-entra">Entra Identity Propagation</a><p>Proof of concept for caller identity through an agent, policy gateway, and backend API.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation">Salesforce Identity Propagation</a><p>Cross-cloud caller identity through an MCP meta-tool and APIM.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/snow-meta-tool">ServiceNow Meta-tool</a><p>Generic discovery, query, and write tools using per-user identity.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/simple-order-agent">Simple Order Agent</a><p>An order-processing example using Claude SDK, MuleSoft MCP, and A2A.</p></li>
-            </ul>
-          </section>
-          <section class="archive-group" aria-labelledby="archive-applications">
-            <h3 id="archive-applications">Applications, operations, and learning</h3>
-            <ul class="archive-list">
-              <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio<span class="visually-hidden"> on GitHub</span></a><p class="archive-description">AI avatars that present, narrate and podcast your decks. Try the <a href="https://ozgurkarahan.com/oz-radio/">live demo</a>: time-boxed, with voice questions, capped daily. <a href="https://ozgurkarahan.com/work/oz-radio/">See it take a question, frame by frame</a>.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/azure-sre-agent-synapse-poc">Azure SRE Agent for Synapse</a><p>Infrastructure and investigation scaffolding for Synapse observability scenarios.</p></li>
-              <li><a href="https://github.com/ozgurkarahan/anthropic-academy">Anthropic Academy</a><p>Worked learning examples.</p></li>
-              <li><span class="private-name">Enterprise Document RAG</span> <span class="private-scope">— Private repository</span><p>Document intelligence and retrieval-augmented generation for an enterprise engagement.</p></li>
-            </ul>
-          </section>
-          <nav class="archive-guides" aria-label="Detailed project guides">
-            <a class="text-link" href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/ai-agents.md">Agents and applications <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/security.md">Identity and security <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/learning-resources.md">Learning resources <span aria-hidden="true">↗</span></a>
-          </nav>
-        </div>
-      </details>
-    </section>
+    <nav class="further shell" id="archive" aria-label="Further reading">
+      <span>Further reading</span>
+      <a href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/ai-agents.md">Agents and applications<span aria-hidden="true">&nbsp;↗</span></a>
+      <a href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/security.md">Identity and security<span aria-hidden="true">&nbsp;↗</span></a>
+      <a href="https://github.com/ozgurkarahan/ozgurkarahan/blob/master/docs/learning-resources.md">Learning resources<span aria-hidden="true">&nbsp;↗</span></a>
+      <a href="https://github.com/ozgurkarahan/anthropic-academy">Anthropic Academy notes<span aria-hidden="true">&nbsp;↗</span></a>
+      <span>Oz Antenna · in development · not public</span>
+    </nav>
 
     <section class="contact-field" id="contact" aria-labelledby="contact-title">
       <div class="contact shell">
         <div>
-          <h2 id="contact-title">Bring a workflow.<br>Let's examine the boundaries.</h2>
-          <p>For conversations about enterprise agents, caller identity, human oversight, or the architecture behind them.</p>
+          <h2 id="contact-title">Bring a workflow. Let's map its building blocks.</h2>
+          <p>How people will talk to the agent, whose identity it carries, what it must know, who governs it, and where it will live. I'm glad to talk it through.</p>
         </div>
         <div class="contact-actions">
           <a class="button button-light" href="https://www.linkedin.com/in/karahanozgur/" rel="me">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
@@ -1023,7 +1022,7 @@ Status chips replace hedges; each card keeps its scope line.
         </div>
       </div>
       <footer class="site-footer shell">
-        <p>Personal work and community samples. Employment at Microsoft does not imply official endorsement. Each project's documentation describes its scope and limitations. <a href="https://ozgurkarahan.com/privacy/">Privacy</a></p>
+        <p>Personal work and community samples, not Microsoft products. Employment at Microsoft does not imply official endorsement. Each project's documentation describes its scope and limitations. <a href="https://ozgurkarahan.com/privacy/">Privacy</a></p>
         <span>© 2026 Ozgur Karahan</span>
       </footer>
     </section>

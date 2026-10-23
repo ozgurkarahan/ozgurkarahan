@@ -17,3 +17,6 @@ Desktop.ini
 .impeccable/
 .playwright-mcp/
 .copilot-handoff.md
+
+# GitHub traffic snapshots (scripts/capture-github-traffic.ps1)
+.traffic/

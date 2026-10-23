@@ -6,6 +6,18 @@
 
 The homepage should turn selected public work, safely redacted private work, and presentations into evidence of capability rather than presenting them as a repository catalog.
 
+### Positioning
+
+Models matter, but whether enterprise agents get used depends on what surrounds them. Özgür builds and tests five building blocks in public:
+
+1. **Voice**: the new channel; people speak to agents, and even developers now speak to their coding agents.
+2. **Distribution**: agents delivered where users already are, in Teams and Microsoft 365 Copilot.
+3. **Context**: workflows and data reached through MCP servers, knowledge bases, and RAG over company documents.
+4. **Identity** (crosses every layer): the user's identity travels from the voice, through the channel, to each system of record, which applies its own authentication and authorization.
+5. **Governance** (crosses every layer): of all agents, tools and skills, including isolated compute for agents that code or browse.
+
+Voice, distribution and context are layers a request goes down to the systems of record (Salesforce, ServiceNow, SAP, Dynamics); identity and governance are verticals across them. This architecture is the homepage's hero diagram and navigation; every piece of work is filed under one block. Cost control and token economics are acknowledged as coming topics but not covered. Claude and Slack are not presented as channels.
+
 ## Audience
 
 ### Primary
@@ -15,6 +27,7 @@ Enterprise clients and technical decision-makers assessing credibility, relevanc
 ### Secondary
 
 - Microsoft leadership, peers, and technical partners
+- Builders, strategists and scientists in AI, each reading at their own depth: the stance, the reasoning, or the cards and source
 - Recruiters and career stakeholders
 - AI engineering and open-source practitioners
 
@@ -33,6 +46,7 @@ A visitor should quickly understand:
 - Personality: clear, architectural, premium
 - Voice: precise, confident, pragmatic, and human
 - Visual intent: structured like a high-end architecture or advisory dossier, with strong hierarchy and selective technical visuals
+- Colour: indigo ink with one amber accent (see `DESIGN.md`, "The Stack"); not green, and never Microsoft blue, so personal work is not mistaken for Microsoft branding
 
 ### Anti-Reference
 

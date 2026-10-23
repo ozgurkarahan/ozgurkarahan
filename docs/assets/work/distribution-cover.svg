@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="distribution-cover-title" aria-describedby="distribution-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
+  <title id="distribution-cover-title">Customer 360: one agent, built once, published where people work</title>
+  <desc id="distribution-cover-desc">Illustrative drawing. On the left, a single node, &#8220;One agent, built once&#8221;. A right-angled route splits in two and leads to &#8220;Teams&#8221; and to &#8220;Microsoft 365 Copilot&#8221;; a small circle, the user's request, sits on each branch. The point of the drawing, outlined in amber, is the frame around both surfaces, labelled &#8220;Where people work&#8221;.</desc>
+  <rect width="640" height="400" style="fill:var(--canvas,#f8f8fb)"/>
+  <rect x="32" y="146" width="200" height="112" rx="8" stroke-width="2" style="fill:var(--brand-soft,#eeeffe);stroke:var(--brand,#2f2a6b)"/>
+  <text x="132" y="194" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">One agent</text>
+  <text x="132" y="232" text-anchor="middle" font-size="26" font-weight="500" style="fill:var(--muted,#535568)">built once</text>
+  <path d="M232 202H286M286 128V258M286 128H344M286 258H344" stroke-width="2" style="fill:none;stroke:var(--muted,#535568)"/>
+  <path d="M344 122L354 128L344 134ZM344 252L354 258L344 264Z" style="fill:var(--muted,#535568)"/>
+  <rect x="356" y="88" width="248" height="80" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="480" y="139" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Teams</text>
+  <rect x="356" y="200" width="248" height="116" rx="8" stroke-width="2" style="fill:var(--surface,#ffffff);stroke:var(--line,#d9dae4)"/>
+  <text x="480" y="250" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Microsoft 365</text>
+  <text x="480" y="288" text-anchor="middle" font-size="30" font-weight="600" style="fill:var(--ink,#191a2c)">Copilot</text>
+  <text x="482" y="62" text-anchor="middle" font-size="26" font-weight="600" style="fill:var(--accent-text,#905c16)">Where people work</text>
+  <text x="32" y="372" font-family="IBM Plex Mono, monospace" font-size="22" style="fill:var(--muted,#535568)">Illustrative</text>
+  <g class="wk-travel" style="--dx:-26px;--dy:74px;--t:0.3s;--d:0.6s">
+    <circle cx="312" cy="128" r="7" style="fill:var(--brand-mid,#5e5cb3)"/>
+  </g>
+  <g class="wk-travel" style="--dx:-26px;--dy:-56px;--t:0.55s;--d:0.6s">
+    <circle cx="312" cy="258" r="7" style="fill:var(--brand-mid,#5e5cb3)"/>
+  </g>
+  <path class="wk-draw" pathLength="1" d="M352 26H612A12 12 0 0 1 624 38V330A12 12 0 0 1 612 342H352A12 12 0 0 1 340 330V38A12 12 0 0 1 352 26Z" fill="none" stroke-width="4" style="stroke:var(--accent,#b8791a);--t:1.4s;--d:1.1s"/>
+</svg>
