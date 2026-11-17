@@ -41,6 +41,13 @@
   .gh .link b{color:#fff}
   .link a{font-family:"IBM Plex Mono",monospace;font-size:.72cqw;color:var(--brand);text-decoration:none;word-break:break-all}
   .gh .link a{color:#a7a9ef}
+  .link a{white-space:nowrap}
+  .link a:hover{text-decoration:underline}
+  .link a::after{content:" ↗" / "";font-size:.9em}
+  .link a:focus-visible{outline:2px solid var(--brand-mid);outline-offset:2px;border-radius:4px}
+  .gh .link a:focus-visible{outline-color:#a7a9ef}
+  .link .addrs,.link .addr{font-family:"IBM Plex Mono",monospace;font-size:.72cqw;color:var(--muted);word-break:break-all}
+  .gh .link .addrs,.gh .link .addr{color:#c7c9de}
   .link small{font-size:.7cqw;color:var(--muted)}
   .gh .link small{color:#c7c9de}
   .tagga{font-family:"IBM Plex Mono",monospace;font-size:.6cqw;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-text);border:1px solid var(--amber-line);border-radius:99px;padding:.1cqw .5cqw;background:var(--amber-soft);margin-left:.5cqw}
@@ -72,9 +79,9 @@
         <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.6.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.4-3.4-1.4-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 3.9-1.3 6.8-5.1 6.8-9.6C22 6.6 17.5 2 12 2z"/></svg>
         <b>All announcements</b>
       </div>
-      <div class="link"><b>microsoft/Build26-news</b><a>github.com/microsoft/Build26-news</a><small>exact-wording index of every announcement</small></div>
-      <div class="link"><b>Session repos</b><a>github.com/microsoft/build26-brk241</a><small>brk241 · brk243 · brk250 · brk252 · DEM333</small></div>
-      <div class="link"><b>Build CLI</b><a>github.com/microsoft/Build-CLI</a><small>connect repos to the session catalog</small></div>
+      <div class="link"><b>microsoft/Build26-news</b><a href="https://github.com/microsoft/Build26-news" target="_blank" rel="noopener">github.com/microsoft/Build26-news</a><small>exact-wording index of every announcement</small></div>
+      <div class="link"><b>Session repos</b><a href="https://github.com/microsoft/build26-brk241" target="_blank" rel="noopener">github.com/microsoft/build26-brk241</a><small>brk241 · brk243 · brk250 · brk252 · DEM333</small></div>
+      <div class="link"><b>Build CLI</b><a href="https://github.com/microsoft/Build-CLI" target="_blank" rel="noopener">github.com/microsoft/Build-CLI</a><small>connect repos to the session catalog</small></div>
     </div>
 
     <div class="col iq c2">
@@ -82,11 +89,11 @@
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M9.5 10.5L6.5 7M14.5 10.5L17.5 7M9.5 13.5L6.5 17M14.5 13.5L17.5 17"/></svg>
         <b>Microsoft IQ</b>
       </div>
-      <div class="link"><b>Microsoft IQ — context layer</b><a>aka.ms/AA10pe80</a><small>GA across Copilot · Foundry · Studio</small></div>
-      <div class="link"><b>Work IQ APIs — GA Jun 16</b><a>aka.ms/WorkIQAPI_GA</a><small>10 MCP tools · Context API</small></div>
-      <div class="link"><b>Foundry IQ — KBs GA</b><a>aka.ms/FoundryIQ</a><small>+54% recall · Serverless · Web IQ</small></div>
-      <div class="link"><b>Fabric IQ — semantic layer GA</b><a>aka.ms/Azure-Data-Build26</a></div>
-      <div class="link"><b>Enterprise agent platform</b><a>aka.ms/AA1188jd</a><small>how IQ fits the single system</small></div>
+      <div class="link"><b>Microsoft IQ — context layer</b><a href="https://aka.ms/AA10pe80" target="_blank" rel="noopener">aka.ms/AA10pe80</a><small>GA across Copilot · Foundry · Studio</small></div>
+      <div class="link"><b>Work IQ APIs — GA Jun 16</b><a href="https://aka.ms/WorkIQAPI_GA" target="_blank" rel="noopener">aka.ms/WorkIQAPI_GA</a><small>10 MCP tools · Context API</small></div>
+      <div class="link"><b>Foundry IQ — KBs GA</b><span class="addr">aka.ms/FoundryIQ</span><small>+54% recall · Serverless · Web IQ</small></div>
+      <div class="link"><b>Fabric IQ — semantic layer GA</b><a href="https://aka.ms/Azure-Data-Build26" target="_blank" rel="noopener">aka.ms/Azure-Data-Build26</a></div>
+      <div class="link"><b>Enterprise agent platform</b><a href="https://aka.ms/AA1188jd" target="_blank" rel="noopener">aka.ms/AA1188jd</a><small>how IQ fits the single system</small></div>
     </div>
 
     <div class="col c3">
@@ -94,11 +101,11 @@
         <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8 7.2l7.6-.6M7.2 8l3.6 7.8M16.8 9l-3.6 6.8"/></svg>
         <b>Foundry deep-dives</b>
       </div>
-      <div class="link"><b>Recap + Agents</b><a>aka.ms/FoundryBuildNews · BuildFoundryAgents</a></div>
-      <div class="link"><b>Agent Framework</b><a>aka.ms/Build2026MicrosoftAgentFramework</a></div>
-      <div class="link"><b>Hosted Agents · Toolbox</b><a>aka.ms/Build2026HostedAgents · /Toolbox</a></div>
-      <div class="link"><b>Foundry Memory</b><a>aka.ms/Build2026FoundryMemory</a></div>
-      <div class="link"><b>Container Apps · sandboxes</b><a>aka.ms/aca/build · aca/sandboxes</a></div>
+      <div class="link"><b>Recap + Agents</b><span class="addrs"><a href="https://aka.ms/FoundryBuildNews" target="_blank" rel="noopener">aka.ms/FoundryBuildNews</a> · <a href="https://aka.ms/BuildFoundryAgents" target="_blank" rel="noopener">BuildFoundryAgents</a></span></div>
+      <div class="link"><b>Agent Framework</b><a href="https://aka.ms/Build2026MicrosoftAgentFramework" target="_blank" rel="noopener">aka.ms/Build2026MicrosoftAgentFramework</a></div>
+      <div class="link"><b>Hosted Agents · Toolbox</b><span class="addrs"><a href="https://aka.ms/Build2026HostedAgents" target="_blank" rel="noopener">aka.ms/Build2026HostedAgents</a></span></div>
+      <div class="link"><b>Foundry Memory</b><a href="https://aka.ms/Build2026FoundryMemory" target="_blank" rel="noopener">aka.ms/Build2026FoundryMemory</a></div>
+      <div class="link"><b>Container Apps · sandboxes</b><span class="addrs"><a href="https://aka.ms/aca/build" target="_blank" rel="noopener">aka.ms/aca/build</a> · <a href="https://aka.ms/aca/sandboxes" target="_blank" rel="noopener">aca/sandboxes</a></span></div>
     </div>
 
     <div class="col c4">
@@ -106,10 +113,9 @@
         <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9l3 2-3 2"/></svg>
         <b>Sessions &amp; keynote</b>
       </div>
-      <div class="link"><b>Live blog</b><a>news.microsoft.com/build-2026</a><small>replaces the Book of News</small></div>
-      <div class="link"><b>Opening keynote</b><a>aka.ms/MSBuildOpeningKeynote</a></div>
-      <div class="link"><b>Session catalog</b><a>aka.ms/MSBuildSessions</a></div>
-      <div class="link"><b>Demos</b><a>aka.ms/MicrosoftBuildDemos</a></div>
+      <div class="link"><b>Live blog</b><a href="https://news.microsoft.com/build-2026" target="_blank" rel="noopener">news.microsoft.com/build-2026</a><small>replaces the Book of News</small></div>
+      <div class="link"><b>Opening keynote</b><a href="https://aka.ms/MSBuildOpeningKeynote" target="_blank" rel="noopener">aka.ms/MSBuildOpeningKeynote</a></div>
+      <div class="link"><b>Session catalog</b><a href="https://aka.ms/MSBuildSessions" target="_blank" rel="noopener">aka.ms/MSBuildSessions</a></div>
     </div>
 
   </div>
@@ -121,8 +127,8 @@
   </div>
 
   <div class="foot">
-    <span>OUR AGENTIC VISION · BUILD 2026</span>
-    <span><span class="num">08</span> / 08 · resources — public links, source every claim</span>
+    <span>MY READING · BUILD 2026</span>
+    <span><span class="num">08</span> / 09 · resources — public links, source every claim</span>
   </div>
 
 </div></section>

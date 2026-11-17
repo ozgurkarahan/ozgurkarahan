@@ -38,4 +38,5 @@ jobs:
             'privacy/index.html'
             'identity-propagation/index.html'
             'work/oz-radio/index.html'
+            'work/horizon-famille/index.html'
           fail: true
