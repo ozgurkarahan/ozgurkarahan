@@ -23,6 +23,8 @@
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var MAX_VALUE_LENGTH = 100;
   // Same-page anchors counted as block_nav: the five blocks, the diagram itself, About and Contact.
+  // Short URLs on this site that only redirect to another host: a click on one leaves the site.
+  var REDIRECT_STUBS = /^\/(oz-radio|customer-360|deckfm)\/?$/;
   var BLOCK_TARGETS = ["voice", "distribution", "context", "identity", "governance", "contact", "about", "stack"];
   // Links one page view with the clicks made on that page. In memory only; never stored.
   var pageLoadId = Math.random().toString(16).slice(2) + Date.now().toString(16);
@@ -156,7 +158,7 @@
       trackEvent("card_click", {
         work: work.getAttribute("data-work"),
         block: layer ? layer.id : "",
-        destination: url.origin === window.location.origin ? "onsite" : "offsite"
+        destination: url.origin === window.location.origin && !REDIRECT_STUBS.test(url.pathname) ? "onsite" : "offsite"
       });
     }
     // Featured project links are counted the same way whether they stay on this site or not.
