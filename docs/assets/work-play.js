@@ -1,7 +1,7 @@
 /*
  * Work drawings: each card's drawing plays once, when its frame first comes fully into view. It never replays
- * (a pointer moving onto the card to click it must not erase the drawing's amber point). The card carries
- * data-play while it plays; removing it snaps the drawing to its static final frame. Under
+ * (a pointer moving onto the card to click it must not erase the drawing's amber point). The card keeps
+ * data-play once it has played; without it (no script) the drawing shows its static final frame. Under
  * prefers-reduced-motion the CSS turns every animation off, so nothing moves.
  * No library, no analytics.
  */
