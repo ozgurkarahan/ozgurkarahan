@@ -269,7 +269,7 @@ Roles are in the frontmatter. Locally: the contact h2 uses clamp(2.1rem, 3.4vw, 
 
 **Accessibility baseline.** Skip link first. Focus: 3px `--brand-mid` outline, 5px offset (3px on cards, −3px in the block rail), 4px radius; the ring follows the ground, not the label. Targets ≥44×44px. Headings in order; English alternative text; decorative glyphs `aria-hidden`; visually hidden text completes short labels ("Deck (The Agentic Platform)", the block rail's names on phones).
 
-**Analytics.** `data-flagship="oz-radio"` only on the opening's primary button and the lead card's work-page button (the privacy notice's "featured project links"). `telemetry.js` sends nothing unless the page is served from `ozgurkarahan.com` or `www.ozgurkarahan.com`, so local previews and forks send nothing.
+**Analytics.** `data-flagship="oz-radio"` only on the opening's primary button and the lead card's work-page button (the privacy notice's "featured project links"). Two more events read the markup as it is: `block_nav` (a same-page link to `#voice`, `#distribution`, `#context`, `#identity`, `#governance`, `#contact`, `#about` or `#stack`, with its source: `diagram` in `nav.arch`, `rail` in `nav.rail`, `nav` in the masthead's `.primary-nav`, `opening` in `.opening-actions`, otherwise `page`) and `card_click` (any link in a `li.topic-card` or the `.lead-card`: its `data-work`, the enclosing `section.layer` id, and `onsite` or `offsite`), so these classes, ids and `data-work` values are analytics hooks too. `telemetry.js` sends nothing unless the page is served from `ozgurkarahan.com` or `www.ozgurkarahan.com`, so local previews and forks send nothing.
 
 ## Diagram grammar
 
