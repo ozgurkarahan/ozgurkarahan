@@ -32,8 +32,10 @@ jobs:
               "privacy/index.html", "identity-propagation/index.html", "work/oz-radio/index.html",
               "docs/assets/telemetry.js", "docs/assets/fonts/fonts.css",
               "docs/assets/fonts/deck-fonts.css",
-              "docs/assets/work-play.js", "docs/ai-agents.html",
+              "docs/assets/work-play.js", "docs/assets/rail.js", "docs/ai-agents.html",
               "docs/assets/social/oz-radio.svg", "docs/assets/social/oz-radio-2026-10-22.png",
+              "docs/assets/flagships/oz-radio-1-presenting.webp", "docs/assets/flagships/oz-radio-2-question.webp",
+              "docs/assets/flagships/oz-radio-3-answering.webp",
           ]
           forbidden = [
               f"{name}{ext}"
