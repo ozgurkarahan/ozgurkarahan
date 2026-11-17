@@ -5,9 +5,11 @@
  * itself (so local previews and forks send nothing), and nothing is sent when Global Privacy
  * Control, Do Not Track or the site opt-out is set. Only the page path, the referring site
  * (domain only, or the path when it is a page of this site), allowlisted UTM values, outbound
- * link clicks, clicks on the featured project links of the home page and deck slide views are
- * recorded. Items go to Azure Application Insights with navigator.sendBeacon; failures are
- * ignored so navigation never depends on analytics.
+ * link clicks, clicks on the featured project links of the home page, the building block opened
+ * from a same-page link (and from where: diagram, block bar, menu, opening or page), clicks on
+ * work cards (which card, which block, on or off the site) and deck slide views are recorded.
+ * Items go to Azure Application Insights with navigator.sendBeacon; failures are ignored so
+ * navigation never depends on analytics.
  *
  * The instrumentation key is public by design: browsers cannot authenticate.
  */
@@ -20,6 +22,10 @@
   var ON_SITE = /^(www\.)?ozgurkarahan\.com$/.test(window.location.hostname);
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var MAX_VALUE_LENGTH = 100;
+  // Same-page anchors counted as block_nav: the five blocks, the diagram itself, About and Contact.
+  // Short URLs on this site that only redirect to another host: a click on one leaves the site.
+  var REDIRECT_STUBS = /^\/(oz-radio|customer-360|deckfm)\/?$/;
+  var BLOCK_TARGETS = ["voice", "distribution", "context", "identity", "governance", "contact", "about", "stack"];
   // Links one page view with the clicks made on that page. In memory only; never stored.
   var pageLoadId = Math.random().toString(16).slice(2) + Date.now().toString(16);
 
@@ -116,6 +122,27 @@
     send("Event", "EventData", { ver: 2, name: name, properties: clean });
   }
 
+  function blockSource(link) {
+    if (link.closest("nav.arch")) return "diagram";
+    if (link.closest("nav.rail")) return "rail";
+    if (link.closest(".masthead .primary-nav")) return "nav";
+    if (link.closest(".opening-actions")) return "opening";
+    return "page";
+  }
+
+  // A plain click on a link that only moves within this page, to one of the BLOCK_TARGETS.
+  // Links that load another page, or open one in a new tab or window, are not counted.
+  function trackBlockNav(event, link, url) {
+    if (event.type !== "click" || event.button !== 0) return;
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (link.target && link.target !== "_self") return;
+    var here = window.location;
+    if (url.origin !== here.origin || url.pathname !== here.pathname || url.search !== here.search) return;
+    var target = url.hash.slice(1);
+    if (BLOCK_TARGETS.indexOf(target) === -1) return;
+    trackEvent("block_nav", { target: target, source: blockSource(link) });
+  }
+
   function onLinkActivated(event) {
     if (event.type === "auxclick" && event.button !== 1) return;
     var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
@@ -123,6 +150,17 @@
     var url;
     try { url = new URL(link.href, window.location.href); } catch (error) { return; }
     var section = link.closest("[id]");
+    trackBlockNav(event, link, url);
+    // Work cards and the lead card carry data-work; counted whether the link stays on this site or not.
+    var work = link.closest("li.topic-card[data-work], .lead-card[data-work]");
+    if (work) {
+      var layer = link.closest("section.layer");
+      trackEvent("card_click", {
+        work: work.getAttribute("data-work"),
+        block: layer ? layer.id : "",
+        destination: url.origin === window.location.origin && !REDIRECT_STUBS.test(url.pathname) ? "onsite" : "offsite"
+      });
+    }
     // Featured project links are counted the same way whether they stay on this site or not.
     var flagship = link.closest("[data-flagship]");
     if (flagship) {

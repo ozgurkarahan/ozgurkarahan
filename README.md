@@ -16,8 +16,8 @@ A request goes down three layers, voice, distribution and context, to the system
 |-------|----------|----------|
 | **01 Voice**: the new channel | Voice is becoming the way we talk to agents; even developers now speak to their coding agents. | [Oz Radio](https://ozgurkarahan.com/work/oz-radio/) (present any deck live, narrated videos, two-host podcasts, 10+ languages), [Horizon Famille](https://ozgurkarahan.com/work/horizon-famille/) |
 | **02 Distribution**: where users are | Build the agent once and publish it where people work: Teams and Microsoft 365 Copilot. | [Customer 360](https://ozgurkarahan.com/customer-360/) |
-| **03 Context**: workflows and data | MCP servers for workflows and data, knowledge bases, and RAG over company documents. | [DocWiki](https://github.com/ozgurkarahan/docwiki), [ServiceNow meta-tool](https://github.com/ozgurkarahan/snow-meta-tool), [AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory), [Simple Order Agent](https://github.com/ozgurkarahan/simple-order-agent) |
-| **04 Identity**: from the voice to the system | The user's identity travels through every layer to Salesforce or ServiceNow, which apply their own authentication and authorization. | [Identity propagation, explained](https://ozgurkarahan.com/identity-propagation/), [Entra identity flow](https://github.com/ozgurkarahan/propagate-id-entra) |
+| **03 Context**: workflows and data | MCP servers for workflows and data, knowledge bases, and RAG over company documents. | [DocWiki](https://ozgurkarahan.com/work/docwiki/) ([live demo](https://docwiki.ozgurkarahan.com/) on a fictional corpus, [source](https://github.com/ozgurkarahan/docwiki)), [ServiceNow meta-tool](https://github.com/ozgurkarahan/snow-meta-tool), [AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory), [Simple Order Agent](https://github.com/ozgurkarahan/simple-order-agent) |
+| **04 Identity**: from the voice to the system | The user's identity travels through every layer to Salesforce or ServiceNow, which apply their own authentication and authorization. | [Identity propagation](https://ozgurkarahan.com/identity-propagation/), [Entra identity flow](https://github.com/ozgurkarahan/propagate-id-entra) |
 | **05 Governance**: across every layer | Every agent, tool and skill has an owner and a rule; agents that code or browse get their own isolated compute. | [Foundry hosted coding agent](https://ozgurkarahan.github.io/foundry-openai-coding-agent/), [The Agentic Platform](https://ozgurkarahan.com/agentic-platform/) |
 
 The building blocks are a way to read the work, not a claim that the separate projects below form one production system.
@@ -36,7 +36,7 @@ A real recorded phone call reaches a Foundry voice agent through Voice Live and 
 
 Separate implementations explore caller identity through Entra ID, Foundry, APIM, and downstream systems. Propagating an identity does not, by itself, establish appropriate authorization.
 
-[Identity propagation, explained](https://ozgurkarahan.com/identity-propagation/) · [Customer 360 project page](https://ozgurkarahan.com/customer-360/) · [Entra ID proof of concept](https://github.com/ozgurkarahan/propagate-id-entra) · [Salesforce sample](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation) · [ServiceNow sample](https://github.com/ozgurkarahan/snow-meta-tool) · [Evaluation boundaries](docs/security.md)
+[Identity propagation](https://ozgurkarahan.com/identity-propagation/) · [Customer 360 project page](https://ozgurkarahan.com/customer-360/) · [Entra ID proof of concept](https://github.com/ozgurkarahan/propagate-id-entra) · [Salesforce sample](https://github.com/ozgurkarahan/salesforce-meta-tool-identity-propagation) · [ServiceNow sample](https://github.com/ozgurkarahan/snow-meta-tool) · [Evaluation boundaries](docs/security.md)
 
 The Entra project is a proof of concept; Salesforce and ServiceNow are sample implementations, not audited production guarantees.
 

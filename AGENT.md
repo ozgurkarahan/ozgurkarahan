@@ -30,10 +30,11 @@ docs/
   security.md                — Identity and security project write-ups
   learning-resources.md      — Curated AI learning resources
   assets/
+    site.css                 — Rules every site page shares, @font-face included (linked with a ?v=<date> query)
     telemetry.js             — Analytics beacon, loaded by every top-level page
     work-play.js             — Plays each homepage work drawing once it is fully in view
     fonts/                   — Self-hosted woff2 fonts and OFL licenses
-      fonts.css              —   Site pages
+      fonts.css              —   Redirect stubs (site pages get the fonts from site.css)
       deck-fonts.css         —   Agentic Platform slides
     work/                    — Work card cover drawings (SVG)
     flagships/               — Screenshots for the Oz Radio work page
@@ -62,7 +63,7 @@ AGENT.md, AGENTS.md, CLAUDE.md, .github/copilot-instructions.md — Agent instru
 
 ## How to Add a Page
 
-1. Create `<page>/index.html`, following the existing pages: `fonts.css`, `telemetry.js`, and a canonical URL (plus Open Graph tags if the page should be shared).
+1. Create `<page>/index.html`, following the existing pages: `site.css` (with its `?v=<date>` query; redirect stubs use `fonts.css`), `telemetry.js`, and a canonical URL (plus Open Graph tags if the page should be shared).
 2. Add it to `sitemap.xml` if it should be indexed (redirect pages use `noindex` and stay out of the sitemap).
 3. Add it to the `required` list in `pages-build-check.yml` and to the `paths` and file arguments in `link-check.yml`.
 4. To rename a page, keep the old path as a `noindex` redirect page (see `deckfm/`) so existing links keep working.

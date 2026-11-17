@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" width="1200" height="627" role="img" aria-labelledby="social-title">
+  <title id="social-title">The Agentic Platform: my reading of Build 2026</title>
+  <!-- Source for the dated PNG. Generated from docs/assets/work/platform-cover.svg (final frame, 0.75 scale); render with the site fonts loaded. -->
+  <rect width="1200" height="627" fill="#f8f8fb"/>
+  <rect width="1200" height="10" fill="#2f2a6b"/>
+  <rect x="72" y="80" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="88" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="96" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="104" width="34" height="5" rx="2" fill="#d9dae4"/><rect x="72" y="112" width="34" height="5" rx="2" fill="#2f2a6b"/>
+  <text x="122" y="105" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="500" letter-spacing="3" fill="#2f2a6b">05 · GOVERNANCE</text>
+  <text font-family="Bricolage Grotesque, Public Sans, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.5" fill="#191a2c"><tspan x="72" y="210">The Agentic Platform:</tspan><tspan x="72" y="274">my reading of</tspan><tspan x="72" y="338">Build 2026</tspan></text>
+  <text font-family="Public Sans, sans-serif" font-size="24" fill="#535568"><tspan x="72" y="430">My notes on public announcements.</tspan><tspan x="72" y="464">Not an official Microsoft deck.</tspan></text>
+  <text x="72" y="590" font-family="IBM Plex Mono, monospace" font-size="20" fill="#2f2a6b">ozgurkarahan.com</text>
+  <g transform="translate(648 164) scale(0.75)">
+    <clipPath id="frame"><rect width="640" height="400" rx="16"/></clipPath>
+    <svg width="640" height="400" viewBox="0 0 640 400" clip-path="url(#frame)" font-family="Public Sans, Segoe UI, sans-serif">
+  <rect width="640" height="400" style="fill:#f8f8fb"/>
+  <rect x="24" y="24" width="592" height="72" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <text x="48" y="70" font-size="30" font-weight="600" style="fill:#191a2c">Experiences</text>
+  <text x="592" y="70" text-anchor="end" font-size="28" font-weight="500" style="fill:#535568">Chat · IDE · always-on</text>
+  <rect x="24" y="128" width="592" height="216" rx="8" stroke-width="2" style="fill:#ffffff;stroke:#d9dae4"/>
+  <path d="M128 96V142M320 96V142M512 96V142" stroke-width="2" style="fill:none;stroke:#535568"/>
+  <path d="M122 142L128 152L134 142ZM314 142L320 152L326 142ZM506 142L512 152L518 142Z" style="fill:#535568"/>
+  <rect x="56" y="152" width="144" height="128" rx="8" stroke-width="2" style="fill:#eeeffe;stroke:#2f2a6b"/>
+  <text x="128" y="196" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Agent</text>
+  <rect x="248" y="152" width="144" height="128" rx="8" stroke-width="2" style="fill:#eeeffe;stroke:#2f2a6b"/>
+  <text x="320" y="196" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Agent</text>
+  <rect x="440" y="152" width="144" height="128" rx="8" stroke-width="2" style="fill:#eeeffe;stroke:#2f2a6b"/>
+  <text x="512" y="196" text-anchor="middle" font-size="30" font-weight="600" style="fill:#191a2c">Agent</text>
+  <text x="48" y="324" font-size="30" font-weight="600" style="fill:#191a2c">One governance</text>
+  <text x="24" y="380" font-family="IBM Plex Mono, Consolas, monospace" font-size="22" font-weight="400" style="fill:#535568">Illustrative</text>
+  <g stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:#2f2a6b">
+    <rect x="102" y="214" width="52" height="32" rx="4" style="fill:#ffffff"/>
+    <path d="M128 246v10M114 256h28"/>
+  </g>
+  <g stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:#2f2a6b">
+    <rect x="294" y="214" width="52" height="32" rx="4" style="fill:#ffffff"/>
+    <path d="M320 246v10M306 256h28"/>
+  </g>
+  <g stroke-width="2" stroke-linejoin="round" style="fill:none;stroke:#2f2a6b">
+    <rect x="486" y="214" width="52" height="32" rx="4" style="fill:#ffffff"/>
+    <path d="M512 246v10M498 256h28"/>
+  </g>
+  <path d="M32 128H608A8 8 0 0 1 616 136V336A8 8 0 0 1 608 344H32A8 8 0 0 1 24 336V136A8 8 0 0 1 32 128Z" stroke-width="4" style="fill:none;stroke:#b8791a"/>
+</svg>
+    <rect width="640" height="400" rx="16" fill="none" stroke="#d9dae4" stroke-width="2"/>
+  </g>
+</svg>

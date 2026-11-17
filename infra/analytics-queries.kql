@@ -66,3 +66,24 @@ pageViews
 | where tostring(customDimensions["utm_medium"]) != "test" and tostring(customDimensions["utm_campaign"]) !startswith "live-verify"
 | summarize pageViewCount = count() by country = client_CountryOrRegion
 | order by pageViewCount desc
+
+// 8. Building blocks opened within a page: from the diagram, the block bar, the menu, the opening or other links
+let testPageLoads = pageViews
+    | where tostring(customDimensions["utm_medium"]) == "test" or tostring(customDimensions["utm_campaign"]) startswith "live-verify"
+    | distinct operation_Id;
+customEvents
+| where timestamp > ago(30d) and name == "block_nav" and operation_Id !in (testPageLoads)
+| summarize clickCount = count() by navSource = tostring(customDimensions["source"]),
+                                navTarget = tostring(customDimensions["target"])
+| order by navSource asc, clickCount desc
+
+// 9. Work cards opened: which card, and whether the link stays on the site
+let testPageLoads = pageViews
+    | where tostring(customDimensions["utm_medium"]) == "test" or tostring(customDimensions["utm_campaign"]) startswith "live-verify"
+    | distinct operation_Id;
+customEvents
+| where timestamp > ago(30d) and name == "card_click" and operation_Id !in (testPageLoads)
+| summarize clickCount = count() by workCard = tostring(customDimensions["work"]),
+                                layerBlock = tostring(customDimensions["block"]),
+                                destination = tostring(customDimensions["destination"])
+| order by clickCount desc

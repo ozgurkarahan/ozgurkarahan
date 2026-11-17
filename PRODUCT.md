@@ -70,7 +70,7 @@ The site must not resemble a developer profile, an enlarged GitHub README, or a 
 - The public Agentic Platform presentation lives at `/agentic-platform/`
 - Work pages live at `/work/<slug>/` and each explains one public sample with dated evidence and its limits; the first is `/work/oz-radio/`
 - Public projects may link to their repositories; private work should communicate capability without implying public source access
-- Audience measurement is owner-only and cookie-free: `docs/assets/telemetry.js` sends page paths, referring domains, UTM tags, outbound clicks, clicks on the home page's featured project links and deck slide views to Azure Application Insights (90-day retention). It honours Global Privacy Control, Do Not Track and the opt-out on `/privacy/`, which must describe any change to what is collected
+- Audience measurement is owner-only and cookie-free: `docs/assets/telemetry.js` sends page paths, referring domains, UTM tags, outbound clicks, clicks on the home page's featured project links, the building block opened from a same-page link (and whether from the diagram, the block bar, the menu, the opening or the page), clicks on work cards (which card, which block, on or off the site) and deck slide views to Azure Application Insights (90-day retention). It honours Global Privacy Control, Do Not Track and the opt-out on `/privacy/`, which must describe any change to what is collected
 - Fonts and scripts are served from the site itself; the analytics beacon is the only third-party request
 
 ## Success Criteria
