@@ -31,7 +31,7 @@ jobs:
               "agentic-platform/index.html", "deckfm/index.html", "oz-radio/index.html", "customer-360/index.html",
               "privacy/index.html", "identity-propagation/index.html", "work/oz-radio/index.html",
               "work/horizon-famille/index.html", "docs/assets/horizon-approval.webp",
-              "docs/assets/telemetry.js", "docs/assets/fonts/fonts.css",
+              "docs/assets/telemetry.js", "docs/assets/site.css", "docs/assets/fonts/fonts.css",
               "docs/assets/fonts/deck-fonts.css",
               "docs/assets/work-play.js", "docs/assets/rail.js", "docs/ai-agents.html",
               "docs/assets/social/oz-radio.svg", "docs/assets/social/oz-radio-2026-10-22.png",
