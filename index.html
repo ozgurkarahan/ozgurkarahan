@@ -14,8 +14,8 @@ strategists, the cards and source links for builders. Each card keeps its scope 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ozgur Karahan — Enterprise agents, five building blocks</title>
-  <meta name="description" content="Voice, distribution, context, identity and governance: the five building blocks enterprise agents need. Ozgur Karahan's live demos, open-source samples and talks for each one.">
+  <title>Ozgur Karahan · AI Solution Engineer · Enterprise agents, five building blocks</title>
+  <meta name="description" content="Voice, distribution, context, identity and governance: the five building blocks enterprise agents need. Ozgur Karahan's live demos, recorded demos and open-source samples for each one.">
   <meta name="theme-color" content="#f8f8fb" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f19" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://ozgurkarahan.com/">
@@ -243,8 +243,8 @@ strategists, the cards and source links for builders. Each card keeps its scope 
     .arch-gov:hover { background: var(--surface); }
     .arch-pulse { display: none; }
     /* Motion: the layers stack in, the identity thread draws down, governance closes around them; then one request
-       travels from the voice to the systems of record, touching each layer. Hovering the diagram replays the request.
-       Runs once: no loop. Reduced motion shows the final frame. */
+       travels from the voice to the systems of record, touching each layer.
+       Runs once: no loop, no hover replay. Reduced motion shows the final frame. */
     @media (prefers-reduced-motion: no-preference) {
       .arch-row { animation: arch-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards, arch-hit 0.7s ease-out 2.4s; }
       .arch-row:nth-child(1) { animation-delay: 0.1s, 1.75s; }
@@ -267,20 +267,12 @@ strategists, the cards and source links for builders. Each card keeps its scope 
         opacity: 0;
         animation: arch-travel 1.7s cubic-bezier(0.45, 0, 0.55, 1) 1.5s;
       }
-      .arch:hover .arch-pulse { animation-name: arch-travel-again; animation-delay: 0s; }
-      .arch:hover .arch-row { animation-name: arch-in, arch-hit-again; animation-duration: 0s, 0.7s; }
-      .arch:hover .arch-row:nth-child(1) { animation-delay: 0s, 0.25s; }
-      .arch:hover .arch-row:nth-child(2) { animation-delay: 0s, 0.65s; }
-      .arch:hover .arch-row:nth-child(3) { animation-delay: 0s, 1.05s; }
-      .arch:hover .arch-systems { animation-delay: 0s, 1.45s; }
     }
     @keyframes arch-in { from { opacity: 0; transform: translateY(0.6rem); } }
     @keyframes arch-fade { from { opacity: 0; } }
     @keyframes arch-grow { from { transform: scaleY(0); } }
     @keyframes arch-travel { 0% { top: 2.25rem; opacity: 0; } 8%, 92% { opacity: 1; } 100% { top: calc(100% - 2.4rem); opacity: 0; } }
-    @keyframes arch-travel-again { 0% { top: 2.25rem; opacity: 0; } 8%, 92% { opacity: 1; } 100% { top: calc(100% - 2.4rem); opacity: 0; } }
     @keyframes arch-hit { 35% { border-color: var(--brand-mid); box-shadow: 0 0 0 3px var(--brand-soft); } }
-    @keyframes arch-hit-again { 35% { border-color: var(--brand-mid); box-shadow: 0 0 0 3px var(--brand-soft); } }
 
     /* Layer sections */
     .layers { border-top: 1px solid var(--line); }
@@ -510,7 +502,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
         <p class="opening-aside">Not covered here, yet: cost control and the value of each token. They are coming fast too.</p>
         <div class="opening-actions">
           <a class="button" href="https://www.linkedin.com/in/karahanozgur/" rel="me"><span>Let's connect<span class="visually-hidden"> on LinkedIn</span></span> <span aria-hidden="true">↗</span></a>
-          <a class="live-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio"><span class="live-dot" aria-hidden="true"></span>Live now: Oz Radio<span aria-hidden="true">&nbsp;↗</span></a>
+          <a class="live-link" href="https://ozgurkarahan.com/work/oz-radio/" data-flagship="oz-radio"><span class="live-dot" aria-hidden="true"></span>Live now: Oz Radio<span aria-hidden="true">&nbsp;→</span></a>
         </div>
       </div>
 
@@ -561,7 +553,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
         <div class="layer-evidence">
           <ul class="work-grid" role="list">
             <li class="topic-card" id="flagship-oz-radio" data-work="oz-radio">
-              <a class="topic-card-link" href="https://ozgurkarahan.com/oz-radio/" data-flagship="oz-radio" aria-labelledby="card-oz-radio-chip card-oz-radio-title" aria-describedby="card-oz-radio-scope">
+              <a class="topic-card-link" href="https://ozgurkarahan.com/work/oz-radio/" data-flagship="oz-radio" aria-labelledby="card-oz-radio-chip card-oz-radio-title" aria-describedby="card-oz-radio-scope">
                 <div class="topic-image">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="ozr-cover-title" aria-describedby="ozr-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
                     <title id="ozr-cover-title">Oz Radio: a live presentation pauses for a spoken question and answers from the slides it cites</title>
@@ -601,7 +593,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
                   <span class="topic-chip topic-chip-live" id="card-oz-radio-chip">Live</span>
                   <h3 id="card-oz-radio-title">Oz Radio: an AI presenter for any deck</h3>
                   <p class="topic-description">An avatar presents your deck live and answers spoken questions. It also turns a deck into a narrated video or a two-host podcast, in more than ten languages.</p>
-                  <p class="topic-scope" id="card-oz-radio-scope">Live demo&nbsp;· present, narrate, podcast&nbsp;· capped&nbsp;daily<span aria-hidden="true">&nbsp;↗</span></p>
+                  <p class="topic-scope" id="card-oz-radio-scope">Live demo&nbsp;· present, narrate, podcast&nbsp;· capped&nbsp;daily<span aria-hidden="true">&nbsp;→</span></p>
                 </div>
               </a>
             </li>
@@ -654,7 +646,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
           <div class="layer-more">
             <h3>Go deeper</h3>
             <ul class="more-list">
-              <li><a href="https://ozgurkarahan.com/work/oz-radio/">Oz Radio, frame by frame<span aria-hidden="true">&nbsp;→</span></a><p>One spoken question, from raised hand to cited answer.</p></li>
+              <li><a href="https://ozgurkarahan.com/oz-radio/">Oz Radio live demo<span aria-hidden="true">&nbsp;↗</span></a><p>Opens the demo app; capped daily.</p></li>
               <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio source<span aria-hidden="true">&nbsp;↗</span></a><p>Live presenting, narrated videos and two-host podcasts, in 10+ languages.</p></li>
               <li><a href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Horizon Famille presentation<span aria-hidden="true">&nbsp;↗</span></a><p>How the call, the systems and the approval fit together.</p></li>
               <li><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille source<span aria-hidden="true">&nbsp;↗</span></a><p>Voice Live, Azure Communication Services and Foundry.</p></li>
@@ -715,7 +707,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
             <h3>Go deeper</h3>
             <ul class="more-list">
               <li><a href="https://ozgurkarahan.github.io/horizon-famille/">Horizon Famille<span aria-hidden="true">&nbsp;↗</span></a><p>A voice agent on a phone line whose approvals reach a person in Teams.</p></li>
-              <li><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform<span aria-hidden="true">&nbsp;↗</span></a><p>Experiences on top: where each kind of user meets their agents.</p></li>
+              <li><a href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform<span aria-hidden="true">&nbsp;→</span></a><p>Experiences on top: where each kind of user meets their agents.</p></li>
             </ul>
           </div>
         </div>
@@ -982,7 +974,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
                   <span class="topic-chip" id="card-platform-chip">Deck</span>
                   <h3 id="card-platform-title">The Agentic Platform</h3>
                   <p class="topic-description">Experiences on top, a computer per agent, one governance across them: the platform in eight slides.</p>
-                  <p class="topic-scope" id="card-platform-scope">Interactive presentation<span aria-hidden="true">&nbsp;↗</span></p>
+                  <p class="topic-scope" id="card-platform-scope">Interactive presentation<span aria-hidden="true">&nbsp;→</span></p>
                 </div>
               </a>
             </li>

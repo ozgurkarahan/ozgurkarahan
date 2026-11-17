@@ -1,7 +1,8 @@
 /*
- * Work drawings: each card's drawing plays once when its frame first comes fully into view, and again when
- * the pointer enters the card. The card carries data-play while it plays; removing it snaps the drawing to its
- * static final frame. Under prefers-reduced-motion the CSS turns every animation off, so nothing moves.
+ * Work drawings: each card's drawing plays once, when its frame first comes fully into view. It never replays
+ * (a pointer moving onto the card to click it must not erase the drawing's amber point). The card carries
+ * data-play while it plays; removing it snaps the drawing to its static final frame. Under
+ * prefers-reduced-motion the CSS turns every animation off, so nothing moves.
  * No library, no analytics.
  */
 (() => {
@@ -14,9 +15,6 @@
 
   const play = card => {
     if (reduced.matches) return;
-    // A replay restarts from its first frame: remove, force a style recalculation, set again.
-    card.removeAttribute("data-play");
-    void card.offsetWidth;
     card.setAttribute("data-play", "");
   };
 
@@ -29,10 +27,5 @@
       }
     }, { threshold: 0.98 });
     for (const card of cards) observer.observe(card.querySelector(".topic-image"));
-  }
-  for (const card of cards) {
-    card.addEventListener("pointerenter", event => {
-      if (event.pointerType === "mouse") play(card);
-    });
   }
 })();

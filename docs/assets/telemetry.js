@@ -1,12 +1,13 @@
 /*
  * Owner-only analytics for ozgurkarahan.com. See https://ozgurkarahan.com/privacy/.
  *
- * No SDK and no cookies. Nothing is sent when Global Privacy Control, Do Not Track or the
- * site opt-out is set. Only the page path, the referring site (domain only, or the path
- * when it is a page of this site), allowlisted UTM values, outbound link clicks, clicks on
- * the featured project links of the home page and deck slide views are recorded. Items go
- * to Azure Application Insights with navigator.sendBeacon; failures are ignored so
- * navigation never depends on analytics.
+ * No SDK and no cookies. Nothing is sent unless the page is served from ozgurkarahan.com
+ * itself (so local previews and forks send nothing), and nothing is sent when Global Privacy
+ * Control, Do Not Track or the site opt-out is set. Only the page path, the referring site
+ * (domain only, or the path when it is a page of this site), allowlisted UTM values, outbound
+ * link clicks, clicks on the featured project links of the home page and deck slide views are
+ * recorded. Items go to Azure Application Insights with navigator.sendBeacon; failures are
+ * ignored so navigation never depends on analytics.
  *
  * The instrumentation key is public by design: browsers cannot authenticate.
  */
@@ -16,6 +17,7 @@
   var IKEY = "9826f519-9441-42e8-8f60-17224f150fce";
   var ENDPOINT = "https://swedencentral-0.in.applicationinsights.azure.com/v2/track";
   var OPT_OUT_KEY = "site-analytics-opt-out";
+  var ON_SITE = /^(www\.)?ozgurkarahan\.com$/.test(window.location.hostname);
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var MAX_VALUE_LENGTH = 100;
   // Links one page view with the clicks made on that page. In memory only; never stored.
@@ -41,7 +43,7 @@
     }
   }
 
-  var disabled = readOptOut();
+  var disabled = !ON_SITE || readOptOut();
 
   function clip(value) {
     return String(value || "").replace(/\s+/g, " ").trim().slice(0, MAX_VALUE_LENGTH);
@@ -152,7 +154,7 @@
     },
     optIn: function () {
       try { window.localStorage.removeItem(OPT_OUT_KEY); } catch (error) { /* ignore */ }
-      disabled = readOptOut();
+      disabled = !ON_SITE || readOptOut();
     }
   };
 
