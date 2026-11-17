@@ -561,6 +561,14 @@ strategists, the cards and source links for builders. Each card keeps its scope 
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
+    /* About: who is behind the blocks, before the contact field. */
+    .about { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 2.5rem; align-items: start; padding-block: 3.5rem; border-top: 1px solid var(--line); }
+    .about-portrait img { display: block; width: 120px; height: 120px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); object-fit: cover; }
+    .about-kicker { color: var(--brand); font-family: var(--mono); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+    .about h2 { margin-top: 0.6rem; font-size: clamp(2rem, 3.2vw, 2.6rem); }
+    .about-text { margin-top: 1rem; max-width: var(--measure); font-size: 1.05rem; }
+    .about-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; margin-top: 1rem; }
+    @media (max-width: 720px) { .about { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; padding-block: 2.75rem; } }
   </style>
 </head>
 <body>
@@ -579,6 +587,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
     <nav class="primary-nav" aria-label="Primary navigation">
       <a href="#voice">Work</a>
       <a href="https://ozgurkarahan.com/agentic-platform/">Deck<span class="visually-hidden"> (The Agentic Platform)</span></a>
+      <a href="#about">About</a>
       <a class="contact-link" href="#contact">Contact<span aria-hidden="true">&nbsp;↓</span></a>
     </nav>
   </header>
@@ -680,7 +689,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
           </article>
           <ul class="work-grid" role="list">
             <li class="topic-card" data-work="voice">
-              <a class="topic-card-link" href="https://ozgurkarahan.github.io/horizon-famille/" aria-labelledby="card-voice-chip card-voice-title" aria-describedby="card-voice-scope">
+              <a class="topic-card-link" href="https://ozgurkarahan.com/work/horizon-famille/" aria-labelledby="card-voice-chip card-voice-title" aria-describedby="card-voice-scope">
                 <div class="topic-image">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="voice-cover-title" aria-describedby="voice-cover-desc" focusable="false" font-family="Public Sans, Segoe UI, sans-serif">
                     <title id="voice-cover-title">Horizon Famille: a phone call reaches a voice agent that checks mock systems and stops at a Teams approval</title>
@@ -720,7 +729,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
                   <span class="topic-chip" id="card-voice-chip">Video 6:19</span>
                   <h3 id="card-voice-title">A phone call that becomes an action</h3>
                   <p class="topic-description">Horizon Famille: a voice agent checks the booking, quotes a change before acting, and hands a discount outside its mandate to a person in Teams.</p>
-                  <p class="topic-scope" id="card-voice-scope">Recorded demo&nbsp;· mock systems&nbsp;· French, English subtitles<span aria-hidden="true">&nbsp;↗</span></p>
+                  <p class="topic-scope" id="card-voice-scope">Recorded demo&nbsp;· mock systems&nbsp;· French, English subtitles<span aria-hidden="true">&nbsp;→</span></p>
                 </div>
               </a>
             </li>
@@ -729,6 +738,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
             <h3>Go deeper</h3>
             <ul class="more-list">
               <li><a href="https://github.com/ozgurkarahan/oz-radio">Oz Radio source<span aria-hidden="true">&nbsp;↗</span></a><p>Live presenting, narrated videos and two-host podcasts, in 10+ languages.</p></li>
+              <li><a href="https://ozgurkarahan.github.io/horizon-famille/">Horizon Famille recording<span aria-hidden="true">&nbsp;↗</span></a><p>The whole call, 6:19, in French with English subtitles.</p></li>
               <li><a href="https://ozgurkarahan.github.io/horizon-famille/slides.html">Horizon Famille presentation<span aria-hidden="true">&nbsp;↗</span></a><p>How the call, the systems and the approval fit together.</p></li>
               <li><a href="https://github.com/ozgurkarahan/horizon-famille">Horizon Famille source<span aria-hidden="true">&nbsp;↗</span></a><p>Voice Live, Azure Communication Services and Foundry.</p></li>
             </ul>
@@ -1054,7 +1064,7 @@ strategists, the cards and source links for builders. Each card keeps its scope 
                 <div class="topic-copy">
                   <span class="topic-chip" id="card-platform-chip">Deck</span>
                   <h3 id="card-platform-title">The Agentic Platform</h3>
-                  <p class="topic-description">Experiences on top, a computer per agent, one governance across them: the platform in eight slides.</p>
+                  <p class="topic-description">Experiences on top, a computer per agent, one governance across them: the platform in nine slides.</p>
                   <p class="topic-scope" id="card-platform-scope">Interactive presentation<span aria-hidden="true">&nbsp;→</span></p>
                 </div>
               </a>
@@ -1084,6 +1094,21 @@ strategists, the cards and source links for builders. Each card keeps its scope 
       <span>Oz Antenna · in development · not public</span>
     </nav>
 
+    <section class="about shell" id="about" aria-labelledby="about-title">
+      <picture class="about-portrait">
+        <source srcset="docs/assets/portrait.webp" type="image/webp">
+        <img src="docs/assets/portrait.jpg" width="296" height="296" loading="lazy" decoding="async" alt="">
+      </picture>
+      <div>
+        <p class="about-kicker">About</p>
+        <h2 id="about-title">About Ozgur</h2>
+        <p class="about-text">I'm Ozgur Karahan, an AI solution engineer at Microsoft. For more than fifteen years I have worked on software, cloud and AI with large enterprises. I speak about the five building blocks of enterprise agents in English, French and Turkish, so far in customer and internal sessions; the Agentic Platform deck is a sample. To invite me to a talk or a panel, message me on LinkedIn.</p>
+        <div class="about-links">
+          <a class="text-link" href="https://ozgurkarahan.com/agentic-platform/">The Agentic Platform deck <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="https://www.linkedin.com/in/karahanozgur/" rel="me">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
     <section class="contact-field" id="contact" aria-labelledby="contact-title">
       <div class="contact shell">
         <div>

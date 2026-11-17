@@ -16,18 +16,35 @@
   <meta name="twitter:card" content="summary_large_image">
   <script src="../docs/assets/telemetry.js"></script>
   <script>window.location.replace("https://ca-p5g2ueh6psqao.nicepebble-1683e1b3.swedencentral.azurecontainerapps.io/" + window.location.hash);</script>
+  <link rel="stylesheet" href="../docs/assets/fonts/fonts.css">
   <style>
+    :root {
+      color-scheme: light dark;
+      --canvas: #f8f8fb;
+      --ink: #191a2c;
+      --brand: #2f2a6b;
+      --line: #d9dae4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --canvas: #0f0f19;
+        --ink: #ebecf4;
+        --brand: #a7a9ef;
+        --line: #353647;
+      }
+    }
     body {
       margin: 0;
       min-height: 100vh;
       display: grid;
       place-items: center;
-      background: oklch(0.98 0.006 145);
-      color: oklch(0.22 0.02 145);
-      font: 1.05rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 1.05rem/1.6 "Public Sans", "Segoe UI", sans-serif;
     }
     main { max-width: 36rem; padding: 2rem; text-align: center; }
-    a { color: oklch(0.4 0.07 150); font-weight: 600; }
+    a { color: var(--brand); font-weight: 600; text-decoration-thickness: 0.08em; text-underline-offset: 0.24em; }
+    a:hover { text-decoration-thickness: 0.14em; }
   </style>
 </head>
 <body>

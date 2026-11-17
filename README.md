@@ -14,7 +14,7 @@ A request goes down three layers, voice, distribution and context, to the system
 
 | Block | The idea | Evidence |
 |-------|----------|----------|
-| **01 Voice**: the new channel | Voice is becoming the way we talk to agents; even developers now speak to their coding agents. | [Oz Radio](https://ozgurkarahan.com/work/oz-radio/) (present any deck live, narrated videos, two-host podcasts, 10+ languages), [Horizon Famille](https://ozgurkarahan.github.io/horizon-famille/) |
+| **01 Voice**: the new channel | Voice is becoming the way we talk to agents; even developers now speak to their coding agents. | [Oz Radio](https://ozgurkarahan.com/work/oz-radio/) (present any deck live, narrated videos, two-host podcasts, 10+ languages), [Horizon Famille](https://ozgurkarahan.com/work/horizon-famille/) |
 | **02 Distribution**: where users are | Build the agent once and publish it where people work: Teams and Microsoft 365 Copilot. | [Customer 360](https://ozgurkarahan.com/customer-360/) |
 | **03 Context**: workflows and data | MCP servers for workflows and data, knowledge bases, and RAG over company documents. | [DocWiki](https://github.com/ozgurkarahan/docwiki), [ServiceNow meta-tool](https://github.com/ozgurkarahan/snow-meta-tool), [AI Agent Memory](https://github.com/ozgurkarahan/ai-agent-memory), [Simple Order Agent](https://github.com/ozgurkarahan/simple-order-agent) |
 | **04 Identity**: from the voice to the system | The user's identity travels through every layer to Salesforce or ServiceNow, which apply their own authentication and authorization. | [Identity propagation, explained](https://ozgurkarahan.com/identity-propagation/), [Entra identity flow](https://github.com/ozgurkarahan/propagate-id-entra) |

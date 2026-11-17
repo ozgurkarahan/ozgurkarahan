@@ -21,6 +21,7 @@
   <meta name="twitter:image" content="https://ozgurkarahan.com/docs/assets/social/identity-propagation-2026-10-22.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232f2a6b'/><rect x='22' y='70' width='56' height='8' rx='3' fill='%23ecb259'/><text x='50' y='58' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='700' fill='%23f2f3f9'>OK</text></svg>">
   <link rel="preload" href="../docs/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../docs/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../docs/assets/fonts/fonts.css">
   <script src="../docs/assets/telemetry.js" defer></script>
   <script type="application/ld+json">
@@ -45,6 +46,8 @@
     }
   </script>
   <style>
+    /* site:shared start */
+    /* Brand tokens: OKLCH is the source of truth (see DESIGN.md); hex values are the rendered sRGB. */
     :root {
       color-scheme: light dark;
       --canvas: #f8f8fb;
@@ -65,7 +68,7 @@
       --on-cta: #191a2c;
       --display: "Bricolage Grotesque", "Public Sans", "Segoe UI", sans-serif;
       --mono: "IBM Plex Mono", ui-monospace, monospace;
-      --measure: 70ch;
+      --measure: 68ch;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -83,9 +86,9 @@
         --deep: #070715;
       }
     }
-    h1, h2 { font-family: var(--display); letter-spacing: -0.03em; }
+
     *, *::before, *::after { box-sizing: border-box; }
-    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; scroll-padding-block: 0.75rem; }
     body {
       margin: 0;
       background: var(--canvas);
@@ -95,13 +98,21 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
-    img { display: block; max-width: 100%; height: auto; }
+    img, svg { display: block; max-width: 100%; height: auto; }
     a { color: inherit; text-decoration-thickness: 0.08em; text-underline-offset: 0.24em; }
     a:hover { text-decoration-thickness: 0.14em; }
-    a:focus-visible { outline: 3px solid var(--brand-mid); outline-offset: 5px; border-radius: 2px; }
-    h1, h2, h3, p, ul, ol, figure { margin: 0; }
-    h1, h2, h3 { text-wrap: balance; overflow-wrap: anywhere; line-height: 1.08; }
-    p, li { max-width: var(--measure); text-wrap: pretty; }
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--brand-mid);
+      outline-offset: 5px;
+      border-radius: 4px;
+    }
+    a, button, summary { scroll-margin-block: 0.75rem; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; line-height: 1.08; }
+    h1, h2 { font-family: var(--display); font-weight: 700; letter-spacing: -0.03em; }
+    p { max-width: var(--measure); text-wrap: pretty; }
+    p + p { margin-top: 1rem; }
+    [id] { scroll-margin-top: 1.25rem; }
     .shell { width: min(100% - 4rem, 74rem); margin-inline: auto; }
     .skip-link {
       position: fixed;
@@ -110,35 +121,114 @@
       left: 1rem;
       padding: 0.75rem 1rem;
       background: var(--ink);
-      color: var(--surface);
+      color: var(--canvas);
       transform: translateY(-200%);
       font-weight: 700;
     }
     .skip-link:focus { transform: translateY(0); }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+    .mono { font-family: var(--mono); }
+
+    /* Masthead */
     .masthead {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 1.5rem;
-      min-height: 6.5rem;
+      min-height: 5.5rem;
       border-bottom: 1px solid var(--line);
     }
-    .brand { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.025em; text-decoration: none; }
-    .brand span { display: block; margin-top: 0.12rem; font-size: 0.9rem; font-weight: 400; letter-spacing: 0; color: var(--muted); }
-    .text-link, .button {
+    .brand { display: inline-flex; align-items: center; gap: 0.85rem; font-family: var(--display); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; }
+    .brand-portrait { flex: none; }
+    .brand-portrait img { display: block; width: 60px; height: 60px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); object-fit: cover; }
+    .brand-text > span { display: block; margin-top: 0.12rem; font-family: "Public Sans", "Segoe UI", sans-serif; font-size: 0.9rem; font-weight: 500; letter-spacing: 0; color: var(--ink); }
+    .primary-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; max-width: 100%; font-size: 0.9rem; }
+    .primary-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; text-decoration: none; }
+    .primary-nav a:hover { text-decoration: underline; }
+    .primary-nav .contact-link { font-weight: 700; }
+
+    .button, .text-link {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.55rem;
       min-height: 44px;
       max-width: 100%;
       font-weight: 700;
       line-height: 1.4;
+      overflow-wrap: anywhere;
     }
-    .button { padding: 0.8rem 1.05rem; text-decoration: none; background: var(--ink); color: var(--surface); }
-    .button:hover { background: var(--brand); }
+    .button { padding: 0.8rem 1.15rem; border-radius: 8px; text-align: center; text-decoration: none; background: var(--brand); color: var(--on-deep); }
+    .button:hover { background: var(--ink); }
+    @media (prefers-color-scheme: dark) {
+      .button { background: var(--cta); color: var(--on-cta); }
+      .button:hover { background: var(--on-deep); }
+    }
+    /* The quiet second action: same box as .button, outlined, never filled. */
+    .button.button-quiet { padding: calc(0.8rem - 1px) calc(1.15rem - 1px); border: 1px solid var(--brand); background: transparent; color: var(--brand); }
+    .button.button-quiet:hover { background: var(--brand-soft); color: var(--ink); border-color: var(--ink); }
+    .text-link { justify-content: flex-start; text-align: start; }
+    .button-light, .button-light:hover { background: var(--cta); color: var(--on-cta); }
+    .button-light:hover { background: var(--on-deep); }
 
-    .article { padding-block: 3.5rem 4.5rem; }
+    .contact-field { color: var(--on-deep); background: var(--deep); }
+    .contact-field a:focus-visible { outline-color: var(--cta); }
+    .contact { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; padding-block: 4rem; align-items: end; }
+    .contact h2 { max-width: 16ch; font-size: clamp(2.1rem, 3.4vw, 3.2rem); }
+    .contact p { color: var(--on-deep-muted); margin-top: 1.2rem; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 0.7rem 1.3rem; align-items: center; }
+    .site-footer { display: flex; align-items: start; justify-content: space-between; gap: 2rem; padding-block: 1.5rem; border-top: 1px solid rgb(199 201 222 / 0.3); color: var(--on-deep-muted); font-size: 0.82rem; }
+    .site-footer p { max-width: 76ch; }
+    .site-footer > span { white-space: nowrap; }
+
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 2rem, 74rem); }
+      /* Two short rows, 88px at most: the portrait and the name, then the nav on one line. Each nav link keeps a 44px
+         target through a transparent extension above and below, so the row itself can stay 36px. */
+      .masthead { align-items: stretch; flex-direction: column; gap: 0; padding-block: 0.375rem 0; min-height: 0; }
+      .brand { align-self: start; gap: 0.65rem; min-height: 44px; font-size: 1.15rem; }
+      .brand-portrait img { width: 40px; height: 40px; }
+      .brand-text > span { display: none; }
+      .primary-nav { flex-wrap: nowrap; width: 100%; font-size: 0.85rem; }
+      .primary-nav a { position: relative; min-height: 36px; }
+      .primary-nav a::before { content: ""; position: absolute; inset: -4px 0; }
+      .contact { grid-template-columns: minmax(0, 1fr); gap: 1.7rem; padding-block: 3rem 2rem; }
+      .contact h2 { max-width: 18ch; }
+      .site-footer { flex-direction: column; gap: 0.75rem; }
+    }
+    @media (max-width: 480px) {
+      /* Phones: the nav spreads across its row. */
+      .primary-nav { justify-content: space-between; gap: 0.8rem; }
+    }
+    @media (max-width: 380px) {
+      .primary-nav { gap: 0.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    /* site:shared end */
+
+    [hidden] { display: none !important; }
+    ul, ol { margin: 0; }
+    li { max-width: var(--measure); text-wrap: pretty; }
+
+    /* The gap under the masthead matches the work page's opening. */
+    .article { padding-block: 2.25rem 4.5rem; }
+    /* Byline under the h1: a 40px portrait, the author and the publication date from the JSON-LD. */
+    .byline { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.25rem; color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+    .byline img { flex: none; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); object-fit: cover; }
+    .byline-name { color: var(--ink); font-weight: 700; }
     .eyebrow { color: var(--brand); font-size: 0.9rem; font-weight: 700; }
     .article h1 { max-width: 18ch; margin-top: 0.75rem; font-size: clamp(2.1rem, 3.2vw, 3rem); font-weight: 700; letter-spacing: -0.035em; }
     .lede { margin-top: 1.5rem; font-size: 1.2rem; line-height: 1.5; }
@@ -178,15 +268,21 @@
     .source-list a:hover strong { text-decoration: underline; text-underline-offset: 0.2em; }
     .source-list span { color: var(--muted); font-size: 0.9rem; }
 
-    .boundary { padding: 1.25rem 1.5rem; background: var(--brand-soft); max-width: 58rem; }
+    .boundary { padding: 1.25rem 1.5rem; border-radius: 12px; background: var(--brand-soft); max-width: 58rem; }
     .next { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; }
 
-    .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+    /* The ending: the next work in the order, with its block, then back to this block on the homepage. */
+    .article-next { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+    .continue { display: grid; justify-items: start; gap: 0.75rem; }
+    .continue-next { display: inline-grid; gap: 0.4rem; min-height: 44px; text-decoration: none; }
+    .continue-title { font-family: var(--display); font-size: clamp(1.75rem, 2.6vw, 2.25rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; text-wrap: balance; }
+    .continue-next:hover .continue-title { text-decoration: underline; text-decoration-thickness: 0.06em; text-underline-offset: 0.14em; }
+    .continue-block { color: var(--brand); font-family: var(--mono); font-size: 0.8rem; font-weight: 500; line-height: 1.5; letter-spacing: 0.1em; text-transform: uppercase; }
+    .continue-back { display: inline-flex; align-items: center; gap: 0.55rem; min-height: 44px; color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+    .continue-back:hover { color: var(--ink); }
 
     @media (max-width: 720px) {
-      .shell { width: min(100% - 2.5rem, 74rem); }
-      .masthead { align-items: start; flex-direction: column; gap: 0.35rem; padding-block: 1.1rem 0.65rem; min-height: 0; }
-      .article { padding-block: 2.5rem 3rem; }
+      .article { padding-block: 1.6rem 3rem; }
       .compare tbody th { white-space: normal; }
     }
     /* "You are here" among the five building blocks: five bars, this page's layer filled; links back to that block on the homepage. */
@@ -195,23 +291,41 @@
     .layer-marker { display: inline-grid; gap: 3px; width: 1.75rem; }
     .layer-marker i { display: block; height: 5px; border-radius: 2px; background: var(--line); }
     .layer-marker[data-layer="1"] i:nth-child(1), .layer-marker[data-layer="4"] i:nth-child(4) { background: var(--brand); }
-    .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="masthead shell">
-    <a class="brand" href="https://ozgurkarahan.com/" aria-label="Ozgur Karahan, home">
-      Ozgur Karahan
-      <span>AI Solution Engineer at Microsoft</span>
+    <a class="brand" href="https://ozgurkarahan.com/">
+      <picture class="brand-portrait">
+        <source srcset="../docs/assets/portrait.webp" type="image/webp">
+        <img src="../docs/assets/portrait.jpg" width="296" height="296" decoding="async" alt="">
+      </picture>
+      <span class="brand-text">
+        Ozgur Karahan
+        <span>AI Solution Engineer at Microsoft</span>
+      </span>
     </a>
-    <a class="text-link" href="https://ozgurkarahan.com/">Back to the homepage</a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="https://ozgurkarahan.com/#voice">Work</a>
+      <a href="https://ozgurkarahan.com/agentic-platform/">Deck<span class="visually-hidden"> (The Agentic Platform)</span></a>
+      <a href="https://ozgurkarahan.com/#about">About</a>
+      <a class="contact-link" href="#contact">Contact<span aria-hidden="true">&nbsp;↓</span></a>
+    </nav>
   </header>
 
-  <main id="main" class="article shell">
+  <main id="main">
+    <article class="article shell" aria-labelledby="article-title">
     <a class="layer-kicker" href="https://ozgurkarahan.com/#identity"><span class="layer-marker" data-layer="4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>04 · Identity<span class="visually-hidden">, which runs through every layer of an enterprise agent</span></a>
     <p class="eyebrow">Identity propagation for AI agents</p>
-    <h1>Agents should act as the person who asked.</h1>
+    <h1 id="article-title">Agents should act as the person who asked.</h1>
+    <p class="byline">
+      <picture>
+        <source srcset="../docs/assets/portrait.webp" type="image/webp">
+        <img src="../docs/assets/portrait.jpg" width="296" height="296" decoding="async" alt="">
+      </picture>
+      <span><span class="byline-name">Ozgur Karahan</span> · <time datetime="2026-10-17">17 October 2026</time></span>
+    </p>
     <p class="lede">When an AI agent reads or changes business records, the system of record should see the signed-in user, apply that user's permissions and record that user's name. This page explains the pattern behind three public samples, and where it stops.</p>
 
     <section aria-labelledby="problem-title">
@@ -370,11 +484,34 @@
         <a class="text-link" href="https://www.linkedin.com/in/karahanozgur/">Discuss it on LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer shell">
-    <p>Personal work and community samples. Employment at Microsoft does not imply official endorsement. <a href="https://ozgurkarahan.com/privacy/">Privacy</a></p>
-    <span>© 2026 Ozgur Karahan</span>
-  </footer>
+    <footer class="article-next">
+      <nav class="continue" aria-label="Continue">
+        <a class="continue-next" href="https://ozgurkarahan.com/agentic-platform/">
+          <span class="continue-title">Next: The Agentic Platform <span aria-hidden="true">→</span></span>
+          <span class="continue-block">05 · Governance</span>
+        </a>
+        <a class="continue-back" href="https://ozgurkarahan.com/#identity"><span aria-hidden="true">←</span> Back to 04 Identity</a>
+      </nav>
+    </footer>
+    </article>
+
+    <section class="contact-field" id="contact" aria-labelledby="contact-title">
+      <div class="contact shell">
+        <div>
+          <h2 id="contact-title">Follow the work, or invite me to speak about it.</h2>
+          <p>New samples and notes go out on LinkedIn. To invite me to a talk or a panel on the five building blocks, message me there.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="https://www.linkedin.com/in/karahanozgur/" rel="me">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/ozgurkarahan" rel="me">Explore GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <footer class="site-footer shell">
+        <p>Personal work and community samples, not Microsoft products. Employment at Microsoft does not imply official endorsement. Each project's documentation describes its scope and limitations. <a href="https://ozgurkarahan.com/privacy/">Privacy</a></p>
+        <span>© 2026 Ozgur Karahan</span>
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
